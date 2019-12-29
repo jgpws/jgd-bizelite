@@ -1,0 +1,66 @@
+/* CSS document */
+@media screen and (min-width: 64.063em) { /* 64.063em = 1025px */
+	#main {
+		background: url(../images/divider-3-col.svg) top right repeat-y;
+	}
+	
+	#searchbar,
+	#menu-social {
+		width: 200px;
+	}
+	
+	#searchbar {
+		right: 200px;
+	}
+
+	#container {
+		margin-right: -400px;
+	}
+
+	#content {
+		margin-right: 400px;
+	}
+
+	a.post-edit-link {
+		margin-left: 0;
+	}
+
+	#primary,
+	#secondary {
+		width: 200px;
+		float: left;
+	}
+
+	.widgettitle {
+		width: 176px;
+		background: url(../images/jgd-bizelite-assets.svg) no-repeat -20px -205px #FFFFFF;
+	}
+	
+	.widget_categories select,
+	.widget_archive select {
+		width: 156px;
+	}
+	
+	#primary .widget_search input#s,
+	#secondary .widget_search input#s {
+		max-width: 110px;
+	}
+
+	.gallery img {
+		width: 100px;
+		height: 100px;
+	}
+	
+	.gallery-caption {
+		max-width: 100px;
+	}
+
+	#calendar_wrap {
+		width: 196px;
+	}
+	
+	.textwidget img,
+	.textwidget select {
+		max-width: 156px;
+	}
+}

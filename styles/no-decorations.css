@@ -1,0 +1,26 @@
+/* CSS document */
+#main {
+	background-image: none;
+	border: transparent;
+}
+
+#custom-html {
+	width: 960px;
+	margin: 0;
+}
+
+#primary h3,
+#secondary h3 {
+	background-image: none;
+	background-color: transparent;
+	padding: 8px 0 0 20px;
+}
+
+#primary ul ul,
+#secondary ul ul {
+	margin: 10px 20px 20px 30px;
+}
+
+#wp-calendar {
+	margin-top: 20px;
+}

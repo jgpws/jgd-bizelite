@@ -1,0 +1,173 @@
+/*CSS document */
+body {
+	background-color: #A0A0A0;
+}
+
+a:link,
+a:visited {
+	color: #404040;
+}
+
+a:hover,
+a:active {
+	color: #808080;
+}
+
+#header,
+#footer {
+	background-color: #808080;
+}
+
+table caption {
+	background-color: #A0A0A0;
+}
+
+#access {
+	background-color: #C0C0C0;
+	border-bottom-color: #A0A0A0;
+}
+
+h3#menubar-pages,
+h3#menubar-cats,
+form#searchform label {
+	color: #333333;
+}
+
+#menubar .pagemenu,
+#menubar .catmenu {
+	background-color: #808080;
+}
+
+#menubar .menu-down-arrow,
+#menu-social .menu-down-arrow {
+	background-color: #808080;
+}
+
+#menubar .pagemenu a:link,
+#menubar .pagemenu a:visited,
+#menubar .catmenu a:link,
+#menubar .catmenu a:visited {
+	color: #FFFFFF;
+}
+
+#menubar .pagemenu a:hover,
+#menubar .pagemenu a:active,
+#menubar .catmenu a:hover,
+#menubar .catmenu a:active {
+	color: #000000;
+}
+
+#menu-social a {
+	color: #808080;
+}
+
+.nav-links a {
+	text-decoration: none;
+}
+
+.nav-separator {
+	background: url(../images/jgd-bizelite-assets.svg) no-repeat -140px -45px;
+}
+
+h2.entry-title a:link,
+h2.entry-title a:visited,
+.featured-cat-post .entry-title a:link,
+.featured-cat-post .entry-title a:visited {
+	color: #808080;
+}
+
+h2.entry-title a:active,
+h2.entry-title a:hover,
+.featured-cat-post .entry-title a:active,
+.featured-cat-post .entry-title a:hover {
+	color: #A0A0A0;
+}
+
+.bypostauthor {
+	background-color: #E0E0E0;
+	color: #333333;
+}
+
+.bypostauthor a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.bypostauthor a.comment-reply-link:hover {
+	text-decoration: none;
+}
+
+a.post-edit-link,
+a.more-link,
+a.comment-reply-link {
+    border-bottom-color: #808080;
+}
+
+a.post-edit-link:link,
+a.more-link:link,
+a.post-edit-link:visited,
+a.more-link:visited,
+a.comment-reply-link:link,
+a.comment-reply-link:visited {
+	background-color: #C0C0C0;
+	color: #333333;
+	font-weight: bold;
+}
+
+a.post-edit-link:hover,
+a.more-link:hover,
+a.post-edit-link:active,
+a.more-link:active,
+a.comment-reply-link:hover,
+a.comment-reply-link:active {
+	background-color: #A0A0A0;
+	color: #FFFFFF;
+}
+
+.wp-caption-text {
+	background-color: #808080;
+}
+
+.wp-caption a:link,
+.wp-caption a:visited,
+.gallery-caption a:link,
+.gallery-caption a:visited {
+	color: #3131C4;
+}
+
+.widgettitle {
+	background: url(../images/jgd-bizelite-assets.svg) no-repeat -20px -163px #FFFFFF;
+}
+
+#to-top,
+#to-bottom {
+	background-color: rgba(128, 128, 128, 0.50);
+}
+
+#wp-calendar {
+	border-color: #A0A0A0;
+}
+
+#wp-calendar tbody td {
+	border-color: #A0A0A0;
+}
+
+/* Page Templates */
+.page-template-page_landing .blog-title a:visited,
+.page-template-page_landing .blog-title a:link {
+    color: #333333;
+}
+
+@media screen and (min-width: 48em) {
+	#menu-social .social-panel-expand {
+		background-color: #C0C0C0;
+		border-bottom-color: #A0A0A0;
+	}
+}
+
+@media screen and (min-width: 40.063em) {
+	#access {
+		border-bottom-color: #A0A0A0;
+		border-top: transparent;
+	}
+}

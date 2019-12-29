@@ -1,0 +1,83 @@
+/* CSS document */
+body {
+	color: #DDDDDD;
+}
+
+blockquote,
+pre {
+	background-color: #404040;
+}
+
+a:link,
+a:visited {
+	color: #FFFFFF;
+}
+
+a:active,
+a:hover {
+	color: #EDEDED;
+}
+
+table,
+table th,
+table td {
+	border-color: #808080;
+}
+
+h2.entry-title a:link,
+h2.entry-title a:visited,
+.featured-cat-post .entry-title a:link,
+.featured-cat-post .entry-title a:visited {
+	color: #FFFFFF;
+}
+
+h2.entry-title a:active,
+h2.entry-title a:hover,
+.featured-cat-post .entry-title a:active,
+.featured-cat-post .entry-title a:hover {
+	color: #EDEDED;
+}
+
+.entry {
+	background-color: #202020;
+}
+
+.sticky .entry {
+	border-color: #DDDDDD;
+}
+
+/* override .widgettitle */
+#primary h3,
+#secondary h3 {
+	background-color: #202020;
+}
+
+#primary ul ul li,
+#secondary ul ul li {
+	color: #F5F5F5;
+}
+
+.commentlist li {
+	border-color: #808080;
+}
+
+.bypostauthor pre {
+	color: #F5F5F5;
+}
+
+.thread-odd {
+	background-color: #404040;
+}
+
+.logged-in-as a:link,
+.logged-in-as a:visited {
+	color: #202020;
+}
+
+#wp-calendar {
+	background-color: #404040;
+}
+
+#wp-calendar thead {
+	background-color: #202020;
+}
