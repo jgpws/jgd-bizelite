@@ -1,0 +1,112 @@
+/* -- Blocks / Block Overrides -- */
+
+.wp-block-cover p:first-of-type:first-letter,
+.wp-block-pullquote p:first-of-type:first-letter {
+	font-size: 1em !important;
+}
+
+.wp-block-gallery,
+.wp-block-image {
+	margin: 0px auto;
+}
+
+.wp-block-embed,
+.wp-block-gallery,
+.wp-block-image {
+	padding: 1em 0px;
+}
+
+.wp-block-button {
+  &__link {
+		border: 1px solid $silver;
+		padding: 2px 6px;
+		font-size: 1em;
+    border-radius: 0px;
+
+    &:link,
+    &:visited {
+      color: $text_color !important;
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+.wp-block-cover {
+  width: auto;
+
+  & + p,
+  &-image + p {
+    margin-top: 1em;
+  }
+}
+
+.wp-block-image figcaption,
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+	@include caption;
+	@include hide-text-overflow;
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+	margin-bottom: -16px;
+}
+
+.wp-block-image {
+  img {
+  	margin: 0px;
+  }
+
+  figcaption {
+    margin: -0.5em 0px 1em 0px;
+  }
+}
+
+.wp-block-gallery {
+  img {
+    border: 1px solid $silver;
+  	margin: 1em auto 0 auto;
+  }
+}
+
+.wp-block-pullquote {
+  margin: 2em 0px;
+	padding: 1em 0px;
+
+  p {
+    font-size: 1.75em;
+  }
+
+  &.is-style-solid-color p {
+    font-size: 2em;
+  }
+
+  &.is-style-default {
+  	border-top: 2px solid $medium_gray;
+  	border-bottom: 2px solid $medium_gray;
+  }
+
+  &.is-style-solid-color {
+  	background-color: $light_gray;
+  }
+
+  &.is-style-default blockquote,
+  &.is-style-solid-color blockquote {
+  	background-color: transparent;
+  }
+
+  blockquote cite,
+  &.is-style-solid-color blockquote cite {
+    font-style: italic;
+  }
+
+  &.alignleft blockquote,
+  &.alignright blockquote {
+    margin: 20px;
+  	max-width: none;
+  }
+}

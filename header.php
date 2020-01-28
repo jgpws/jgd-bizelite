@@ -14,59 +14,55 @@
 <!-- http://themeshaper.com/2009/06/24/creating-wordpress-theme-html-structure-tutorial/ -->
 <div id="wrapper" class="hfeed">
 	<div id="header">
-		<div id="masthead">
-		
-			<div id="branding">
-			<?php if ( function_exists( 'the_custom_logo' ) ) {
-    			the_custom_logo();
-			} ?>
-			<div id="site-title-block">
-			<?php if ( is_home() || is_front_page() ) { ?>
-			<h1 class="blog-title"><a href="<?php echo esc_url( home_url('/') ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php } else { ?>
-			<h4 class="blog-title"><a href="<?php echo esc_url( home_url('/') ); ?>"><?php bloginfo( 'name' ); ?></a></h4>
-			<?php } ?>
-			<?php if( get_bloginfo( 'description' ) ) { ?>
-				<h3 class="subtitle"><?php bloginfo( 'description' ); ?></h3>
-			<?php } ?>
-			</div><!-- #site-title-block -->
-			</div><!-- #branding -->
-			
-			<div id="access">
-				<div id="menubar">
-				<ul>
-					<li class="menubar-pages-list-item">
-					<h3 id="menubar-pages">
-					<?php jgd_bizelite_menutitle_one_customizer(); ?>
-					</h3>
-					<?php wp_nav_menu( 
-						array(
-							'theme_location' => 'header_one',
-							'container_class' => 'pagemenu',
-							'fallback_cb' => 'jgd_bizelite_pages_default'
-						)
-					); ?>
-					</li>
-					<li class="menubar-cats-list-item">
-					<h3 id="menubar-cats">
-					<?php jgd_bizelite_menutitle_two_customizer(); ?>
-					</h3>
-					<?php wp_nav_menu(
-						array(
-							'theme_location' => 'header_two',
-							'container_class' => 'catmenu',
-							'fallback_cb' => 'jgd_bizelite_cats_default'
-							)
-					); ?>
-					</li>
+		<div class="branding">
+		<?php if ( function_exists( 'the_custom_logo' ) ) {
+  			the_custom_logo();
+		} ?>
+		<div class="site-title-block">
+		<?php if ( is_home() || is_front_page() ) { ?>
+		<h1 class="blog-title"><a href="<?php echo esc_url( home_url('/') ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+		<?php } else { ?>
+		<h4 class="blog-title"><a href="<?php echo esc_url( home_url('/') ); ?>"><?php bloginfo( 'name' ); ?></a></h4>
+		<?php } ?>
+		<?php if( get_bloginfo( 'description' ) ) { ?>
+			<h3 class="subtitle"><?php bloginfo( 'description' ); ?></h3>
+		<?php } ?>
+		</div><!-- #site-title-block -->
+		</div><!-- .branding -->
 
-				</ul>
-				</div><!-- #menubar -->
-				<div id="searchbar">
-				<?php get_search_form(); ?>
-				</div><!-- #searchbar -->
-				<?php get_template_part( 'menu', 'social' ); ?>
-			</div><!-- #access -->
-		
-		</div><!-- #masthead -->
+		<div id="access">
+			<!--<div class="menubar">-->
+			<ul class="menubar">
+				<li class="menubar-pages-list-item">
+				<h3 class="menubar-title">
+				<?php jgd_bizelite_menutitle_one_customizer(); ?>
+				</h3>
+				<?php wp_nav_menu(
+					array(
+						'theme_location' => 'header_one',
+						'container_class' => 'pagemenu pagemenu-vertical is-zero-height',
+						'fallback_cb' => 'jgd_bizelite_pages_default'
+					)
+				); ?>
+				</li>
+				<li class="menubar-cats-list-item">
+				<h3 class="menubar-title">
+				<?php jgd_bizelite_menutitle_two_customizer(); ?>
+				</h3>
+				<?php wp_nav_menu(
+					array(
+						'theme_location' => 'header_two',
+						'container_class' => 'pagemenu pagemenu-vertical is-zero-height',
+						'fallback_cb' => 'jgd_bizelite_cats_default'
+						)
+				); ?>
+				</li>
+
+			</ul>
+			<!--</div>--><!-- #menubar -->
+			<div class="searchbar">
+			<?php get_search_form(); ?>
+			</div><!-- #searchbar -->
+			<?php get_template_part( 'menu', 'social' ); ?>
+		</div><!-- #access -->
 	</div><!-- #header -->

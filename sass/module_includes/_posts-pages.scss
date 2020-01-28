@@ -1,0 +1,433 @@
+/* -- Posts / Pages -- */
+.entry-title {
+	a:link,
+	a:visited {
+		color: $black;
+		text-decoration: none;
+	}
+
+	a:active,
+	a:hover {
+		color: $medium_gray;
+	}
+}
+
+.post,
+.type-page {
+	.entry {
+		// Drop Cap
+		p:first-of-type:first-letter {
+			font-size: 2.14em;
+		}
+	}
+
+	.index-meta {
+		padding: 20px 0px;
+
+		p {
+			border-bottom: 1px solid $silver;
+			margin-bottom: 0px;
+			padding: 0.325em 0;
+		}
+	}
+}
+
+.post-blog,
+.type-page {
+	clear: both;
+	padding: 0.5em 0px;
+
+	.entry {
+		&-title {
+			line-height: 1em;
+			padding: 0px 5%;
+		}
+
+		background-color: $base_color;
+		border: 2px solid $silver;
+		clear: both;
+		margin: 20px 5%;
+		overflow-x: hidden;
+		padding: 20px 5%;
+
+		 > * {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 740px;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin: 0.2em auto;
+		}
+	}
+
+	// For each icon type, icons are added with jQuery because Themify icons are applied via a css class
+	// See the file scripts/jgd-bizelite-scripts.js
+	.index-meta {
+		padding: 20px 5%;
+
+		span[class*="ti-"] {
+			margin: 0px 3px;
+		}
+
+		span[class="ti-pencil"] {
+			float: left;
+			margin: 20px 10px 0px 0px;
+		}
+
+		span[class="ti-pencil"] + div {
+			margin-left: 20px;
+		}
+	}
+
+	.page-links {
+		text-align: center;
+	}
+
+	.page-links a {
+		min-width: 72px;
+		display: inline-block;
+	}
+}
+
+.type-page .entry-title {
+	margin-top: 0.5em;
+}
+
+@media screen and (min-width: 40.063em) { // 40.063em = 641px
+	.post-blog,
+	.type-page {
+		.index-meta {
+			padding: 20px 50% 20px 5%;
+		}
+
+		.entry {
+			margin: 20px calc(2.5% + 20px);
+		}
+	}
+}
+
+@media screen and (min-width: 85.438em) { // 85.438em = 1367px
+	.post-blog,
+	.type-page {
+		.entry {
+			margin: 20px calc(10% + 20px);
+
+			&-title {
+				padding: 0px 10%;
+			}
+		}
+
+		.index-meta {
+			padding: 20px 50% 20px 10%;
+		}
+	}
+}
+
+/* Attachment Page */
+.attachment {
+	.post-parent-return {
+		font-weight: bold;
+		margin-bottom: 0px;
+		text-align: center;
+	}
+
+	.post-parent-return,
+	.index-meta {
+		padding: 20px 5%;
+	}
+
+	.entry-title {
+		padding: 0px 5%;
+	}
+
+	.entry img {
+		margin: 0 auto 1em;
+		display: block;
+	}
+}
+
+@media screen and (min-width: 85.438em) {
+	.attachment {
+		.post-parent-return,
+		.index-meta {
+			padding: 20px 10%;
+		}
+
+		.entry-title {
+			padding: 0px 10%;
+		}
+	}
+}
+
+/* Archive Pages */
+.archive,
+.category,
+.tag {
+	.archive-title {
+		padding: 20px 5% 0px 5%;
+	}
+
+	hr {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+
+.category .archive-title {
+	margin-top: 0.5em;
+}
+
+.author {
+	.author-meta {
+		padding: 20px 5%;
+	}
+
+	.author-sep {
+		margin-top: 0px;
+	}
+}
+
+@media screen and (min-width: 85.438em) {
+	.archive,
+	.category,
+	.tag {
+		.archive-title {
+			clear: both;
+			padding: 20px 10% 0px 10%;
+		}
+
+		hr {
+			margin-left: 10%;
+			margin-right: 10%;
+		}
+	}
+
+	.author .author-meta {
+		padding: 20px 10%;
+	}
+}
+
+/* Comments Section */
+.comments-section {
+	.comment-author,
+	.comment-meta {
+		line-height: 2em;
+	}
+
+	.children {
+		padding-left: 2em;
+	}
+
+	.comment {
+		border-bottom: 2px solid $light_gray;
+		padding-bottom: 1em;
+		list-style: none;
+	}
+
+	.commentlist li li {
+		border-bottom: 0;
+	}
+
+	.comment-body {
+		padding: 1em;
+	}
+
+	.thread-odd {
+		background-color: $text_color_light;
+	}
+
+	.bypostauthor {
+		background-color: $silver;
+		font-weight: bold;
+	}
+
+	.bypostauthor a {
+		color: $white;
+	}
+
+	.bypostauthor pre {
+		color: $text_color;
+	}
+
+	.comment-meta a {
+		color: $black;
+	}
+}
+
+/* Page Templates */
+.page-template-page_featured_categories {
+	.entry {
+		margin: 20px 0px;
+	}
+
+	.type-page .entry-title,
+	.type-page .meta {
+		position: absolute;
+		left: -9999px;
+	}
+}
+
+@media screen and (min-width: 48em) { // 48em = 768px
+	.page-template-page_landing,
+	.page-template-page_featured_categories {
+		.entry {
+			margin: 20px 80px;
+		}
+
+		.entry-title {
+			padding: 0px 80px;
+		}
+
+		.index-meta {
+			padding-left: 80px;
+		}
+	}
+}
+
+@media screen and (min-width: 64.063em) { // 64.063em = 1025px
+	.page-template-page_landing,
+	.page-template-page_featured_categories {
+		.index-meta {
+			padding-left: 160px;
+		}
+
+		.entry-title {
+			padding: 0px 160px;
+		}
+
+		.entry {
+			margin: 20px 160px;
+		}
+	}
+}
+
+@media screen and (min-width: 85.438em) { // 85.438em = 1367px
+	.page-template-page_landing .index-meta,
+	.page-template-page_featured_categories .index-meta {
+		padding: 20px 50% 20px 160px;
+	}
+}
+
+.featured-cat-container {
+	padding: 20px 5%;
+
+	hr {
+		margin-bottom: 0px;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.featured-cat-container {
+		padding: 20px 80px;
+	}
+}
+
+@media screen and (min-width: 64.063em) {
+	.featured-cat-container {
+		padding: 20px 160px;
+	}
+}
+
+.featured-cat-title {
+	padding: 10px 0px;
+	text-align: center;
+	border-bottom: 1px solid $silver;
+}
+
+.featured-cat-panel {
+	display: flex;
+	flex-direction: column;
+	padding-top: 20px;
+
+	.entry {
+		margin: 1em 0px;
+	}
+}
+
+@media screen and (min-width: 64.063em) {
+	.featured-cat-panel {
+		flex-direction: row;
+	}
+}
+
+.featured-cat-post {
+	margin: 0.5em 0px;
+
+	.entry-title-featured {
+		font-size: 1.29rem;
+		font-weight: bold;
+
+		a:link,
+		a:visited {
+			color: $black;
+			text-decoration: none;
+		}
+
+		a:active,
+		a:hover {
+			color: $medium_gray;
+		}
+	}
+
+	.entry {
+		background-color: $black_12_opacity;
+		border: transparent;
+		padding: 20px;
+	}
+
+	.meta-featured {
+		border-bottom: 1px solid $silver;
+		padding: 0.325em 0px;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	.wp-post-image,
+	.ti-image {
+		display: block;
+		float: none;
+		margin: 0px auto 20px;
+	}
+
+	.ti-image {
+		background-color: $black_12_opacity;
+		color: $medium_gray;
+		font-size: 5em;
+		padding: 0.5em;
+		text-align: center;
+		max-width: 300px;
+	}
+}
+
+@media screen and (min-width: 40.063em) { // 40.063em = 641px
+	.featured-cat-post {
+		margin: 0.5em 12.5%;
+	}
+}
+
+@media screen and (min-width: 64.063em) {
+	.featured-cat-post {
+		margin: 0.5em 0px; // Restore from mobile screen widths
+		width: 33%;
+
+		.entry-title-featured {
+			margin: 0px 1em 0.5em;
+		}
+
+		.entry {
+			margin: 1em;
+		}
+
+		.meta-featured {
+			margin: 0px 1em;
+		}
+	}
+}

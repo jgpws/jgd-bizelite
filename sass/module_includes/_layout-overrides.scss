@@ -1,0 +1,168 @@
+/* -- Layout overrides -- */
+
+/* 3 Column */
+@media screen and (min-width: 64.063em) { // 64.063em = 1025px
+  .three-col-r,
+  .three-col-l {
+    .menu-social {
+  		width: 200px;
+  	}
+
+    .gallery-caption {
+  		width: 100px;
+  	}
+
+    .gallery img {
+  		width: 100px;
+  		height: 100px;
+  	}
+
+    .secondary.widget-area {
+  		border-left: 4px solid $black_25_opacity;
+  	}
+
+    .widgettitle {
+  		@include hide-text-overflow;
+  		background: url(images/jgd-bizelite-assets.svg) no-repeat -20px -223px $base_color;
+  		width: 196px;
+  	}
+
+    .widget {
+  		width: 196px;
+  	}
+
+    .widget_search .search-input {
+   		max-width: 110px;
+   	}
+
+    .widget_categories select,
+  	.widget_archive select {
+  		width: 156px;
+  	}
+
+    .textwidget img,
+  	.textwidget select {
+  		max-width: 156px;
+  	}
+  }
+}
+
+/* Magazine (Grid Style) */
+.mag-grid {
+  table,
+  table th,
+  table td {
+    border: 1px solid $dark_gray;
+  }
+
+  .post {
+  	margin: 10px 2.5%;
+  }
+
+  .entry-title {
+  	font-size: 1.29rem;
+  	line-height: 1em;
+  	margin-bottom: 0.5em;
+    padding: 0px;
+  }
+
+  a.post-edit-link {
+  	margin-left: 0;
+  }
+
+  .entry {
+  	background-color: $black_12_opacity;
+  	border: 0;
+  	border-bottom: solid 2px $silver;
+  	margin: 1em 0;
+  	padding: 20px;
+  	overflow-x: hidden;
+
+    p:first-of-type {
+    	clear: left;
+    }
+  }
+
+  .sticky .entry {
+  	border-bottom: solid 2px $medium_gray;
+  }
+
+  blockquote {
+  	background-color: transparent;
+  }
+
+  .wp-post-image {
+  	float: none;
+  	margin: 0 0 1em 0;
+  }
+
+  .gallery {
+  	margin-bottom: 1em;
+  }
+
+  .wp-caption-text {
+  	margin-bottom: 1em;
+  }
+
+  #comment {
+  	width: 100%;
+  }
+
+  .wp-block-columns {
+    flex-direction: column;
+  }
+}
+
+.mag-grid.archive,
+.mag-grid.search {
+  .archive-title,
+  .category-archive-title {
+    padding: 20px 0px 0px 0px;
+  }
+
+  &.archive hr,
+  &.category hr,
+  &.tag hr {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .index-meta {
+    padding: 20px 0px;
+  }
+}
+
+@media screen and (min-width: 33.313em) {
+	.mag-grid a.more-link {
+    display: block;
+	}
+}
+
+@media screen and (min-width: 48em) { // 48em = 768px
+  .mag-grid {
+    .post,
+    .type-page {
+  		display: inline-block;
+  		vertical-align: top;
+  		width: 44.5%; /* for rounding errors with inline-block */
+  	}
+
+    .index-meta {
+  		max-width: 100%;
+  	}
+
+    .gallery-item {
+  		width: 50%;
+  	}
+  }
+}
+
+@media screen and (min-width: 85.438em) { /* 85.438em = 1367px */
+	.mag-grid {
+    .post,
+    .type-page {
+		  margin: 10px 1.5%;
+		  width: 29.5%;
+    }
+	}
+}

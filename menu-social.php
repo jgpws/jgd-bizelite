@@ -10,7 +10,7 @@ if( has_nav_menu( 'social_profiles' ) ) {
 			'theme_location' => 'social_profiles',
 			'container' => 'div',
 			'container_id' => 'menu-social',
-			'container_class' => 'menu',
+			'container_class' => 'menu-social',
 			'menu_id' => 'menu-social-items',
 			'menu_class' => 'menu-items',
 			'depth' => 1,

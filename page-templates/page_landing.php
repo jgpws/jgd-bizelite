@@ -10,22 +10,18 @@
 
 <?php get_header( 'landing' ); ?>
 
-	<div class="texture">
-	
-	<div id="main">
-		
+	<div id="main" class="texture">
+
 		<div id="container">
-		
+
 			<div id="content">
-			
+
 			<?php get_template_part( 'loop', 'page' ); ?>
 
 			</div><!-- #content -->
-		
+
 		</div><!-- #container -->
-		
+
 	</div><!-- #main -->
 
-	</div><!-- .texture div -->
-	
 <?php get_footer(); ?>

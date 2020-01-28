@@ -1,0 +1,99 @@
+/* Header Search Bar */
+.searchbar {
+	border-bottom: 1px solid $black_25_opacity;
+	height: 43px;
+
+	.search-form {
+		height: 42px;
+		margin: 0 auto;
+		width: 200px;
+	}
+
+	label {
+		font-size: 1em;
+		font-weight: bold;
+		color: $white;
+		margin-left: 1em;
+	}
+
+	.search-input,
+	.search-submit {
+		display: inline-block;
+		margin: 3px 0px;
+		vertical-align: bottom;
+	}
+
+	.search-input {
+		min-height: 36px;
+		border: 1px solid $dark_gray;
+		width: 120px;
+	}
+
+	.search-submit {
+		margin: 9px 0.5em;
+	}
+}
+
+@media screen and (min-width: 40.063em) { // 40.063em = 641px
+	.searchbar,
+	.searchbar .searchform {
+		height: 36px;
+	}
+
+	.searchbar {
+		.search-input {
+			margin: 6px 0px;
+			min-height: auto;
+		}
+
+		.search-submit {
+			margin: 5px 0.5em;
+		}
+	}
+}
+
+@media screen and (min-width: 48em) { // 48em = 768px
+	.searchbar {
+		border-left: 1px solid $black_25_opacity;
+		border-bottom: transparent;
+		position: absolute;
+		right: 200px;
+		top: auto;
+		width: 200px;
+
+		.search-input {
+			margin-left: 1em;
+		}
+	}
+}
+
+@media screen and (min-width: 64.063em) { // 64.063em = 1025px
+	.searchbar {
+		right: 280px;
+		width: 280px;
+
+		.three-col-r & ,
+		.three-col-l & {
+			right: 200px;
+			width: 200px;
+		}
+	}
+}
+
+/* Global Search Bar styles */
+.search-input {
+	color: $medium_gray;
+	display: inline-block;
+}
+
+.search-submit {
+	background: url(images/jgd-bizelite-assets.svg) no-repeat -204px -382px;
+	border: transparent;
+	display: inline-block;
+	height: 24px;
+	margin: 0px 0.5em;
+	min-width: 24px;
+	padding: 0px;
+	vertical-align: bottom;
+	width: 24px;
+}

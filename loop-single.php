@@ -3,22 +3,22 @@
 
 <!-- opens post div -->
 <div id="post-<?php the_id(); ?>" <?php post_class(); ?>>
-<h1 class="entry-title"><?php the_title(); ?></a></h1>
-<?php get_template_part( 'entry', 'meta' ); ?>
+	<h1 class="entry-title"><?php the_title(); ?></a></h1>
+	<?php get_template_part( 'entry', 'meta' ); ?>
 
-	<!-- opens entry div -->
-	<div class="entry clearfix">
-	<?php
-	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-		the_post_thumbnail('medium');
-	}
-	?>
-	<?php the_content(); ?>
-	<?php wp_link_pages('before=<p class="page-links">' . __( 'Page: ', 'jgd-bizelite' ) . '&after=</p>'); ?>
-				
-	<?php jgd_bizelite_disable_comments_switcher_customizer(); ?>
-	</div>
-	<!-- closes entry div -->
+		<!-- opens entry div -->
+		<div class="entry clearfix">
+			<?php
+			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+				the_post_thumbnail('medium');
+			}
+			?>
+			<?php the_content(); ?>
+			<?php wp_link_pages('before=<p class="page-links">' . __( 'Page: ', 'jgd-bizelite' ) . '&after=</p>'); ?>
+
+			<?php jgd_bizelite_disable_comments_switcher_customizer(); ?>
+		</div>
+		<!-- closes entry div -->
 
 </div>
 <!-- closes post div -->

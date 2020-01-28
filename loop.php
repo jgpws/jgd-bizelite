@@ -1,28 +1,37 @@
 <!-- begins the loop -->
-<?php if(have_posts()) : while ( have_posts() ) : the_post(); ?>
+<?php if(have_posts()) : while ( have_posts() ) : the_post();
+
+$mag_choices = get_theme_mod( 'jgd_bizelite_mag_choices', 'blog' );
+?>
 
 <!-- opens post div -->
 <div id="post-<?php the_id(); ?>" <?php post_class(); ?>>
-<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-<?php get_template_part( 'entry', 'meta' ); ?>
+	<?php if ( $mag_choices == 'magazine_2' ) { ?>
+	<div class="entry-header">
+	<?php
+		if( has_post_thumbnail() ) {
+			the_post_thumbnail( 'full' );
+		}
+	} ?>
+		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+		<?php $meta_info = ( $mag_choices == 'magazine_2' ) ? get_template_part( 'entry', 'meta-featured' ) : get_template_part( 'entry', 'meta' );
+		if ( $mag_choices == 'magazine_2' ) { ?>
+	</div>
+	<?php
+	} ?>
 
 	<!-- opens entry div -->
 	<div class="entry clearfix">
 	<?php
 	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-		if( 	get_theme_mod( 'layout_choices' ) == '2cr-mag' ||
-				get_theme_mod( 'layout_choices' ) == '3cr-mag' ||
-				get_theme_mod( 'layout_choices' ) == '2cl-mag' ||
-				get_theme_mod( 'layout_choices' ) == '3cl-mag' ) {
-			the_post_thumbnail( 'full' );
-		} else {
-			the_post_thumbnail( 'medium' );
+		if( $mag_choices != 'magazine_2' ) {
+			$post_tn = ( $mag_choices == 'magazine_1' ) ? the_post_thumbnail( 'full' ) : the_post_thumbnail( 'medium' );
 		}
 	}
 	?>
-	<?php 
+	<?php
 	if( is_home() ) {
-		the_content( __( 'Continue Reading...', 'jgd-bizelite' ) );
+		the_content( esc_html__( 'Continue Reading...', 'jgd-bizelite' ) );
 	} else if( ( is_author() || is_archive() ) ) {
 		the_excerpt();
 	} else {

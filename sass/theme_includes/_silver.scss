@@ -1,0 +1,191 @@
+/* Silver color scheme */
+// Base
+.silver {
+	background-color: $silver_alt;
+
+  a:link,
+  a:visited {
+  	color: $darker_silver_alt;
+  }
+
+  a:hover,
+  a:active {
+  	color: $dark_silver_alt;
+  }
+
+  table caption {
+  	background-color: $silver_alt;
+  }
+}
+
+// Buttons
+.silver {
+  .button-dropdown {
+    background-color: $dark_silver_alt;
+  }
+
+  a.button-primary {
+  	background-color: $silver;
+  	border-bottom-color: $dark_silver_alt;
+  	color: $text_color;
+  }
+
+  a.button-primary:hover {
+  	background-color: $silver_alt;
+  }
+}
+
+// Header/Footer
+.silver {
+  .branding,
+  #footer {
+	  background-color: $dark_silver_alt;
+  }
+
+  .blog-title a:link,
+  .blog-title a:visited {
+  	color: $white;
+  }
+
+  &.custom-header .site-title-block {
+  	background-color: $silver_50_opacity;
+  }
+
+  #access {
+  	background-color: $silver;
+  	border-bottom-color: $silver_alt;
+  }
+
+  .menubar-title,
+  .searchform label {
+  	color: $text_color;
+  }
+
+  .pagemenu {
+    .menu {
+    	background-color: $dark_silver_alt;
+    }
+
+    a:link,
+    a:visited {
+      color: $white;
+    }
+
+    a:active,
+    a:hover {
+      color: $black;
+    }
+  }
+
+  .menu-social a {
+  	color: $darker_silver_alt;
+  }
+
+  .site-info a:link,
+  .site-info a:visited {
+  	color: $white;
+  }
+
+  .up,
+  .down {
+  	background-color: $silver_50_opacity;
+  }
+}
+
+@media screen and (min-width: 40.063em) {
+	.silver #access {
+		border-bottom-color: $silver_alt;
+		border-top: transparent;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.silver .menu-social .social-panel-expand {
+		background-color: $silver;
+		border-bottom-color: $silver_alt;
+	}
+}
+
+// Posts/Pages
+.silver {
+  .nav-separator {
+	  background: url(images/jgd-bizelite-assets.svg) no-repeat -140px -45px;
+  }
+
+  .entry-title,
+  .entry-title-featured {
+    a:link,
+    a:visited {
+      color: $dark_silver_alt;
+    }
+
+    a:active,
+    a:hover {
+      color: $silver_alt;
+    }
+  }
+
+  .wp-caption-text,
+  .gallery-caption,
+  .wp-block-image figcaption,
+  .wp-block-gallery .blocks-gallery-image figcaption,
+  .wp-block-gallery .blocks-gallery-item figcaption {
+  	background-color: $dark_silver_alt;
+  }
+
+  .wp-caption-text {
+  	background-color: $dark_silver_alt;
+  }
+
+  .wp-caption a:link,
+  .wp-caption a:visited,
+  .gallery-caption a:link,
+  .gallery-caption a:visited {
+  	color: $link_color;
+  }
+
+  .bypostauthor {
+  	background-color: $light_silver_alt;
+  	color: $text_color;
+
+    a {
+      color: $black;
+    	text-decoration: none;
+    }
+
+    .button-primary {
+    	background-color: $silver_alt;
+    }
+  }
+
+  &.page-template-page_landing .blog-title a:visited,
+  &.page-template-page_landing .blog-title a:link {
+      color: $text_color;
+  }
+
+  .wp-block-pullquote.is-style-default {
+  	border-color: $silver;
+  }
+}
+
+// Sidebar
+.silver {
+  .widgettitle {
+	  background: url(images/jgd-bizelite-assets.svg) no-repeat -20px -173px $base_color;
+  }
+
+  #wp-calendar {
+  	border-color: $silver_alt;
+
+    tbody td {
+      border-color: $silver_alt;
+    }
+  }
+}
+
+@media screen and (min-width: 64.063em) {
+	.silver.three-col-r .widgettitle,
+	.silver.three-col-l .widgettitle {
+		background: url(images/jgd-bizelite-assets.svg) no-repeat -20px -323px $base_color;
+	}
+}

@@ -1,0 +1,173 @@
+/* Dark Background / Light Text */
+// Base
+.light-text {
+	color: #dddddd;
+
+  a:link,
+  a:visited {
+  	color: #ffffff;
+  }
+
+  a:active,
+  a:hover {
+  	color: #ededed;
+  }
+
+  table,
+  table th,
+  table td {
+  	border-color: #808080;
+  }
+
+  blockquote,
+  pre {
+  	background-color: #404040;
+  }
+}
+
+// Posts/Pages
+.light-text {
+  .entry-title,
+  .featured-cat-post {
+    a:link,
+    a:visited {
+      color: #ffffff;
+    }
+
+    a:active,
+    a:hover {
+      color: #ededed;
+    }
+  }
+
+  .entry {
+  	background-color: #202020;
+  }
+
+  .sticky .entry {
+  	border-color: #dddddd;
+  }
+
+  .comments-section .comment {
+  	border-color: #808080;
+  }
+
+  .bypostauthor pre {
+  	color: #f5f5f5;
+  }
+
+  .thread-odd {
+  	background-color: #404040;
+  }
+
+  .logged-in-as a:link,
+  .logged-in-as a:visited {
+  	color: #202020;
+  }
+}
+
+// Sidebar
+.light-text {
+  .widget-area ul ul li {
+  	color: #f5f5f5;
+  }
+
+  .widgettitle,
+  &.three-col-l .widgettitle,
+  &.three-col-r .widgettitle {
+  	background-color: #202020;
+  }
+
+  #wp-calendar {
+  	background-color: #404040;
+
+    thead {
+    	background-color: #202020;
+    }
+  }
+}
+
+// Color theme overrides
+.light-text {
+  &.blue {
+    .sticky .entry {
+    	border-color: #aaaae0;
+    }
+
+    .widgettitle {
+    	background-color: #000053;
+    }
+  }
+
+  &.green {
+    .sticky .entry {
+    	border-color: #b8d8b8;
+    }
+
+    .widgettitle {
+    	background-color: #0b3d0b;
+    }
+  }
+
+  &.red {
+    .sticky .entry {
+    	border-color: #daadad;
+    }
+
+    .widgettitle {
+    	background-color: #5a0000;
+    }
+  }
+
+  &.silver {
+    .sticky .entry {
+    	border-color: #e0e0e0;
+    }
+
+    a.post-edit-link:link,
+    a.more-link:link,
+    a.post-edit-link:visited,
+    a.more-link:visited,
+    a.comment-reply-link:link,
+    a.comment-reply-link:visited {
+    	color: #333333;
+    }
+
+    .widgettitle {
+    	background-color: #808080;
+    	color: #ffffff;
+    }
+  }
+
+  &.olive {
+    .sticky .entry {
+    	border-color: #e0e0aa;
+    }
+
+    a.post-edit-link:link,
+    a.more-link:link,
+    a.post-edit-link:visited,
+    a.more-link:visited,
+    a.comment-reply-link:link,
+    a.comment-reply-link:visited {
+    	color: #000000;
+    }
+
+    a.post-edit-link:hover,
+    a.more-link:hover,
+    a.post-edit-link:active,
+    a.more-link:active,
+    a.comment-reply-link:hover,
+    a.comment-reply-link:active {
+    	color: #ffffff;
+    }
+
+    .bypostauthor a.comment-reply-link.button-primary {
+      color: #ffffff;
+    }
+
+    .widgettitle {
+    	background-color: #535300;
+    }
+  }
+}

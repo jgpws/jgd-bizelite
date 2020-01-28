@@ -1,0 +1,84 @@
+/* -- Utility / State Rules -- */
+
+.alignleft {
+	float: left;
+	margin: 0px 1em 1em 0px !important;
+}
+
+.alignright {
+	float: right;
+	margin: 0px 0px 1em 1em !important;
+}
+
+.aligncenter {
+	margin: 0 auto;
+}
+
+img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignwide,
+.alignfull {
+	max-width: none !important;
+}
+
+.alignwide {
+	margin-left: -4% !important;
+	margin-right: -4% !important;
+}
+
+.alignfull {
+	margin-left: -8% !important;
+	margin-right: -8% !important;
+}
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100% !important;
+	height: auto;
+}
+
+.clearfix::after { // Stops floated images from overflowing parent container; Apply to parent container
+	clear: both;
+	content: " ";
+	display: block;
+	visibility: hidden;
+}
+
+/* JavaScript added States */
+.is-hidden {
+	position: absolute;
+	left: -9999px;
+}
+
+@supports( clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px) ) {
+	.is-hidden {
+		clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+	}
+}
+
+.is-collapsed {
+	overflow: hidden;
+}
+
+.is-expanded {
+	overflow: visible;
+}
+
+.screen-reader-text {
+	clip: rect( 1px, 1px, 1px, 1px );
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.is-zero-height {
+	max-height: 0px;
+}

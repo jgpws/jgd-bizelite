@@ -1,0 +1,32 @@
+/* Texture Removal */
+.no-texture #main.texture {
+	background-image: none;
+}
+
+/* Decorations Removal */
+.no-decs {
+  .widgettitle {
+  	background-image: none;
+  	background-color: transparent !important;
+  	padding: 8px 0 0 20px;
+  }
+
+  .widget-area ul li {
+  	border-top: transparent;
+  }
+}
+
+@media screen and (min-width: 64.063em) { // 64.063em = 1025px
+  .no-decs {
+    &.three-col-r,
+  	&.three-col-l {
+      .widgettitle {
+		    background: transparent;
+      }
+
+      .secondary.widget-area {
+        border-left: transparent;
+      }
+  	}
+  }
+}

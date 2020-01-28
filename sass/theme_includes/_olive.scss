@@ -1,0 +1,198 @@
+/* Olive color scheme */
+// Base
+.olive {
+	background-color: $olive;
+
+  a:link,
+  a:visited {
+  	color: $dark_olive;
+  }
+
+  a:hover,
+  a:active {
+  	color: $olive;
+  }
+
+  table caption {
+  	background-color: $dark_olive;
+  }
+}
+
+// Buttons
+.olive {
+  .button-dropdown {
+    background-color: $dark_olive;
+  }
+
+  a.button-primary {
+  	background-color: $medium_olive;
+  	border-bottom-color: $dark_olive;
+  	color: $black;
+  }
+
+  a.button-primary:hover {
+  	background-color: $dark_olive;
+  	color: $white;
+  }
+}
+
+// Header/Footer
+.olive {
+  .branding,
+  #footer {
+	  background-color: $dark_olive;
+  }
+
+  &.custom-header .site-title-block {
+  	background-color: $olive_50_opacity;
+  }
+
+  .blog-title a:link,
+  .blog-title a:visited {
+  	color: $white;
+  }
+
+  #access {
+  	background-color: $medium_olive;
+  	border-top-color: $olive;
+  }
+
+  .menubar-title {
+  	color: $dark_olive;
+  }
+
+  .pagemenu .menu {
+  	background-color: $dark_olive;
+  }
+
+  .searchbar .search-input {
+  	border-color: $olive;
+  }
+
+  .menu-social a {
+  	color: $dark_olive;
+  }
+
+  .site-info a:link,
+  .site-info a:visited {
+  	color: $white;
+  }
+
+  .up,
+  .down {
+  	background-color: rgba(83, 83, 0, 0.50);
+  }
+}
+
+@media screen and (min-width: 40.063em) {
+	.olive #access {
+		border-bottom-color: $olive;
+		border-top: transparent;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.olive .menu-social a {
+		color: $white;
+	}
+
+	.olive .menu-social .social-panel-expand {
+		background-color: $medium_olive;
+		border-bottom-color: $olive;
+	}
+
+	.olive .menu-social .social-panel-expand a {
+		color: $dark_olive;
+	}
+}
+
+// Posts/Pages
+.olive {
+  .nav-separator {
+	  background: url(images/jgd-bizelite-assets.svg) no-repeat -170px -45px;
+  }
+
+  .entry-title,
+  .entry-title-featured {
+    a:link,
+    a:visited {
+      color: $dark_olive;
+    }
+
+    a:active,
+    a:hover {
+      color: $olive;
+    }
+  }
+
+  .sticky .entry {
+  	border-color: $olive;
+  }
+
+  .wp-caption-text,
+  .gallery-caption,
+  .wp-block-image figcaption,
+  .wp-block-gallery .blocks-gallery-image figcaption,
+  .wp-block-gallery .blocks-gallery-item figcaption {
+  	background-color: $olive;
+  }
+
+  .wp-caption-text {
+  	background-color: $dark_olive;
+  }
+
+  .wp-caption a:link,
+  .wp-caption a:visited,
+  .gallery-caption a:link,
+  .gallery-caption a:visited {
+  	color: $link_color_light--olive;
+  }
+
+  .bypostauthor {
+  	background-color: $medium_olive;
+
+    a {
+      color: $black;
+    	text-decoration: none;
+    }
+
+    .button-primary {
+    	background-color: $dark_olive;
+    	color: $white;
+    }
+  }
+
+  .wp-block-pullquote.is-style-default {
+  	border-color: $medium_olive;
+  }
+
+  .page-template-page_landing .blog-title a:visited,
+  .page-template-page_landing .blog-title a:link {
+      color: $dark_olive;
+  }
+}
+
+.olive {
+  .widget-area ul ul li {
+	  color: $olive;
+  }
+
+  .widgettitle {
+  	background: url(images/jgd-bizelite-assets.svg) no-repeat -306px -173px $base_color;
+  }
+
+  #wp-calendar {
+  	border-color: $dark_olive;
+
+    tbody td {
+      border-color: $dark_olive;
+    }
+  }
+}
+
+@media screen and (min-width: 64.063em) {
+	.olive.three-col-r .widgettitle,
+	.olive.three-col-l .widgettitle {
+		background: url(images/jgd-bizelite-assets.svg) no-repeat -306px -323px $base_color;
+	}
+}

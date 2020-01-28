@@ -1,0 +1,98 @@
+/* Branding */
+.branding {
+	background-color: $black;
+  float: left;
+	width: 100%;
+}
+
+/* Site Title Block */
+.site-title-block {
+	padding: 20px 0px;
+
+  .custom-header & {
+    background-color: $black_50_opacity;
+  	border-bottom: 2px solid $white_25_opacity;
+  }
+}
+
+@media screen and (min-width: 40.063em) { // 40.063em = 641px
+  .site-title-block {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 64.063em) { // 64.063em = 1025px
+  .site-title-block {
+		width: 50%;
+	}
+}
+
+/* Site Title and Description */
+.blog-title {
+	font-size: 2.14em;
+	padding: 0px 40px;
+
+  a:link,
+  a:visited {
+    color: $white;
+  	text-decoration: none;
+  }
+
+  .wp-custom-logo & {
+    font-size: 1.71em;
+  }
+
+  &-landing {
+    background-color: transparent;
+  	border-bottom: 1px solid $black_25_opacity;
+  	font-size: 1.29em;
+  	padding: 6px 40px;
+  	text-align: center;
+  	width: auto;
+  }
+}
+
+@media screen and (min-width: 40.063em) {
+  .blog-title {
+    &-landing {
+      border-bottom: transparent;
+  		border-right: 1px solid $black_25_opacity;
+  		float: left;
+  		height: 36px;
+  		padding: 3px 2.5% 0 2.5%;
+    }
+
+    .wp-custom-logo & {
+      font-size: 2.14em;
+    }
+  }
+}
+
+.subtitle {
+  color: $white;
+	padding: 0px 40px;
+
+  .wp-custom-logo & {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 48em) { // 48em = 768px
+  .wp-custom-logo .subtitle {
+    font-size: 1.29em;
+  }
+}
+
+/* Custom Logo */
+.custom-logo-link img {
+  max-height: 100px;
+	width: auto;
+	float: left;
+}
+
+@media screen and (min-width: 64.063em) {
+  .custom-logo-link img {
+		margin: 20px;
+		max-height: 200px;
+	}
+}

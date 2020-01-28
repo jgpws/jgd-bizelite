@@ -6,41 +6,23 @@
 
 ( function( $ ) {
 	/* menubar */
-	var pageMenu = $( '#menubar .pagemenu' );
-	var catMenu = $( '#menubar .catmenu' );
-	var pagesTitle = $( '#menubar-pages' );
-	var catsTitle = $( '#menubar-cats' );
+	var pageMenu = $( '.menubar .pagemenu-vertical' );
+	var menuTitle = $( '.menubar-title' );
 	var pagesListItem = $( '.menubar-pages-list-item' );
 	var catsListItem = $( '.menubar-cats-list-item' );
 
-	// hide menubar .pagemenu and .catmenu divs on page load
-	$( pageMenu ).hide();
-	$( catMenu ).hide();
-
-	// toggle the .pagemenu and .catmenu divs when clicking each h3 .menu-down-arrow buttons
 	// Dynamically add the buttons to the menu titles
-	pagesTitle.after( '<button class="menu-down-arrow"></button>' );
-	catsTitle.after( '<button class="menu-down-arrow"></button>' );
+	menuTitle.after( '<button class="button-dropdown"></button>' );
 
-	// Assign them to variables
-	//var pagesMenuDownArrow = $( '#menubar-pages + .menu-down-arrow' );
-	//var catsMenuDownArrow = $( '#menubar-cats + .menu-down-arrow' );
-
-	// Toggle each when clicked
-	/*pagesMenuDownArrow.click( function() {
-		pageMenu.slideToggle( 'slow' );
+	// toggle the .pagemenu div when clicking each heading
+	pagesListItem.click( function( e ) {
+		e.stopPropagation();
+		$( this ).find( pageMenu ).toggleClass( 'is-zero-height' );
 	} );
 
-	catsMenuDownArrow.click( function() {
-		catMenu.slideToggle( 'slow' );
-	} );*/
-
-	pagesListItem.click( function() {
-		pageMenu.slideToggle( 'slow' );
-	} );
-
-	catsListItem.click( function() {
-		catMenu.slideToggle( 'slow' );
+	catsListItem.click( function( e ) {
+		e.stopPropagation();
+		$( this ).find( pageMenu ).toggleClass( 'is-zero-height' );
 	} );
 
 	// Hide .pagemenu and .catmenu when clicking outside of menus
@@ -48,143 +30,31 @@
 	// http://stackoverflow.com/questions/1403615/use-jquery-to-hide-a-div-when-the-user-clicks-outside-of-it
 
 	$( document ).click( function( e ) {
-		if ( !( pagesListItem ).is( e.target ) // if the target of the click is not the container.
-			&& ( pagesListItem ).has( e.target ).length === 0 ) {
-			pageMenu.slideUp( 'slow' );
-		}
-	} );
-
-	jQuery(document).click(function(e) {
-		if ( !( catsListItem ).is( e.target ) // if the target of the click is not the container.
-			&& ( catsListItem ).has( e.target ).length === 0 ) {
-			catMenu.slideUp( 'slow' );
+		if ( 	!( pagesListItem ).is( e.target ) && ( pagesListItem ).has( e.target ).length === 0 || // if the target of the click is not the container.
+ 					!( catsListItem ).is( e.target ) && ( catsListItem ).has( e.target ).length === 0 ) {
+			$( this ).find( pageMenu ).addClass( 'is-zero-height' );
 		}
 	} );
 
 	/* primary and secondary sidebars */
 
-	// find every second li tag that has ul below and add button .down-arrow-gray
-	$( '#primary > ul > li > ul > li' ).filter( ':has(ul)' ).prepend( '<button class="down-arrow-gray"></button>' );
-	$( '#secondary > ul > li > ul > li' ).filter( ':has(ul)' ).prepend( '<button class="down-arrow-gray"></button>' );
+	// find every second li tag that has ul below and add button .button-dropdown--light
+	$( '.primary > ul > li > ul > li' ).filter( ':has(ul)' ).prepend( '<button class="button-dropdown--light"></button>' );
+	$( '.secondary > ul > li > ul > li' ).filter( ':has(ul)' ).prepend( '<button class="button-dropdown--light"></button>' );
 
 	// hide ul.children on page load
-	$( '#primary ul.children' ).hide();
-	$( '#secondary ul.children' ).hide();
+	$( '.primary ul.children' ).hide();
+	$( '.secondary ul.children' ).hide();
 
 	// toggle ul below second li tag when second li tag is clicked
-	$( '#primary > ul > li > ul > li > ul.children' ).hide().end().find( 'div#primary > ul > li > ul > li .down-arrow-gray' ).click( function() {
+	$( '.primary > ul > li > ul > li > ul.children' ).hide().end().find( '.primary > ul > li > ul > li .button-dropdown--light' ).click( function() {
 		console.log( $( this ) );
 		$( this ).siblings( '.children' ).slideToggle();
 	} );
 
-	$( '#secondary > ul > li > ul > li > ul.children' ).hide().end().find( '#secondary > ul > li > ul > li .down-arrow-gray' ).click( function() {
-		$( '#secondary ul.children' ).slideToggle();
+	$( '.secondary > ul > li > ul > li > ul.children' ).hide().end().find( '.secondary > ul > li > ul > li .button-dropdown--light' ).click( function() {
+		$( '.secondary ul.children' ).slideToggle();
 	} );
-
-	/* Place smaller widget design behind .widgettitle only on 3-column layout */
-	/* adapted from http://churchm.ag/dynamically-applying-stylesheets-using-jquery/ */
-	var templateDir = jgd_bizelite_ScriptParams.templateDir;
-
-	// check for blue stylesheet with 3-column stylesheets
-	var blueExists = false;
-	var threeColExists = false;
-	$( 'link' ).each( function() {
-		var myId = this.id;
-		if (	myId === 'jgd-bizelite-3cr-css' ||
-				myId === 'jgd-bizelite-3cl-css' ||
-				myId === 'jgd-bizelite-3cr-mag-css' ||
-				myId === 'jgd-bizelite-3cl-mag-css' ) {
-			threeColExists = true;
-		}
-		if ( myId === 'jgd-bizelite-blue-css' ) {
-			blueExists = true;
-		}
-	} );
-
-	if( ( threeColExists === true ) && ( blueExists === true ) ) {
-		$( 'head' ).append( '<style type="text/css"> .widgettitle { background: url(' + templateDir + '/images/jgd-bizelite-assets.svg) no-repeat -306px -206px #FFFFFF; } </style>' );
-	}
-
-	// check for green stylesheet with 3-column stylesheets
-	var greenExists = false;
-	var threeColExists = false;
-	$( 'link' ).each( function() {
-    	var myId = this.id;
-    	if (	myId === 'jgd-bizelite-3cr-css' ||
-    			myId === 'jgd-bizelite-3cl-css' ||
-    			myId === 'jgd-bizelite-3cr-mag-css' ||
-    			myId === 'jgd-bizelite-3cl-mag-css' ) {
-    		threeColExists = true;
-    	}
-    	if ( myId === 'jgd-bizelite-green-css' ) {
-    		greenExists = true;
-    	}
-	} );
-
-	if( ( threeColExists === true ) && ( greenExists === true ) ) {
-		$( 'head' ).append( '<style type="text/css"> .widgettitle { background: url(' + templateDir + '/images/jgd-bizelite-assets.svg) no-repeat -20px -250px #FFFFFF; } </style>' );
-	}
-
-	// check for red stylesheet with 3-column stylesheets
-	var redExists = false;
-	var threeColExists = false;
-
-	$( 'link' ).each( function() {
-		var myId = this.id;
-		if (	myId === 'jgd-bizelite-3cr-css' ||
-    			myId === 'jgd-bizelite-3cl-css' ||
-    			myId === 'jgd-bizelite-3cr-mag-css' ||
-    			myId === 'jgd-bizelite-3cl-mag-css' ) {
-    		threeColExists = true;
-    	}
-    	if ( myId === 'jgd-bizelite-red-css' ) {
-    		redExists = true;
-    	}
-	} );
-
-	if( ( threeColExists === true ) && ( redExists === true ) ) {
-		$( 'head' ).append( '<style type="text/css"> .widgettitle { background: url(' + templateDir + '/images/jgd-bizelite-assets.svg) no-repeat -306px -250px #FFFFFF; } </style>' );
-	}
-
-	// check for silver stylesheet with 3-column stylesheets
-	var silverExists = false;
-	var threeColExists = false;
-	$( 'link' ).each( function() {
-    	myId = this.id;
-    	if (	myId === 'jgd-bizelite-3cr-css' ||
-    			myId === 'jgd-bizelite-3cl-css' ||
-    			myId === 'jgd-bizelite-3cr-mag-css' ||
-    			myId === 'jgd-bizelite-3cl-mag-css') {
-    		threeColExists = true;
-    	}
-    	if ( myId === 'jgd-bizelite-silver-css' ) {
-    		silverExists = true;
-    	}
-	} );
-
-	if( ( threeColExists === true ) && ( silverExists === true ) ) {
-		$( 'head' ).append( '<style type="text/css"> .widgettitle { background: url(' + templateDir + '/images/jgd-bizelite-assets.svg) no-repeat -20px -297px #FFFFFF; </style>' );
-	}
-
-	// check for olive stylesheet with 3-column stylesheets
-	var oliveExists = false;
-	var threeColExists = false;
-	$( 'link' ).each( function() {
-    	var myId = this.id;
-    	if (	myId === 'jgd-bizelite-3cr-css' ||
-    			myId === 'jgd-bizelite-3cl-css' ||
-    			myId === 'jgd-bizelite-3cr-mag-css' ||
-    			myId === 'jgd-bizelite-3cl-mag-css' ) {
-    		threeColExists = true;
-    	}
-    	if ( myId === 'jgd-bizelite-olive-css' ) {
-			oliveExists = true;
-		}
-	} );
-
-	if( ( threeColExists === true ) && ( oliveExists === true ) ) {
-		$( 'head' ).append( '<style type="text/css"> .widgettitle { background: url(' + templateDir + '/images/jgd-bizelite-assets.svg) no-repeat -306px -297px #FFFFFF; } </style>' );
-	}
 
 	// Up and down button script to scroll to top and down to sidebar in tablet widths and below
 	/* adapted from the code from the article "Using jQuery to add a dynamic Back To Top floating button with smooth scroll". See http://www.developerdrive.com/2013/07/using-jquery-to-add-a-dynamic-back-to-top-floating-button-with-smooth-scroll/ */
@@ -217,7 +87,7 @@
 
 		$( toBottom ).click( function ( event ) {
 			event.preventDefault();
-			$( "html, body" ).animate( { scrollTop: $( "#primary" ).offset().top }, duration250 );
+			$( "html, body" ).animate( { scrollTop: $( "#sidebar" ).offset().top }, duration250 );
 		} );
 	}
 	$( window ).load( animateUpDownButtons() );
@@ -265,33 +135,34 @@
 	socialPanel = $( '#menu-social' );
 
 	function addRevealButton() {
-		socialPanel.append( '<button class="menu-down-arrow"></button>' );
+		socialPanel.append( '<button class="button-dropdown"></button>' );
 	}
 
 	function hideOverflow() {
-		socialButtonUl.addClass( 'hide-overflow' ).removeClass( 'show-overflow' );
+		socialButtonUl.addClass( 'is-collapsed' ).removeClass( 'is-expanded' );
 	}
 
 	function showOverflow() {
-		socialButtonUl.addClass( 'show-overflow' ).removeClass( 'hide-overflow' );
+		socialButtonUl.addClass( 'is-expanded' ).removeClass( 'is-collapsed' );
 	}
 
 	function socialMoreInit() {
-		socialButtonUl.addClass( 'show-overflow' );
+		socialButtonUl.addClass( 'is-expanded' );
 		if ( windowWidth >= 768 ) {
 			overflowSwitch();
 		}
 	}
 
 	function revealBtnHandler() {
-		socialMoreButton = $( '#menu-social-items + .menu-down-arrow' );
+		socialMoreButton = $( '#menu-social-items + .button-dropdown' );
 		socialMoreButton.on( 'click', function() {
-			socialButtonUl.toggleClass( 'hide-overflow show-overflow social-panel-expand' );
+			socialButtonUl.toggleClass( 'is-collapsed is-expanded social-panel-expand' );
 		} );
 		//console.log( socialMoreButton );
 	}
 
 	function overflowSwitch() {
+		socialMoreButton = $( '#menu-social-items + .button-dropdown' );
 		if( socialPanel.width() === 200 ) {
 			socialButtonUl.width( 164 ); // Social media ul width minus width of .menu-down-arrow button, styled to 36 x 36 px
 			hideOverflow();

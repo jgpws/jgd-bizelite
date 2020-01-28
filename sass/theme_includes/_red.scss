@@ -1,0 +1,179 @@
+/* Red color scheme */
+// Base
+.red {
+	background-color: $red;
+
+  a:link,
+  a:visited {
+  	color: $dark_red;
+  }
+
+  a:hover,
+  a:active {
+  	color: $red;
+  }
+
+  table caption {
+  	background-color: $dark_red;
+  }
+}
+
+// Buttons
+.red {
+  .button-dropdown {
+    background-color: $dark_red;
+  }
+
+  a.button-primary {
+  	background-color: $medium_red;
+  	border-bottom-color: $dark_red;
+  	color: $white;
+  }
+
+  a.button-primary:hover {
+  	background-color: $dark_red;
+  }
+}
+
+// Header/Footer
+.red {
+  .branding,
+  #footer {
+  	background-color: $dark_red;
+  }
+
+  &.custom-header .site-title-block {
+  	background-color: $red_50_opacity;
+  }
+
+  .blog-title a:visited,
+  .blog-title a:link {
+  	color: $white;
+  }
+
+  #access {
+  	background-color: $medium_red;
+  	border-top-color: $red;
+  }
+
+  .pagemenu .menu {
+  	background-color: $dark_red;
+  }
+
+  .menu-social a:link,
+  .menu-social a:visited,
+  .site-info a:link,
+  .site-info a:visited {
+  	color: $white;
+  }
+
+  .searchbar .search-input {
+  	border-color: $red;
+  }
+
+  .up,
+  .down {
+  	background-color: $red_50_opacity;
+  }
+}
+
+@media screen and (min-width: 40.063em) {
+	.red #access {
+		border-bottom-color: $red;
+		border-top: transparent;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.red .menu-social .social-panel-expand {
+		background-color: $medium_red;
+		border-bottom-color: $red;
+	}
+}
+
+// Posts/Pages
+.red {
+  .nav-separator {
+	  background: url(images/jgd-bizelite-assets.svg) no-repeat -110px -45px;
+  }
+
+  .entry-title,
+  .entry-title-featured {
+    a:link,
+    a:visited {
+      color: $dark_red;
+    }
+
+    a:active,
+    a:hover {
+      color: $medium_red;
+    }
+  }
+
+  .sticky .entry {
+  	border-color: $red;
+  }
+
+  .wp-caption-text,
+  .gallery-caption,
+  .wp-block-image figcaption,
+  .wp-block-gallery .blocks-gallery-image figcaption,
+  .wp-block-gallery .blocks-gallery-item figcaption {
+  	background-color: $dark_red;
+  }
+
+  .wp-caption-text {
+  	background-color: $dark_red;
+  }
+
+  .wp-caption a:link,
+  .wp-caption a:visited,
+  .gallery-caption a:link,
+  .gallery-caption a:visited {
+  	color: $link_color_light--red;
+  }
+
+  .bypostauthor {
+  	background-color: $medium_red;
+  	color: $text_color_light;
+
+    a {
+      color: $white;
+    	text-decoration: none;
+    }
+
+		.button-primary {
+			background-color: $dark_red;
+		}
+  }
+
+  .wp-block-pullquote.is-style-default {
+    border-color: $medium_red;
+  }
+}
+
+// Sidebar
+.red {
+  .widget-area ul ul li {
+	  color: $red;
+  }
+
+  .widgettitle {
+  	background: url(images/jgd-bizelite-assets.svg) no-repeat -306px -123px $base_color;
+  }
+
+  #wp-calendar {
+  	border-color: $dark_red;
+
+    tbody td {
+      border-color: $dark_red;
+    }
+  }
+}
+
+@media screen and (min-width: 64.063em) {
+	.red.three-col-r .widgettitle,
+	.red.three-col-l .widgettitle {
+		background: url(images/jgd-bizelite-assets.svg) no-repeat -306px -273px $base_color;
+	}
+}

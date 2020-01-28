@@ -1,0 +1,169 @@
+/* -- Base styles -- */
+
+body {
+	font-family: FreeSerif, "Times New Roman", Times, serif;
+	color: $text_color;
+	background-color: $dark_gray;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+p,
+ul li,
+ol li,
+dl dt,
+dl dd,
+blockquote {
+	font-size: 1em;
+	line-height: 1.29em;
+}
+
+blockquote {
+	background-color: $light_gray;
+	margin: 20px;
+	padding: 1em;
+	font-style: italic;
+	clear: both;
+}
+
+blockquote p {
+	font-size: 1em;
+}
+
+h1 {
+	font-size: 2.14em; // ~30 px
+}
+
+h2 {
+	font-size: 1.71em; // ~24 px
+}
+
+h3 {
+	font-size: 1.29em; // ~18 px
+}
+
+h4 {
+	font-size: 1em; // ~16 px
+}
+
+h5 {
+	font-size: 0.875em; // ~14 px
+}
+
+h6 {
+	font-size: 0.75em; // ~12 px
+}
+
+a:link,
+a:visited {
+	color: $link_color;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: $link_hover_color;
+	text-decoration: underline;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a img {
+	border: 0;
+}
+
+video { // for responsive html5 videos
+  width: 100% !important;
+  height: auto !important;
+}
+
+table {
+	margin: 0 auto;
+}
+
+table,
+table th,
+table td {
+	border: 1px solid $light_gray;
+}
+
+table th, table td {
+	padding: 0.5em;
+}
+
+table caption {
+	color: $text_color_light;
+	background-color: $black;
+	font-weight: bold;
+}
+
+pre {
+	background-color: $light_gray;
+	border: 1px solid $silver;
+	overflow-x: auto;
+	padding: 1em;
+}
+
+.entry form p:first-child:first-letter {
+	font-size: 1em;
+}
+
+form label {
+	margin-right: 6px;
+}
+
+button,
+form input,
+form textarea,
+select {
+	color: $text_color;
+	border: 1px solid $silver;
+	padding: 2px 6px;
+	font-size: 1em;
+}
+
+form input:focus,
+form textarea:focus {
+	background-color: $light_gray;
+}
+
+button,
+form input,
+form textarea,
+select,
+select option {
+	font-family: FreeSerif, "Times New Roman", Times, serif;
+}
+
+button,
+.wp-block-button__link,
+form input[type="reset"],
+form input[type="submit"],
+select {
+	background-color: $light_gray;
+	margin: 6px;
+	min-width: 72px;
+}
+
+select option {
+	height: 36px;
+}
+
+form textarea {
+	width: 100%;
+}
+
+form input#searchsubmit {
+	border: 0;
+}
+
+hr {
+	border-bottom: 2px solid $black_25_opacity;
+	border-top: transparent;
+	margin: 1em 0;
+}

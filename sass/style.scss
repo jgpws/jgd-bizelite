@@ -1,0 +1,34 @@
+/*
+Theme Name: JGD-BizElite
+Theme URI: http://www.jasong-designs.com/2012/02/17/jgd-bizelite/
+Description: JGD-BizElite is a free, responsive/fixed theme with premium features. Ideal for a content heavy blog, JGD-BizElite is packed with options. Customizer modifications include WordPress's Custom Logo, Custom Header, custom menus and background. Additional Customizer options give you the ability to hide post date, tag and category links, and change the footer text. Eight layouts, six color schemes and two custom page templates are included.
+Author: Jason G. Designs
+Author URI: http://www.jasong-designs.com
+Version: 1.4.0
+Text Domain: jgd-bizelite
+Tags: two-columns, three-columns, custom-header, custom-background, custom-colors, editor-style, custom-menu, featured-images, theme-options, translation-ready
+License: General Public License, v3
+License URI: http://www.gnu.org/licenses/gpl.html
+*/
+
+@import "mixins";
+
+@import "variables";
+
+@import "reset";
+
+@import "base";
+
+@import "layout";
+
+@import "module";
+
+@import "utility";
+
+@import "themes";
+
+/* -- plugin support --*/
+
+.jetpack-video-wrapper iframe {
+	margin: 0 auto !important;
+}

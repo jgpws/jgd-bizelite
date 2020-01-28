@@ -1,0 +1,60 @@
+/* Social Profiles Menu */
+.menu-social {
+	border-bottom: 1px solid $black_25_opacity;
+	height: 36px;
+	text-align: center;
+	width: auto;
+
+	.menu-items {
+		list-style-type: none;
+		margin: 0px;
+		max-height: 36px;
+		padding: 0px;
+		transition: 0.5s;
+	}
+
+	.menu-item {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.button-dropdown {
+		margin: 9px;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+
+	a:link,
+	a:visited {
+		color: $white;
+		display: block;
+		height: 36px;
+		padding: 0.5em;
+		text-decoration: none;
+		width: 36px;
+	}
+}
+
+@media screen and (min-width: 48em) { // 48em = 768px
+	.menu-social {
+		border-left: transparent;
+		border-bottom: transparent;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 200px;
+
+		.social-panel-expand {
+			background-color: $medium_gray;
+			border-bottom: 4px solid $dark_gray;
+			max-height: 72px;
+		}
+	}
+}
+
+@media screen and (min-width: 64.063em) { // 64.063em = 1025px
+	.menu-social {
+		width: 280px;
+	}
+}

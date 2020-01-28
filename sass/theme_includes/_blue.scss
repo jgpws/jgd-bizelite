@@ -1,0 +1,179 @@
+/* Blue color scheme */
+// Base
+.blue {
+	background-color: $blue;
+
+  a:link,
+  a:visited {
+    color: $dark_blue;
+  }
+
+  a:hover,
+  a:active {
+    color: $blue;
+  }
+
+  table caption {
+  	background-color: $dark_blue;
+  }
+}
+
+// Buttons
+.blue {
+  .button-dropdown {
+  	background-color: $dark_blue;
+  }
+
+  a.button-primary {
+  	background-color: $medium_blue;
+  	border-bottom-color: $dark_blue;
+  	color: #ffffff;
+  }
+
+  a.button-primary:hover {
+  	background-color: $dark_blue;
+  }
+}
+
+// Header/Footer
+.blue {
+  .branding,
+  #footer {
+    background-color: $dark_blue;
+  }
+
+  &.custom-header .site-title-block {
+    background-color: $blue_50_opacity;
+  }
+
+  #access {
+  	background-color: $medium_blue;
+  	border-top: 4px solid $blue;
+  }
+
+  .pagemenu .menu {
+    background-color: $dark_blue;
+  }
+
+  .menu-social a:link,
+  .menu-social a:visited,
+  .site-info a:link,
+  .site-info a:visited {
+  	color: $white;
+  }
+
+  .searchbar .search-input {
+  	border-color: $blue;
+  }
+
+  .blog-title a:visited,
+  .blog-title a:link {
+  	color: $white;
+  }
+
+  .up,
+  .down {
+  	background-color: $blue_50_opacity;
+  }
+}
+
+@media screen and (min-width: 40.063em) {
+	.blue #access {
+		border-bottom-color: $blue;
+		border-top: transparent;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.blue .menu-social .social-panel-expand {
+		background-color: $medium_blue;
+		border-bottom-color: $blue;
+	}
+}
+
+// Posts/Pages
+.blue {
+  .nav-separator {
+  	background: url(images/jgd-bizelite-assets.svg) no-repeat -50px -45px;
+  }
+
+  .entry-title,
+  .entry-title-featured {
+    a:link,
+    a:visited {
+      color: $dark_blue;
+    }
+
+    a:active,
+    a:hover {
+      color: $medium_blue;
+    }
+  }
+
+  .sticky .entry {
+    border-color: $blue;
+  }
+
+  .wp-caption-text,
+  .gallery-caption,
+  .wp-block-image figcaption,
+  .wp-block-gallery .blocks-gallery-image figcaption,
+  .wp-block-gallery .blocks-gallery-item figcaption {
+  	background-color: $dark_blue;
+  }
+
+  .wp-caption-text {
+  	background-color: $dark_blue;
+  }
+
+  .wp-caption a:link,
+  .wp-caption a:visited,
+  .gallery-caption a:link,
+  .gallery-caption a:visited {
+  	color: $link_color_light--blue;
+  }
+
+  .bypostauthor {
+  	background-color: $medium_blue;
+  	color: $text_color_light;
+
+    a {
+      color: $white;
+    	text-decoration: none;
+    }
+
+    .button-primary {
+    	background-color: $dark_blue;
+    }
+  }
+
+  .wp-block-pullquote.is-style-default {
+  	border-color: $medium_blue;
+  }
+}
+
+// Sidebar
+.blue {
+  .widget-area ul ul li {
+  	color: $blue;
+  }
+
+  .widgettitle {
+  	background: url(images/jgd-bizelite-assets.svg) no-repeat -306px -73px $base_color;
+  }
+
+  #wp-calendar {
+  	border-color: $dark_blue;
+
+    tbody td {
+      border-color: $dark_blue;
+    }
+  }
+}
+
+@media screen and (min-width: 64.063em) {
+	.blue.three-col-r .widgettitle,
+	.blue.three-col-l .widgettitle {
+		background: url(images/jgd-bizelite-assets.svg) no-repeat -306px -223px $base_color;
+	}
+}

@@ -1,0 +1,129 @@
+/* Main Menu */
+
+// jQuery required for display of these menus
+.menubar {
+  list-style: none;
+  margin: 0;
+	padding: 0;
+
+	&-pages-list-item,
+	&-cats-list-item {
+    border-bottom: 1px solid $black_25_opacity;
+  	list-style: none;
+  }
+
+  &-title,
+  & .button-dropdown {
+    display: inline-block;
+  }
+
+  &-title {
+    color: $white;
+  	cursor: default;
+  	font-size: 1em;
+  	padding: 10px 20px;
+  }
+
+  & .button-dropdown {
+  	margin: 9px;
+    float: right;
+  }
+}
+
+@media screen and (min-width: 48em) { // 48em = 768px
+  .menubar {
+		float: left;
+		height: 40px;
+		position: relative;
+
+    &-title {
+      padding: 7.5px 20px;
+    }
+
+    &-pages-list-item,
+    &-cats-list-item {
+      border-bottom: transparent;
+  		border-right: 1px solid $black_25_opacity;
+  		float: left;
+  		min-width: 110px;
+  		padding: 0px;
+    }
+	}
+}
+
+.pagemenu {
+	.menu {
+		background-color: $black;
+		border: 10px solid $light_gray;
+		padding: 10px;
+	}
+}
+
+.pagemenu-vertical {
+	float: none;
+	max-height: 2500px;
+	overflow-y: hidden;
+	transition: all 1s ease-in-out;
+	z-index: 2;
+
+	.menu {
+    float: none;
+  	height: auto;
+  }
+
+	.page_item,
+  .cat-item,
+  .menu-item {
+    border: 0;
+  	float: none;
+  	list-style: none;
+
+    a {
+      display: block;
+      padding: 0.5em;
+
+      &:link,
+      &:visited {
+        color: $white;
+      	text-decoration: none;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $light_gray;
+      	color: $black;
+      }
+    }
+  }
+
+	.children,
+	.sub-menu {
+		padding-left: 0px;
+	}
+
+	.children .page_item,
+	.children .cat-item,
+	.sub-menu .menu-item {
+		margin-left: 10px;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.pagemenu-vertical {
+		margin-top: 0;
+		position: absolute;
+		top: 36px;
+
+		.page_item,
+    .cat-item,
+    .menu-item {
+      width: 200px;
+    }
+
+    .children .page_item,
+    .children .cat-item,
+    .sub-menu .menu-item {
+      width: auto;
+    }
+	}
+}

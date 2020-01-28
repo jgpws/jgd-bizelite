@@ -1,0 +1,44 @@
+/* Button Styles */
+
+.button-dropdown,
+.button-dropdown--light {
+  height: 16px;
+  min-width: 16px;
+  width: 16px;
+}
+
+.button-dropdown {
+  background: url(images/jgd-bizelite-assets.svg) no-repeat -20px -16px $dark_gray;
+  border: 1px solid $white;
+}
+
+.button-dropdown--light {
+  background: url(images/jgd-bizelite-assets.svg) no-repeat -49px -17px $white;
+	border: 1px solid #a0a0a0;
+}
+
+.button-primary {
+  background-color: $medium_gray;
+  border-bottom: 1px solid $dark_gray;
+  display: inline-block;
+	font-weight: bold;
+  font-size: 0.875em;
+	height: 36px;
+	min-width: 72px;
+	padding: 8px;
+	text-align: center;
+	vertical-align: middle;
+
+  &:hover {
+    background-color: $black;
+    text-decoration: none;
+  }
+
+  .bypostauthor & {
+    background-color: $black;
+  }
+}
+
+a.button-primary {
+  color: $white;
+}

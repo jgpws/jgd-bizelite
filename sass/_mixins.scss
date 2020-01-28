@@ -1,0 +1,16 @@
+// Mixins
+
+// Styles
+@mixin caption {
+  text-align: center;
+	background: none #000000;
+	color: #f5f5f5;
+	font-weight: bold;
+	padding: 6px;
+}
+
+@mixin hide-text-overflow {
+  overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

@@ -1,15 +1,13 @@
 <?php get_header(); ?>
 <?php global $post; ?>
 
-	<div class="texture">
-	
-	<div id="main">
-		
+	<div id="main" class="texture">
+
 		<div id="container">
-		
+
 			<div id="content">
 			<!-- see http://themeshaper.com/2009/06/29/wordpress-theme-index-template-tutorial/ -->
-			
+
 			<p class="post-parent-return"><?php _e( 'Return to:', 'jgd-bizelite' ); ?> <a href="<?php echo esc_url( get_permalink( $post->post_parent ) ); ?>" title="<?php printf( __( 'Return to %s', 'jgd-bizelite' ), esc_html( get_the_title( $post->post_parent ), 1 ) ); ?>" rev="attachment"><?php echo get_the_title( $post->post_parent ); ?></a></p>
 
 			<!-- begins the loop- single page -->
@@ -28,7 +26,7 @@
 				echo "<strong>Height:</strong> " . $attachment_metadata['height'] . "px</p>"; ?>
 				<?php the_content(); ?>
 				<?php wp_link_pages('before=<p class="page-links">' . __( 'Page: ', 'jgd-bizelite' ) . '&after=</p>'); ?>
-				
+
 				<?php jgd_bizelite_disable_comments_switcher_customizer(); ?>
 				</div>
 				<!-- closes entry div -->
@@ -42,13 +40,11 @@
 			<!-- ends the loop- single page -->
 
 			</div><!-- #content -->
-		
+
 		</div><!-- #container -->
-		
+
 		<?php get_sidebar(); ?>
-		
+
 	</div><!-- #main -->
 
-	</div><!-- .texture div -->
-	
 	<?php get_footer(); ?>
