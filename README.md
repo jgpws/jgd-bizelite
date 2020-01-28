@@ -7,7 +7,7 @@ JGD-BizElite is a free responsive/fixed theme with premium features. Ideal for a
 ## General Features
 * Clean, simple design
 * Support for logo upload
-* Support for a custom header background up to 1366 pixels wide
+* Support for a custom header background up to 1920 pixels wide
 * Ability for a website owner to change the background behind the website as well as other customizations listed in the *Customizer Options* section below
 * Post image thumbnail support on home, single posts and pages
 * Custom menus
