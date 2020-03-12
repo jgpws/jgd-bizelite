@@ -16,6 +16,18 @@
   table caption {
   	background-color: $silver_alt;
   }
+
+	.wp-block-calendar table tfoot {
+		a:link,
+		a:visited {
+			color: $darker_silver_alt;
+		}
+
+		a:hover,
+	  a:active {
+	    color: $dark_silver_alt;
+	  }
+	}
 }
 
 // Buttons

@@ -12,9 +12,12 @@ function jgd_bizelite_setup() {
 	/* automatic feed links */
 	add_theme_support( 'automatic-feed-links' );
 
-	/* Editor style that matches front end */
-	// see editor-style.css
-	add_editor_style();
+	/* Gutenberg editor styles that match front end */
+	add_editor_style( 'css/editor-style.css' );
+
+	add_theme_support( 'editor-styles' );
+
+	jgd_bizelite_gutenberg_colors();
 
 	/* Custom menus */
 	register_nav_menus(
@@ -63,6 +66,246 @@ function jgd_bizelite_setup() {
 }
 add_action( 'after_setup_theme', 'jgd_bizelite_setup' );
 
+function jgd_bizelite_gutenberg_colors() {
+	$color_choices = get_theme_mod( 'jgd_bizelite_style_choices', 'none' );
+	switch ( $color_choices ) {
+		case 'none':
+			add_theme_support(
+				'editor-color-palette', array(
+					array(
+						'name' => esc_html__( 'White', 'jgd-bizelite' ),
+						'slug' => 'white',
+						'color' => '#ffffff',
+					),
+					array(
+						'name' => esc_html__( 'Light Gray', 'jgd-bizelite' ),
+						'slug' => 'light-gray',
+						'color' => '#ededed',
+					),
+					array(
+						'name' => esc_html__( 'Medium Gray', 'jgd-bizelite' ),
+						'slug' => 'medium-gray',
+						'color' => '#808080',
+					),
+					array(
+						'name' => esc_html__( 'Dark Gray', 'jgd-bizelite' ),
+						'slug' => 'dark-gray',
+						'color' => '#333333',
+					),
+					array(
+						'name' => esc_html__( 'Black', 'jgd-bizelite' ),
+						'slug' => 'black',
+						'color' => '#000000',
+					),
+				)
+			);
+			break;
+		case 'blue':
+			add_theme_support(
+				'editor-color-palette', array(
+					array(
+						'name' => esc_html__( 'White', 'jgd-bizelite' ),
+						'slug' => 'white',
+						'color' => '#ffffff',
+					),
+					array(
+						'name' => esc_html__( 'Light Blue', 'jgd-bizelite' ),
+						'slug' => 'light-blue',
+						'color' => '#aaaae0',
+					),
+					array(
+						'name' => esc_html__( 'Medium Blue', 'jgd-bizelite' ),
+						'slug' => 'medium-blue',
+						'color' => '#5656c0',
+					),
+					array(
+						'name' => esc_html__( 'Blue', 'jgd-bizelite' ),
+						'slug' => 'blue',
+						'color' => '#000080',
+					),
+					array(
+						'name' => esc_html__( 'Dark Blue', 'jgd-bizelite' ),
+						'slug' => 'dark-blue',
+						'color' => '#000053',
+					),
+					array(
+						'name' => esc_html__( 'Black', 'jgd-bizelite' ),
+						'slug' => 'black',
+						'color' => '#000000',
+					),
+				),
+			);
+			break;
+		case 'green':
+			add_theme_support(
+				'editor-color-palette', array(
+					array(
+						'name' => esc_html__( 'White', 'jgd-bizelite' ),
+						'slug' => 'white',
+						'color' => '#ffffff',
+					),
+					array(
+						'name' => esc_html__( 'Light Green', 'jgd-bizelite' ),
+						'slug' => 'light-green',
+						'color' => '#b8d8b8',
+					),
+					array(
+						'name' => esc_html__( 'Medium Green', 'jgd-bizelite' ),
+						'slug' => 'medium-green',
+						'color' => '#71b071',
+					),
+					array(
+						'name' => esc_html__( 'Green', 'jgd-bizelite' ),
+						'slug' => 'green',
+						'color' => '#215e21',
+					),
+					array(
+						'name' => esc_html__( 'Dark Green', 'jgd-bizelite' ),
+						'slug' => 'dark-green',
+						'color' => '#0b3d0b',
+					),
+					array(
+						'name' => esc_html__( 'Black', 'jgd-bizelite' ),
+						'slug' => 'black',
+						'color' => '#000000',
+					),
+				),
+			);
+			break;
+		case 'red':
+			add_theme_support(
+				'editor-color-palette', array(
+					array(
+						'name' => esc_html__( 'White', 'jgd-bizelite' ),
+						'slug' => 'white',
+						'color' => '#ffffff',
+					),
+					array(
+						'name' => esc_html__( 'Light Red', 'jgd-bizelite' ),
+						'slug' => 'light-red',
+						'color' => '#daadad',
+					),
+					array(
+						'name' => esc_html__( 'Medium Red', 'jgd-bizelite' ),
+						'slug' => 'medium-red',
+						'color' => '#c55959',
+					),
+					array(
+						'name' => esc_html__( 'Dark Red', 'jgd-bizelite' ),
+						'slug' => 'dark-red',
+						'color' => '#5a0000',
+					),
+					array(
+						'name' => esc_html__( 'Black', 'jgd-bizelite' ),
+						'slug' => 'black',
+						'color' => '#000000',
+					),
+				),
+			);
+			break;
+		case 'silver':
+			add_theme_support(
+				'editor-color-palette', array(
+					array(
+						'name' => esc_html__( 'White', 'jgd-bizelite' ),
+						'slug' => 'white',
+						'color' => '#ffffff',
+					),
+					array(
+						'name' => esc_html__( 'Light Silver', 'jgd-bizelite' ),
+						'slug' => 'light-silver',
+						'color' => '#e0e0e0',
+					),
+					array(
+						'name' => esc_html__( 'Silver', 'jgd-bizelite' ),
+						'slug' => 'silver',
+						'color' => '#c0c0c0',
+					),
+					array(
+						'name' => esc_html__( 'Medium Gray', 'jgd-bizelite' ),
+						'slug' => 'medium-gray',
+						'color' => '#808080',
+					),
+					array(
+						'name' => esc_html__( 'Medium Dark Gray', 'jgd-bizelite' ),
+						'slug' => 'medium-dark-gray',
+						'color' => '#404040',
+					),
+					array(
+						'name' => esc_html__( 'Black', 'jgd-bizelite' ),
+						'slug' => 'black',
+						'color' => '#000000',
+					),
+				),
+			);
+			break;
+		case 'olive':
+			add_theme_support(
+				'editor-color-palette', array(
+					array(
+						'name' => esc_html__( 'White', 'jgd-bizelite' ),
+						'slug' => 'white',
+						'color' => '#ffffff',
+					),
+					array(
+						'name' => esc_html__( 'Light Olive', 'jgd-bizelite' ),
+						'slug' => 'light-olive',
+						'color' => '#e0e0aa',
+					),
+					array(
+						'name' => esc_html__( 'Medium Olive', 'jgd-bizelite' ),
+						'slug' => 'medium-olive',
+						'color' => '#c0c056',
+					),
+					array(
+						'name' => esc_html__( 'Olive', 'jgd-bizelite' ),
+						'slug' => 'olive',
+						'color' => '#808000',
+					),
+					array(
+						'name' => esc_html__( 'Dark Olive', 'jgd-bizelite' ),
+						'slug' => 'dark-olive',
+						'color' => '#535300',
+					),
+					array(
+						'name' => esc_html__( 'Black', 'jgd-bizelite' ),
+						'slug' => 'black',
+						'color' => '#000000',
+					),
+				),
+			);
+			break;
+	}
+}
+
+function jgd_bizelite_gutenberg_overrides() {
+	$color_choices = get_theme_mod( 'jgd_bizelite_style_choices', 'none' );
+	wp_enqueue_style( 'jgd-bizelite-gutenberg-style', get_template_directory_uri() . '/css/gutenberg-editor-style.css', false );
+	wp_enqueue_style( 'jgd-bizelite-gutenberg-colors', get_template_directory_uri() . '/css/gutenberg-colors.css', false );
+
+	switch ( $color_choices ) {
+		case 'blue':
+			wp_enqueue_style( 'jgd-bizelite-gutenberg-override-blue', get_template_directory_uri() . '/css/editor-style-blue.css', array( 'jgd-bizelite-gutenberg-style' ), '', false );
+			break;
+		case 'green':
+			wp_enqueue_style( 'jgd-bizelite-gutenberg-override-green', get_template_directory_uri() . '/css/editor-style-green.css', array( 'jgd-bizelite-gutenberg-style' ), '', false );
+			break;
+		case 'red':
+			wp_enqueue_style( 'jgd-bizelite-gutenberg-override-red', get_template_directory_uri() . '/css/editor-style-red.css', array( 'jgd-bizelite-gutenberg-style' ), '', false );
+			break;
+		case 'silver':
+			wp_enqueue_style( 'jgd-bizelite-gutenberg-override-silver', get_template_directory_uri() . '/css/editor-style-silver.css', array( 'jgd-bizelite-gutenberg-style' ), '', false );
+			break;
+		case 'olive':
+			wp_enqueue_style( 'jgd-bizelite-gutenberg-override-olive', get_template_directory_uri() . '/css/editor-style-olive.css', array( 'jgd-bizelite-gutenberg-style' ), '', false );
+			break;
+		default:
+			// do nothing
+			break;
+	}
+}
+add_action( 'enqueue_block_editor_assets', 'jgd_bizelite_gutenberg_overrides' );
+
 /* content width */
 if ( ! isset( $content_width ) ) {
 	$content_width = 740;
@@ -96,6 +339,7 @@ function jgd_bizelite_enqueue_styles() {
 	wp_register_style( 'jgd-bizelite-main-stylesheet', get_stylesheet_uri() );
 	wp_enqueue_style( 'jgd-bizelite-main-stylesheet' );
 	wp_enqueue_style( 'jgd-bizelite-icons', get_template_directory_uri() . '/css/themify-icons.css' );
+	wp_enqueue_style( 'jgd-bizelite-gutenberg-colors-frontend', get_template_directory_uri() . '/css/gutenberg-colors.css' );
 }
 
 /* enqueue JavaScripts necessary for this theme */
@@ -290,7 +534,9 @@ function jgd_bizelite_body_classes( $classes ) {
 			}
 			break;
 		case 'magazine_2':
-			$classes[] = 'mag-featured';
+			if ( ! is_singular() ) {
+				$classes[] = 'mag-featured';
+			}
 			break;
 		default:
 			$classes[] = '';
@@ -336,6 +582,12 @@ function jgd_bizelite_post_classes( $classes ) {
 				$classes[] = 'post-grid';
 				break;
 			} else {
+				$classes[] = 'post-blog';
+				break;
+			}
+		case 'magazine_2':
+			$classes[] = 'clearfix';
+			if ( is_singular() ) {
 				$classes[] = 'post-blog';
 				break;
 			}

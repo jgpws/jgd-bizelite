@@ -1,0 +1,112 @@
+/* -- Gutenberg colors for the front end -- */
+@import "variables";
+
+/* White */
+.has-white-background-color {
+  background-color: $white;
+}
+
+.has-white-color {
+  color: $white;
+}
+
+$black_colors: ("light-gray": $light_gray, "medium-gray": $medium_gray, "dark-gray": $dark_gray);
+$blue_colors: ("light-blue": $light_blue, "medium-blue": $medium_blue, "blue": $blue, "dark-blue": $dark_blue);
+$green_colors: ("light-green": $light_green, "medium-green": $medium_green, "green": $green, "dark-green": $dark_green);
+$red_colors: ("light-red": $light_red, "medium-red": $medium_red, "red": $red, "dark-red": $dark_red);
+$silver_colors: ("light-silver": $light_silver_alt, "silver": $silver, "medium-dark-gray": $darker_silver_alt);
+$olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "olive": $olive, "dark-olive": $dark_olive);
+
+/* Black color scheme */
+@each $slug, $var in $black_colors {
+  .has-#{$slug}-background-color {
+    background-color: #{$var};
+  }
+
+  .has-#{$slug}-color {
+    color: #{$var};
+  }
+}
+
+/* Blue color scheme */
+@each $slug, $var in $blue_colors {
+  .has-#{$slug}-background-color {
+    background-color: #{$var};
+  }
+
+  .has-#{$slug}-color {
+    color: #{$var};
+  }
+}
+
+/* Green color scheme */
+@each $slug, $var in $green_colors {
+  .has-#{$slug}-background-color {
+    background-color: #{$var};
+  }
+
+  .has-#{$slug}-color {
+    color: #{$var};
+  }
+}
+
+/* Red color scheme */
+@each $slug, $var in $red_colors {
+  .has-#{$slug}-background-color {
+    background-color: #{$var};
+  }
+
+  .has-#{$slug}-color {
+    color: #{$var};
+  }
+}
+
+/* Silver color scheme */
+@each $slug, $var in $silver_colors {
+  .has-#{$slug}-background-color {
+    background-color: #{$var};
+  }
+
+  .has-#{$slug}-color {
+    color: #{$var};
+  }
+}
+
+/* Olive color scheme */
+@each $slug, $var in $olive_colors {
+  .has-#{$slug}-background-color {
+    background-color: #{$var};
+  }
+
+  .has-#{$slug}-color {
+    color: #{$var};
+  }
+}
+
+/* Black */
+.has-black-background-color {
+  background-color: $black;
+}
+
+.has-black-color {
+  color: $black;
+}
+
+// Blue
+
+// Green
+/*.has-light-green-background-color {
+  background-color: $light_green;
+}
+
+.has-light-green-color {
+  color: $light_green;
+}
+
+.has-medium-green-background-color {
+  background-color: $medium_green;
+}
+
+.has-green-background-color {
+  color: $medium_green;
+}*/

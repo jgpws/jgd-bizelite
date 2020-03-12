@@ -29,7 +29,6 @@ p {
 }
 
 pre {
-	font-family: "Courier New", Courier, monospace;
 	font-size: 0.9em;
 }
 
@@ -158,6 +157,12 @@ table caption {
 	color: #f5f5f5;
 	background-color: #000000;
 	font-weight: bold;
+}
+
+pre,
+code,
+kbd {
+	font-family: "Courier New", Courier, monospace;
 }
 
 pre {
@@ -404,7 +409,7 @@ hr {
 }
 
 .custom-header .site-title-block {
-	background-color: rgba(0, 0, 0, 0.25);
+	background-color: rgba(0, 0, 0, 0.5);
 	border-bottom: 2px solid rgba(255, 255, 255, 0.25);
 }
 
@@ -1274,7 +1279,7 @@ hr {
 
 .up,
 .down {
-	background-color: rgba(0, 0, 0, 0.25);
+	background-color: rgba(0, 0, 0, 0.5);
 	background-image: url(images/jgd-bizelite-assets.svg);
 	background-repeat: no-repeat;
 	border: 1px solid #ffffff;
@@ -1500,38 +1505,47 @@ a.button-primary {
 	margin: 10px 20px;
 }
 
+#wp-calendar {
+	background-color: #ffffff;
+	border: 1px solid #333333;
+	border-collapse: collapse;
+}
+
+#wp-calendar thead {
+	background-color: #ededed;
+	text-align: center;
+}
+
+#wp-calendar th {
+	font-weight: bold;
+}
+
+#wp-calendar tbody td {
+	border: 1px solid #808080;
+	text-align: center;
+}
+
+#wp-calendar th,
+#wp-calendar td {
+	border: 0;
+}
+
 .widget_calendar .calendar_wrap {
 	width: 196px;
 	margin: 20px auto;
 }
 
 .widget_calendar #wp-calendar {
-	border: 0;
-	background-color: #ffffff;
-	border: 1px solid #333333;
-	border-collapse: collapse;
-	margin: 0px;
 	width: 100%;
-}
-
-.widget_calendar caption {
-	width: 196px;
-}
-
-.widget_calendar thead {
-	background-color: #ededed;
-	text-align: center;
 }
 
 .widget_calendar th,
 .widget_calendar td {
 	padding: 0;
-	border: 0;
 }
 
-.widget_calendar tbody td {
-	border: 1px solid #808080;
-	text-align: center;
+.widget_calendar caption {
+	width: 196px;
 }
 
 .widget_search .search-form {
@@ -1629,11 +1643,12 @@ a.more-link {
 	text-align: center;
 	background: none #000000;
 	color: #f5f5f5;
+	font-size: 1em;
 	font-weight: bold;
 	padding: 6px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: nowrap;
+	white-space: nowrap !important;
 }
 
 .wp-caption-text {
@@ -1711,7 +1726,8 @@ a.more-link {
 
 .wp-block-embed,
 .wp-block-gallery,
-.wp-block-image {
+.wp-block-image,
+.wp-block-calendar {
 	padding: 1em 0px;
 }
 
@@ -1745,11 +1761,12 @@ a.more-link {
 	text-align: center;
 	background: none #000000;
 	color: #f5f5f5;
+	font-size: 1em;
 	font-weight: bold;
 	padding: 6px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: nowrap;
+	white-space: nowrap !important;
 }
 
 .wp-block-gallery .blocks-gallery-image figcaption,
@@ -1768,6 +1785,21 @@ a.more-link {
 .wp-block-gallery img {
 	border: 1px solid #c0c0c0;
 	margin: 1em auto 0 auto;
+}
+
+.wp-block-quote p,
+.wp-block-quote cite {
+	font-size: 1em;
+}
+
+.wp-block-quote.is-style-large {
+	margin: 2em 0px;
+	padding: 2em;
+}
+
+.wp-block-quote.is-style-large p {
+	font-size: 1.5em;
+	line-height: 1.29em;
 }
 
 .wp-block-pullquote {
@@ -1808,6 +1840,53 @@ a.more-link {
 	max-width: none;
 }
 
+.wp-block-separator.is-style-default {
+	width: 50%;
+}
+
+.wp-block-separator.is-style-wide {
+	width: 100%;
+	border-width: 2px;
+}
+
+.wp-block-calendar table {
+	font-family: FreeSerif, "Times New Roman", Times, serif;
+}
+
+.wp-block-calendar table caption {
+	color: #ffffff;
+}
+
+.wp-block-calendar table tbody {
+	color: #333333;
+}
+
+.wp-block-calendar table tfoot {
+	font-weight: bold;
+}
+
+.wp-block-calendar table tfoot a:link,
+.wp-block-calendar table tfoot a:visited {
+	color: #3131c4;
+}
+
+.wp-block-calendar table tfoot a:active,
+.wp-block-calendar table tfoot a:hover {
+	color: #c03030;
+}
+
+.post-blog .wp-block-calendar caption,
+.type-page .wp-block-calendar caption {
+	padding: 0.25em;
+}
+
+.post-blog .wp-block-calendar th,
+.post-blog .wp-block-calendar td,
+.type-page .wp-block-calendar th,
+.type-page .wp-block-calendar td {
+	padding: 1em;
+}
+
 /* -- Layout overrides -- */
 /* 3 Column */
 @media screen and (min-width: 64.063em) {
@@ -1832,7 +1911,7 @@ a.more-link {
 	.three-col-l .widgettitle {
 		overflow: hidden;
 		text-overflow: ellipsis;
-		white-space: nowrap;
+		white-space: nowrap !important;
 		background: url(images/jgd-bizelite-assets.svg) no-repeat -20px -223px #ffffff;
 		width: 196px;
 	}
@@ -1867,6 +1946,10 @@ a.more-link {
 
 .mag-grid .post {
 	margin: 10px 2.5%;
+}
+
+.mag-grid .post .index-meta {
+	padding: 0px;
 }
 
 .mag-grid .entry-title {
@@ -1969,11 +2052,135 @@ a.more-link {
 }
 
 @media screen and (min-width: 85.438em) {
-	/* 85.438em = 1367px */
 	.mag-grid .post,
 	.mag-grid .type-page {
 		margin: 10px 1.5%;
 		width: 29.5%;
+	}
+}
+
+/* Featured Articles style */
+.mag-featured .post {
+	padding: 20px 10%;
+}
+
+.mag-featured .post.has-post-thumbnail:nth-of-type(1) {
+	background-color: rgba(0, 0, 0, 0.12);
+	border-bottom: 4px solid #c0c0c0;
+	clear: left;
+	margin: 20px 10%;
+	padding: 20px;
+}
+
+.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-header {
+	position: relative;
+}
+
+.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block {
+	background-color: rgba(0, 0, 0, 0.5);
+	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+	color: #ffffff;
+	padding: 10px 20px;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a:link,
+.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a:visited {
+	color: #ffffff;
+}
+
+.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a:active,
+.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a:hover {
+	color: #ededed;
+}
+
+.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap !important;
+	line-height: 1em;
+	font-size: 1.29rem;
+}
+
+.mag-featured .post.has-post-thumbnail:nth-of-type(1) .index-meta {
+	padding-bottom: 0px;
+}
+
+.mag-featured .post.has-post-thumbnail:nth-of-type(1) .index-meta p {
+	border-bottom-color: transparent;
+}
+
+.mag-featured .post.has-post-thumbnail:nth-of-type(1) .wp-post-image {
+	float: none;
+	margin: 0 0 1em 0;
+}
+
+.mag-featured:not(.paged) .post:nth-of-type(2),
+.mag-featured:not(.paged) .post:nth-of-type(3),
+.mag-featured:not(.paged) .post:nth-of-type(4) {
+	margin: 10px 10%;
+	padding: 0px;
+}
+
+.mag-featured:not(.paged) .post:nth-of-type(2) .entry-title,
+.mag-featured:not(.paged) .post:nth-of-type(3) .entry-title,
+.mag-featured:not(.paged) .post:nth-of-type(4) .entry-title {
+	font-size: 1.29rem;
+	line-height: 1em;
+	margin-bottom: 0.5em;
+	padding: 0px;
+}
+
+.mag-featured:not(.paged) .post:nth-of-type(2) .entry,
+.mag-featured:not(.paged) .post:nth-of-type(3) .entry,
+.mag-featured:not(.paged) .post:nth-of-type(4) .entry {
+	background-color: rgba(0, 0, 0, 0.12);
+	padding: 20px;
+}
+
+@media screen and (min-width: 40.063em) {
+	.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block {
+		width: auto;
+	}
+	.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title {
+		font-size: 1.71rem;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.mag-featured:not(.paged) .post:nth-of-type(2),
+	.mag-featured:not(.paged) .post:nth-of-type(3),
+	.mag-featured:not(.paged) .post:nth-of-type(4) {
+		display: inline-block;
+		vertical-align: top;
+		width: 37%;
+	}
+	.mag-featured:not(.paged) .post:nth-of-type(2),
+	.mag-featured:not(.paged) .post:nth-of-type(4) {
+		margin: 10px 2.5% 10px 10%;
+	}
+	.mag-featured:not(.paged) .post:nth-of-type(3) {
+		margin: 10px 10% 10px 2.5%;
+	}
+}
+
+@media screen and (min-width: 85.438em) {
+	.mag-featured:not(.paged) .post:nth-of-type(2),
+	.mag-featured:not(.paged) .post:nth-of-type(3),
+	.mag-featured:not(.paged) .post:nth-of-type(4) {
+		margin: 10px 1.5%;
+		width: 24%;
+	}
+	.mag-featured:not(.paged) .post:nth-of-type(2) {
+		margin: 10px 1.5% 10px 10%;
+	}
+	.mag-featured:not(.paged) .post:nth-of-type(3) {
+		margin: 10px 1.5%;
+	}
+	.mag-featured:not(.paged) .post:nth-of-type(4) {
+		margin: 10px 10% 10px 1.5%;
 	}
 }
 
@@ -2080,6 +2287,16 @@ img.aligncenter {
 
 .blue table caption {
 	background-color: #000053;
+}
+
+.blue .wp-block-calendar table tfoot a:link,
+.blue .wp-block-calendar table tfoot a:visited {
+	color: #000053;
+}
+
+.blue .wp-block-calendar table tfoot a:hover,
+.blue .wp-block-calendar table tfoot a:active {
+	color: #000080;
 }
 
 .blue .button-dropdown {
@@ -2248,6 +2465,16 @@ img.aligncenter {
 
 .green table caption {
 	background-color: #0b3d0b;
+}
+
+.green .wp-block-calendar table tfoot a:link,
+.green .wp-block-calendar table tfoot a:visited {
+	color: #0b3d0b;
+}
+
+.green .wp-block-calendar table tfoot a:hover,
+.green .wp-block-calendar table tfoot a:active {
+	color: #215e21;
 }
 
 .green .button-dropdown {
@@ -2424,6 +2651,16 @@ img.aligncenter {
 	background-color: #5a0000;
 }
 
+.red .wp-block-calendar table tfoot a:link,
+.red .wp-block-calendar table tfoot a:visited {
+	color: #5a0000;
+}
+
+.red .wp-block-calendar table tfoot a:hover,
+.red .wp-block-calendar table tfoot a:active {
+	color: #8b0000;
+}
+
 .red .button-dropdown {
 	background-color: #5a0000;
 }
@@ -2590,6 +2827,16 @@ img.aligncenter {
 
 .silver table caption {
 	background-color: #a0a0a0;
+}
+
+.silver .wp-block-calendar table tfoot a:link,
+.silver .wp-block-calendar table tfoot a:visited {
+	color: #404040;
+}
+
+.silver .wp-block-calendar table tfoot a:hover,
+.silver .wp-block-calendar table tfoot a:active {
+	color: #808080;
 }
 
 .silver .button-dropdown {
@@ -2768,6 +3015,16 @@ img.aligncenter {
 
 .olive table caption {
 	background-color: #535300;
+}
+
+.olive .wp-block-calendar table tfoot a:link,
+.olive .wp-block-calendar table tfoot a:visited {
+	color: #535300;
+}
+
+.olive .wp-block-calendar table tfoot a:hover,
+.olive .wp-block-calendar table tfoot a:active {
+	color: #808000;
 }
 
 .olive .button-dropdown {
@@ -2981,6 +3238,15 @@ img.aligncenter {
 	background-color: #202020;
 }
 
+.light-text .post-blog .entry,
+.light-text .type-page .entry {
+	border-color: #808080;
+}
+
+.light-text .index-meta p {
+	border-color: #808080;
+}
+
 .light-text .sticky .entry {
 	border-color: #dddddd;
 }
@@ -2999,6 +3265,23 @@ img.aligncenter {
 
 .light-text .logged-in-as a:link,
 .light-text .logged-in-as a:visited {
+	color: #202020;
+}
+
+.light-text .widget li {
+	border-color: #808080;
+}
+
+.light-text .gallery img,
+.light-text .wp-block-gallery img {
+	border-color: #808080;
+}
+
+.light-text .wp-block-calendar table tbody {
+	color: #dddddd;
+}
+
+.light-text .wp-block-calendar table th {
 	color: #202020;
 }
 

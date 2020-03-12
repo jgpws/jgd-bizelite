@@ -156,7 +156,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_section(
 		'jgd_bizelite_layout', array(
 			'title' => __( 'Layout', 'jgd-bizelite' ),
-			'description' => sprintf( esc_html__( '%1$sSelect from four column layouts and five layout styles.%2$s', 'jgd-bizelite' ), '<p>', '</p>' ),
+			'description' => sprintf( esc_html__( '%1$sSelect from four column layouts and five layout styles.%2$s%1$s* Refreshes the page%2$s', 'jgd-bizelite' ), '<p>', '</p>' ),
 			'priority' => 45,
 			'capability' => 'edit_theme_options',
 			'theme_supports' => ''
@@ -189,7 +189,6 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_setting(
 		'jgd_bizelite_mag_choices', array(
 			'default' => 'blog',
-			'transport' => 'postMessage',
 			'sanitize_callback' => 'jgd_bizelite_sanitize_mag_choices',
 		)
 	);
@@ -198,7 +197,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		'jgd_bizelite_mag_choices', array(
 			'type' => 'radio',
 			'priority' => 20,
-			'label' => esc_html__( 'Layout Styles', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Layout Styles *', 'jgd-bizelite' ),
 			'section' => 'jgd_bizelite_layout',
 			'choices' => array(
 				'blog' => esc_html__( 'Blog Layout (default)', 'jgd-bizelite' ),

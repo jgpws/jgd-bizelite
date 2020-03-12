@@ -139,28 +139,4 @@
 		} );
 	} );
 
-	wp.customize( 'jgd_bizelite_mag_choices', function( value ) {
-		value.bind( function( newval ) {
-			switch ( newval ) {
-				case 'blog_wide':
-					$( 'body' ).addClass( 'blog-wide' ).removeClass( 'mag-grid mag-featured' );
-					$( '.post' ).addClass( 'post-blog' ).removeClass( 'post-grid' );
-					break;
-				case 'magazine_1':
-					$( 'body' ).addClass( 'mag-grid' ).removeClass( 'blog-wide mag-featured' );
-					// Remove .post-grid class on all non blog entry index pages; replace with .post-blog
-					$( '.post' ).removeClass( 'post-grid' ).addClass( 'post-blog' );
-					// Add .post-grid class only to the blog index page
-					$( 'body.blog .post' ).addClass( 'post-grid' ).removeClass( 'post-blog' );
-					break;
-				case 'magazine_2':
-					$( 'body' ).addClass( 'mag-featured' ).removeClass( 'blog-wide mag-grid' );
-					break;
-				default:
-					$( 'body' ).removeClass( 'blog-wide mag-grid mag-featured' );
-					$( '.post' ).addClass( 'post-blog' ).removeClass( 'post-grid' );
-			}
-		} );
-	} );
-
 } ) ( jQuery );

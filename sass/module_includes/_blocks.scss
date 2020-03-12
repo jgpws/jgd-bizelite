@@ -12,7 +12,8 @@
 
 .wp-block-embed,
 .wp-block-gallery,
-.wp-block-image {
+.wp-block-image,
+.wp-block-calendar {
 	padding: 1em 0px;
 }
 
@@ -73,6 +74,23 @@
   }
 }
 
+.wp-block-quote {
+	p,
+	cite {
+		font-size: 1em;
+	}
+
+	&.is-style-large {
+		margin: 2em 0px;
+		padding: 2em;
+
+		p {
+			font-size: 1.5em;
+			line-height: 1.29em;
+		}
+	}
+}
+
 .wp-block-pullquote {
   margin: 2em 0px;
 	padding: 1em 0px;
@@ -109,4 +127,57 @@
     margin: 20px;
   	max-width: none;
   }
+}
+
+.wp-block-separator {
+	&.is-style-default {
+		width: 50%;
+	}
+
+	&.is-style-wide {
+		width: 100%;
+		border-width: 2px;
+	}
+}
+
+.wp-block-calendar {
+	table {
+		font-family: $serif;
+
+		caption {
+			color: $white;
+		}
+
+		tbody {
+			color: $text_color;
+		}
+
+		tfoot {
+			font-weight: bold;
+
+			a:link,
+			a:visited {
+				color: $link_color;
+			}
+
+			a:active,
+			a:hover {
+				color: $link_hover_color;
+			}
+		}
+	}
+}
+
+.post-blog,
+.type-page {
+	.wp-block-calendar {
+		caption {
+			padding: 0.25em;
+		}
+
+		th,
+		td {
+			padding: 1em;
+		}
+	}
 }

@@ -1,0 +1,26 @@
+.editor-styles-wrapper a:link,
+.editor-styles-wrapper a:visited {
+  color: #535300 !important;
+}
+
+.editor-styles-wrapper table caption,
+.wp-block-calendar table caption {
+  background-color: #535300 !important;
+}
+
+.editor-styles-wrapper .wp-caption-text,
+.editor-styles-wrapper .gallery-caption,
+.wp-block-image figcaption,
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+  background-color: #808000;
+}
+
+.wp-block-calendar table tfoot a:link,
+.wp-block-calendar table tfoot a:visited {
+  color: #535300;
+}
+
+.wp-block-pullquote.is-style-default {
+  border-color: #c0c056;
+}

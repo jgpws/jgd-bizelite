@@ -30,8 +30,8 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 
 == Changelog ==
 
-= 1.4.0 January 2020 =
-New version. Moved main menus to a new location under the header. Set a new maximum width of 1366px. Refactored the underlying code to follow SMACSS principles and use SASS. Removed individual stylesheets for custom colors/layouts and added to main stylesheet. using parent class names switched via body class filters and the Customizer.
+= 1.4.0 January 2020 to March 11 2020 =
+New version. Moved main menus to a new location under the header. Set a new maximum width of 1366px. Refactored the underlying code to follow SMACSS principles and use SASS. Removed individual stylesheets for custom colors/layouts and added to main stylesheet using parent class names switched via body class filters and the Customizer. Added a new Featured Articles post layout style.
 
 = 1.3.1 November 25 2019 =
 Adjusted Gutenberg gallery styles to be similar to non-Gutenberg galleries. Adjusted JavaScript for social media icon panel. Minor fix for captioned images. New readme.txt format required for themes.

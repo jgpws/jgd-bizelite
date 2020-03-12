@@ -1,0 +1,213 @@
+/* -- Editor Styles for the back end -- */
+body {
+	background-color: #ffffff;
+	color: #333333;
+	font-family: FreeSerif, "Times New Roman", Times, serif;
+	line-height: 1.29em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+p,
+ul li,
+ol li,
+dl dt,
+dl dd,
+blockquote {
+	font-size: 1em;
+}
+
+blockquote {
+	background-color: #ededed;
+	margin: 20px;
+	padding: 1em;
+	font-style: italic;
+	clear: both;
+}
+
+blockquote p {
+	font-size: 1em;
+}
+
+h1 {
+	font-size: 2.14em;
+}
+
+h2 {
+	font-size: 1.71em;
+}
+
+h3 {
+	font-size: 1.29em;
+}
+
+h4 {
+	font-size: 1em;
+}
+
+h5 {
+	font-size: 0.875em;
+}
+
+h6 {
+	font-size: 0.75em;
+}
+
+a:link,
+a:visited {
+	color: #3131c4;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: #c03030;
+	text-decoration: underline;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a img {
+	border: 0;
+}
+
+video {
+	width: 100% !important;
+	height: auto !important;
+}
+
+table {
+	margin: 0 auto;
+}
+
+table,
+table th,
+table td {
+	border: 1px solid #ededed;
+}
+
+table th, table td {
+	padding: 0.5em;
+}
+
+table caption {
+	color: #f5f5f5;
+	background-color: #000000;
+	font-weight: bold;
+}
+
+pre,
+code,
+kbd {
+	font-family: "Courier New", Courier, monospace;
+}
+
+pre {
+	background-color: #ededed;
+	border: 1px solid #c0c0c0;
+	overflow-x: auto;
+	padding: 1em;
+}
+
+.entry form p:first-child:first-letter {
+	font-size: 1em;
+}
+
+form label {
+	margin-right: 6px;
+}
+
+button:not(.components-button),
+form input,
+form textarea,
+select {
+	color: #333333;
+	border: 1px solid #c0c0c0;
+	padding: 2px 6px;
+	font-size: 1em;
+}
+
+form input:focus,
+form textarea:focus {
+	background-color: #ededed;
+}
+
+button:not(.components-button),
+form input,
+form textarea,
+select,
+select option {
+	font-family: FreeSerif, "Times New Roman", Times, serif;
+}
+
+button:not(.components-button),
+.wp-block-button__link,
+form input[type="reset"],
+form input[type="submit"],
+select {
+	background-color: #ededed;
+	margin: 6px;
+	min-width: 72px;
+}
+
+select option {
+	height: 36px;
+}
+
+form textarea {
+	width: 100%;
+}
+
+form input#searchsubmit {
+	border: 0;
+}
+
+hr {
+	border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+	border-top: transparent;
+	margin: 1em 0;
+}
+
+.wp-caption-text,
+.gallery-caption {
+	text-align: center;
+	background: none #000000;
+	color: #f5f5f5;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 6px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap !important;
+}
+
+#wp-calendar {
+	background-color: #ffffff;
+	border: 1px solid #333333;
+	border-collapse: collapse;
+}
+
+#wp-calendar thead {
+	background-color: #ededed;
+	text-align: center;
+}
+
+#wp-calendar th {
+	font-weight: bold;
+}
+
+#wp-calendar tbody td {
+	border: 1px solid #808080;
+	text-align: center;
+}
+
+#wp-calendar th,
+#wp-calendar td {
+	border: 0;
+}
+/*# sourceMappingURL=editor-style.css.map */

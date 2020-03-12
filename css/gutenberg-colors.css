@@ -1,0 +1,217 @@
+/* -- Gutenberg colors for the front end -- */
+/* White */
+.has-white-background-color {
+	background-color: #ffffff;
+}
+
+.has-white-color {
+	color: #ffffff;
+}
+
+/* Black color scheme */
+.has-light-gray-background-color {
+	background-color: #ededed;
+}
+
+.has-light-gray-color {
+	color: #ededed;
+}
+
+.has-medium-gray-background-color {
+	background-color: #808080;
+}
+
+.has-medium-gray-color {
+	color: #808080;
+}
+
+.has-dark-gray-background-color {
+	background-color: #333333;
+}
+
+.has-dark-gray-color {
+	color: #333333;
+}
+
+/* Blue color scheme */
+.has-light-blue-background-color {
+	background-color: #aaaae0;
+}
+
+.has-light-blue-color {
+	color: #aaaae0;
+}
+
+.has-medium-blue-background-color {
+	background-color: #5656c0;
+}
+
+.has-medium-blue-color {
+	color: #5656c0;
+}
+
+.has-blue-background-color {
+	background-color: #000080;
+}
+
+.has-blue-color {
+	color: #000080;
+}
+
+.has-dark-blue-background-color {
+	background-color: #000053;
+}
+
+.has-dark-blue-color {
+	color: #000053;
+}
+
+/* Green color scheme */
+.has-light-green-background-color {
+	background-color: #b8d8b8;
+}
+
+.has-light-green-color {
+	color: #b8d8b8;
+}
+
+.has-medium-green-background-color {
+	background-color: #71b071;
+}
+
+.has-medium-green-color {
+	color: #71b071;
+}
+
+.has-green-background-color {
+	background-color: #215e21;
+}
+
+.has-green-color {
+	color: #215e21;
+}
+
+.has-dark-green-background-color {
+	background-color: #0b3d0b;
+}
+
+.has-dark-green-color {
+	color: #0b3d0b;
+}
+
+/* Red color scheme */
+.has-light-red-background-color {
+	background-color: #daadad;
+}
+
+.has-light-red-color {
+	color: #daadad;
+}
+
+.has-medium-red-background-color {
+	background-color: #c55959;
+}
+
+.has-medium-red-color {
+	color: #c55959;
+}
+
+.has-red-background-color {
+	background-color: #8b0000;
+}
+
+.has-red-color {
+	color: #8b0000;
+}
+
+.has-dark-red-background-color {
+	background-color: #5a0000;
+}
+
+.has-dark-red-color {
+	color: #5a0000;
+}
+
+/* Silver color scheme */
+.has-light-silver-background-color {
+	background-color: #e0e0e0;
+}
+
+.has-light-silver-color {
+	color: #e0e0e0;
+}
+
+.has-silver-background-color {
+	background-color: #c0c0c0;
+}
+
+.has-silver-color {
+	color: #c0c0c0;
+}
+
+.has-medium-dark-gray-background-color {
+	background-color: #404040;
+}
+
+.has-medium-dark-gray-color {
+	color: #404040;
+}
+
+/* Olive color scheme */
+.has-light-olive-background-color {
+	background-color: #e0e0aa;
+}
+
+.has-light-olive-color {
+	color: #e0e0aa;
+}
+
+.has-medium-olive-background-color {
+	background-color: #c0c056;
+}
+
+.has-medium-olive-color {
+	color: #c0c056;
+}
+
+.has-olive-background-color {
+	background-color: #808000;
+}
+
+.has-olive-color {
+	color: #808000;
+}
+
+.has-dark-olive-background-color {
+	background-color: #535300;
+}
+
+.has-dark-olive-color {
+	color: #535300;
+}
+
+/* Black */
+.has-black-background-color {
+	background-color: #000000;
+}
+
+.has-black-color {
+	color: #000000;
+}
+
+/*.has-light-green-background-color {
+  background-color: $light_green;
+}
+
+.has-light-green-color {
+  color: $light_green;
+}
+
+.has-medium-green-background-color {
+  background-color: $medium_green;
+}
+
+.has-green-background-color {
+  color: $medium_green;
+}*/
+/*# sourceMappingURL=gutenberg-colors.css.map */

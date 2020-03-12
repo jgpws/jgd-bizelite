@@ -57,6 +57,10 @@
 
   .post {
   	margin: 10px 2.5%;
+
+  	.index-meta {
+  		padding: 0px;
+  	}
   }
 
   .entry-title {
@@ -157,7 +161,7 @@
   }
 }
 
-@media screen and (min-width: 85.438em) { /* 85.438em = 1367px */
+@media screen and (min-width: 85.438em) { // 85.438em = 1367px
 	.mag-grid {
     .post,
     .type-page {
@@ -165,4 +169,141 @@
 		  width: 29.5%;
     }
 	}
+}
+
+/* Featured Articles style */
+.mag-featured {
+  .post {
+    padding: 20px 10%;
+  }
+
+  .post.has-post-thumbnail:nth-of-type(1) {
+    background-color: $black_12_opacity;
+    border-bottom: 4px solid $silver;
+    clear: left;
+    margin: 20px 10%;
+    padding: 20px;
+
+    .entry-header {
+      position: relative;
+    }
+
+    .entry-title-block {
+      background-color: $black_50_opacity;
+      border-bottom: 2px solid $white_50_opacity;
+      color: $white;
+      padding: 10px 20px;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+
+        a:link,
+        a:visited {
+          color: $white;
+        }
+
+        a:active,
+        a:hover {
+          color: $light_gray;
+        }
+      }
+
+      .entry-title {
+        @include hide-text-overflow;
+        line-height: 1em;
+        font-size: 1.29rem;
+      }
+
+      .index-meta {
+        padding-bottom: 0px;
+
+        p {
+          border-bottom-color: transparent;
+        }
+      }
+
+      .wp-post-image {
+      	float: none;
+      	margin: 0 0 1em 0;
+      }
+    }
+}
+
+.mag-featured:not(.paged) {
+  .post:nth-of-type(2),
+  .post:nth-of-type(3),
+  .post:nth-of-type(4) {
+    margin: 10px 10%;
+    padding: 0px;
+
+    .entry-title {
+      font-size: 1.29rem;
+      line-height: 1em;
+      margin-bottom: 0.5em;
+      padding: 0px;
+    }
+
+    .entry {
+      background-color: $black_12_opacity;
+      padding: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 40.063em) { // 40.063em = 641px
+  .mag-featured {
+    .post.has-post-thumbnail:nth-of-type(1) {
+      .entry-title-block {
+        width: auto;
+      }
+
+      .entry-title {
+        font-size: 1.71rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48em) { // 48em = 768px
+  .mag-featured:not(.paged) {
+    .post:nth-of-type(2),
+    .post:nth-of-type(3),
+    .post:nth-of-type(4) {
+      display: inline-block;
+      vertical-align: top;
+      width: 37%;
+    }
+
+    .post:nth-of-type(2),
+    .post:nth-of-type(4) {
+      margin: 10px 2.5% 10px 10%;
+    }
+
+    .post:nth-of-type(3) {
+      margin: 10px 10% 10px 2.5%;
+    }
+  }
+}
+
+@media screen and (min-width: 85.438em) { // 85.438em = 1367px
+  .mag-featured:not(.paged) {
+    .post:nth-of-type(2),
+    .post:nth-of-type(3),
+    .post:nth-of-type(4) {
+      margin: 10px 1.5%;
+      width: 24%;
+    }
+
+    .post:nth-of-type(2) {
+      margin: 10px 1.5% 10px 10%;
+    }
+
+    .post:nth-of-type(3) {
+      margin: 10px 1.5%;
+    }
+
+    .post:nth-of-type(4) {
+      margin: 10px 10% 10px 1.5%;
+    }
+  }
 }

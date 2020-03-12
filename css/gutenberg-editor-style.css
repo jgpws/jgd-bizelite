@@ -1,0 +1,184 @@
+/* -- Gutenberg editor styles for the backend -- */
+.block-editor-block-list__block[data-type="core/paragraph"] p {
+	line-height: 1.29em;
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+	text-align: center;
+	background: none #000000;
+	color: #f5f5f5;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 6px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap !important;
+}
+
+.editor-post-title__block {
+	margin-bottom: 0px;
+}
+
+.editor-post-title__block .editor-post-title__input {
+	font-family: FreeSerif, "Times New Roman", Times, serif;
+	font-size: 2.14em;
+	padding: 0px;
+}
+
+.wp-block {
+	max-width: 740px;
+}
+
+.wp-block[data-align=wide] {
+	max-width: 1024px;
+}
+
+.wp-block[data-align=full] {
+	max-width: none;
+}
+
+.wp-block-cover p:first-of-type:first-letter, .wp-block-pullquote p:first-of-type:first-letter {
+	font-size: 1em;
+}
+
+.wp-block-gallery, .wp-block-image {
+	margin: 0px auto;
+}
+
+.wp-block-embed, .wp-block-gallery, .wp-block-image, .wp-block-calendar {
+	padding: 1em 0px;
+}
+
+.wp-block-image figcaption {
+	text-align: center;
+	background: none #000000;
+	color: #f5f5f5;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 6px;
+}
+
+.wp-block .wp-block-button {
+	color: #333333;
+}
+
+.wp-block .wp-block-button__link {
+	border: 1px solid #c0c0c0;
+	padding: 2px 6px;
+	font-size: 1em;
+	border-radius: 0px;
+}
+
+.wp-block .wp-block-button__link:link, .wp-block .wp-block-button__link:visited {
+	color: #333333 !important;
+}
+
+.wp-block .wp-block-button__link:hover, .wp-block .wp-block-button__link:active {
+	text-decoration: none;
+}
+
+.wp-block .wp-block-image img {
+	margin: 0px;
+}
+
+.wp-block .wp-block-image figcaption {
+	margin: -0.75em 0px 1em 0px;
+}
+
+.wp-block .wp-block-gallery img {
+	border: 1px solid #c0c0c0;
+	margin: 1em auto 0 auto;
+}
+
+.wp-block-quote {
+	border-left: transparent;
+}
+
+.wp-block-quote.is-style-large {
+	margin: 2em 0px;
+	padding: 2em;
+}
+
+.wp-block-quote p {
+	line-height: 1.29em;
+}
+
+.wp-block-quote__citation {
+	color: #333333;
+	font-size: 1em;
+	font-style: italic;
+}
+
+.wp-block-pullquote {
+	margin: 2em 0px;
+	padding: 1em 0px;
+}
+
+.wp-block-pullquote.is-style-default {
+	border-top: 2px solid #808080;
+	border-bottom: 2px solid #808080;
+}
+
+.wp-block-pullquote.is-style-default blockquote,
+.wp-block-pullquote.is-style-solid-color blockquote {
+	background-color: transparent;
+}
+
+.wp-block-pullquote.is-style-solid-color p {
+	font-size: 2em;
+}
+
+.wp-block-pullquote.is-style-solid-color {
+	background-color: #ededed;
+}
+
+.wp-block-pullquote__citation {
+	font-size: 1em;
+	font-style: italic;
+	text-transform: none;
+}
+
+.wp-block-separator {
+	margin: 1em auto !important;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	max-width: none;
+}
+
+.wp-block-separator.is-style-default {
+	width: 50%;
+}
+
+.wp-block-separator.is-style-wide {
+	width: 100%;
+	border-width: 2px;
+}
+
+.wp-block-calendar table {
+	font-family: FreeSerif, "Times New Roman", Times, serif;
+}
+
+.wp-block-calendar table caption {
+	color: #ffffff;
+}
+
+.wp-block-calendar table tbody {
+	color: #333333;
+}
+
+.wp-block-calendar table tfoot {
+	font-weight: bold;
+}
+
+.wp-block-calendar table tfoot a:link,
+.wp-block-calendar table tfoot a:visited {
+	color: #3131c4;
+}
+
+.wp-block-calendar table tfoot a:active,
+.wp-block-calendar table tfoot a:hover {
+	color: #c03030;
+}
+/*# sourceMappingURL=gutenberg-editor-style.css.map */

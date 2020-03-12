@@ -16,6 +16,18 @@
   table caption {
   	background-color: $dark_blue;
   }
+
+	.wp-block-calendar table tfoot {
+		a:link,
+		a:visited {
+			color: $dark_blue;
+		}
+
+		a:hover,
+	  a:active {
+	    color: $blue;
+	  }
+	}
 }
 
 // Buttons

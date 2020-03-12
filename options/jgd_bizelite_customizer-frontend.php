@@ -153,7 +153,7 @@ function jgd_bizelite_hide_postdate_switcher_customizer() {
 	if( $hide_postdate == 1 ) {
 		echo '';
 	} else { ?>
-		| <?php jgd_bizelite_postdate_icon() ?><?php echo get_the_date(); ?>
+		<span class="hide-post-date">	| <?php jgd_bizelite_postdate_icon() ?><?php echo get_the_date(); ?></span>
 	<?php
 	}
 }

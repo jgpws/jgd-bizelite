@@ -5,23 +5,23 @@
 
   a:link,
   a:visited {
-  	color: #ffffff;
+  	color: $white;
   }
 
   a:active,
   a:hover {
-  	color: #ededed;
+  	color: $light_gray;
   }
 
   table,
   table th,
   table td {
-  	border-color: #808080;
+  	border-color: $medium_gray;
   }
 
   blockquote,
   pre {
-  	background-color: #404040;
+  	background-color: $medium_dark_gray;
   }
 }
 
@@ -31,58 +31,84 @@
   .featured-cat-post {
     a:link,
     a:visited {
-      color: #ffffff;
+      color: $white;
     }
 
     a:active,
     a:hover {
-      color: #ededed;
+      color: $light_gray;
     }
   }
 
   .entry {
-  	background-color: #202020;
+  	background-color: $base_color_dark;
   }
+
+	.post-blog .entry,
+	.type-page .entry {
+		border-color: $medium_gray;
+	}
+
+	.index-meta p {
+		border-color: $medium_gray;
+	}
 
   .sticky .entry {
   	border-color: #dddddd;
   }
 
   .comments-section .comment {
-  	border-color: #808080;
+  	border-color: $medium_gray;
   }
 
   .bypostauthor pre {
-  	color: #f5f5f5;
+  	color: $text_color_light;
   }
 
   .thread-odd {
-  	background-color: #404040;
+  	background-color: $medium_dark_gray;
   }
 
   .logged-in-as a:link,
   .logged-in-as a:visited {
-  	color: #202020;
+  	color: $darker_gray;
   }
+
+	.widget li {
+		border-color: $medium_gray;
+	}
+
+	.gallery img,
+	.wp-block-gallery img {
+		border-color: $medium_gray;
+	}
+
+	.wp-block-calendar table tbody {
+		color: #dddddd;
+	}
+
+	.wp-block-calendar table th {
+		color: $darker_gray;
+	}
 }
 
 // Sidebar
 .light-text {
   .widget-area ul ul li {
-  	color: #f5f5f5;
+  	color: $text_color_light;
   }
 
   .widgettitle,
   &.three-col-l .widgettitle,
   &.three-col-r .widgettitle {
-  	background-color: #202020;
+  	background-color: $base_color_dark;
   }
 
   #wp-calendar {
-  	background-color: #404040;
+  	background-color: $medium_dark_gray;
 
     thead {
-    	background-color: #202020;
+    	background-color: $darker_gray;
     }
   }
 }
@@ -95,7 +121,7 @@
     }
 
     .widgettitle {
-    	background-color: #000053;
+    	background-color: $dark_blue;
     }
   }
 
@@ -105,7 +131,7 @@
     }
 
     .widgettitle {
-    	background-color: #0b3d0b;
+    	background-color: $dark_green;
     }
   }
 
@@ -115,13 +141,13 @@
     }
 
     .widgettitle {
-    	background-color: #5a0000;
+    	background-color: $dark_red;
     }
   }
 
   &.silver {
     .sticky .entry {
-    	border-color: #e0e0e0;
+    	border-color: $light_silver_alt;
     }
 
     a.post-edit-link:link,
@@ -130,12 +156,12 @@
     a.more-link:visited,
     a.comment-reply-link:link,
     a.comment-reply-link:visited {
-    	color: #333333;
+    	color: $text_color;
     }
 
     .widgettitle {
-    	background-color: #808080;
-    	color: #ffffff;
+    	background-color: $dark_silver_alt;
+    	color: $white;
     }
   }
 
@@ -150,7 +176,7 @@
     a.more-link:visited,
     a.comment-reply-link:link,
     a.comment-reply-link:visited {
-    	color: #000000;
+    	color: $black;
     }
 
     a.post-edit-link:hover,
@@ -159,15 +185,15 @@
     a.more-link:active,
     a.comment-reply-link:hover,
     a.comment-reply-link:active {
-    	color: #ffffff;
+    	color: $white;
     }
 
     .bypostauthor a.comment-reply-link.button-primary {
-      color: #ffffff;
+      color: $white;
     }
 
     .widgettitle {
-    	background-color: #535300;
+    	background-color: $dark_olive;
     }
   }
 }

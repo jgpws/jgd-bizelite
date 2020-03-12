@@ -1,0 +1,189 @@
+/* -- Gutenberg editor styles for the backend -- */
+@import "mixins";
+@import "variables";
+
+.block-editor-block-list__block[data-type="core/paragraph"] p {
+  line-height: 1.29em;
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+  @include caption;
+  @include hide-text-overflow;
+}
+
+.editor-post-title__block {
+  margin-bottom: 0px;
+}
+
+.editor-post-title__block .editor-post-title__input {
+  font-family: $serif;
+  font-size: 2.14em;
+  padding: 0px;
+}
+
+.wp-block {
+  max-width: 740px;
+
+  &[data-align=wide] {
+    max-width: 1024px;
+  }
+
+  &[data-align=full] {
+    max-width: none;
+  }
+
+  &-cover,
+  &-pullquote {
+    p:first-of-type:first-letter {
+      font-size: 1em;
+    }
+  }
+
+  &-gallery,
+  &-image {
+    margin: 0px auto;
+  }
+
+  &-embed,
+  &-gallery,
+  &-image,
+  &-calendar {
+    padding: 1em 0px;
+  }
+
+  &-image figcaption {
+  	@include caption;
+  }
+
+  .wp-block-button {
+    color: $text_color;
+
+    &__link {
+  		border: 1px solid $silver;
+  		padding: 2px 6px;
+  		font-size: 1em;
+      border-radius: 0px;
+
+      &:link,
+      &:visited {
+        color: $text_color !important;
+      }
+
+      &:hover,
+      &:active {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .wp-block-image {
+    img {
+    	margin: 0px;
+    }
+
+    figcaption {
+      margin: -0.75em 0px 1em 0px;
+    }
+  }
+
+  .wp-block-gallery {
+    img {
+      border: 1px solid $silver;
+    	margin: 1em auto 0 auto;
+    }
+  }
+
+  &-quote {
+    border-left: transparent;
+
+    &.is-style-large {
+      margin: 2em 0px;
+    	padding: 2em;
+    }
+
+    p {
+      line-height: 1.29em;
+    }
+
+    &__citation {
+      color: $text_color;
+      font-size: 1em;
+      font-style: italic;
+    }
+  }
+
+  &-pullquote {
+    margin: 2em 0px;
+  	padding: 1em 0px;
+
+    &.is-style-default {
+    	border-top: 2px solid $medium_gray;
+    	border-bottom: 2px solid $medium_gray;
+    }
+
+    &.is-style-default blockquote,
+    &.is-style-solid-color blockquote {
+    	background-color: transparent;
+    }
+
+    &.is-style-solid-color p {
+      font-size: 2em;
+    }
+
+    &.is-style-solid-color {
+    	background-color: $light_gray;
+    }
+
+    &__citation {
+      font-size: 1em;
+      font-style: italic;
+      text-transform: none;
+    }
+  }
+
+  &-separator {
+    margin: 1em auto !important;
+
+    &:not(.is-style-wide):not(.is-style-dots) {
+      max-width: none;
+    }
+
+    &.is-style-default {
+      width: 50%;
+    }
+
+    &.is-style-wide {
+  		width: 100%;
+  		border-width: 2px;
+  	}
+  }
+
+  &-calendar {
+    table {
+  		font-family: $serif;
+
+  		caption {
+  			color: $white;
+  		}
+
+  		tbody {
+  			color: $text_color;
+  		}
+
+  		tfoot {
+  			font-weight: bold;
+
+  			a:link,
+  			a:visited {
+  				color: $link_color;
+  			}
+
+  			a:active,
+  			a:hover {
+  				color: $link_hover_color;
+  			}
+  		}
+  	}
+  }
+}
