@@ -15,7 +15,7 @@ get_header(); ?>
 
 			<div id="content">
 
-			<?php get_template_part( 'loop', 'page' );
+			<?php get_template_part( 'template-parts/loop', 'page' );
 
 			// Begin parameters and display of category posts
 			$args = array(
@@ -35,13 +35,16 @@ get_header(); ?>
 
 			$cat_query1 = new WP_Query( $args );
 			$cat_query2 = new WP_Query( $args2 );
-			$cat_query3 = new WP_Query( $args3 ); ?>
+			$cat_query3 = new WP_Query( $args3 );
+			$cat1 = get_theme_mod( 'jgd_bizelite_cat_dropdown_1', 0 );
+			$cat2 = get_theme_mod( 'jgd_bizelite_cat_dropdown_2', 0 );
+			$cat3 = get_theme_mod( 'jgd_bizelite_cat_dropdown_3', 0 ); ?>
 
 				<div class="featured-cat-container">
 					<h2><?php jgd_bizelite_cat_section_title_customizer(); ?></h2>
 					<hr>
 					<?php if( $cat_query1->have_posts() ) : ?>
-					<h3 class="featured-cat-title"><?php echo get_cat_name( intval( get_theme_mod( 'jgd_bizelite_cat_dropdown_1' ) ) ); ?></h3>
+					<h3 class="featured-cat-title"><?php echo esc_html( get_cat_name( intval( $cat1 ) ) ); ?></h3>
 						<div class="featured-cat-panel">
 						<?php
 							while( $cat_query1->have_posts() ) : $cat_query1->the_post(); ?>
@@ -65,7 +68,7 @@ get_header(); ?>
 					endif;
 
 					if( $cat_query2->have_posts() ) : ?>
-					<h3 class="featured-cat-title"><?php echo get_cat_name( intval( get_theme_mod( 'jgd_bizelite_cat_dropdown_2' ) ) ); ?></h3>
+					<h3 class="featured-cat-title"><?php echo esc_html( get_cat_name( intval( $cat2 ) ) ); ?></h3>
 					<div class="featured-cat-panel">
 					<?php
 						while( $cat_query2->have_posts() ) : $cat_query2->the_post(); ?>
@@ -89,7 +92,7 @@ get_header(); ?>
 					endif;
 
 					if( $cat_query3->have_posts() ) : ?>
-					<h3 class="featured-cat-title"><?php echo get_cat_name( intval( get_theme_mod( 'jgd_bizelite_cat_dropdown_3' ) ) ); ?></h3>
+					<h3 class="featured-cat-title"><?php echo esc_html( get_cat_name( intval( $cat3 ) ) ); ?></h3>
 					<div class="featured-cat-panel">
 					<?php
 						while( $cat_query3->have_posts() ) : $cat_query3->the_post(); ?>

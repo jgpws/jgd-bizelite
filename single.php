@@ -9,7 +9,7 @@
 
 			<?php the_post_navigation(); ?>
 
-			<?php get_template_part( 'loop', 'single' ); ?>
+			<?php get_template_part( 'template-parts/loop', 'single' ); ?>
 
 			</div><!-- #content -->
 

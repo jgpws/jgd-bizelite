@@ -18,7 +18,7 @@ if( $first_query->have_posts() ) : while ( $first_query->have_posts() ) : $first
 			} ?>
 			<div class="entry-title-block">
 				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-				<?php get_template_part( 'entry', 'meta-featured' ); ?>
+				<?php get_template_part( 'template-parts/entry', 'meta-featured' ); ?>
 			</div>
 		</div>
 
@@ -33,7 +33,7 @@ if( $first_query->have_posts() ) : while ( $first_query->have_posts() ) : $first
 	<?php
 	endwhile;
 else: ?>
-<p><?php _e('Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite'); ?></p>
+<p><?php esc_html_e( 'Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite' ); ?></p>
 <?php endif;
 wp_reset_postdata();
 // ends first loop ?>
@@ -45,7 +45,7 @@ if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<!-- opens post div -->
 	<div id="post-<?php the_id(); ?>" <?php post_class(); ?>>
 		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-			<?php get_template_part( 'entry', 'meta-featured' ); ?>
+			<?php get_template_part( 'template-parts/entry', 'meta-featured' ); ?>
 
 		<!-- opens entry div -->
 		<div class="entry clearfix">
@@ -63,7 +63,7 @@ if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
  endwhile;
  wp_reset_postdata();
 else: ?>
-<p><?php _e('Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite'); ?></p>
+<p><?php esc_html_e('Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite'); ?></p>
 <?php endif;
 wp_reset_postdata();
 // ends second loop ?>

@@ -4,7 +4,7 @@
 <!-- opens post div -->
 <div id="post-<?php the_id(); ?>" <?php post_class(); ?>>
 		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-		<?php get_template_part( 'entry', 'meta' ); ?>
+		<?php get_template_part( 'template-parts/entry', 'meta' ); ?>
 
 	<!-- opens entry div -->
 	<div class="entry clearfix">
@@ -27,6 +27,6 @@
 <!-- closes post div -->
 
 <?php endwhile; else: ?>
-<p><?php _e('Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite'); ?></p>
+<p><?php esc_html_e( 'Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite' ); ?></p>
 <?php endif; ?>
 <!-- ends the loop -->

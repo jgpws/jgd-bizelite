@@ -5,13 +5,13 @@
 		<div id="container">
 
 			<div id="content">
-			<?php get_template_part( 'navigation' ); ?>
+			<?php get_template_part( 'template-parts/navigation' ); ?>
 
-			<h1 class="archive-title"><?php _e( 'Archive:', 'jgd-bizelite' ); ?></h1>
+			<h1 class="archive-title"><?php esc_html_e( 'Archive:', 'jgd-bizelite' ); ?></h1>
 			<h2 class="archive-title"><?php the_archive_title(); ?></h2>
 			<hr>
 
-			<?php get_template_part( 'loop' ); ?>
+			<?php get_template_part( 'template-parts/loop' ); ?>
 
 			</div><!-- #content -->
 

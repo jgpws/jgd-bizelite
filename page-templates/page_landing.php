@@ -16,7 +16,7 @@
 
 			<div id="content">
 
-			<?php get_template_part( 'loop', 'page' ); ?>
+			<?php get_template_part( 'template-parts/loop', 'page' ); ?>
 
 			</div><!-- #content -->
 

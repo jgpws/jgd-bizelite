@@ -200,6 +200,30 @@
       border-color: $dark_olive;
     }
   }
+
+	&.mag-featured {
+		.post.has-post-thumbnail:nth-of-type(1) {
+			.entry-title-block {
+				background-color: $white_50_opacity;
+				color: $text-color;
+
+				a:link,
+				a:visited {
+					color: $darker_silver_alt;
+				}
+
+				a.post-edit-link:link,
+				a.post-edit-link:visited {
+					color: $black;
+				}
+
+				a.post-edit-link:active,
+				a.post-edit-link:hover {
+					color: $white;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 64.063em) {

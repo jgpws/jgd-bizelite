@@ -14,8 +14,12 @@
 
 	<!-- opens entry div -->
 	<div class="entry clearfix">
-	<?php the_content(); ?>
-	<?php wp_link_pages('before=<p class="page-links">' . __( 'Page: ', 'jgd-bizelite' ) . '&after=</p>'); ?>
+	<?php
+	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+		the_post_thumbnail( 'medium' );
+	} ?>
+	<?php the_excerpt(); ?>
+	<?php wp_link_pages( 'before=<p class="page-links">' . __( 'Page: ', 'jgd-bizelite' ) . '&after=</p>' ); ?>
 	</div>
 	<!-- closes entry div -->
 
@@ -23,7 +27,7 @@
 <!-- closes post div -->
 
 <?php endwhile; else: ?>
-<p><?php _e( 'The search term you entered was not found. Would you like to enter another search term?', 'jgd-bizelite' ); ?></p>
+<p><?php esc_html_e( 'The search term you entered was not found. Would you like to enter another search term?', 'jgd-bizelite' ); ?></p>
 <?php get_search_form(); ?>
 <?php endif; ?>
 <!-- end the loop- search -->

@@ -1,7 +1,8 @@
 <div class="comments-section clearfix">
 <?php
 if ( post_password_required() ) {
-	echo sprintf( __( '%1$sThis post is password protected. Enter the password to view comments.%2$s', 'jgd-bizelite' ), '<p class="nocomments">', '</p>' );
+	/* translators: %1$s = <p class="nocomments">; %2$s = </p> */
+	echo sprintf( esc_html__( '%1$sThis post is password protected. Enter the password to view comments.%2$s', 'jgd-bizelite' ), '<p class="nocomments">', '</p>' );
 	return;
 }
 
@@ -19,8 +20,10 @@ if ( have_comments() ) : ?>
 <?php else : // this is displayed if there are no comments so far ?>
 	<?php if ( comments_open() ) :
 		// If comments are open, but there are no comments.
+		/* translators: %1$s = <p class="nocomments">; %2$s = </p> */
 		echo sprintf( esc_html__( '%1$sBe the first to comment!%2$s', 'jgd-bizelite' ), '<p class="nocomments">', '</p>' );
 	else : // comments are closed
+		/* translators: %1$s = <p class="nocomments">; %2$s = </p> */
 		echo sprintf( esc_html__( '%1$sComments are closed.%2$s', 'jgd-bizelite' ), '<p class="nocomments">', '</p>' );
 	endif;
 endif;

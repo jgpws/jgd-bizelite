@@ -168,7 +168,8 @@
 /* Archive Pages */
 .archive,
 .category,
-.tag {
+.tag,
+.search {
 	.archive-title {
 		padding: 20px 5% 0px 5%;
 	}
@@ -193,10 +194,15 @@
 	}
 }
 
+.search .search-subtitle {
+	padding: 0px 5%;
+}
+
 @media screen and (min-width: 85.438em) {
 	.archive,
 	.category,
-	.tag {
+	.tag,
+	.search {
 		.archive-title {
 			clear: both;
 			padding: 20px 10% 0px 10%;
@@ -210,6 +216,10 @@
 
 	.author .author-meta {
 		padding: 20px 10%;
+	}
+
+	.search .search-subtitle {
+		padding: 0px 10%;
 	}
 }
 

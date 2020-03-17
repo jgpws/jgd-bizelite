@@ -5,12 +5,13 @@
 		<div id="container">
 
 			<div id="content">
-			<?php get_template_part( 'navigation' ); ?>
+			<?php get_template_part( 'template-parts/navigation' ); ?>
 
-			<h3><?php _e( 'Search results for: ', 'jgd-bizelite' ); ?></h3>
-			<h1 class="subtitle-margin hr"><?php the_search_query(); ?></h1>
+			<h3 class="archive-title"><?php esc_html_e( 'Search results for: ', 'jgd-bizelite' ); ?></h3>
+			<h1 class="search-subtitle"><?php the_search_query(); ?></h1>
+			<hr>
 
-			<?php get_template_part( 'loop', 'search' ); ?>
+			<?php get_template_part( 'template-parts/loop', 'search' ); ?>
 
 			</div><!-- #content -->
 

@@ -5,7 +5,7 @@ Tags: two-columns, three-columns, custom-header, custom-background, custom-color
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.1.3
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl.html
 
@@ -29,6 +29,9 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 * Themify Icons, Copyright 2019 Lally Elias, SIL Open Font License, https://github.com/lykmapipo/themify-icons
 
 == Changelog ==
+
+= 1.4.1 March 16 2020 =
+Updated screenshot; Moved template parts to template-parts folder; Adjusted Search page for the Featured Articles layout; Search results pages now use excerpts.
 
 = 1.4.0 January 2020 to March 11 2020 =
 New version. Moved main menus to a new location under the header. Set a new maximum width of 1366px. Refactored the underlying code to follow SMACSS principles and use SASS. Removed individual stylesheets for custom colors/layouts and added to main stylesheet using parent class names switched via body class filters and the Customizer. Added a new Featured Articles post layout style.

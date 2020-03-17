@@ -5,7 +5,7 @@
 		<div id="container">
 
 			<div id="content">
-			<?php get_template_part( 'navigation' ); ?>
+			<?php get_template_part( 'template-parts/navigation' ); ?>
 			<?php
 			// current author info
 			$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval( $author ) ); ?>
@@ -15,9 +15,9 @@
 				<?php if( $curauth->user_url ) { ?>
 				<div class="author-meta">
 					<?php echo get_avatar( get_the_author_meta( 'ID' ). 32 ); ?>
-					<?php echo sprintf( __( '%1$sWebsite:%2$s', 'jgd-bizelite' ), '<h2>', '</h2>' ); ?>
+					<?php /* translators: %1$s = <h2>; %2$s = </h2> */ echo sprintf( esc_html__( '%1$sWebsite:%2$s', 'jgd-bizelite' ), '<h2>', '</h2>' ); ?>
 					<p><a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_url ( $curauth->user_url ); ?></a></p>
-					<h2><?php _e( 'About this author:', 'jgd-bizelite' ); ?></h2>
+					<h2><?php esc_html_e( 'About this author:', 'jgd-bizelite' ); ?></h2>
 					<?php the_archive_description( '<p class="author-description">', '</p>' ); ?>
 				</div>
 				<?php } ?>
@@ -43,7 +43,7 @@
 			<!-- closes post div -->
 
 			<?php endwhile; else: ?>
-			<p><?php _e('Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite'); ?></p>
+			<p><?php esc_html_e('Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite'); ?></p>
 			<?php endif; ?>
 
 			</div><!-- #content -->

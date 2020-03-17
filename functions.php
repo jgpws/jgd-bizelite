@@ -133,7 +133,7 @@ function jgd_bizelite_gutenberg_colors() {
 						'slug' => 'black',
 						'color' => '#000000',
 					),
-				),
+				)
 			);
 			break;
 		case 'green':
@@ -169,7 +169,7 @@ function jgd_bizelite_gutenberg_colors() {
 						'slug' => 'black',
 						'color' => '#000000',
 					),
-				),
+				)
 			);
 			break;
 		case 'red':
@@ -200,7 +200,7 @@ function jgd_bizelite_gutenberg_colors() {
 						'slug' => 'black',
 						'color' => '#000000',
 					),
-				),
+				)
 			);
 			break;
 		case 'silver':
@@ -236,7 +236,7 @@ function jgd_bizelite_gutenberg_colors() {
 						'slug' => 'black',
 						'color' => '#000000',
 					),
-				),
+				)
 			);
 			break;
 		case 'olive':
@@ -272,7 +272,7 @@ function jgd_bizelite_gutenberg_colors() {
 						'slug' => 'black',
 						'color' => '#000000',
 					),
-				),
+				)
 			);
 			break;
 	}
@@ -336,7 +336,7 @@ add_action( 'widgets_init', 'jgd_bizelite_secondary_sidebar_init' );
 
 /* enqueue all styles */
 function jgd_bizelite_enqueue_styles() {
-	wp_register_style( 'jgd-bizelite-main-stylesheet', get_stylesheet_uri() );
+	wp_register_style( 'jgd-bizelite-main-stylesheet', get_template_directory_uri() . '/style.min.css' );
 	wp_enqueue_style( 'jgd-bizelite-main-stylesheet' );
 	wp_enqueue_style( 'jgd-bizelite-icons', get_template_directory_uri() . '/css/themify-icons.css' );
 	wp_enqueue_style( 'jgd-bizelite-gutenberg-colors-frontend', get_template_directory_uri() . '/css/gutenberg-colors.css' );
@@ -346,7 +346,7 @@ function jgd_bizelite_enqueue_styles() {
 function jgd_bizelite_enqueue_scripts() {
 	wp_register_script(
 		'jgd-bizelite-script',
-		get_template_directory_uri() . '/scripts/jgd-bizelite-scripts.js',
+		get_template_directory_uri() . '/scripts/jgd-bizelite-scripts.min.js',
 		array('jquery'),
       '1.0', true
 	);
@@ -599,6 +599,19 @@ function jgd_bizelite_post_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'post_class', 'jgd_bizelite_post_classes' );
+
+/* Exclude pages from search results */
+/* https://www.wpbeginner.com/wp-tutorials/how-to-exclude-pages-from-wordpress-search-results/
+ */
+if ( !is_admin() ) {
+	function jgd_bizelite_search_filter( $query ) {
+		if ( $query->is_search ) {
+			$query->set( 'post_type', 'post' );
+		}
+		return $query;
+	}
+	add_filter( 'pre_get_posts', 'jgd_bizelite_search_filter' );
+}
 
 /* Remove inline styling in gallery code when a gallery is displayed, so the code validates */
 add_filter( 'use_default_gallery_style', '__return_false' );

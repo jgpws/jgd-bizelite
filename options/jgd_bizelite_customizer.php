@@ -19,12 +19,12 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		'jgd_bizelite_logo_options', array(
 			'type' => 'radio',
 			'label' => __( 'Logo/Title Alignment*', 'jgd-bizelite' ),
-			'description' => sprintf(__( '%1$s* = refeshes the page%2$s%1$s** = The title and subtitle are not displayed in Center logo alignment.%2$s', 'jgd-bizelite' ), '<p>', '</p>' ),
+			'description' => sprintf( /* translators: %1$s = <p>, %2$s = </p> */ esc_html__( '%1$s* = refeshes the page%2$s%1$s** = The title and subtitle are not displayed in Center logo alignment.%2$s', 'jgd-bizelite' ), '<p>', '</p>' ),
 			'section' => 'title_tagline',
 			'choices' => array(
-				'left' => __( 'Left (default)', 'jgd-bizelite' ),
-				'center' => __( 'Center**', 'jgd-bizelite' ),
-				'right' => __( 'Right', 'jgd-bizelite' ),
+				'left' => esc_html__( 'Left (default)', 'jgd-bizelite' ),
+				'center' => esc_html__( 'Center**', 'jgd-bizelite' ),
+				'right' => esc_html__( 'Right', 'jgd-bizelite' ),
 			),
 		)
 	);
@@ -156,7 +156,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_section(
 		'jgd_bizelite_layout', array(
 			'title' => __( 'Layout', 'jgd-bizelite' ),
-			'description' => sprintf( esc_html__( '%1$sSelect from four column layouts and five layout styles.%2$s%1$s* Refreshes the page%2$s', 'jgd-bizelite' ), '<p>', '</p>' ),
+			'description' => sprintf( /* translators: %1$s = <p>, %2$s = </p> */ esc_html__( '%1$sSelect from four column layouts and five layout styles.%2$s%1$s* Refreshes the page%2$s', 'jgd-bizelite' ), '<p>', '</p>' ),
 			'priority' => 45,
 			'capability' => 'edit_theme_options',
 			'theme_supports' => ''
@@ -212,7 +212,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_section(
 		'jgd_bizelite_display_options', array(
 			'title' => __( 'Display Options', 'jgd-bizelite' ),
-			'description' => sprintf(__( '%1$sIn this section, you can add and/or subtract content from your website or blog.%2$s%3$s* Refreshes the page%4$s', 'jgd-bizelite' ), '<p>', '</p>', '<p>', '</p>' ),
+			'description' => sprintf( /* translators: %1$s = <p>, %2$s = </p> */ esc_html__( '%1$sIn this section, you can add and/or subtract content from your website or blog.%2$s%1$s* Refreshes the page%2$s', 'jgd-bizelite' ), '<p>', '</p>' ),
 			'priority' => 85,
 			'capability' => 'edit_theme_options',
 			'theme_supports' => ''
@@ -267,7 +267,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control(
 		'jgd_bizelite_hide_comments_link', array(
 			'label' => __( 'Hide the comments link', 'jgd-bizelite' ),
-			'description' => sprintf(__( 'Use this with %1$sDisable comments%2$s to remove comment references on the index and single post pages.', 'jgd-bizelite' ), '<strong>', '</strong>' ),
+			'description' => sprintf( /* translators: %1$s = </strong>, %2$s = </strong> */ esc_html__( 'Use this with %1$sDisable comments%2$s to remove comment references on the index and single post pages.', 'jgd-bizelite' ), '<strong>', '</strong>' ),
 			'section' => 'jgd_bizelite_display_options',
 			'priority' => 30,
 			'active_callback' => 'jgd_bizelite_notpage_callback',
@@ -304,7 +304,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control(
 		'jgd_bizelite_hide_tags', array(
 			'label' => __( 'Hide tag links', 'jgd-bizelite' ),
-			'description' => sprintf(__( '%1$s*Warning:%2$s when hiding tag links on every page, your website will no longer have links to tag pages.', 'jgd-bizelite' ), '<strong>', '</strong>' ),
+			'description' => sprintf( /* translators: %1$s = <strong>, %2$s = </strong> */ esc_html__( '%1$s*Warning:%2$s when hiding tag links on every page, your website will no longer have links to tag pages.', 'jgd-bizelite' ), '<strong>', '</strong>' ),
 			'section' => 'jgd_bizelite_display_options',
 			'priority' => 50,
 			'active_callback' => 'jgd_bizelite_notpage_callback',
@@ -385,7 +385,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control(
 		'jgd_bizelite_footer_info', array(
 			'label' => __( 'Change the footer information', 'jgd-bizelite' ),
-			'description' => sprintf(__( '%1$s* Supports HTML%2$s%3$sTo retrieve the web address of this theme, see %5$sTheme web address%6$s in this theme\'s readme.txt file.%4$s', 'jgd-bizelite' ), '<p>', '</p>', '<p>', '</p>', '<strong>', '</strong>' ),
+			'description' => sprintf( /* translators: %1$s = <p>, %2$s = </p>, %3$s = <strong>, %4$s = </strong> */ esc_html__( '%1$s* Supports HTML%2$s%1$sTo retrieve the web address of this theme, see %3$sTheme web address%4$s in this theme\'s readme.txt file.%2$s', 'jgd-bizelite' ), '<p>', '</p>', '<strong>', '</strong>' ),
 			'section' => 'jgd_bizelite_display_options',
 			'priority' => 80,
 			'type' => 'textarea'
@@ -617,4 +617,3 @@ function jgd_bizelite_preview_js() {
 	wp_localize_script( 'jgd-bizelite-custom-css-preview', 'jbeCustomizer', $args );
 }
 add_action( 'customize_preview_init', 'jgd_bizelite_preview_js' );
-?>

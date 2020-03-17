@@ -1,10 +1,10 @@
-/*
+/*!
 Theme Name: JGD-BizElite
 Theme URI: http://www.jasong-designs.com/2012/02/17/jgd-bizelite/
 Description: JGD-BizElite is a free, responsive/fixed theme with premium features. Ideal for a content heavy blog, JGD-BizElite is packed with options. Customizer modifications include WordPress's Custom Logo, Custom Header, custom menus and background. Additional Customizer options give you the ability to hide post date, tag and category links, and change the footer text. Eight layouts, six color schemes and two custom page templates are included.
 Author: Jason G. Designs
 Author URI: http://www.jasong-designs.com
-Version: 1.4.0
+Version: 1.4.1
 Text Domain: jgd-bizelite
 Tags: two-columns, three-columns, custom-header, custom-background, custom-colors, editor-style, custom-menu, featured-images, theme-options, translation-ready
 License: General Public License, v3
@@ -1003,13 +1003,15 @@ hr {
 /* Archive Pages */
 .archive .archive-title,
 .category .archive-title,
-.tag .archive-title {
+.tag .archive-title,
+.search .archive-title {
 	padding: 20px 5% 0px 5%;
 }
 
 .archive hr,
 .category hr,
-.tag hr {
+.tag hr,
+.search hr {
 	margin-left: 5%;
 	margin-right: 5%;
 }
@@ -1026,21 +1028,30 @@ hr {
 	margin-top: 0px;
 }
 
+.search .search-subtitle {
+	padding: 0px 5%;
+}
+
 @media screen and (min-width: 85.438em) {
 	.archive .archive-title,
 	.category .archive-title,
-	.tag .archive-title {
+	.tag .archive-title,
+	.search .archive-title {
 		clear: both;
 		padding: 20px 10% 0px 10%;
 	}
 	.archive hr,
 	.category hr,
-	.tag hr {
+	.tag hr,
+	.search hr {
 		margin-left: 10%;
 		margin-right: 10%;
 	}
 	.author .author-meta {
 		padding: 20px 10%;
+	}
+	.search .search-subtitle {
+		padding: 0px 10%;
 	}
 }
 
@@ -2117,25 +2128,25 @@ a.more-link {
 	margin: 0 0 1em 0;
 }
 
-.mag-featured:not(.paged) .post:nth-of-type(2),
-.mag-featured:not(.paged) .post:nth-of-type(3),
-.mag-featured:not(.paged) .post:nth-of-type(4) {
+.mag-featured:not(.paged):not(.search) .post:nth-of-type(2),
+.mag-featured:not(.paged):not(.search) .post:nth-of-type(3),
+.mag-featured:not(.paged):not(.search) .post:nth-of-type(4) {
 	margin: 10px 10%;
 	padding: 0px;
 }
 
-.mag-featured:not(.paged) .post:nth-of-type(2) .entry-title,
-.mag-featured:not(.paged) .post:nth-of-type(3) .entry-title,
-.mag-featured:not(.paged) .post:nth-of-type(4) .entry-title {
+.mag-featured:not(.paged):not(.search) .post:nth-of-type(2) .entry-title,
+.mag-featured:not(.paged):not(.search) .post:nth-of-type(3) .entry-title,
+.mag-featured:not(.paged):not(.search) .post:nth-of-type(4) .entry-title {
 	font-size: 1.29rem;
 	line-height: 1em;
 	margin-bottom: 0.5em;
 	padding: 0px;
 }
 
-.mag-featured:not(.paged) .post:nth-of-type(2) .entry,
-.mag-featured:not(.paged) .post:nth-of-type(3) .entry,
-.mag-featured:not(.paged) .post:nth-of-type(4) .entry {
+.mag-featured:not(.paged):not(.search) .post:nth-of-type(2) .entry,
+.mag-featured:not(.paged):not(.search) .post:nth-of-type(3) .entry,
+.mag-featured:not(.paged):not(.search) .post:nth-of-type(4) .entry {
 	background-color: rgba(0, 0, 0, 0.12);
 	padding: 20px;
 }
@@ -2150,36 +2161,36 @@ a.more-link {
 }
 
 @media screen and (min-width: 48em) {
-	.mag-featured:not(.paged) .post:nth-of-type(2),
-	.mag-featured:not(.paged) .post:nth-of-type(3),
-	.mag-featured:not(.paged) .post:nth-of-type(4) {
+	.mag-featured:not(.paged):not(.search) .post:nth-of-type(2),
+	.mag-featured:not(.paged):not(.search) .post:nth-of-type(3),
+	.mag-featured:not(.paged):not(.search) .post:nth-of-type(4) {
 		display: inline-block;
 		vertical-align: top;
 		width: 37%;
 	}
-	.mag-featured:not(.paged) .post:nth-of-type(2),
-	.mag-featured:not(.paged) .post:nth-of-type(4) {
+	.mag-featured:not(.paged):not(.search) .post:nth-of-type(2),
+	.mag-featured:not(.paged):not(.search) .post:nth-of-type(4) {
 		margin: 10px 2.5% 10px 10%;
 	}
-	.mag-featured:not(.paged) .post:nth-of-type(3) {
+	.mag-featured:not(.paged):not(.search) .post:nth-of-type(3) {
 		margin: 10px 10% 10px 2.5%;
 	}
 }
 
 @media screen and (min-width: 85.438em) {
-	.mag-featured:not(.paged) .post:nth-of-type(2),
-	.mag-featured:not(.paged) .post:nth-of-type(3),
-	.mag-featured:not(.paged) .post:nth-of-type(4) {
+	.mag-featured:not(.paged):not(.search) .post:nth-of-type(2),
+	.mag-featured:not(.paged):not(.search) .post:nth-of-type(3),
+	.mag-featured:not(.paged):not(.search) .post:nth-of-type(4) {
 		margin: 10px 1.5%;
 		width: 24%;
 	}
-	.mag-featured:not(.paged) .post:nth-of-type(2) {
+	.mag-featured:not(.paged):not(.search) .post:nth-of-type(2) {
 		margin: 10px 1.5% 10px 10%;
 	}
-	.mag-featured:not(.paged) .post:nth-of-type(3) {
+	.mag-featured:not(.paged):not(.search) .post:nth-of-type(3) {
 		margin: 10px 1.5%;
 	}
-	.mag-featured:not(.paged) .post:nth-of-type(4) {
+	.mag-featured:not(.paged):not(.search) .post:nth-of-type(4) {
 		margin: 10px 10% 10px 1.5%;
 	}
 }
@@ -2609,6 +2620,16 @@ img.aligncenter {
 	border-color: #71b071;
 }
 
+.green.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a.post-edit-link:link,
+.green.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a.post-edit-link:visited {
+	color: #0b3d0b;
+}
+
+.green.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a.post-edit-link:active,
+.green.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a.post-edit-link:hover {
+	color: #ffffff;
+}
+
 .green .widget-area ul ul li {
 	color: #215e21;
 }
@@ -2979,6 +3000,16 @@ img.aligncenter {
 	border-color: #c0c0c0;
 }
 
+.silver.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block {
+	background-color: rgba(255, 255, 255, 0.5);
+	color: #333333;
+}
+
+.silver.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a:link,
+.silver.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a:visited {
+	color: #404040;
+}
+
 .silver .widgettitle {
 	background: url(images/jgd-bizelite-assets.svg) no-repeat -20px -173px #ffffff;
 }
@@ -3185,6 +3216,26 @@ img.aligncenter {
 
 .olive #wp-calendar tbody td {
 	border-color: #535300;
+}
+
+.olive.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block {
+	background-color: rgba(255, 255, 255, 0.5);
+	color: #333333;
+}
+
+.olive.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a:link,
+.olive.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a:visited {
+	color: #404040;
+}
+
+.olive.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a.post-edit-link:link,
+.olive.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a.post-edit-link:visited {
+	color: #000000;
+}
+
+.olive.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a.post-edit-link:active,
+.olive.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a.post-edit-link:hover {
+	color: #ffffff;
 }
 
 @media screen and (min-width: 64.063em) {

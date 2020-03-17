@@ -169,6 +169,22 @@
   .wp-block-pullquote.is-style-default {
   	border-color: $medium_green;
   }
+
+	&.mag-featured {
+		.post.has-post-thumbnail:nth-of-type(1) {
+			.entry-title-block {
+				a.post-edit-link:link,
+				a.post-edit-link:visited {
+					color: $dark_green;
+				}
+
+				a.post-edit-link:active,
+				a.post-edit-link:hover {
+					color: $white;
+				}
+			}
+		}
+	}
 }
 
 // Sidebar

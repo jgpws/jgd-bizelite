@@ -229,7 +229,7 @@
     }
 }
 
-.mag-featured:not(.paged) {
+.mag-featured:not(.paged):not(.search) {
   .post:nth-of-type(2),
   .post:nth-of-type(3),
   .post:nth-of-type(4) {
@@ -265,7 +265,7 @@
 }
 
 @media screen and (min-width: 48em) { // 48em = 768px
-  .mag-featured:not(.paged) {
+  .mag-featured:not(.paged):not(.search) {
     .post:nth-of-type(2),
     .post:nth-of-type(3),
     .post:nth-of-type(4) {
@@ -286,7 +286,7 @@
 }
 
 @media screen and (min-width: 85.438em) { // 85.438em = 1367px
-  .mag-featured:not(.paged) {
+  .mag-featured:not(.paged):not(.search) {
     .post:nth-of-type(2),
     .post:nth-of-type(3),
     .post:nth-of-type(4) {

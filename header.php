@@ -63,6 +63,6 @@
 			<div class="searchbar">
 			<?php get_search_form(); ?>
 			</div><!-- #searchbar -->
-			<?php get_template_part( 'menu', 'social' ); ?>
+			<?php get_template_part( 'template-parts/menu', 'social' ); ?>
 		</div><!-- #access -->
 	</div><!-- #header -->

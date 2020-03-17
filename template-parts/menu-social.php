@@ -20,5 +20,3 @@ if( has_nav_menu( 'social_profiles' ) ) {
 		)
 	);
 }
-
-?>

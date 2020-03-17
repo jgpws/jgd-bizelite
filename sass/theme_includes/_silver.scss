@@ -178,6 +178,20 @@
   .wp-block-pullquote.is-style-default {
   	border-color: $silver;
   }
+
+	&.mag-featured {
+		.post.has-post-thumbnail:nth-of-type(1) {
+			.entry-title-block {
+				background-color: $white_50_opacity;
+				color: $text-color;
+
+				a:link,
+				a:visited {
+					color: $darker_silver_alt;
+				}
+			}
+		}
+	}
 }
 
 // Sidebar
