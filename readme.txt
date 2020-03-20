@@ -5,7 +5,7 @@ Tags: two-columns, three-columns, custom-header, custom-background, custom-color
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.1.3
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl.html
 
@@ -29,6 +29,9 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 * Themify Icons, Copyright 2019 Lally Elias, SIL Open Font License, https://github.com/lykmapipo/themify-icons
 
 == Changelog ==
+
+= 1.4.2 March 16 2020 =
+Version 1.4.1 was broken because I forgot to copy over all JavaScript files to the dist folder in Gulp. This is fixed in version 1.4.2.
 
 = 1.4.1 March 16 2020 =
 Updated screenshot; Moved template parts to template-parts folder; Adjusted Search page for the Featured Articles layout; Search results pages now use excerpts.
