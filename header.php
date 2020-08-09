@@ -11,6 +11,11 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+} else {
+	do_action( 'wp_body_open' );
+} ?>
 <!-- http://themeshaper.com/2009/06/24/creating-wordpress-theme-html-structure-tutorial/ -->
 <div id="wrapper" class="hfeed">
 	<div id="header">
