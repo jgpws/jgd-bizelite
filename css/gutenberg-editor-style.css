@@ -3,6 +3,11 @@
 	line-height: 1.29em;
 }
 
+table,
+.wp-block-table table {
+	border-collapse: separate;
+}
+
 .wp-block-gallery .blocks-gallery-image figcaption,
 .wp-block-gallery .blocks-gallery-item figcaption {
 	text-align: center;
@@ -36,10 +41,6 @@
 
 .wp-block[data-align=full] {
 	max-width: none;
-}
-
-.wp-block-cover p:first-of-type:first-letter, .wp-block-pullquote p:first-of-type:first-letter {
-	font-size: 1em;
 }
 
 .wp-block-gallery, .wp-block-image {
@@ -78,6 +79,41 @@
 	text-decoration: none;
 }
 
+.wp-block-file {
+	background-color: #ededed;
+	margin: 0.5em 0;
+	padding: 1em;
+	text-align: center;
+}
+
+.wp-block-file .wp-block-file__button {
+	background-color: #ededed;
+	border: 1px solid #c0c0c0;
+	border-radius: 0px;
+	color: #333333 !important;
+	font-size: 1em;
+	padding: 2px 6px;
+}
+
+.wp-block-file .wp-block-file__button:hover, .wp-block-file .wp-block-file__button:focus {
+	color: #333333 !important;
+}
+
+.wp-block .is-style-outline .wp-block-button__link {
+	background-color: transparent;
+	border-color: #c0c0c0;
+	border-width: 1px;
+}
+
+.wp-block .is-style-outline .wp-block-button__link.has-white-color {
+	color: #333333 !important;
+}
+
+.wp-block .is-style-outline :hover,
+.wp-block .is-style-outline :focus {
+	background-color: #ededed;
+}
+
 .wp-block .wp-block-image img {
 	margin: 0px;
 }
@@ -113,6 +149,10 @@
 .wp-block-pullquote {
 	margin: 2em 0px;
 	padding: 1em 0px;
+}
+
+.wp-block-pullquote blockquote p {
+	font-size: 1.75em !important;
 }
 
 .wp-block-pullquote.is-style-default {
@@ -154,6 +194,31 @@
 .wp-block-separator.is-style-wide {
 	width: 100%;
 	border-width: 2px;
+}
+
+.wp-block-table.is-style-stripes {
+	border-bottom: none;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) {
+	background-color: #ededed;
+}
+
+.wp-block-table.is-style-stripes th,
+.wp-block-table.is-style-stripes td {
+	border-color: #ededed;
+}
+
+.wp-block-table figcaption {
+	color: #333333;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 0.5em;
+	text-align: center;
+}
+
+.wp-block-verse {
+	background-color: transparent;
 }
 
 .wp-block-calendar table {

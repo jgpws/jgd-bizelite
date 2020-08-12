@@ -1,14 +1,14 @@
 <?php
 /*
- * Template Name: Landing Page
- * Description: Full width page ideal for a landing page. It has no sidebars, no comments and a thin header with only the dropdown menus.
+ * Template Name: Thin Header
+ * Description: Full width page with no sidebars, no comments. It has a thin header with only the dropdown menus.
  * @package WordPress
  * @subpackage JGD-BizElite
- * @since JGD-BizElite 1.1
+ * @since JGD-BizElite 1.4
  */
 ?>
 
-<?php get_header( 'landing' ); ?>
+<?php get_header( 'thin' ); ?>
 
 	<div id="main" class="texture">
 

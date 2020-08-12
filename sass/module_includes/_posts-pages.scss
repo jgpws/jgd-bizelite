@@ -14,13 +14,6 @@
 
 .post,
 .type-page {
-	.entry {
-		// Drop Cap
-		p:first-of-type:first-letter {
-			font-size: 2.14em;
-		}
-	}
-
 	.index-meta {
 		padding: 20px 0px;
 
@@ -89,9 +82,20 @@
 		text-align: center;
 	}
 
-	.page-links a {
-		min-width: 72px;
+	.post-page-numbers {
+		border: 1px solid $silver;
 		display: inline-block;
+		min-width: 44px;
+		padding: 0.5em;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+
+	.post-page-numbers.current {
+		border-color: $light_gray;
 	}
 }
 
@@ -271,6 +275,15 @@
 }
 
 /* Page Templates */
+.page-template-landing {
+	.post-blog .entry,
+	.type-page .entry {
+		background-color: transparent;
+		border: none;
+		margin: 0;
+	}
+}
+
 .page-template-page_featured_categories {
 	.entry {
 		margin: 20px 0px;
@@ -284,7 +297,7 @@
 }
 
 @media screen and (min-width: 48em) { // 48em = 768px
-	.page-template-page_landing,
+	.page-template-thin-header,
 	.page-template-page_featured_categories {
 		.entry {
 			margin: 20px 80px;
@@ -301,7 +314,7 @@
 }
 
 @media screen and (min-width: 64.063em) { // 64.063em = 1025px
-	.page-template-page_landing,
+	.page-template-thin-header,
 	.page-template-page_featured_categories {
 		.index-meta {
 			padding-left: 160px;
@@ -318,7 +331,7 @@
 }
 
 @media screen and (min-width: 85.438em) { // 85.438em = 1367px
-	.page-template-page_landing .index-meta,
+	.page-template-thin-header .index-meta,
 	.page-template-page_featured_categories .index-meta {
 		padding: 20px 50% 20px 160px;
 	}

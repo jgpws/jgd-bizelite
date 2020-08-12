@@ -6,6 +6,11 @@
   line-height: 1.29em;
 }
 
+table,
+.wp-block-table table {
+  border-collapse: separate;
+}
+
 .wp-block-gallery .blocks-gallery-image figcaption,
 .wp-block-gallery .blocks-gallery-item figcaption {
   @include caption;
@@ -31,13 +36,6 @@
 
   &[data-align=full] {
     max-width: none;
-  }
-
-  &-cover,
-  &-pullquote {
-    p:first-of-type:first-letter {
-      font-size: 1em;
-    }
   }
 
   &-gallery,
@@ -75,6 +73,44 @@
         text-decoration: none;
       }
     }
+  }
+
+  &-file {
+    background-color: $light_gray;
+  	margin: 0.5em 0;
+  	padding: 1em;
+  	text-align: center;
+
+    .wp-block-file__button {
+      background-color: $light_gray;
+  		border: 1px solid $silver;
+  		border-radius: 0px;
+  		color: $text_color !important;
+  		font-size: 1em;
+  		padding: 2px 6px;
+
+  		&:hover,
+  		&:focus {
+  			color: $text_color !important;
+  		}
+    }
+  }
+
+  .is-style-outline {
+    .wp-block-button__link {
+      background-color: transparent;
+      border-color: $silver;
+  		border-width: 1px;
+
+      &.has-white-color {
+        color: $text_color !important;
+      }
+    }
+
+    :hover,
+  	:focus {
+  		background-color: $light_gray;
+  	}
   }
 
   .wp-block-image {
@@ -117,6 +153,10 @@
     margin: 2em 0px;
   	padding: 1em 0px;
 
+    blockquote p {
+      font-size: 1.75em !important;
+    }
+
     &.is-style-default {
     	border-top: 2px solid $medium_gray;
     	border-bottom: 2px solid $medium_gray;
@@ -157,6 +197,33 @@
   		width: 100%;
   		border-width: 2px;
   	}
+  }
+
+  &-table {
+    &.is-style-stripes {
+  		border-bottom: none;
+
+  		tbody tr:nth-child(2n + 1) {
+  			background-color: $light_gray;
+  		}
+
+  		th,
+  		td {
+  			border-color: $light_gray;
+  		}
+  	}
+
+    figcaption {
+      color: $text_color;
+      font-size: 1em;
+      font-weight: bold;
+      padding: 0.5em;
+      text-align: center;
+    }
+  }
+
+  &-verse {
+    background-color: transparent;
   }
 
   &-calendar {

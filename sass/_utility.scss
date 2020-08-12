@@ -30,6 +30,11 @@ img.aligncenter {
 	margin-right: -4% !important;
 }
 
+.page-template-landing .alignwide {
+	margin-left: -2.5% !important;
+	margin-right: -2.5% !important;
+}
+
 .alignfull {
 	margin-left: -8% !important;
 	margin-right: -8% !important;
@@ -81,4 +86,22 @@ img.aligncenter {
 
 .is-zero-height {
 	max-height: 0px;
+}
+
+@media screen and (min-width: 64.063em) { // 64.063em = 1025px
+	.page-template-landing {
+		.alignwide {
+			margin-left: 2.5% !important;
+			margin-right: 2.5% !important;
+		}
+	}
+}
+
+@media screen and (min-width: 85.438em) { // 85.438em = 1367px
+	.page-template-landing {
+		.alignwide {
+			margin-left: 5% !important;
+			margin-right: 5% !important;
+		}
+	}
 }

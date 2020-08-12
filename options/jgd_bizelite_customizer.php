@@ -59,22 +59,20 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 
 	$wp_customize->add_setting(
 		'jgd_bizelite_content_sidebar_bgcolor', array(
-			'default' => '#ededed',
+			//'default' => '#ededed',
 			'transport' => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 
 	$wp_customize->add_control(
-		new WP_Customize_Color_Control (
-			$wp_customize,
-			'jgd_bizelite_content_sidebar_bgcolor',
-				array(
-					'label' => esc_html__( 'Content and Sidebar background color', 'jgd-bizelite' ),
-					'section' => 'colors',
-					'priority' => 30,
-					'settings' => 'jgd_bizelite_content_sidebar_bgcolor'
-				)
+		new WP_Customize_Color_Control ( $wp_customize, 'jgd_bizelite_content_sidebar_bgcolor',
+			array(
+				'label' => esc_html__( 'Content and Sidebar background color', 'jgd-bizelite' ),
+				'section' => 'colors',
+				'priority' => 30,
+				'settings' => 'jgd_bizelite_content_sidebar_bgcolor'
+			)
 		)
 	);
 
@@ -91,7 +89,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 			'type' => 'checkbox',
 			'section' => 'colors',
 			'priority' => 40,
-			'label' => __( 'Use light text for dark background', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Use light text for dark background', 'jgd-bizelite' ),
 		)
 	);
 
@@ -108,7 +106,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 			'type' => 'checkbox',
 			'section' => 'colors',
 			'priority' => 50,
-			'label' => __( 'Hide background texture behind content', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Hide background texture behind content', 'jgd-bizelite' ),
 		)
 	);
 
@@ -124,7 +122,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 			'type' => 'checkbox',
 			'section' => 'colors',
 			'priority' => 60,
-			'label' => __( 'Hide Decorations', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Hide Decorations', 'jgd-bizelite' ),
 		)
 	);
 
@@ -143,11 +141,11 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		'jgd_bizelite_header_alignment', array(
 			'type' => 'radio',
 			'section' => 'header_image',
-			'label' => __( 'Align the header background image if it is smaller than the recommended size.', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Align the header background image if it is smaller than the recommended size.', 'jgd-bizelite' ),
 			'choices' => array(
-				'left' => __( 'Left', 'jgd-bizelite' ),
-				'center' => __( 'Center (default)', 'jgd-bizelite' ),
-				'right' => __( 'Right', 'jgd-bizelite' ),
+				'left' => esc_html__( 'Left', 'jgd-bizelite' ),
+				'center' => esc_html__( 'Center (default)', 'jgd-bizelite' ),
+				'right' => esc_html__( 'Right', 'jgd-bizelite' ),
 			),
 		)
 	);
@@ -155,7 +153,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	// for Layouts
 	$wp_customize->add_section(
 		'jgd_bizelite_layout', array(
-			'title' => __( 'Layout', 'jgd-bizelite' ),
+			'title' => esc_html__( 'Layout', 'jgd-bizelite' ),
 			'description' => sprintf( /* translators: %1$s = <p>, %2$s = </p> */ esc_html__( '%1$sSelect from four column layouts and five layout styles.%2$s%1$s* Refreshes the page%2$s', 'jgd-bizelite' ), '<p>', '</p>' ),
 			'priority' => 45,
 			'capability' => 'edit_theme_options',
@@ -211,7 +209,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	// Display Options
 	$wp_customize->add_section(
 		'jgd_bizelite_display_options', array(
-			'title' => __( 'Display Options', 'jgd-bizelite' ),
+			'title' => esc_html__( 'Display Options', 'jgd-bizelite' ),
 			'description' => sprintf( /* translators: %1$s = <p>, %2$s = </p> */ esc_html__( '%1$sIn this section, you can add and/or subtract content from your website or blog.%2$s%1$s* Refreshes the page%2$s', 'jgd-bizelite' ), '<p>', '</p>' ),
 			'priority' => 85,
 			'capability' => 'edit_theme_options',
@@ -266,7 +264,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 
 	$wp_customize->add_control(
 		'jgd_bizelite_hide_comments_link', array(
-			'label' => __( 'Hide the comments link', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Hide the comments link', 'jgd-bizelite' ),
 			'description' => sprintf( /* translators: %1$s = </strong>, %2$s = </strong> */ esc_html__( 'Use this with %1$sDisable comments%2$s to remove comment references on the index and single post pages.', 'jgd-bizelite' ), '<strong>', '</strong>' ),
 			'section' => 'jgd_bizelite_display_options',
 			'priority' => 30,
@@ -285,7 +283,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 
 	$wp_customize->add_control(
 		'jgd_bizelite_hide_categories', array(
-			'label' => __( 'Hide category links', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Hide category links', 'jgd-bizelite' ),
 			'section' => 'jgd_bizelite_display_options',
 			'priority' => 40,
 			'active_callback' => 'jgd_bizelite_notpage_callback',
@@ -303,7 +301,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 
 	$wp_customize->add_control(
 		'jgd_bizelite_hide_tags', array(
-			'label' => __( 'Hide tag links', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Hide tag links', 'jgd-bizelite' ),
 			'description' => sprintf( /* translators: %1$s = <strong>, %2$s = </strong> */ esc_html__( '%1$s*Warning:%2$s when hiding tag links on every page, your website will no longer have links to tag pages.', 'jgd-bizelite' ), '<strong>', '</strong>' ),
 			'section' => 'jgd_bizelite_display_options',
 			'priority' => 50,
@@ -324,7 +322,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 
 	$wp_customize->add_control(
 		'jgd_bizelite_use_icons', array(
-			'label' => __( 'Use icons in place of and next to titles*', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Use icons in place of and next to titles*', 'jgd-bizelite' ),
 			'section' => 'jgd_bizelite_display_options',
 			'priority' => 55,
 			'type' => 'checkbox',
@@ -342,7 +340,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 
 	$wp_customize->add_control(
 		'jgd_bizelite_menutitle_one', array(
-			'label' => __( 'Replace the Pages title in the menu bar', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Replace the Pages title in the menu bar', 'jgd-bizelite' ),
 			'section' => 'jgd_bizelite_display_options',
 			'priority' => 60,
 			'type' => 'text'
@@ -363,7 +361,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 
 	$wp_customize->add_control(
 		'jgd_bizelite_menutitle_two', array(
-			'label' => __( 'Replace the Categories title in the menu bar', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Replace the Categories title in the menu bar', 'jgd-bizelite' ),
 			'section' => 'jgd_bizelite_display_options',
 			'priority' => 70,
 			'type' => 'text'
@@ -384,7 +382,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 
 	$wp_customize->add_control(
 		'jgd_bizelite_footer_info', array(
-			'label' => __( 'Change the footer information', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Change the footer information', 'jgd-bizelite' ),
 			'description' => sprintf( /* translators: %1$s = <p>, %2$s = </p>, %3$s = <strong>, %4$s = </strong> */ esc_html__( '%1$s* Supports HTML%2$s%1$sTo retrieve the web address of this theme, see %3$sTheme web address%4$s in this theme\'s readme.txt file.%2$s', 'jgd-bizelite' ), '<p>', '</p>', '<strong>', '</strong>' ),
 			'section' => 'jgd_bizelite_display_options',
 			'priority' => 80,
@@ -392,20 +390,22 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 
+	// For Page Templates
 	$wp_customize->add_panel(
 		'jgd_bizelite_page_templates', array(
-			'title' => __( 'Page Template Customizations', 'jgd-bizelite' ),
+			'title' => esc_html__( 'Page Template Customizations', 'jgd-bizelite' ),
 			'priority' => 125,
-			'description' => __( 'In this section are customizations for some of the page templates that can be applied to a custom home page.', 'jgd-bizelite' ),
+			'description' => esc_html__( 'In this section are customizations for some of the page templates that can be applied to a custom home page.', 'jgd-bizelite' ),
 			'active_callback' => 'jgd_bizelite_page_callback',
 		)
 	);
 
+	// Featured Categories
 	$wp_customize->add_section(
 		'jgd_bizelite_cats_template', array(
-			'title' => __( 'Featured Categories', 'jgd-bizelite' ),
+			'title' => esc_html__( 'Featured Categories', 'jgd-bizelite' ),
 			'priority' => 125,
-			'description' => __( 'Customize the Featured Categories page template.', 'jgd-bizelite' ),
+			'description' => esc_html__( 'Customize the Featured Categories page template.', 'jgd-bizelite' ),
 			'panel' => 'jgd_bizelite_page_templates',
 			'active_callback' => 'jgd_bizelite_page_callback',
 		)
@@ -422,7 +422,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control( new JGD_BizElite_Category_Control( $wp_customize,
 		'jgd_bizelite_cat_dropdown_1', array(
 			'section' => 'jgd_bizelite_cats_template',
-			'label' => __( 'Display Category 1', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Display Category 1', 'jgd-bizelite' ),
 			'dropdown_args' => array(
 				'id' => 'cat-1',
 			),
@@ -440,7 +440,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control( new JGD_BizElite_Category_Control( $wp_customize,
 		'jgd_bizelite_cat_dropdown_2', array(
 			'section' => 'jgd_bizelite_cats_template',
-			'label' => __( 'Display Category 2', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Display Category 2', 'jgd-bizelite' ),
 			'dropdown_args' => array(
 				'id' => 'cat-2',
 			),
@@ -458,7 +458,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control( new JGD_BizElite_Category_Control( $wp_customize,
 		'jgd_bizelite_cat_dropdown_3', array(
 			'section' => 'jgd_bizelite_cats_template',
-			'label' => __( 'Display Category 3', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Display Category 3', 'jgd-bizelite' ),
 			'dropdown_args' => array(
 				'id' => 'cat-3',
 			),
@@ -476,9 +476,58 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 
 	$wp_customize->add_control(
 		'jgd_bizelite_cat_section_title', array(
-			'label' => __( 'Replace the Latest Posts title above the featured category posts.', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Replace the Latest Posts title above the featured category posts.', 'jgd-bizelite' ),
 			'type' => 'text',
 			'section' => 'jgd_bizelite_cats_template',
+		)
+	);
+
+	// Landing Page
+	$wp_customize->add_section(
+		'jgd_bizelite_landing', array(
+			'title' => esc_html__( 'Landing Page', 'jgd-bizelite' ),
+			'priority' => 130,
+			'description' => esc_html__( 'Customize the Landing Page template.', 'jgd-bizelite' ),
+			'panel' => 'jgd_bizelite_page_templates',
+			'active_callback' => 'jgd_bizelite_page_callback',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'jgd_bizelite_landing_bg', array(
+			'type' => 'theme_mod',
+			'default' => '#ffffff',
+			'transport' => 'postMessage',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control( $wp_customize, 'jgd_bizelite_landing_bg',
+			array(
+				'label' => esc_html__( 'Background Color', 'jgd-bizelite' ),
+				'description' => esc_html__( 'Change the background color of the Landing Page independent of the theme background color.', 'jgd-bizelite' ),
+				'type' => 'color',
+				'section' => 'jgd_bizelite_landing',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'jgd_bizelite_show_landing_bg_gutenberg', array(
+			'type' => 'theme_mod',
+			'default' => 0,
+			'transport' => 'postMessage',
+			'sanitize_callback' => 'jgd_bizelite_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'jgd_bizelite_show_landing_bg_gutenberg', array(
+			'type' => 'checkbox',
+			'label' => esc_html__( 'Show Landing Page background color in the Block Editor.', 'jgd-bizelite' ),
+			'description' => sprintf( esc_html__( '%1$sUse this feature to preview the landing page background color in the block editor.%2$s%1$s%3$sDisable (uncheck) this feature after finishing customizations to the landing page, as it shows the background on every page.%4$s%2$s', 'jgd-bizelite' ), '<p>', '</p>', '<strong>', '</strong>' ),
+			'section' => 'jgd_bizelite_landing',
 		)
 	);
 

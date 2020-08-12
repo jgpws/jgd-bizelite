@@ -124,17 +124,22 @@ function jgd_bizelite_logo_align_switcher() {
 }
 add_action( 'wp_enqueue_scripts', 'jgd_bizelite_logo_align_switcher' );
 
-function jgd_bizelite_content_sidebar_bgcolor_css() {
+function jgd_bizelite_custom_color_css() {
 	$content_sidebar_bg = get_theme_mod( 'jgd_bizelite_content_sidebar_bgcolor', '#ededed' );
-	if ( $content_sidebar_bg != '' ) {
-		$content_sidebar_bg_css = '
+	$landing_page_bg = get_theme_mod( 'jgd_bizelite_landing_bg', '#ffffff' );
+
+	$css = '
 #main.texture {
-	background-color: ' . $content_sidebar_bg . ';
+	background-color: ' . esc_attr( $content_sidebar_bg ) . ';
 }';
-		wp_add_inline_style( 'jgd-bizelite-main-stylesheet', $content_sidebar_bg_css );
-	}
+
+	$css .= '
+.page-template-landing #main.texture {
+	background-color: ' . esc_attr( $landing_page_bg ) . ';
+}';
+	wp_add_inline_style( 'jgd-bizelite-main-stylesheet', $css );
 }
-add_action( 'wp_enqueue_scripts', 'jgd_bizelite_content_sidebar_bgcolor_css' );
+add_action( 'wp_enqueue_scripts', 'jgd_bizelite_custom_color_css' );
 
 function jgd_bizelite_header_align_switcher() {
 	$header_align = get_theme_mod( 'jgd_bizelite_header_alignment' );

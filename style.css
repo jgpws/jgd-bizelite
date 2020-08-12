@@ -4,7 +4,7 @@ Theme URI: http://www.jasong-designs.com/2012/02/17/jgd-bizelite/
 Description: JGD-BizElite is a free, responsive/fixed theme with premium features. Ideal for a content heavy blog, JGD-BizElite is packed with options. Customizer modifications include WordPress's Custom Logo, Custom Header, custom menus and background. Additional Customizer options give you the ability to hide post date, tag and category links, and change the footer text. Eight layouts, six color schemes and two custom page templates are included.
 Author: Jason G. Designs
 Author URI: http://www.jasong-designs.com
-Version: 1.4.3
+Version: 1.5.0
 Tested up to: 5.4
 Requires PHP: 5.6
 Text Domain: jgd-bizelite
@@ -59,6 +59,11 @@ h6 {
 }
 
 /* -- Base styles -- */
+html,
+body {
+	height: 100%;
+}
+
 body {
 	font-family: FreeSerif, "Times New Roman", Times, serif;
 	color: #333333;
@@ -247,7 +252,13 @@ hr {
 
 @media screen and (min-width: 40.063em) {
 	#wrapper {
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		        flex-direction: column;
 		margin: 0 auto;
+		min-height: 100%;
 		width: 90%;
 	}
 }
@@ -266,7 +277,7 @@ hr {
 }
 
 @media screen and (min-width: 40.063em) {
-	.page-template-page_landing #access {
+	.page-template-thin-header #access {
 		position: static;
 	}
 }
@@ -283,6 +294,8 @@ hr {
 /* Main */
 #main {
 	display: grid;
+	-webkit-box-flex: 1;
+	        flex-grow: 1;
 	grid-template-columns: minmax(320px, auto);
 	width: 100%;
 }
@@ -295,16 +308,31 @@ hr {
 	border: transparent;
 }
 
+.page-template-landing #wrapper {
+	max-width: none;
+	width: 100%;
+}
+
+.page-template-landing #main {
+	background-image: none;
+	border-left: none;
+	border-right: none;
+}
+
 @media screen and (min-width: 64.063em) {
 	#main {
 		border-left: 4px solid rgba(0, 0, 0, 0.25);
 		grid-template-columns: minmax(0, auto) 284px;
 	}
-	.page-template-page_landing #main,
+	.page-template-landing #main,
+	.page-template-thin-header #main,
+	.page-template-page_featured_categories #main {
+		grid-template-columns: auto;
+	}
+	.page-template-thin-header #main,
 	.page-template-page_featured_categories #main {
 		border-left: 4px solid rgba(0, 0, 0, 0.25);
 		border-right: 4px solid rgba(0, 0, 0, 0.25);
-		grid-template-columns: auto;
 	}
 	.three-col-r #main {
 		grid-template-columns: minmax(0, auto) 404px;
@@ -333,7 +361,7 @@ hr {
 	.three-col-l #container {
 		grid-column: 2 / 3;
 	}
-	.page-template-page_landing #container,
+	.page-template-thin-header #container,
 	.page-template-page_featured_categories #container {
 		grid-column: 1 / 3;
 	}
@@ -459,9 +487,6 @@ hr {
 		float: left;
 		height: 36px;
 		padding: 3px 2.5% 0 2.5%;
-	}
-	.wp-custom-logo .blog-title {
-		font-size: 2.14em;
 	}
 }
 
@@ -848,11 +873,6 @@ hr {
 	color: #808080;
 }
 
-.post .entry p:first-of-type:first-letter,
-.type-page .entry p:first-of-type:first-letter {
-	font-size: 2.14em;
-}
-
 .post .index-meta,
 .type-page .index-meta {
 	padding: 20px 0px;
@@ -935,10 +955,23 @@ hr {
 	text-align: center;
 }
 
-.post-blog .page-links a,
-.type-page .page-links a {
-	min-width: 72px;
+.post-blog .post-page-numbers,
+.type-page .post-page-numbers {
+	border: 1px solid #c0c0c0;
 	display: inline-block;
+	min-width: 44px;
+	padding: 0.5em;
+}
+
+.post-blog .post-page-numbers:hover, .post-blog .post-page-numbers:focus,
+.type-page .post-page-numbers:hover,
+.type-page .post-page-numbers:focus {
+	text-decoration: none;
+}
+
+.post-blog .post-page-numbers.current,
+.type-page .post-page-numbers.current {
+	border-color: #ededed;
 }
 
 .type-page .entry-title {
@@ -1103,6 +1136,13 @@ hr {
 }
 
 /* Page Templates */
+.page-template-landing .post-blog .entry,
+.page-template-landing .type-page .entry {
+	background-color: transparent;
+	border: none;
+	margin: 0;
+}
+
 .page-template-page_featured_categories .entry {
 	margin: 20px 0px;
 }
@@ -1114,37 +1154,37 @@ hr {
 }
 
 @media screen and (min-width: 48em) {
-	.page-template-page_landing .entry,
+	.page-template-thin-header .entry,
 	.page-template-page_featured_categories .entry {
 		margin: 20px 80px;
 	}
-	.page-template-page_landing .entry-title,
+	.page-template-thin-header .entry-title,
 	.page-template-page_featured_categories .entry-title {
 		padding: 0px 80px;
 	}
-	.page-template-page_landing .index-meta,
+	.page-template-thin-header .index-meta,
 	.page-template-page_featured_categories .index-meta {
 		padding-left: 80px;
 	}
 }
 
 @media screen and (min-width: 64.063em) {
-	.page-template-page_landing .index-meta,
+	.page-template-thin-header .index-meta,
 	.page-template-page_featured_categories .index-meta {
 		padding-left: 160px;
 	}
-	.page-template-page_landing .entry-title,
+	.page-template-thin-header .entry-title,
 	.page-template-page_featured_categories .entry-title {
 		padding: 0px 160px;
 	}
-	.page-template-page_landing .entry,
+	.page-template-thin-header .entry,
 	.page-template-page_featured_categories .entry {
 		margin: 20px 160px;
 	}
 }
 
 @media screen and (min-width: 85.438em) {
-	.page-template-page_landing .index-meta,
+	.page-template-thin-header .index-meta,
 	.page-template-page_featured_categories .index-meta {
 		padding: 20px 50% 20px 160px;
 	}
@@ -1727,11 +1767,6 @@ a.more-link {
 }
 
 /* -- Blocks / Block Overrides -- */
-.wp-block-cover p:first-of-type:first-letter,
-.wp-block-pullquote p:first-of-type:first-letter {
-	font-size: 1em !important;
-}
-
 .wp-block-gallery,
 .wp-block-image {
 	margin: 0px auto;
@@ -1742,6 +1777,10 @@ a.more-link {
 .wp-block-image,
 .wp-block-calendar {
 	padding: 1em 0px;
+}
+
+.wp-block-button {
+	color: #333333;
 }
 
 .wp-block-button__link {
@@ -1756,16 +1795,43 @@ a.more-link {
 }
 
 .wp-block-button__link:hover, .wp-block-button__link:active {
+	color: #333333 !important;
 	text-decoration: none;
 }
 
-.wp-block-cover {
-	width: auto;
+.wp-block-file {
+	background-color: #ededed;
+	margin: 0.5em 0;
+	padding: 1em;
+	text-align: center;
 }
 
-.wp-block-cover + p,
-.wp-block-cover-image + p {
-	margin-top: 1em;
+.wp-block-file .wp-block-file__button {
+	background-color: #ededed;
+	border: 1px solid #c0c0c0;
+	border-radius: 0px;
+	color: #333333 !important;
+	font-size: 1em;
+	padding: 2px 6px;
+}
+
+.wp-block-file .wp-block-file__button:hover, .wp-block-file .wp-block-file__button:focus {
+	color: #333333 !important;
+}
+
+.is-style-outline .wp-block-button__link {
+	border-color: #c0c0c0;
+	border-width: 1px;
+}
+
+.is-style-outline :hover,
+.is-style-outline :focus {
+	background-color: #ededed;
+}
+
+.wp-block-cover {
+	margin: 1em auto;
+	width: auto;
 }
 
 .wp-block-image figcaption,
@@ -1798,6 +1864,16 @@ a.more-link {
 .wp-block-gallery img {
 	border: 1px solid #c0c0c0;
 	margin: 1em auto 0 auto;
+}
+
+.wp-block-latest-comments__comment, .wp-block-latest-comments__comment-date,
+.wp-block-latest-comments__comment-excerpt p {
+	font-size: 1em;
+}
+
+.wp-block-latest-comments__comment-date {
+	color: #808080;
+	font-style: italic;
 }
 
 .wp-block-quote p,
@@ -1860,6 +1936,29 @@ a.more-link {
 .wp-block-separator.is-style-wide {
 	width: 100%;
 	border-width: 2px;
+}
+
+.wp-block-table.is-style-stripes {
+	border-bottom: none;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) {
+	background-color: #ededed;
+}
+
+.wp-block-table.is-style-stripes th,
+.wp-block-table.is-style-stripes td {
+	border-color: #ededed;
+}
+
+.wp-block-table figcaption {
+	font-weight: bold;
+	padding: 0.5em;
+	text-align: center;
+}
+
+.wp-block-verse {
+	background-color: transparent;
 }
 
 .wp-block-calendar table {
@@ -2228,6 +2327,11 @@ img.aligncenter {
 	margin-right: -4% !important;
 }
 
+.page-template-landing .alignwide {
+	margin-left: -2.5% !important;
+	margin-right: -2.5% !important;
+}
+
 .alignfull {
 	margin-left: -8% !important;
 	margin-right: -8% !important;
@@ -2280,6 +2384,20 @@ img.aligncenter {
 
 .is-zero-height {
 	max-height: 0px;
+}
+
+@media screen and (min-width: 64.063em) {
+	.page-template-landing .alignwide {
+		margin-left: 2.5% !important;
+		margin-right: 2.5% !important;
+	}
+}
+
+@media screen and (min-width: 85.438em) {
+	.page-template-landing .alignwide {
+		margin-left: 5% !important;
+		margin-right: 5% !important;
+	}
 }
 
 /* -- Theme Styles -- */

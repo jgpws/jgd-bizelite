@@ -1,5 +1,10 @@
 /* -- Base styles -- */
 
+html,
+body {
+	height: 100%; // For content that is too short; used with Flexbox on the #wrapper
+}
+
 body {
 	font-family: $serif;
 	color: $text_color;

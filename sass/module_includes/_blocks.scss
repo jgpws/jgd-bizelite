@@ -1,10 +1,5 @@
 /* -- Blocks / Block Overrides -- */
 
-.wp-block-cover p:first-of-type:first-letter,
-.wp-block-pullquote p:first-of-type:first-letter {
-	font-size: 1em !important;
-}
-
 .wp-block-gallery,
 .wp-block-image {
 	margin: 0px auto;
@@ -18,6 +13,8 @@
 }
 
 .wp-block-button {
+	color: $text_color;
+
   &__link {
 		border: 1px solid $silver;
 		padding: 2px 6px;
@@ -31,18 +28,48 @@
 
     &:hover,
     &:active {
+			color: $text_color !important;
       text-decoration: none;
     }
   }
 }
 
-.wp-block-cover {
-  width: auto;
+.wp-block-file {
+	background-color: $light_gray;
+	margin: 0.5em 0;
+	padding: 1em;
+	text-align: center;
 
-  & + p,
-  &-image + p {
-    margin-top: 1em;
-  }
+	.wp-block-file__button {
+		background-color: $light_gray;
+		border: 1px solid $silver;
+		border-radius: 0px;
+		color: $text_color !important;
+		font-size: 1em;
+		padding: 2px 6px;
+
+		&:hover,
+		&:focus {
+			color: $text_color !important;
+		}
+	}
+}
+
+.is-style-outline {
+	.wp-block-button__link {
+		border-color: $silver;
+		border-width: 1px;
+	}
+
+	:hover,
+	:focus {
+		background-color: $light_gray;
+	}
+}
+
+.wp-block-cover {
+	margin: 1em auto;
+  width: auto;
 }
 
 .wp-block-image figcaption,
@@ -72,6 +99,19 @@
     border: 1px solid $silver;
   	margin: 1em auto 0 auto;
   }
+}
+
+.wp-block-latest-comments {
+	&__comment,
+	&__comment-date,
+	&__comment-excerpt p {
+		font-size: 1em;
+	}
+
+	&__comment-date {
+		color: $medium_gray;
+		font-style: italic;
+	}
 }
 
 .wp-block-quote {
@@ -138,6 +178,31 @@
 		width: 100%;
 		border-width: 2px;
 	}
+}
+
+.wp-block-table {
+	&.is-style-stripes {
+		border-bottom: none;
+
+		tbody tr:nth-child(2n + 1) {
+			background-color: $light_gray;
+		}
+
+		th,
+		td {
+			border-color: $light_gray;
+		}
+	}
+
+	figcaption {
+		font-weight: bold;
+		padding: 0.5em;
+		text-align: center;
+	}
+}
+
+.wp-block-verse {
+	background-color: transparent;
 }
 
 .wp-block-calendar {

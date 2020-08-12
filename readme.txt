@@ -5,7 +5,7 @@ Tags: two-columns, three-columns, custom-header, custom-background, custom-color
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.4
-Stable tag: 1.4.3
+Stable tag: 1.5.0
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -29,6 +29,12 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 * Themify Icons, Copyright 2019 Lally Elias, SIL Open Font License, https://github.com/lykmapipo/themify-icons
 
 == Changelog ==
+
+= 1.5.0 August 11 2020 =
+New major version that includes a breaking change for those using custom page templates. The old Landing Page template has been renamed to Thin Header. A new Landing Page template has replaced the old one with a blank full width page template. New styling for page links. Removed built in drop caps, as this is now supported in Gutenberg.
+
+= 1.4.4 August 09 2020 =
+CSS fixes for the Landing Page template. etc.
 
 = 1.4.3 August 09 2020 =
 Added support for the wp_body_open function.
