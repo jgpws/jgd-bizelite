@@ -247,6 +247,12 @@
       background-color: $black_12_opacity;
       padding: 20px;
     }
+
+    .wp-post-image {
+      display: block;
+      float: none;
+      margin: 0 auto 1em;
+    }
   }
 }
 

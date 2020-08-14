@@ -59,7 +59,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 
 	$wp_customize->add_setting(
 		'jgd_bizelite_content_sidebar_bgcolor', array(
-			//'default' => '#ededed',
+			'default' => '#ededed',
 			'transport' => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)

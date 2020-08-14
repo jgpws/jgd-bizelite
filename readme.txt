@@ -30,6 +30,9 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 
 == Changelog ==
 
+= 1.5.1 August 12 2020 =
+Minor fixes.
+
 = 1.5.0 August 11 2020 =
 New major version that includes a breaking change for those using custom page templates. The old Landing Page template has been renamed to Thin Header. A new Landing Page template has replaced the old one with a blank full width page template. New styling for page links. Removed built in drop caps, as this is now supported in Gutenberg.
 

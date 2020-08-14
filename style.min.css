@@ -4,7 +4,7 @@ Theme URI: http://www.jasong-designs.com/2012/02/17/jgd-bizelite/
 Description: JGD-BizElite is a free, responsive/fixed theme with premium features. Ideal for a content heavy blog, JGD-BizElite is packed with options. Customizer modifications include WordPress's Custom Logo, Custom Header, custom menus and background. Additional Customizer options give you the ability to hide post date, tag and category links, and change the footer text. Eight layouts, six color schemes and two custom page templates are included.
 Author: Jason G. Designs
 Author URI: http://www.jasong-designs.com
-Version: 1.5.0
+Version: 1.5.1
 Tested up to: 5.4
 Requires PHP: 5.6
 Text Domain: jgd-bizelite
@@ -242,6 +242,7 @@ a.more-link{clear:both;display:block;margin-top:1em;padding:8px}@media screen an
 .mag-featured:not(.paged):not(.search) .post:nth-of-type(2),.mag-featured:not(.paged):not(.search) .post:nth-of-type(3),.mag-featured:not(.paged):not(.search) .post:nth-of-type(4){margin:10px 10%;padding:0}
 .mag-featured:not(.paged):not(.search) .post:nth-of-type(2) .entry-title,.mag-featured:not(.paged):not(.search) .post:nth-of-type(3) .entry-title,.mag-featured:not(.paged):not(.search) .post:nth-of-type(4) .entry-title{font-size:1.29rem;line-height:1em;margin-bottom:.5em;padding:0}
 .mag-featured:not(.paged):not(.search) .post:nth-of-type(2) .entry,.mag-featured:not(.paged):not(.search) .post:nth-of-type(3) .entry,.mag-featured:not(.paged):not(.search) .post:nth-of-type(4) .entry{background-color:rgba(0,0,0,0.12);padding:20px}
+.mag-featured:not(.paged):not(.search) .post:nth-of-type(2) .wp-post-image,.mag-featured:not(.paged):not(.search) .post:nth-of-type(3) .wp-post-image,.mag-featured:not(.paged):not(.search) .post:nth-of-type(4) .wp-post-image{display:block;float:none;margin:0 auto 1em}
 @media screen and (min-width:40.063em){.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block{width:auto}
 .mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title{font-size:1.71rem}
 }@media screen and (min-width:48em){.mag-featured:not(.paged):not(.search) .post:nth-of-type(2),.mag-featured:not(.paged):not(.search) .post:nth-of-type(3),.mag-featured:not(.paged):not(.search) .post:nth-of-type(4){display:inline-block;vertical-align:top;width:37%}

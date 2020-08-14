@@ -39,7 +39,7 @@ function jgd_bizelite_setup() {
 	// also see the function jgd_bizelite_header_style, below
 	$args = array(
 		'default-image' => get_template_directory_uri() . '/images/waves-bg-large.png',
-		'width' => 1366,
+		'width' => 1920,
 		'height' => 240,
 		'uploads' => true,
 		'header-text' => true,
@@ -356,7 +356,7 @@ add_action( 'widgets_init', 'jgd_bizelite_secondary_sidebar_init' );
 
 /* enqueue all styles */
 function jgd_bizelite_enqueue_styles() {
-	wp_register_style( 'jgd-bizelite-main-stylesheet', get_template_directory_uri() . '/style.css' );
+	wp_register_style( 'jgd-bizelite-main-stylesheet', get_template_directory_uri() . '/style.min.css' );
 	wp_enqueue_style( 'jgd-bizelite-main-stylesheet' );
 	wp_enqueue_style( 'jgd-bizelite-icons', get_template_directory_uri() . '/css/themify-icons.css' );
 	wp_enqueue_style( 'jgd-bizelite-gutenberg-colors-frontend', get_template_directory_uri() . '/css/gutenberg-colors.css' );
