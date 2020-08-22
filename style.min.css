@@ -4,11 +4,11 @@ Theme URI: http://www.jasong-designs.com/2012/02/17/jgd-bizelite/
 Description: JGD-BizElite is a free, responsive/fixed theme with premium features. Ideal for a content heavy blog, JGD-BizElite is packed with options. Customizer modifications include WordPress's Custom Logo, Custom Header, custom menus and background. Additional Customizer options give you the ability to hide post date, tag and category links, and change the footer text. Eight layouts, six color schemes and two custom page templates are included.
 Author: Jason G. Designs
 Author URI: http://www.jasong-designs.com
-Version: 1.5.1
+Version: 1.5.2
 Tested up to: 5.4
 Requires PHP: 5.6
 Text Domain: jgd-bizelite
-Tags: two-columns, three-columns, custom-header, custom-background, custom-colors, editor-style, custom-menu, featured-images, theme-options, translation-ready
+Tags: blog, news, two-columns, three-columns, custom-header, custom-background, custom-colors, editor-style, custom-menu, featured-images, theme-options, translation-ready, wide-blocks
 License: General Public License, v3
 License URI: http://www.gnu.org/licenses/gpl.html
 */*{box-sizing:border-box}body,h1,h2,h3,h4,h5,h6,p,div,table,tr,td,caption{margin:0;padding:0}
@@ -23,8 +23,7 @@ a:hover,a:active{color:#c03030;text-decoration:underline}img{max-width:100%;heig
 a img{border:0}video{width:100% !important;height:auto !important}table{margin:0 auto}
 table,table th,table td{border:1px solid #ededed}table th,table td{padding:.5em}table caption{color:#f5f5f5;background-color:#000;font-weight:bold}
 pre,code,kbd{font-family:"Courier New",Courier,monospace}pre{background-color:#ededed;border:1px solid silver;overflow-x:auto;padding:1em}
-.entry form p:first-child:first-letter {font-size:1em}form label{margin-right:6px}
-button,form input,form textarea,select{color:#333;border:1px solid silver;padding:2px 6px;font-size:1em}
+form label{margin-right:6px}button,form input,form textarea,select{color:#333;border:1px solid silver;padding:2px 6px;font-size:1em}
 form input:focus,form textarea:focus{background-color:#ededed}button,form input,form textarea,select,select option{font-family:FreeSerif,"Times New Roman",Times,serif}
 button,.wp-block-button__link,form input[type="reset"],form input[type="submit"],select{background-color:#ededed;margin:6px;min-width:72px}
 select option{height:36px}form textarea{width:100%}form input#searchsubmit{border:0}
@@ -74,9 +73,9 @@ hr{border-bottom:2px solid rgba(0,0,0,0.25);border-top:transparent;margin:1em 0}
 .searchbar .search-input{min-height:36px;border:1px solid #333;width:120px}.searchbar .search-submit{margin:9px .5em}
 @media screen and (min-width:40.063em){.searchbar,.searchbar .searchform{height:36px}
 .searchbar .search-input{margin:6px 0;min-height:auto}.searchbar .search-submit{margin:5px .5em}
-}@media screen and (min-width:48em){.searchbar{border-left:1px solid rgba(0,0,0,0.25);border-bottom:transparent;position:absolute;right:200px;top:auto;width:200px}
-.searchbar .search-input{margin-left:1em}}@media screen and (min-width:64.063em){.searchbar{right:280px;width:280px}
-.three-col-r .searchbar,.three-col-l .searchbar{right:200px;width:200px}}.search-input{color:gray;display:inline-block}
+}@media screen and (min-width:48em){.searchbar{border-left:1px solid rgba(0,0,0,0.25);border-bottom:transparent;position:absolute;right:0;top:auto;width:200px}
+.searchbar .search-input{margin-left:1em}}@media screen and (min-width:64.063em){.searchbar{width:280px}
+.three-col-r .searchbar,.three-col-l .searchbar{width:200px}}.search-input{color:gray;display:inline-block}
 .search-submit{background:url(images/jgd-bizelite-assets.svg) no-repeat -204px -382px;border:transparent;display:inline-block;height:24px;margin:0 .5em;min-width:24px;padding:0;vertical-align:bottom;width:24px}
 .menu-social{border-bottom:1px solid rgba(0,0,0,0.25);height:36px;text-align:center;width:auto}
 .menu-social .menu-items{list-style-type:none;margin:0;max-height:36px;padding:0;-webkit-transition:.5s;transition:.5s}
@@ -332,13 +331,13 @@ a.more-link{clear:both;display:block;margin-top:1em;padding:8px}@media screen an
 .silver .wp-block-calendar table tfoot a:hover,.silver .wp-block-calendar table tfoot a:active{color:gray}
 .silver .button-dropdown{background-color:gray}.silver a.button-primary{background-color:silver;border-bottom-color:gray;color:#333}
 .silver a.button-primary:hover{background-color:#a0a0a0}.silver .branding,.silver #footer{background-color:gray}
-.silver .blog-title a:link,.silver .blog-title a:visited{color:#fff}.silver.custom-header .site-title-block{background-color:rgba(128,128,128,0.5)}
-.silver #access{background-color:silver;border-bottom-color:#a0a0a0}.silver .menubar-title,.silver .searchform label{color:#333}
-.silver .pagemenu .menu{background-color:gray}.silver .pagemenu a:link,.silver .pagemenu a:visited{color:#fff}
-.silver .pagemenu a:active,.silver .pagemenu a:hover{color:#000}.silver .menu-social a{color:#404040}
-.silver .site-info a:link,.silver .site-info a:visited{color:#fff}.silver .up,.silver .down{background-color:rgba(128,128,128,0.5)}
-@media screen and (min-width:40.063em){.silver #access{border-bottom-color:#a0a0a0;border-top:transparent}
-}@media screen and (min-width:48em){.silver .menu-social .social-panel-expand{background-color:silver;border-bottom-color:#a0a0a0}
+.silver .blog-title a:link,.silver .blog-title a:visited{color:#fff}.silver.page-template-thin-header .blog-title a:link,.silver.page-template-thin-header .blog-title a:visited{color:#333}
+.silver.custom-header .site-title-block{background-color:rgba(128,128,128,0.5)}.silver #access{background-color:silver;border-bottom-color:#a0a0a0}
+.silver .menubar-title,.silver .searchform label{color:#333}.silver .pagemenu .menu{background-color:gray}
+.silver .pagemenu a:link,.silver .pagemenu a:visited{color:#fff}.silver .pagemenu a:active,.silver .pagemenu a:hover{color:#000}
+.silver .menu-social a{color:#404040}.silver .site-info a:link,.silver .site-info a:visited{color:#fff}
+.silver .up,.silver .down{background-color:rgba(128,128,128,0.5)}@media screen and (min-width:40.063em){.silver #access{border-bottom-color:#a0a0a0;border-top:transparent}
+}@media screen and (min-width:48em){.silver .menu-social a{color:#fff}.silver .menu-social .social-panel-expand{background-color:silver;border-bottom-color:#a0a0a0}
 }.silver .nav-separator{background:url(images/jgd-bizelite-assets.svg) no-repeat -140px -45px}
 .silver .entry-title a:link,.silver .entry-title a:visited,.silver .entry-title-featured a:link,.silver .entry-title-featured a:visited{color:gray}
 .silver .entry-title a:active,.silver .entry-title a:hover,.silver .entry-title-featured a:active,.silver .entry-title-featured a:hover{color:#a0a0a0}

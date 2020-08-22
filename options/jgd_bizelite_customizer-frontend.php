@@ -141,6 +141,66 @@ function jgd_bizelite_custom_color_css() {
 }
 add_action( 'wp_enqueue_scripts', 'jgd_bizelite_custom_color_css' );
 
+function jgd_bizelite_social_icon_color_switcher() {
+	$color_scheme = get_theme_mod( 'jgd_bizelite_style_choices', 'none' );
+	$social_icon_color = get_theme_mod( 'jgd_bizelite_social_icon_color', 'white' );
+
+	if ( $social_icon_color == 'theme_color' ) {
+		switch ( $color_scheme ) {
+			case 'blue':
+				$css = '
+@media screen and (min-width: 768px) {
+	.custom-header.blue .menu-items:not(.social-panel-expand) a {
+		color: #5656c0;
+	}
+}';
+				break;
+			case 'green':
+				$css = '
+@media screen and (min-width: 768px) {
+	.custom-header.green .menu-items:not(.social-panel-expand) a {
+		color: #71b071;
+	}
+}';
+				break;
+			case 'red':
+				$css = '
+@media screen and (min-width: 768px) {
+	.custom-header.red .menu-items:not(.social-panel-expand) a {
+		color: #c55959;
+	}
+}';
+				break;
+			case 'silver':
+				$css = '
+@media screen and (min-width: 768px) {
+	.custom-header.silver .menu-items:not(.social-panel-expand) a {
+		color: #a0a0a0;
+	}
+}';
+				break;
+			case 'olive':
+				$css = '
+@media screen and (min-width: 768px) {
+	.custom-header.olive .menu-items:not(.social-panel-expand) a {
+		color: #c0c056;
+	}
+}';
+				break;
+			default:
+				$css = '
+@media screen and (min-width: 768px) {
+	.custom-header .menu-items:not(.social-panel-expand) a {
+		color: #808080;
+	}
+}';
+				break;
+		}
+	}
+	wp_add_inline_style( 'jgd-bizelite-main-stylesheet', $css );
+}
+add_action( 'wp_enqueue_scripts', 'jgd_bizelite_social_icon_color_switcher' );
+
 function jgd_bizelite_header_align_switcher() {
 	$header_align = get_theme_mod( 'jgd_bizelite_header_alignment' );
 	if( $header_align === 'left' ) {

@@ -77,6 +77,28 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
+		'jgd_bizelite_social_icon_color', array(
+			'default' => 'white',
+			'sanitize_callback' => 'jgd_bizelite_sanitize_social_icon_choices',
+		)
+	);
+
+	$wp_customize->add_control(
+		'jgd_bizelite_social_icon_color', array(
+			'label' => esc_html__( 'Social Icons color *', 'jgd-bizelite' ),
+			'description' => sprintf( /* translators: %1$s = <p>, %2$s = </p> */ esc_html__( '%1$sChange the color of the Social Media badges in the Header when using a Custom Header image. Scheme color is based on the preset color scheme.%2$s%1$s* Refreshes the page%2$s', 'jgd-bizelite' ), '<p>', '</p>' ),
+			'type' => 'radio',
+			'section' => 'colors',
+			'priority' => 35,
+			'settings' => 'jgd_bizelite_social_icon_color',
+			'choices' => array(
+				'white' => esc_html__( 'White', 'jgd-bizelite' ),
+				'theme_color' => esc_html__( 'Scheme Color', 'jgd-bizelite' ),
+			),
+		)
+	);
+
+	$wp_customize->add_setting(
 		'jgd_bizelite_light_text', array(
 			'default' => 0,
 			'transport' => 'postMessage',
@@ -643,6 +665,14 @@ function jgd_bizelite_sanitize_mag_choices( $value ) {
 function jgd_bizelite_sanitize_style_choices( $value ) {
 	if( ! in_array( $value, array( 'none', 'blue', 'green', 'red', 'silver', 'olive' ) ) ) {
 		$value = 'none';
+	}
+
+	return $value;
+}
+
+function jgd_bizelite_sanitize_social_icon_choices( $value ) {
+	if( ! in_array( $value, array( 'white', 'theme_color' ) ) ) {
+		$value = 'white';
 	}
 
 	return $value;

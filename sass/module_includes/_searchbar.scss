@@ -57,7 +57,7 @@
 		border-left: 1px solid $black_25_opacity;
 		border-bottom: transparent;
 		position: absolute;
-		right: 200px;
+		right: 0px;
 		top: auto;
 		width: 200px;
 
@@ -69,12 +69,10 @@
 
 @media screen and (min-width: 64.063em) { // 64.063em = 1025px
 	.searchbar {
-		right: 280px;
 		width: 280px;
 
 		.three-col-r & ,
 		.three-col-l & {
-			right: 200px;
 			width: 200px;
 		}
 	}

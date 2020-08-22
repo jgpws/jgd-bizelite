@@ -59,6 +59,13 @@
   	color: $white;
   }
 
+	&.page-template-thin-header {
+		.blog-title a:link,
+		.blog-title a:visited {
+			color: $text_color;
+		}
+	}
+
   &.custom-header .site-title-block {
   	background-color: $silver_50_opacity;
   }
@@ -112,6 +119,10 @@
 }
 
 @media screen and (min-width: 48em) {
+	.silver .menu-social a {
+		color: $white;
+	}
+
 	.silver .menu-social .social-panel-expand {
 		background-color: $silver;
 		border-bottom-color: $silver_alt;

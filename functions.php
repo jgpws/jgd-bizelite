@@ -12,6 +12,9 @@ function jgd_bizelite_setup() {
 	/* automatic feed links */
 	add_theme_support( 'automatic-feed-links' );
 
+	/* Selective refresh */
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
 	/* Gutenberg editor styles that match front end */
 	add_editor_style( 'css/editor-style.css' );
 
