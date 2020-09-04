@@ -5,7 +5,7 @@ Tags: blog, news, two-columns, three-columns, custom-header, custom-background, 
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.4
-Stable tag: 1.5.3
+Stable tag: 1.5.5
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -30,7 +30,13 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 
 == Changelog ==
 
-= 1.5.3 August 31 2020 =
+= 1.5.5 September 4 2020 =
+Bug fix: Important update! I used a function to check if WooCommerce is activated before calling the is_woocommerce function in body_class, otherwise the site does not load anything after the body.
+
+= 1.5.4 September 3 2020 =
+Added body_open functions to the alternative header files.
+
+= 1.5.3 September 3 2020 =
 Added compatibility with WooCommerce by matching styling to the theme. Added separate sidebar option for shop pages. Fixed CSS in 404 error pages.
 
 = 1.5.2 =

@@ -457,7 +457,7 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 
 /* enqueue all styles */
 function jgd_bizelite_enqueue_styles() {
-	wp_register_style( 'jgd-bizelite-main-stylesheet', get_template_directory_uri() . '/style.css' );
+	wp_register_style( 'jgd-bizelite-main-stylesheet', get_template_directory_uri() . '/style.min.css' );
 	wp_enqueue_style( 'jgd-bizelite-main-stylesheet' );
 	wp_enqueue_style( 'jgd-bizelite-icons', get_template_directory_uri() . '/css/themify-icons.css' );
 	wp_enqueue_style( 'jgd-bizelite-gutenberg-colors-frontend', get_template_directory_uri() . '/css/gutenberg-colors.css' );
@@ -631,7 +631,7 @@ function jgd_bizelite_body_classes( $classes ) {
 	$layout_style = get_theme_mod( 'jgd_bizelite_mag_choices', 'blog' );
 	$wc_sidebar = get_theme_mod( 'jgd_bizelite_woocommerce_sidebar', 'default_sidebar' );
 
-	if ( is_woocommerce() && $wc_sidebar == 'wc_sidebar' ) {
+	if ( ( is_woocommerce_activated() && is_woocommerce() ) && $wc_sidebar == 'wc_sidebar' ) {
 		switch ( $column_layout ) {
 			case '3cr':
 				$classes[] = '';
