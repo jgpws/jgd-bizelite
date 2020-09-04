@@ -43,6 +43,12 @@
 		} );
 	} );
 
+	wp.customize( 'jgd_bizelite_landing_light_text', function( value ) {
+		value.bind( function( newval ) {
+			var toggleText = ( true === newval ) ? $( 'body.page-template-landing' ).addClass( 'light-text' ) : $( 'body.page-template-landing' ).removeClass( 'light-text' );
+		} );
+	} );
+
 	wp.customize( 'jgd_bizelite_hide_bg_texture', function( value ) {
 		value.bind( function( newval ) {
 			var toggleTexture = ( true === newval ) ? $( 'body' ).addClass( 'no-texture' ) : $( 'body' ).removeClass( 'no-texture' );

@@ -24,3 +24,7 @@
 .wp-block-pullquote.is-style-default {
   border-color: #c0c0c0;
 }
+
+.wc-block-grid__product .wc-block-grid__product-title {
+  color: #404040;
+}

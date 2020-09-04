@@ -65,6 +65,13 @@ function jgd_bizelite_setup() {
 	);
 	register_default_headers( $header_images );
 
+	/* WooCommerce compatibility */
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+  add_theme_support( 'wc-product-gallery-lightbox' );
+  add_theme_support( 'wc-product-gallery-slider' );
+
+	/* Gutenberg */
 	add_theme_support( 'align-wide' );
 }
 add_action( 'after_setup_theme', 'jgd_bizelite_setup' );
@@ -312,11 +319,78 @@ add_action( 'enqueue_block_editor_assets', 'jgd_bizelite_gutenberg_overrides' );
 function jgd_bizelite_custom_editor_style() {
 	$preview_page_bg = get_theme_mod( 'jgd_bizelite_show_landing_bg_gutenberg', 0 );
 	$landing_page_bg = get_theme_mod( 'jgd_bizelite_landing_bg', '#ffffff' );
+	$light_text_landing = get_theme_mod( 'jgd_bizelite_landing_light_text', 0 );
 
 	if ( $preview_page_bg == 1 ) {
 		$css = '
 .editor-styles-wrapper {
 	background-color: ' . esc_attr( $landing_page_bg ) . ' !important;
+}';
+	}
+
+	if ( $light_text_landing == 1 ) {
+		$css .= '
+.editor-styles-wrapper {
+	color: #f5f5f5 !important;
+}
+
+.editor-styles-wrapper a:link,
+.editor-styles-wrapper a:visited {
+	color: #ffffff !important;
+}
+
+.editor-styles-wrapper a:hover,
+.editor-styles-wrapper a:active {
+	color: #f5f5f5 !important;
+}
+
+.editor-styles-wrapper blockquote,
+.editor-styles-wrapper pre {
+	background-color: #404040 !important;
+}
+
+.editor-styles-wrapper pre {
+	color: #f5f5f5;
+}
+
+.editor-styles-wrapper figcaption {
+	color: #f5f5f5;
+}
+
+.editor-styles-wrapper table,
+.editor-styles-wrapper table th,
+.editor-styles-wrapper table td {
+	border-color: #808080 !important;
+}
+
+.editor-styles-wrapper .wp-block-quote__citation {
+	color: #f5f5f5;
+}
+
+.editor-styles-wrapper .wp-block-file {
+	background-color: #404040;
+}
+
+.editor-styles-wrapper .wp-block-pullquote.is-style-default blockquote,
+.editor-styles-wrapper .wp-block-pullquote.is-style-solid-color blockquote {
+	background-color: transparent !important;
+	color: #f5f5f5;
+}
+
+.editor-styles-wrapper .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) {
+	background-color: #404040;
+}
+
+.editor-styles-wrapper .wp-block-calendar table th {
+	color: #333333;
+}
+
+.editor-styles-wrapper .wp-block-calendar .wp-calendar-table {
+	background-color: #404040 !important;
+}
+
+.editor-styles-wrapper .wp-block-calendar table tbody {
+	color: #f5f5f5;
 }';
 	}
 
@@ -338,7 +412,7 @@ if ( ! isset( $content_width ) ) {
 // Primary sidebar
 function jgd_bizelite_primary_sidebar_init() {
 	register_sidebar( array (
-	'name' => __( 'Primary Widgets', 'jgd-bizelite' ),
+	'name' => esc_html__( 'Primary Widgets', 'jgd-bizelite' ),
 	'id' => 'primary_widget_area',
 	'before_title' => '<h3 class="widgettitle">',
 	'after_title' => '</h3>'
@@ -348,18 +422,42 @@ function jgd_bizelite_primary_sidebar_init() {
 // Secondary sidebar
 function jgd_bizelite_secondary_sidebar_init() {
 	register_sidebar( array (
-	'name' => __( 'Secondary Widgets', 'jgd-bizelite' ),
+	'name' => esc_html__( 'Secondary Widgets', 'jgd-bizelite' ),
 	'id' => 'secondary_widget_area',
 	'before_title' => '<h3 class="widgettitle">',
 	'after_title' => '</h3>'
 	) );
 }
+
+// WooCommerce sidebar
+function jgd_bizelite_wc_sidebar_init() {
+	if ( is_woocommerce_activated() ) {
+		register_sidebar( array(
+			'name' => esc_html__( 'WooCommerce Widgets', 'jgd-bizelite' ),
+			'id' => 'wc_widget_area',
+			'before_title' => '<h3 class="widgettitle">',
+			'after_title' => '</h3>'
+		) );
+	}
+}
+
 add_action( 'widgets_init', 'jgd_bizelite_primary_sidebar_init' );
 add_action( 'widgets_init', 'jgd_bizelite_secondary_sidebar_init' );
+add_action( 'widgets_init', 'jgd_bizelite_wc_sidebar_init' );
+
+/* WooCommerce functions */
+/**
+ * Check if WooCommerce is activated
+ */
+if ( ! function_exists( 'is_woocommerce_activated' ) ) {
+	function is_woocommerce_activated() {
+		if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
+	}
+}
 
 /* enqueue all styles */
 function jgd_bizelite_enqueue_styles() {
-	wp_register_style( 'jgd-bizelite-main-stylesheet', get_template_directory_uri() . '/style.min.css' );
+	wp_register_style( 'jgd-bizelite-main-stylesheet', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'jgd-bizelite-main-stylesheet' );
 	wp_enqueue_style( 'jgd-bizelite-icons', get_template_directory_uri() . '/css/themify-icons.css' );
 	wp_enqueue_style( 'jgd-bizelite-gutenberg-colors-frontend', get_template_directory_uri() . '/css/gutenberg-colors.css' );
@@ -531,20 +629,35 @@ function jgd_bizelite_body_classes( $classes ) {
 	// Layout choices
 	$column_layout = get_theme_mod( 'jgd_bizelite_layout_choices', 'none' );
 	$layout_style = get_theme_mod( 'jgd_bizelite_mag_choices', 'blog' );
+	$wc_sidebar = get_theme_mod( 'jgd_bizelite_woocommerce_sidebar', 'default_sidebar' );
 
-	switch( $column_layout ) {
-		case '3cr':
-			$classes[] = 'three-col-r';
-			break;
-		case '2cl':
-			$classes[] = 'two-col-l';
-			break;
-		case '3cl':
-			$classes[] = 'three-col-l';
-			break;
-		default:
-			$classes[] = '';
-			break;
+	if ( is_woocommerce() && $wc_sidebar == 'wc_sidebar' ) {
+		switch ( $column_layout ) {
+			case '3cr':
+				$classes[] = '';
+				break;
+			case '3cl':
+				$classes[] = 'two-col-l';
+				break;
+			default:
+				$classes[] = '';
+				break;
+		}
+	} else {
+		switch( $column_layout ) {
+			case '3cr':
+				$classes[] = 'three-col-r';
+				break;
+			case '2cl':
+				$classes[] = 'two-col-l';
+				break;
+			case '3cl':
+				$classes[] = 'three-col-l';
+				break;
+			default:
+				$classes[] = '';
+				break;
+		}
 	}
 
 	switch( $layout_style ) {
@@ -571,10 +684,15 @@ function jgd_bizelite_body_classes( $classes ) {
 	}
 
 	$light_text = get_theme_mod( 'jgd_bizelite_light_text', 0 );
+	$light_text_landing = get_theme_mod( 'jgd_bizelite_landing_light_text', 0 );
 	$texture = get_theme_mod( 'jgd_bizelite_hide_bg_texture', 0 );
 	$decorations = get_theme_mod( 'jgd_bizelite_hide_decorations', 0 );
 
 	if( $light_text == 1 ) {
+		$classes[] = 'light-text';
+	}
+
+	if( $light_text_landing == 1 && is_page_template( 'page-templates/landing.php' ) ) {
 		$classes[] = 'light-text';
 	}
 

@@ -553,6 +553,53 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting(
+		'jgd_bizelite_landing_light_text', array(
+			'type' => 'theme_mod',
+			'default' => 0,
+			'transport' => 'postMessage',
+			'sanitize_callback' => 'jgd_bizelite_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'jgd_bizelite_landing_light_text', array(
+			'type' => 'checkbox',
+			'label' => esc_html__( 'Use light text for dark background', 'jgd-bizelite' ),
+			'section' => 'jgd_bizelite_landing',
+		)
+	);
+
+	// WooCommerce store
+	$wp_customize->add_section(
+		'jgd_bizelite_store_section', array(
+			'title' => esc_html__( 'Store Options', 'jgd-bizelite' ),
+			'description' => esc_html__( 'Customize your WooCommerce store.', 'jgd-bizelite' ),
+			'priority' => 127,
+			//'active_callback' => 'jgd_bizelite_wc_page_callback',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'jgd_bizelite_woocommerce_sidebar', array(
+			'type' => 'theme_mod',
+			'default' => 'default_sidebar',
+			'sanitize_callback' => 'jgd_bizelite_sanitize_wc_sidebar_choices',
+		)
+	);
+
+	$wp_customize->add_control(
+		'jgd_bizelite_woocommerce_sidebar', array(
+			'type' => 'radio',
+			'label' => esc_html__( 'Use a different sidebar on WooCommerce shop pages.', 'jgd-bizelite' ),
+			'section' => 'jgd_bizelite_store_section',
+			'choices' => array(
+				'default_sidebar' => esc_html__( 'Default Sidebar', 'jgd-bizelite' ),
+				'wc_sidebar' => esc_html__( 'WooCommerce Widgets Sidebar', 'jgd-bizelite' ),
+			)
+		)
+	);
+
 	// Use post transport on included settings
 	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -629,6 +676,12 @@ function jgd_bizelite_page_callback() {
 	return is_page();
 }
 
+function jgd_bizelite_wc_page_callback() {
+	if ( is_woocommerce_activated() ) {
+		return true;
+	}
+}
+
 /* Sanitization callbacks */
 function jgd_bizelite_sanitize_logo_choices( $value ) {
 	if( !in_array( $value, array( 'left', 'center', 'right' ) ) ) {
@@ -673,6 +726,14 @@ function jgd_bizelite_sanitize_style_choices( $value ) {
 function jgd_bizelite_sanitize_social_icon_choices( $value ) {
 	if( ! in_array( $value, array( 'white', 'theme_color' ) ) ) {
 		$value = 'white';
+	}
+
+	return $value;
+}
+
+function jgd_bizelite_sanitize_wc_sidebar_choices( $value ) {
+	if( ! in_array( $value, array( 'default_sidebar', 'wc_sidebar' ) ) ) {
+		$value = 'default_sidebar';
 	}
 
 	return $value;

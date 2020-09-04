@@ -246,3 +246,109 @@
 		}
 	}
 }
+
+/* WooCommerce blocks */
+.wc-block-grid__product {
+	border-left: 0px;
+	border-right: 0px;
+	padding: 20px;
+}
+
+.wc-block-grid__product-link {
+	&:hover,
+	&:active {
+		text-decoration: none;
+	}
+}
+
+.wc-block-grid .wc-block-components-product-title,
+.wc-block-grid__product-title {
+	font-size: 1.29rem;
+	text-align: left;
+}
+
+.wc-block-grid .wc-block-components-product-title {
+	a {
+		color: $black;
+		text-decoration: none;
+
+		&:hover {
+			color: $medium_gray;
+		}
+	}
+}
+
+.wc-block-grid__product-title {
+	color: $black;
+
+	&:hover {
+		border-bottom: none;
+		color: $medium_gray;
+	}
+}
+
+.wc-block-components-product-image .wc-block-components-product-sale-badge--alignright,
+.wc-block-grid__product .wc-block-grid__product-onsale {
+	background-color: $black_50_opacity;
+	border-top: transparent;
+	border-right: transparent;
+	border-bottom: 2px solid $white_50_opacity;
+	border-left: transparent;
+	border-radius: 0;
+	color: $white;
+	font-size: .875em;
+	text-transform: none;
+}
+
+.wc-block-grid__product .wc-block-grid__product-onsale {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.wc-block-components-product-image .wc-block-components-product-sale-badge--alignright {
+	top: 0;
+	right: auto;
+	left: 0;
+}
+
+.wc-block-grid__product .wc-block-grid__product-add-to-cart,
+.wc-block-grid__product .wc-block-grid__product-onsale,
+.wc-block-grid__product .wc-block-grid__product-price,
+.wc-block-grid__product .wc-block-grid__product-rating {
+	text-align: left;
+}
+
+.wc-block-grid__product-add-to-cart a,
+.wc-block-grid__product-add-to-cart button {
+	color: $text_color;
+	display: flex;
+	width: 100%;
+}
+
+.wc-block-featured-product__link .wp-block-button__link {
+	background-color: $black_50_opacity;
+	border-top: transparent;
+	border-right: transparent;
+	border-bottom: 1px solid $dark_gray;
+	border-left: transparent;
+	color: $white !important;
+	font-size: 1.29rem;
+	font-weight: bold;
+	padding: 0.5em 1em;
+
+	&:hover {
+		background-color: $black;
+	}
+}
+
+.wc-block-components-pagination__page {
+	border-color: $silver;
+	min-width: 44px;
+	padding: 0.5em;
+	margin: 0 0.125em;
+}
+
+.wc-block-components-pagination__page--active[disabled] {
+	border-color: $light_gray;
+}

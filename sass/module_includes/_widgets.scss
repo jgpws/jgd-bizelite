@@ -77,6 +77,38 @@
 	list-style: none;
 }
 
+.wp-calendar-nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.woocommerce {
+	.widgettitle {
+		margin-top: 0px;
+	}
+
+	.widget.woocommerce {
+		ul {
+			padding: 20px;
+		}
+
+		p {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}
+
+.woocommerce-product-search {
+	padding: 10px;
+
+	button {
+		display: block;
+		margin: 6px 0;
+		width: 100%;
+	}
+}
+
 @media screen and (min-width: 40.063em) { // 40.063em = 641px
 	.widget-area {
 		width: 95%;
@@ -122,7 +154,8 @@
 		padding-bottom: 0px;
 	}
 
-	.widget_search .search-form {
+	.widget_search .search-form,
+	.woocommerce-product-search {
 		padding: 10px 20px;
 	}
 

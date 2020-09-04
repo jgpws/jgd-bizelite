@@ -22,6 +22,7 @@ img.aligncenter {
 
 .alignwide,
 .alignfull {
+	clear: both;
 	max-width: none !important;
 }
 
@@ -54,6 +55,10 @@ img.aligncenter {
 	content: " ";
 	display: block;
 	visibility: hidden;
+}
+
+.large-text {
+	font-size: 1.71em;
 }
 
 /* JavaScript added States */

@@ -5,7 +5,7 @@ Tags: blog, news, two-columns, three-columns, custom-header, custom-background, 
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.4
-Stable tag: 1.5.2
+Stable tag: 1.5.3
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -30,8 +30,11 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 
 == Changelog ==
 
+= 1.5.3 August 31 2020 =
+Added compatibility with WooCommerce by matching styling to the theme. Added separate sidebar option for shop pages. Fixed CSS in 404 error pages.
+
 = 1.5.2 =
-CSS fixes; Searchbar is now all the way to the right.
+CSS fixes; Searchbar is now all the way to the right. New option for social icon color when in front of header image.
 
 = 1.5.1 August 12 2020 =
 Minor fixes.

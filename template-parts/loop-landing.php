@@ -3,6 +3,9 @@
 
 <!-- opens post div -->
 <div id="post-<?php the_id(); ?>" <?php post_class(); ?>>
+	<div class="index-meta">
+		<?php jgd_bizelite_edit_icon(); ?>
+	</div>
 
 	<!-- opens entry div -->
 	<div class="entry clearfix">

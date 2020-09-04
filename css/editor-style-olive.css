@@ -24,3 +24,12 @@
 .wp-block-pullquote.is-style-default {
   border-color: #c0c056;
 }
+
+.wc-block-grid__product .wc-block-grid__product-title {
+  color: #535300;
+}
+
+.wc-block-featured-product__link .wp-block-button__link {
+  background-color: rgba(83, 83, 0, 0.50) !important;
+  border-bottom: #535300;
+}

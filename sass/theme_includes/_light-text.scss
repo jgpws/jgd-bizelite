@@ -49,6 +49,16 @@
 		border-color: $medium_gray;
 	}
 
+	.post-blog .post-page-numbers,
+	.type-page .post-page-numbers,
+	.error404 .post-page-numbers {
+		border-color: $white_25_opacity;
+
+		&.current {
+			border-color: $white_12_opacity;
+		}
+	}
+
 	.index-meta p {
 		border-color: $medium_gray;
 	}
@@ -90,6 +100,71 @@
 	.wp-block-calendar table th {
 		color: $darker_gray;
 	}
+
+	.wp-block-file {
+		background-color: $medium_dark_gray;
+	}
+
+	.wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) {
+		background-color: $medium_dark_gray;
+	}
+
+	&.woocommerce {
+		.woocommerce-breadcrumb,
+		ul.products li.product .price {
+			color: $text_color_light;
+		}
+
+		.woocommerce-breadcrumb a:hover {
+			color: $text_color_light;
+		}
+
+		ul.products li.product .woocommerce-loop-category__title,
+		ul.products li.product .woocommerce-loop-product__title,
+		ul.products li.product h3 {
+			color: $white;
+
+			&:hover {
+				color: $text_color_light;
+			}
+		}
+
+		nav.woocommerce-pagination ul li span.current {
+			border-color: $white_25_opacity;
+			color: $text_color_light;
+		}
+
+		nav.woocommerce-pagination ul li a {
+			&:hover,
+			&:active {
+				color: $text_color_light;
+			}
+		}
+
+		div.product .woocommerce-tabs ul.tabs li.active a,
+		div.product .woocommerce-tabs .panel {
+			color: $text_color;
+		}
+
+		.widget_shopping_cart .buttons a,
+		&.widget_shopping_cart .buttons a {
+			color: $text_color;
+		}
+	}
+
+	.wc-block-components-pagination__page,
+	.wc-block-components-pagination__page--active[disabled]:focus,
+	.wc-block-components-pagination__page--active[disabled]:hover {
+		color: $white;
+	}
+
+	.wc-block-components-pagination__page {
+		border-color: $white_25_opacity;
+	}
+
+	.wc-block-components-pagination__page--active[disabled] {
+		border-color: $white_12_opacity;
+	}
 }
 
 // Sidebar
@@ -111,6 +186,14 @@
     	background-color: $darker_gray;
     }
   }
+}
+
+@media screen and (min-width: 64.063em) {
+	.light-text {
+		&.no-decs #sidebar {
+			border-color: $white_25_opacity;
+		}
+	}
 }
 
 // Color theme overrides
