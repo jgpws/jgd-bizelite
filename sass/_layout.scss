@@ -50,9 +50,8 @@
 		border-top: transparent;
 	}
 
-	.woocommerce #access,
-	.woocommerce-cart #access,
-	.woocommerce-checkout #access {
+	.page-template-full-width #access,
+	.woocommerce #access {
 		border-bottom: none;
 		height: 0;
 	}
@@ -122,8 +121,7 @@
     }
 	}
 
-	.woocommerce-cart,
-	.woocommerce-checkout {
+	.page-template-full-width {
 		#main,
 		&.three-col-r #main {
 			border-right: 4px solid rgba(0, 0, 0, 0.25);

@@ -7,6 +7,10 @@ if(have_posts()) : while ( have_posts() ) : the_post(); ?>
 
 <!-- opens post div -->
 <div id="post-<?php the_id(); ?>" <?php post_class(); ?>>
+	<h1 class="entry-title"><?php the_title(); ?></a></h1>
+	<div class="index-meta">
+		<?php jgd_bizelite_edit_icon(); ?>
+	</div>
 
 	<!-- opens entry div -->
 	<div class="entry clearfix">

@@ -458,11 +458,11 @@
 }
 
 /* WooCommerce Pages */
-.woocommerce {
-	h1:not(.blog-title),
+.woocommerce .woo-content-container {
+	h1,
 	h2,
-	h3:not(.subtitle),
-	h4:not(.blog-title),
+	h3,
+	h4,
 	h5,
 	h6 {
 		margin: 0.2em auto;
@@ -735,6 +735,36 @@
 .woocommerce-checkout #payment {
 	background-color: $light_gray;
 	border-radius: 0px;
+}
+
+.woocommerce-MyAccount-navigation ul {
+	list-style-type: none;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation {
+	background-color: $light_gray;
+}
+
+.woocommerce-MyAccount-navigation-link {
+	border-bottom: 1px solid $silver;
+
+	a {
+		display: block;
+		font-weight: bold;
+		padding: 0.5em;
+		text-decoration: none;
+	}
+
+	&.is-active a {
+		background-color: $white;
+	}
+}
+
+.woocommerce form .show-password-input,
+.woocommerce-page form .show-password-input {
+	top: auto;
 }
 
 @media screen and (min-width: 48em) {

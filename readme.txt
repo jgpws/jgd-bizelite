@@ -1,11 +1,11 @@
 === JGD-BizElite ===
 
 Contributors: jgpws
-Tags: blog, news, two-columns, three-columns, custom-header, custom-background, custom-colors, editor-style, custom-menu, featured-images, theme-options, translation-ready, wide-blocks
+Tags: blog, news, two-columns, three-columns, custom-header, custom-logo, custom-background, custom-colors, editor-style, custom-menu, featured-images, theme-options, threaded-comments, translation-ready, wide-blocks
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.4
-Stable tag: 1.5.5
+Stable tag: 1.5.6
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -29,6 +29,9 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 * Themify Icons, Copyright 2019 Lally Elias, SIL Open Font License, https://github.com/lykmapipo/themify-icons
 
 == Changelog ==
+
+= 1.5.6 September 5 2020 =
+Removed full width styling on WooCommerce cart and checkout pages and instead applied them to a custom page template-- Full Width, No Menu.
 
 = 1.5.5 September 4 2020 =
 Bug fix: Important update! I used a function to check if WooCommerce is activated before calling the is_woocommerce function in body_class, otherwise the site does not load anything after the body.

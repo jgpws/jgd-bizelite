@@ -298,7 +298,7 @@ function jgd_bizelite_hide_cats_switcher_customizer() {
 function jgd_bizelite_category_icon() {
 	$use_icons = get_theme_mod( 'jgd_bizelite_use_icons' );
 	if( $use_icons == 1 ) { ?>
-		<strong><span class="ti-folder" title="<?php esc_attr_e( 'Posted in categories:', 'jgd-bizelite' ); ?>"><span class="screen-reader-text"><?php esc_html_e( 'Posted in categories:', 'jgd-bizelite' ); ?></span></span> :</strong><?php the_category(', '); ?>
+		<strong><span class="ti-folder" title="<?php esc_attr_e( 'Posted in categories:', 'jgd-bizelite' ); ?>"><span class="screen-reader-text"><?php esc_html_e( 'Posted in categories:', 'jgd-bizelite' ); ?></span></span> : </strong><?php the_category(', '); ?>
 	<?php
 	} else { ?>
 		<strong><?php esc_html_e( 'Posted in categories: ', 'jgd-bizelite' ); ?></strong><?php the_category(', '); ?>

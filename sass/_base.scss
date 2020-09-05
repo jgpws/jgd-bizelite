@@ -169,6 +169,11 @@ form input#searchsubmit {
 	border: 0;
 }
 
+fieldset {
+	border: 1px solid $silver;
+	margin-bottom: 1em;
+}
+
 hr {
 	border-bottom: 2px solid $black_25_opacity;
 	border-top: transparent;

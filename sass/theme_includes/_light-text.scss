@@ -141,6 +141,10 @@
 			}
 		}
 
+		&.woocommerce.single-product div.product p.price {
+			color: $text_color_light;
+		}
+
 		div.product .woocommerce-tabs ul.tabs li.active a,
 		div.product .woocommerce-tabs .panel {
 			color: $text_color;
