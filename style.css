@@ -4,7 +4,7 @@ Theme URI: http://www.jasong-designs.com/2012/02/17/jgd-bizelite/
 Description: JGD-BizElite is a free, responsive/fixed theme with premium features. Ideal for a content heavy blog, JGD-BizElite is packed with options. Customizer modifications include WordPress's Custom Logo, Custom Header, custom menus and background. Additional Customizer options give you the ability to hide post date, tag and category links, and change the footer text. Eight layouts, six color schemes and two custom page templates are included.
 Author: Jason G. Designs
 Author URI: http://www.jasong-designs.com
-Version: 1.5.6
+Version: 1.5.9
 Tested up to: 5.4
 Requires PHP: 5.6
 Text Domain: jgd-bizelite
@@ -70,8 +70,9 @@ body {
 	background-color: #333333;
 }
 
-p {
-	margin-bottom: 1em;
+p,
+address {
+	margin-bottom: 1rem;
 }
 
 p,
@@ -86,7 +87,7 @@ blockquote {
 
 blockquote {
 	background-color: #ededed;
-	margin: 20px;
+	margin: 20px !important;
 	padding: 1em;
 	font-style: italic;
 	clear: both;
@@ -938,7 +939,7 @@ hr {
 	clear: both;
 	margin: 20px 5%;
 	overflow-x: hidden;
-	padding: 20px 5%;
+	padding: 20px 1.5em;
 }
 
 .post-blog .entry-title,
@@ -1044,6 +1045,7 @@ hr {
 	.post-blog .entry,
 	.type-page .entry {
 		margin: 20px calc(2.5% + 20px);
+		padding: 20px 3em;
 	}
 }
 
@@ -2248,17 +2250,18 @@ a.more-link {
 
 .wp-block-button__link {
 	border: 1px solid #c0c0c0;
+	color: #333333;
 	padding: 2px 6px;
 	font-size: 1em;
 	border-radius: 0px;
 }
 
 .wp-block-button__link:link, .wp-block-button__link:visited {
-	color: #333333 !important;
+	color: #333333;
 }
 
 .wp-block-button__link:hover, .wp-block-button__link:active {
-	color: #333333 !important;
+	color: #333333;
 	text-decoration: none;
 }
 
@@ -2337,6 +2340,21 @@ a.more-link {
 .wp-block-latest-comments__comment-date {
 	color: #808080;
 	font-style: italic;
+}
+
+.wp-block-media-text__media img {
+	margin: 20px;
+	width: calc(100% - 40px);
+}
+
+.wp-block-media-text {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .wp-block-quote p,
@@ -2460,6 +2478,11 @@ a.more-link {
 .type-page .wp-block-calendar th,
 .type-page .wp-block-calendar td {
 	padding: 1em;
+}
+
+.wp-block-social-links:not(.is-style-logos-only) .wp-social-link a:link,
+.wp-block-social-links:not(.is-style-logos-only) .wp-social-link a:visited {
+	color: #ffffff !important;
 }
 
 /* WooCommerce blocks */
@@ -2896,18 +2919,17 @@ img.aligncenter {
 }
 
 .alignwide {
-	margin-left: -4% !important;
-	margin-right: -4% !important;
+	margin-left: -0.75em !important;
+	margin-right: -0.75em !important;
 }
 
-.page-template-landing .alignwide {
+/*.page-template-landing .alignwide {
 	margin-left: -2.5% !important;
 	margin-right: -2.5% !important;
-}
-
+}*/
 .alignfull {
-	margin-left: -8% !important;
-	margin-right: -8% !important;
+	margin-left: -1.5em !important;
+	margin-right: -1.5em !important;
 }
 
 .size-auto,
@@ -2963,10 +2985,28 @@ img.aligncenter {
 	max-height: 0px;
 }
 
+@media screen and (min-width: 40.063em) {
+	.alignwide {
+		margin-left: -1.5em !important;
+		margin-right: -1.5em !important;
+	}
+	.alignfull {
+		margin-left: -3em !important;
+		margin-right: -3em !important;
+	}
+}
+
 @media screen and (min-width: 64.063em) {
+	.page-template-landing .entry {
+		padding: 20px 6em;
+	}
 	.page-template-landing .alignwide {
-		margin-left: 2.5% !important;
-		margin-right: 2.5% !important;
+		margin-left: -3em !important;
+		margin-right: -3em !important;
+	}
+	.page-template-landing .alignfull {
+		margin-left: -6em !important;
+		margin-right: -6em !important;
 	}
 }
 
@@ -3019,6 +3059,10 @@ img.aligncenter {
 
 .blue a.button-primary:hover {
 	background-color: #000053;
+}
+
+.blue .wp-block-button__link:link, .blue .wp-block-button__link:visited, .blue .wp-block-button__link:active, .blue .wp-block-button__link:hover {
+	color: #333333;
 }
 
 .blue .branding,
@@ -3252,6 +3296,10 @@ img.aligncenter {
 .green .button-primary:hover {
 	background-color: #0b3d0b;
 	color: #ffffff;
+}
+
+.green .wp-block-button__link:link, .green .wp-block-button__link:visited, .green .wp-block-button__link:active, .green .wp-block-button__link:hover {
+	color: #333333;
 }
 
 .green .branding,
@@ -3505,6 +3553,11 @@ img.aligncenter {
 	background-color: #5a0000;
 }
 
+.red .wp-block-button__link:link,
+.red .wp-block-button__link:visited {
+	color: #333333;
+}
+
 .red .branding,
 .red #footer {
 	background-color: #5a0000;
@@ -3736,6 +3789,11 @@ img.aligncenter {
 
 .silver a.button-primary:hover {
 	background-color: #a0a0a0;
+}
+
+.silver .wp-block-button__link:link,
+.silver .wp-block-button__link:visited {
+	color: #333333;
 }
 
 .silver .branding,
@@ -3994,6 +4052,11 @@ img.aligncenter {
 .olive a.button-primary:hover {
 	background-color: #535300;
 	color: #ffffff;
+}
+
+.olive .wp-block-button__link:link,
+.olive .wp-block-button__link:visited {
+	color: #333333;
 }
 
 .olive .branding,

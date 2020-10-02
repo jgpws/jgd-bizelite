@@ -126,17 +126,41 @@ add_action( 'wp_enqueue_scripts', 'jgd_bizelite_logo_align_switcher' );
 
 function jgd_bizelite_custom_color_css() {
 	$content_sidebar_bg = get_theme_mod( 'jgd_bizelite_content_sidebar_bgcolor', '#ededed' );
-	$landing_page_bg = get_theme_mod( 'jgd_bizelite_landing_bg', '#ffffff' );
+
+	$landing_page_id_1 = get_theme_mod( 'jgd_bizelite_apply_landing_page_1', 0 );
+	$landing_page_id_2 = get_theme_mod( 'jgd_bizelite_apply_landing_page_2', 0 );
+	$landing_page_id_3 = get_theme_mod( 'jgd_bizelite_apply_landing_page_3', 0 );
+
+	$landing_page_bg_1 = get_theme_mod( 'jgd_bizelite_landing_bg_1', '#ffffff' );
+	$landing_page_bg_2 = get_theme_mod( 'jgd_bizelite_landing_bg_2', '#ffffff' );
+	$landing_page_bg_3 = get_theme_mod( 'jgd_bizelite_landing_bg_3', '#ffffff' );
 
 	$css = '
 #main.texture {
 	background-color: ' . esc_attr( $content_sidebar_bg ) . ';
 }';
 
-	$css .= '
-.page-template-landing #main.texture {
-	background-color: ' . esc_attr( $landing_page_bg ) . ';
+	if ( $landing_page_bg_1 != '' ) {
+		$css .= '
+.page-template-landing.page-id-' . $landing_page_id_1 . ' #main.texture {
+	background-color: ' . esc_attr( $landing_page_bg_1 ) . ';
 }';
+	}
+
+	if ( $landing_page_bg_2 != '' ) {
+		$css .= '
+.page-template-landing.page-id-' . $landing_page_id_2 . ' #main.texture {
+	background-color: ' . esc_attr( $landing_page_bg_2 ) . ';
+}';
+	}
+
+	if ( $landing_page_bg_3 != '' ) {
+		$css .= '
+.page-template-landing.page-id-' . $landing_page_id_3 . '  #main.texture {
+	background-color: ' . esc_attr( $landing_page_bg_3 ) . ';
+}';
+	}
+
 	wp_add_inline_style( 'jgd-bizelite-main-stylesheet', $css );
 }
 add_action( 'wp_enqueue_scripts', 'jgd_bizelite_custom_color_css' );
@@ -369,4 +393,3 @@ function jgd_bizelite_wc_sidebar_switcher() {
 		get_sidebar();
 	}
 }
-?>

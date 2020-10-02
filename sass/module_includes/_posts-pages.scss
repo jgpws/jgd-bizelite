@@ -42,7 +42,7 @@
 		clear: both;
 		margin: 20px 5%;
 		overflow-x: hidden;
-		padding: 20px 5%;
+		padding: 20px 1.5em;
 
 		 > * {
 			margin-left: auto;
@@ -114,6 +114,7 @@
 
 		.entry {
 			margin: 20px calc(2.5% + 20px);
+			padding: 20px 3em;
 		}
 	}
 }

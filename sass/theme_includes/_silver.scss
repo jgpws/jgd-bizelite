@@ -45,6 +45,11 @@
   a.button-primary:hover {
   	background-color: $silver_alt;
   }
+
+	.wp-block-button__link:link,
+	.wp-block-button__link:visited {
+		color: $text_color;
+	}
 }
 
 // Header/Footer

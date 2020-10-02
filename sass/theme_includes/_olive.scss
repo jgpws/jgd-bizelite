@@ -46,6 +46,11 @@
   	background-color: $dark_olive;
   	color: $white;
   }
+
+	.wp-block-button__link:link,
+	.wp-block-button__link:visited {
+		color: $text_color;
+	}
 }
 
 // Header/Footer

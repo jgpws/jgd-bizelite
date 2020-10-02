@@ -45,6 +45,15 @@
   	background-color: $dark_green;
   	color: $white;
   }
+
+	.wp-block-button__link {
+		&:link,
+		&:visited,
+		&:active,
+		&:hover {
+			color: $text_color;
+		}
+	}
 }
 
 // Header/Footer

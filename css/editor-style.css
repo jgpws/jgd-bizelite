@@ -6,8 +6,15 @@ body {
 	line-height: 1.29em;
 }
 
-p {
-	margin-bottom: 1em;
+p,
+address {
+	margin-bottom: 1rem;
+	margin-top: 0;
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce li,
+.wp-block-freeform.block-library-rich-text__tinymce p {
+	line-height: 1.29em;
 }
 
 p,
@@ -21,10 +28,15 @@ blockquote {
 
 blockquote {
 	background-color: #ededed;
-	margin: 20px;
 	padding: 1em;
 	font-style: italic;
 	clear: both;
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce blockquote {
+	border-left: none;
+	box-shadow: none;
+	margin: 20px;
 }
 
 blockquote p {
@@ -102,14 +114,17 @@ table caption {
 }
 
 pre,
+.wp-block-freeform.block-library-rich-text__tinymce pre,
 code,
 kbd {
 	font-family: "Courier New", Courier, monospace;
 }
 
-pre {
+pre,
+.wp-block-freeform.block-library-rich-text__tinymce pre {
 	background-color: #ededed;
 	border: 1px solid #c0c0c0;
+	font-size: 0.9em;
 	overflow-x: auto;
 	padding: 1em;
 }
@@ -122,7 +137,7 @@ form label {
 	margin-right: 6px;
 }
 
-button:not(.components-button),
+.editor-styles-wrapper button:not(.components-button),
 form input,
 form textarea,
 select {
@@ -137,15 +152,14 @@ form textarea:focus {
 	background-color: #ededed;
 }
 
-button:not(.components-button),
-form input,
+.editor-styles-wrapper form input,
 form textarea,
 select,
 select option {
 	font-family: FreeSerif, "Times New Roman", Times, serif;
 }
 
-button:not(.components-button),
+.editor-styles-wrapper button:not(.components-button),
 .wp-block-button__link,
 form input[type="reset"],
 form input[type="submit"],

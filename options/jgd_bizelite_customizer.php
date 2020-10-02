@@ -509,66 +509,111 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		'jgd_bizelite_landing', array(
 			'title' => esc_html__( 'Landing Page', 'jgd-bizelite' ),
 			'priority' => 130,
-			'description' => esc_html__( 'Customize the Landing Page template.', 'jgd-bizelite' ),
+			'description' => sprintf( esc_html__( '%1$sCustomize pages using the Landing Page template.%2$s%1$s* Use these features to preview the landing page colors in the block editor.%2$s%1$s%3$sDisable (uncheck) these features after finishing customizations to the landing page, as they show on every page.%4$s%2$s', 'jgd-bizelite' ), '<p>', '</p>', '<strong>', '</strong>' ),
 			'panel' => 'jgd_bizelite_page_templates',
 			'active_callback' => 'jgd_bizelite_page_callback',
 		)
 	);
 
+	// Landing Page
 	$wp_customize->add_setting(
-		'jgd_bizelite_landing_bg', array(
+		'jgd_bizelite_select_landing_page', array(
 			'type' => 'theme_mod',
-			'default' => '#ffffff',
-			'transport' => 'postMessage',
-			'sanitize_callback' => 'sanitize_hex_color',
+			'default' => 'select_page',
+			'sanitize_callback' => 'jgd_bizelite_sanitize_lp_choices',
 		)
 	);
 
 	$wp_customize->add_control(
-		new WP_Customize_Color_Control( $wp_customize, 'jgd_bizelite_landing_bg',
-			array(
-				'label' => esc_html__( 'Background Color', 'jgd-bizelite' ),
-				'description' => esc_html__( 'Change the background color of the Landing Page independent of the theme background color.', 'jgd-bizelite' ),
-				'type' => 'color',
+		'jgd_bizelite_select_landing_page', array(
+			'label' => esc_html__( 'Select a Landing Page', 'jgd-bizelite' ),
+			'type' => 'select',
+			'section' => 'jgd_bizelite_landing',
+			'choices' => array(
+				'select_page' => esc_html__( 'Select a Landing Page', 'jgd-bizelite' ),
+				'lp_one' => esc_html__( 'Landing Page 1', 'jgd-bizelite' ),
+				'lp_two' => esc_html__( 'Landing Page 2', 'jgd-bizelite' ),
+				'lp_three' => esc_html__( 'Landing Page 3', 'jgd-bizelite' ),
+			),
+		)
+	);
+
+	// Array for each Customizer setting/control
+	for ( $counter = 1; $counter <= 3; $counter++ ) {
+
+		$wp_customize->add_setting(
+			'jgd_bizelite_apply_landing_page_' . $counter , array(
+				'type' => 'theme_mod',
+				'default' => 0,
+				'sanitize_callback' => 'absint',
+			)
+		);
+
+		$wp_customize->add_control(
+			'jgd_bizelite_apply_landing_page_' . $counter, array(
+				'label' => esc_html__( 'Apply Customizations to the selected page' , 'jgd-bizelite' ),
+				'description' => esc_html__( 'The selected page must have the Landing Page template applied.', 'jgd-bizelite' ),
+				'type' => 'dropdown-pages',
 				'section' => 'jgd_bizelite_landing',
 			)
-		)
-	);
+		);
 
-	$wp_customize->add_setting(
-		'jgd_bizelite_show_landing_bg_gutenberg', array(
-			'type' => 'theme_mod',
-			'default' => 0,
-			'transport' => 'postMessage',
-			'sanitize_callback' => 'jgd_bizelite_sanitize_checkbox',
-		)
-	);
+		$wp_customize->add_setting(
+			'jgd_bizelite_landing_bg_' . $counter, array(
+				'type' => 'theme_mod',
+				'default' => '#ffffff',
+				'transport' => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
 
-	$wp_customize->add_control(
-		'jgd_bizelite_show_landing_bg_gutenberg', array(
-			'type' => 'checkbox',
-			'label' => esc_html__( 'Show Landing Page background color in the Block Editor.', 'jgd-bizelite' ),
-			'description' => sprintf( esc_html__( '%1$sUse this feature to preview the landing page background color in the block editor.%2$s%1$s%3$sDisable (uncheck) this feature after finishing customizations to the landing page, as it shows the background on every page.%4$s%2$s', 'jgd-bizelite' ), '<p>', '</p>', '<strong>', '</strong>' ),
-			'section' => 'jgd_bizelite_landing',
-		)
-	);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control( $wp_customize, 'jgd_bizelite_landing_bg_' . $counter,
+				array(
+					'label' => esc_html__( 'Background Color', 'jgd-bizelite' ),
+					'description' => esc_html__( 'Change the background color of the Landing Page independent of the theme background color.', 'jgd-bizelite' ),
+					'type' => 'color',
+					'section' => 'jgd_bizelite_landing',
+				)
+			)
+		);
 
-	$wp_customize->add_setting(
-		'jgd_bizelite_landing_light_text', array(
-			'type' => 'theme_mod',
-			'default' => 0,
-			'transport' => 'postMessage',
-			'sanitize_callback' => 'jgd_bizelite_sanitize_checkbox',
-		)
-	);
+		$wp_customize->add_setting(
+			'jgd_bizelite_show_landing_bg_gutenberg_' . $counter , array(
+				'type' => 'theme_mod',
+				'default' => 0,
+				'transport' => 'postMessage',
+				'sanitize_callback' => 'jgd_bizelite_sanitize_checkbox',
+			)
+		);
 
-	$wp_customize->add_control(
-		'jgd_bizelite_landing_light_text', array(
-			'type' => 'checkbox',
-			'label' => esc_html__( 'Use light text for dark background', 'jgd-bizelite' ),
-			'section' => 'jgd_bizelite_landing',
-		)
-	);
+		$wp_customize->add_control(
+			'jgd_bizelite_show_landing_bg_gutenberg_' . $counter , array(
+				'type' => 'checkbox',
+				'label' => esc_html__( 'Show Landing Page background color in the Block Editor. *', 'jgd-bizelite' ),
+				'section' => 'jgd_bizelite_landing',
+			)
+		);
+
+		$wp_customize->add_setting(
+			'jgd_bizelite_landing_light_text_' . $counter , array(
+				'type' => 'theme_mod',
+				'default' => 0,
+				'transport' => 'postMessage',
+				'sanitize_callback' => 'jgd_bizelite_sanitize_checkbox',
+			)
+		);
+
+		$wp_customize->add_control(
+			'jgd_bizelite_landing_light_text_' . $counter , array(
+				'type' => 'checkbox',
+				'label' => esc_html__( 'Use light text for dark background *', 'jgd-bizelite' ),
+				'section' => 'jgd_bizelite_landing',
+			)
+		);
+
+	}
+	//
 
 	// WooCommerce store
 	$wp_customize->add_section(
@@ -739,6 +784,14 @@ function jgd_bizelite_sanitize_wc_sidebar_choices( $value ) {
 	return $value;
 }
 
+function jgd_bizelite_sanitize_lp_choices( $value ) {
+	if ( ! in_array( $value, array( 'select_page', 'lp_one', 'lp_two', 'lp_three' ) ) ) {
+		$value = 'select_page';
+	}
+
+	return $value;
+}
+
 function jgd_bizelite_sanitize_html( $input ) {
 	return wp_filter_post_kses( force_balance_tags( $input ) );
 };
@@ -757,3 +810,9 @@ function jgd_bizelite_preview_js() {
 	wp_localize_script( 'jgd-bizelite-custom-css-preview', 'jbeCustomizer', $args );
 }
 add_action( 'customize_preview_init', 'jgd_bizelite_preview_js' );
+
+/* for Customizer controls */
+function jgd_bizelite_customizer_controls() {
+	wp_enqueue_script( 'jgd-bizelite-customizer-controls', get_template_directory_uri() . '/scripts/jbe-customize-controls.js', array( 'jquery' ), '', true );
+}
+add_action( 'customize_controls_enqueue_scripts', 'jgd_bizelite_customizer_controls' );

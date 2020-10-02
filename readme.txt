@@ -5,7 +5,7 @@ Tags: blog, news, two-columns, three-columns, custom-header, custom-logo, custom
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.4
-Stable tag: 1.5.6
+Stable tag: 1.5.9
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -29,6 +29,15 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 * Themify Icons, Copyright 2019 Lally Elias, SIL Open Font License, https://github.com/lykmapipo/themify-icons
 
 == Changelog ==
+
+= 1.5.9 September 26 2020 =
+Used fixed values for left/right padding in entry area, for accuracy with full and wide width elements; adjusted styling for the Social Icons block; moved some functions to an inc folder; added several new Customizer options for the Landing Page template.
+
+= 1.5.8 September 21 2020 =
+More CSS fixes for the Media Text block.
+
+= 1.5.7 September 19 2020 =
+CSS adjustments for the Media Text block; CSS fixes for button rendering.
 
 = 1.5.6 September 5 2020 =
 Removed full width styling on WooCommerce cart and checkout pages and instead applied them to a custom page template-- Full Width, No Menu.

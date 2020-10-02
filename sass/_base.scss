@@ -11,8 +11,9 @@ body {
 	background-color: $dark_gray;
 }
 
-p {
-	margin-bottom: 1em;
+p,
+address {
+	margin-bottom: 1rem;
 }
 
 p,
@@ -27,7 +28,7 @@ blockquote {
 
 blockquote {
 	background-color: $light_gray;
-	margin: 20px;
+	margin: 20px !important;
 	padding: 1em;
 	font-style: italic;
 	clear: both;

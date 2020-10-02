@@ -31,7 +31,19 @@
 		} );
 	} );
 
-	wp.customize( 'jgd_bizelite_landing_bg', function( value ) {
+	wp.customize( 'jgd_bizelite_landing_bg_1', function( value ) {
+		value.bind( function( newval ) {
+			$( '#main.texture' ).css( 'background-color', newval );
+		} );
+	} );
+
+	wp.customize( 'jgd_bizelite_landing_bg_2', function( value ) {
+		value.bind( function( newval ) {
+			$( '#main.texture' ).css( 'background-color', newval );
+		} );
+	} );
+
+	wp.customize( 'jgd_bizelite_landing_bg_3', function( value ) {
 		value.bind( function( newval ) {
 			$( '#main.texture' ).css( 'background-color', newval );
 		} );
@@ -43,7 +55,19 @@
 		} );
 	} );
 
-	wp.customize( 'jgd_bizelite_landing_light_text', function( value ) {
+	wp.customize( 'jgd_bizelite_landing_light_text_1', function( value ) {
+		value.bind( function( newval ) {
+			var toggleText = ( true === newval ) ? $( 'body.page-template-landing' ).addClass( 'light-text' ) : $( 'body.page-template-landing' ).removeClass( 'light-text' );
+		} );
+	} );
+
+	wp.customize( 'jgd_bizelite_landing_light_text_2', function( value ) {
+		value.bind( function( newval ) {
+			var toggleText = ( true === newval ) ? $( 'body.page-template-landing' ).addClass( 'light-text' ) : $( 'body.page-template-landing' ).removeClass( 'light-text' );
+		} );
+	} );
+
+	wp.customize( 'jgd_bizelite_landing_light_text_3', function( value ) {
 		value.bind( function( newval ) {
 			var toggleText = ( true === newval ) ? $( 'body.page-template-landing' ).addClass( 'light-text' ) : $( 'body.page-template-landing' ).removeClass( 'light-text' );
 		} );

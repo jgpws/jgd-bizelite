@@ -109,6 +109,12 @@ function copyImgs(done) {
   done();
 }
 
+function copyInc(done) {
+  gulp.src('./inc/*.php')
+    .pipe(gulp.dest('./dist/inc'));
+  done();
+}
+
 function copyOpts(done) {
   gulp.src('./options/*.php')
     .pipe(gulp.dest('./dist/options'));
@@ -166,7 +172,7 @@ exports.style = style;
 exports.minifyStyle = minifyStyle;
 exports.minifyJS = minifyJS;
 exports.watch = watch;
-exports.copyFiles = series(clean, copyMainFiles, copyCSS, copyFonts, copyImgs, copyOpts, copyOrig, copyPageTmplts, copySass, copyScripts, copyTempParts);
+exports.copyFiles = series(clean, copyMainFiles, copyCSS, copyFonts, copyImgs, copyInc, copyOpts, copyOrig, copyPageTmplts, copySass, copyScripts, copyTempParts);
 exports.zipUp = zipUp;
 exports.clean = clean;
 exports.finishUp = series(zipUp, cleanAfterZip);

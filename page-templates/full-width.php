@@ -4,7 +4,7 @@
  * Description: Full width page. It has no main menu, sidebars or comments, but includes a header and footer.
  * @package WordPress
  * @subpackage JGD-BizElite
- * @since JGD-BizElite 1.4
+ * @since JGD-BizElite 1.5
  */
 ?>
 

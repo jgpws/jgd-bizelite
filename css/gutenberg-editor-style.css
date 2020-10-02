@@ -12,11 +12,6 @@ h6 {
 	margin: 0.2em auto !important;
 }
 
-ol,
-ul {
-	margin-left: 0 !important;
-}
-
 table,
 .wp-block-table table {
 	border-collapse: separate;
@@ -78,12 +73,19 @@ pre {
 	padding: 6px;
 }
 
+.wp-block .wp-block-buttons {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .wp-block .wp-block-button {
 	color: #333333;
+	margin: 0;
 }
 
 .wp-block .wp-block-button__link {
 	border: 1px solid #c0c0c0;
+	color: #333333;
 	padding: 2px 6px;
 	font-size: 1em;
 	border-radius: 0px;
@@ -143,6 +145,16 @@ pre {
 .wp-block .wp-block-gallery img {
 	border: 1px solid #c0c0c0;
 	margin: 1em auto 0 auto;
+}
+
+.wp-block-media-text__media img {
+	margin: 20px;
+	width: calc(100% - 40px);
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .wp-block-quote {

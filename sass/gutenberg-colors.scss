@@ -10,6 +10,15 @@
   color: $white;
 }
 
+.wp-block-button__link.has-white-color {
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $white;
+  }
+}
+
 $black_colors: ("light-gray": $light_gray, "medium-gray": $medium_gray, "dark-gray": $dark_gray);
 $blue_colors: ("light-blue": $light_blue, "medium-blue": $medium_blue, "blue": $blue, "dark-blue": $dark_blue);
 $green_colors: ("light-green": $light_green, "medium-green": $medium_green, "green": $green, "dark-green": $dark_green);
@@ -36,6 +45,13 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
       border-color: $silver;
     }
   }
+
+  .wp-block-button__link.has-#{$slug}-color {
+    &:link,
+    &:visited {
+      color: #{$var};
+    }
+  }
 }
 
 /* Blue color scheme */
@@ -54,6 +70,13 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
     &:hover,
     &:focus {
       color: #{$var} !important;
+    }
+  }
+
+  .wp-block-button__link.has-#{$slug}-color {
+    &:link,
+    &:visited {
+      color: #{$var};
     }
   }
 }
@@ -76,6 +99,13 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
       color: #{$var} !important;
     }
   }
+
+  .wp-block-button__link.has-#{$slug}-color {
+    &:link,
+    &:visited {
+      color: #{$var};
+    }
+  }
 }
 
 /* Red color scheme */
@@ -94,6 +124,13 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
     &:hover,
     &:focus {
       color: #{$var} !important;
+    }
+  }
+
+  .wp-block-button__link.has-#{$slug}-color {
+    &:link,
+    &:visited {
+      color: #{$var};
     }
   }
 }
@@ -116,6 +153,13 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
       color: #{$var} !important;
     }
   }
+
+  .wp-block-button__link.has-#{$slug}-color {
+    &:link,
+    &:visited {
+      color: #{$var};
+    }
+  }
 }
 
 /* Olive color scheme */
@@ -136,6 +180,13 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
       color: #{$var} !important;
     }
   }
+
+  .wp-block-button__link.has-#{$slug}-color {
+    &:link,
+    &:visited {
+      color: #{$var};
+    }
+  }
 }
 
 /* Black */
@@ -153,5 +204,12 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
   &:hover,
   &:focus {
     color: $black !important;
+  }
+}
+
+.wp-block-button__link.has-black-color {
+  &:link,
+  &:visited {
+    color: $black;
   }
 }
