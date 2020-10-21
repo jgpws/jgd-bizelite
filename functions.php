@@ -168,7 +168,7 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 
 /* enqueue all styles */
 function jgd_bizelite_enqueue_styles() {
-	wp_register_style( 'jgd-bizelite-main-stylesheet', get_template_directory_uri() . '/style.css' );
+	wp_register_style( 'jgd-bizelite-main-stylesheet', get_template_directory_uri() . '/style.min.css' );
 	wp_enqueue_style( 'jgd-bizelite-main-stylesheet' );
 	wp_enqueue_style( 'jgd-bizelite-icons', get_template_directory_uri() . '/css/themify-icons.css' );
 	wp_enqueue_style( 'jgd-bizelite-gutenberg-colors-frontend', get_template_directory_uri() . '/css/gutenberg-colors.css' );
@@ -408,11 +408,6 @@ function jgd_bizelite_body_classes( $classes ) {
 		$classes[] = 'light-text';
 	}
 
-	/*if( (	$light_text_landing_1 == 1 || $light_text_landing_2 == 1 )
-	&& is_page_template( 'page-templates/landing.php' )
-	&& ( is_page( $landing_page_id_1 ) || is_page( $landing_page_id_2 ) ) ) {
-		$classes[] = 'light-text';
-	}*/
 	if ( is_page_template( 'page-templates/landing.php' ) && $light_text_landing_1 == 1 && is_page( $landing_page_id_1 ) ) {
 		$classes[] = 'light-text';
 	}
