@@ -1,6 +1,7 @@
 # JGD-BizElite
 
 * [JGD-BizElite homepage](https://www.jasong-designs.com/2012/02/17/jgd-bizelite/)
+* [Video tour of JGD-BizElite](https://www.youtube.com/watch?v=2doXOAUZjTk&t=24s)
 
 JGD-BizElite is a free responsive/fixed theme with premium features. Ideal for a content heavy blog, JGD-BizElite is packed with options. Customizer modifications include WordPress’s Custom Logo, Custom Header, custom menus and background. Additional Customizer options give you the ability to hide the post date, tag and category links, and change the footer text. You can choose between four column layouts and three content area layouts.
 
