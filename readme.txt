@@ -5,7 +5,7 @@ Tags: blog, news, two-columns, three-columns, custom-header, custom-logo, custom
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.4
-Stable tag: 1.5.9
+Stable tag: 1.6.0
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -29,6 +29,9 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 * Themify Icons, Copyright 2019 Lally Elias, SIL Open Font License, https://github.com/lykmapipo/themify-icons
 
 == Changelog ==
+
+= 1.6.0 June 15 2021 =
+Added a new feature- Header and Footer gradients
 
 = 1.5.9 September 26 2020 =
 Used fixed values for left/right padding in entry area, for accuracy with full and wide width elements; adjusted styling for the Social Icons block; moved some functions to an inc folder; added several new Customizer options for the Landing Page template.

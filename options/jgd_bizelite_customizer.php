@@ -228,6 +228,107 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 
+	// for Header/Footer Gradients
+	$wp_customize->add_section(
+		'jgd_bizelite_gradients', array(
+			'title' => esc_html__( 'Header/Footer Gradients', 'jgd-bizelite' ),
+			'description' => esc_html__( 'Add a gradient of two colors to the Header or Footer.', 'jgd-bizelite' ),
+			'priority' => 47,
+		),
+	);
+
+	$wp_customize->add_setting(
+		'jgd_bizelite_header_gradient_1', array(
+			'default' => '#000000',
+			'sanitize_callback' => 'sanitize_hex_color',
+		),
+	);
+
+	$wp_customize->add_control(
+		'jgd_bizelite_header_gradient_1', array(
+			'label' => esc_html__( 'Header Gradient Color 1', 'jgd-bizelite' ),
+			'section' => 'jgd_bizelite_gradients',
+			'type' => 'color',
+		),
+	);
+
+	$wp_customize->add_setting(
+		'jgd_bizelite_header_gradient_2', array(
+			'default' => '#000000',
+			'sanitize_callback' => 'sanitize_hex_color',
+		),
+	);
+
+	$wp_customize->add_control(
+		'jgd_bizelite_header_gradient_2', array(
+			'label' => esc_html__( 'Header Gradient Color 2', 'jgd-bizelite' ),
+			'section' => 'jgd_bizelite_gradients',
+			'type' => 'color',
+		),
+	);
+
+	$wp_customize->add_setting(
+		'jgd_bizelite_header_gradient_angle', array(
+			'default' => 0,
+			'sanitize_callback' => 'absint',
+		),
+	);
+
+	$wp_customize->add_control(
+		'jgd_bizelite_header_gradient_angle', array(
+			'label' => esc_html__( 'Header Gradient Angle', 'jgd-bizelite' ),
+			'description' => esc_html__( 'Enter a number to change the angle by degree. For example, 45 degrees would rotate the gradient clockwise.', 'jgd-bizelite' ),
+			'section' => 'jgd_bizelite_gradients',
+			'type' => 'text',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'jgd_bizelite_footer_gradient_1', array(
+			'default' => '#000000',
+			'sanitize_callback' => 'sanitize_hex_color',
+		),
+	);
+
+	$wp_customize->add_control(
+		'jgd_bizelite_footer_gradient_1', array(
+			'label' => esc_html__( 'Footer Gradient Color 1', 'jgd-bizelite' ),
+			'section' => 'jgd_bizelite_gradients',
+			'type' => 'color',
+		),
+	);
+
+	$wp_customize->add_setting(
+		'jgd_bizelite_footer_gradient_2', array(
+			'default' => '#000000',
+			'sanitize_callback' => 'sanitize_hex_color',
+		),
+	);
+
+	$wp_customize->add_control(
+		'jgd_bizelite_footer_gradient_2', array(
+			'label' => esc_html__( 'Footer Gradient Color 2', 'jgd-bizelite' ),
+			'section' => 'jgd_bizelite_gradients',
+			'type' => 'color',
+		),
+	);
+
+	$wp_customize->add_setting(
+		'jgd_bizelite_footer_gradient_angle', array(
+			'default' => 0,
+			'sanitize_callback' => 'absint',
+		),
+	);
+
+	$wp_customize->add_control(
+		'jgd_bizelite_footer_gradient_angle', array(
+			'label' => esc_html__( 'Footer Gradient Angle', 'jgd-bizelite' ),
+			'description' => esc_html__( 'Enter a number to change the angle by degree. For example, 45 degrees would rotate the gradient clockwise.' ),
+			'section' => 'jgd_bizelite_gradients',
+			'type' => 'text',
+		)
+	);
+
 	// Display Options
 	$wp_customize->add_section(
 		'jgd_bizelite_display_options', array(

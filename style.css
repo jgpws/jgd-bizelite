@@ -4,7 +4,7 @@ Theme URI: http://www.jasong-designs.com/2012/02/17/jgd-bizelite/
 Description: JGD-BizElite is a free, responsive/fixed theme with premium features. Ideal for a content heavy blog, JGD-BizElite is packed with options. Customizer modifications include WordPress's Custom Logo, Custom Header, custom menus and background. Additional Customizer options give you the ability to hide post date, tag and category links, and change the footer text. Eight layouts, six color schemes and two custom page templates are included.
 Author: Jason G. Designs
 Author URI: http://www.jasong-designs.com
-Version: 1.5.9
+Version: 1.6.0
 Tested up to: 5.4
 Requires PHP: 5.6
 Text Domain: jgd-bizelite
@@ -254,11 +254,8 @@ hr {
 
 @media screen and (min-width: 40.063em) {
 	#wrapper {
-		display: -webkit-box;
 		display: flex;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		        flex-direction: column;
+		flex-direction: column;
 		margin: 0 auto;
 		min-height: 100%;
 		width: 90%;
@@ -301,8 +298,7 @@ hr {
 /* Main */
 #main {
 	display: grid;
-	-webkit-box-flex: 1;
-	        flex-grow: 1;
+	flex-grow: 1;
 	grid-template-columns: minmax(320px, auto);
 	width: 100%;
 }
@@ -617,7 +613,6 @@ hr {
 	float: none;
 	max-height: 2500px;
 	overflow-y: hidden;
-	-webkit-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
 	z-index: 2;
 }
@@ -794,7 +789,6 @@ hr {
 	margin: 0px;
 	max-height: 36px;
 	padding: 0px;
-	-webkit-transition: 0.5s;
 	transition: 0.5s;
 }
 
@@ -1277,11 +1271,8 @@ hr {
 }
 
 .featured-cat-panel {
-	display: -webkit-box;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	        flex-direction: column;
+	flex-direction: column;
 	padding-top: 20px;
 }
 
@@ -1291,9 +1282,7 @@ hr {
 
 @media screen and (min-width: 64.063em) {
 	.featured-cat-panel {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		        flex-direction: row;
+		flex-direction: row;
 	}
 }
 
@@ -1416,7 +1405,6 @@ hr {
 
 .woocommerce .products ul,
 .woocommerce ul.products {
-	display: -webkit-box;
 	display: flex;
 	flex-wrap: wrap;
 	margin: 20px 5%;
@@ -1640,10 +1628,8 @@ hr {
 .woocommerce table.cart td.actions .coupon,
 .woocommerce-page #content table.cart td.actions .coupon,
 .woocommerce-page table.cart td.actions .coupon {
-	display: -webkit-box;
 	display: flex;
-	-webkit-box-pack: justify;
-	        justify-content: space-between;
+	justify-content: space-between;
 }
 
 #add_payment_method #payment,
@@ -1685,9 +1671,7 @@ hr {
 
 @media screen and (min-width: 48em) {
 	.woocommerce ul.products.columns-1 {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		        flex-direction: column;
+		flex-direction: column;
 	}
 	.woocommerce ul.products.columns-1 li.product,
 	.woocommerce-page ul.products.columns-1 li.product {
@@ -1856,13 +1840,9 @@ a.button-primary {
 }
 
 .widget-area ul {
-	-webkit-box-align: center;
-	        align-items: center;
-	display: -webkit-box;
+	align-items: center;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	        flex-direction: column;
+	flex-direction: column;
 	margin: 0;
 	padding: 0;
 }
@@ -1933,10 +1913,8 @@ a.button-primary {
 }
 
 .wp-calendar-nav {
-	display: -webkit-box;
 	display: flex;
-	-webkit-box-pack: justify;
-	        justify-content: space-between;
+	justify-content: space-between;
 }
 
 .woocommerce .widgettitle {
@@ -1978,14 +1956,10 @@ a.button-primary {
 
 @media screen and (min-width: 48em) {
 	.widget-area ul {
-		-webkit-box-align: stretch;
-		        align-items: stretch;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		        flex-direction: row;
+		align-items: stretch;
+		flex-direction: row;
 		flex-wrap: wrap;
-		-webkit-box-pack: center;
-		        justify-content: center;
+		justify-content: center;
 	}
 	.widget {
 		margin: 0px 20px;
@@ -1998,9 +1972,7 @@ a.button-primary {
 		margin: 0px;
 	}
 	.widget-area ul {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		        flex-direction: column;
+		flex-direction: column;
 	}
 	.widget {
 		border-top: transparent;
@@ -2555,7 +2527,6 @@ a.more-link {
 .wc-block-grid__product-add-to-cart a,
 .wc-block-grid__product-add-to-cart button {
 	color: #333333;
-	display: -webkit-box;
 	display: flex;
 	width: 100%;
 }
@@ -2702,9 +2673,7 @@ a.more-link {
 }
 
 .mag-grid .wp-block-columns {
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	        flex-direction: column;
+	flex-direction: column;
 }
 
 .mag-grid.archive .archive-title,
