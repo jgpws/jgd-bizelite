@@ -51,6 +51,7 @@
 	}
 
 	.page-template-full-width #access,
+	.page-template-full-page-width #access,
 	.woocommerce #access {
 		border-bottom: none;
 		height: 0;
@@ -94,9 +95,19 @@
 		grid-template-columns: minmax(0, auto) 284px;
 
 		.page-template-landing &,
-		.page-template-thin-header & ,
+		.page-template-thin-header &,
+		.page-template-full-page-width &,
+		.page-template-full-page-width.two-col-l &,
+		.page-template-full-page-width.three-col-r &,
+		.page-template-full-page-width.three-col-l &,
     .page-template-page_featured_categories & {
 			grid-template-columns: 100%;
+		}
+
+		.page-template-full-page-width &,
+		.page-template-full-page-width.two-col-l &,
+		.page-template-full-page-width.three-col-l & {
+			border: transparent;
 		}
 
     .page-template-thin-header & ,
@@ -137,6 +148,11 @@
 		&.three-col-l #container {
 			grid-column: 1 / 3;
 		}
+	}
+
+	.page-template-full-page-width.two-col-l #container,
+	.page-template-full-page-width.three-col-l #container {
+		grid-column: 1 / 2;
 	}
 }
 

@@ -4,7 +4,7 @@ Theme URI: http://www.jasong-designs.com/2012/02/17/jgd-bizelite/
 Description: JGD-BizElite is a free, responsive/fixed theme with premium features. Ideal for a content heavy blog, JGD-BizElite is packed with options. Customizer modifications include WordPress's Custom Logo, Custom Header, custom menus and background. Additional Customizer options give you the ability to hide post date, tag and category links, and change the footer text. Eight layouts, six color schemes and two custom page templates are included.
 Author: Jason G. Designs
 Author URI: http://www.jasong-designs.com
-Version: 1.6.0
+Version: 1.6.1
 Tested up to: 5.4
 Requires PHP: 5.6
 Text Domain: jgd-bizelite
@@ -33,18 +33,20 @@ fieldset{border:1px solid silver;margin-bottom:1em}hr{border-bottom:2px solid rg
 }#header{position:relative;width:100%}#access{width:100%;float:left;border-top:4px solid #333;background-color:gray}
 @media screen and (min-width:40.063em){.page-template-thin-header #access{position:static}
 }@media screen and (min-width:48em){#access{height:36px;position:static;border-bottom:1px solid #333;border-top:transparent}
-.page-template-full-width #access,.woocommerce #access{border-bottom:0;height:0}}
-#main{display:grid;flex-grow:1;grid-template-columns:minmax(320px,auto);width:100%}
+.page-template-full-width #access,.page-template-full-page-width #access,.woocommerce #access{border-bottom:0;height:0}
+}#main{display:grid;flex-grow:1;grid-template-columns:minmax(320px,auto);width:100%}
 #main.texture{background:url(images/noise-texture.png) #ededed}.no-decs #main,.no-decs.two-col-l #main,.no-decs.three-col-l #main{border:transparent}
 .page-template-landing #wrapper{max-width:none;width:100%}.page-template-landing #main{background-image:none;border-left:0;border-right:0}
 @media screen and (min-width:64.063em){#main{border-left:4px solid rgba(0,0,0,0.25);grid-template-columns:minmax(0,auto) 284px}
-.page-template-landing #main,.page-template-thin-header #main,.page-template-page_featured_categories #main{grid-template-columns:100%}
+.page-template-landing #main,.page-template-thin-header #main,.page-template-full-page-width #main,.page-template-full-page-width.two-col-l #main,.page-template-full-page-width.three-col-r #main,.page-template-full-page-width.three-col-l #main,.page-template-page_featured_categories #main{grid-template-columns:100%}
+.page-template-full-page-width #main,.page-template-full-page-width.two-col-l #main,.page-template-full-page-width.three-col-l #main{border:transparent}
 .page-template-thin-header #main,.page-template-page_featured_categories #main{border-left:4px solid rgba(0,0,0,0.25);border-right:4px solid rgba(0,0,0,0.25)}
 .three-col-r #main{grid-template-columns:minmax(0,auto) 404px}.two-col-l #main{border-left:transparent;border-right:4px solid rgba(0,0,0,0.25);grid-template-columns:284px minmax(0,auto)}
 .three-col-l #main{border-right:4px solid rgba(0,0,0,0.25);grid-template-columns:400px minmax(0,auto)}
 .page-template-full-width #main,.page-template-full-width.three-col-r #main{border-right:4px solid rgba(0,0,0,0.25)}
 .page-template-full-width.two-col-l #main,.page-template-full-width.three-col-l #main{border-left:4px solid rgba(0,0,0,0.25)}
 .page-template-full-width #container,.page-template-full-width.two-col-l #container,.page-template-full-width.three-col-l #container{grid-column:1 / 3}
+.page-template-full-page-width.two-col-l #container,.page-template-full-page-width.three-col-l #container{grid-column:1 / 2}
 }#container{grid-column:1 / 2;width:100%}@media screen and (min-width:64.063em){.two-col-l #container{grid-column:2 / 3}
 .three-col-l #container{grid-column:2 / 3}.page-template-landing #container,.page-template-thin-header #container,.page-template-page_featured_categories #container{grid-column:1 / 3}
 .woo-content-container{grid-column:1 / 2}.two-col-l .woo-content-container,.three-col-l .woo-content-container{grid-column:2 / 3}
@@ -128,7 +130,9 @@ fieldset{border:1px solid silver;margin-bottom:1em}hr{border-bottom:2px solid rg
 .comments-section .commentlist li li{border-bottom:0}.comments-section .comment-body{padding:1em}
 .comments-section .thread-odd{background-color:#f5f5f5}.comments-section .bypostauthor{background-color:silver;font-weight:bold}
 .comments-section .bypostauthor a{color:#fff}.comments-section .bypostauthor pre{color:#333}
-.comments-section .comment-meta a{color:#000}.page-template-landing .post-blog .entry,.page-template-landing .type-page .entry{background-color:transparent;border:0;margin:0}
+.comments-section .comment-meta a{color:#000}.page-template-landing .post-blog .entry,.page-template-landing .type-page .entry,.page-template-full-page-width .post-blog .entry,.page-template-full-page-width .type-page .entry{background-color:transparent;border:0;margin:0}
+.page-template-full-page-width #main.texture{background-image:none}.page-template-full-page-width .index-meta,.page-template-full-page-width .type-page,.page-template-full-page-width .type-page .entry{padding:0}
+.page-template-full-page-width .post-edit-link{margin:20px 5%}.page-template-full-page-width .type-page .entry>*{max-width:none}
 .page-template-page_featured_categories .entry{margin:20px 0}.page-template-page_featured_categories .type-page .entry-title,.page-template-page_featured_categories .type-page .meta{position:absolute;left:-9999px}
 @media screen and (min-width:48em){.page-template-thin-header .entry,.page-template-page_featured_categories .entry{margin:20px 80px}
 .page-template-thin-header .entry-title,.page-template-page_featured_categories .entry-title{padding:0 80px}

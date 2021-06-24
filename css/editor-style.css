@@ -1,8 +1,8 @@
 /* -- Editor Styles for the back end -- */
-body {
+.editor-styles-wrapper {
 	background-color: #ffffff;
 	color: #333333;
-	font-family: FreeSerif, "Times New Roman", Times, serif;
+	font-family: FreeSerif, "Times New Roman", Times, serif !important;
 	line-height: 1.29em;
 }
 

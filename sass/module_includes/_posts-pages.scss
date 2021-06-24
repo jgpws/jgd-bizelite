@@ -278,12 +278,33 @@
 }
 
 /* Page Templates */
-.page-template-landing {
+.page-template-landing,
+.page-template-full-page-width {
 	.post-blog .entry,
 	.type-page .entry {
 		background-color: transparent;
 		border: none;
 		margin: 0;
+	}
+}
+
+.page-template-full-page-width {
+	#main.texture {
+		background-image: none;
+	}
+
+	.index-meta,
+	.type-page,
+	.type-page .entry {
+		padding: 0;
+	}
+
+	.post-edit-link {
+		margin: 20px 5%;
+	}
+
+	.type-page .entry > * {
+		max-width: none;
 	}
 }
 

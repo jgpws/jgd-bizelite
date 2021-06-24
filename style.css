@@ -4,7 +4,7 @@ Theme URI: http://www.jasong-designs.com/2012/02/17/jgd-bizelite/
 Description: JGD-BizElite is a free, responsive/fixed theme with premium features. Ideal for a content heavy blog, JGD-BizElite is packed with options. Customizer modifications include WordPress's Custom Logo, Custom Header, custom menus and background. Additional Customizer options give you the ability to hide post date, tag and category links, and change the footer text. Eight layouts, six color schemes and two custom page templates are included.
 Author: Jason G. Designs
 Author URI: http://www.jasong-designs.com
-Version: 1.6.0
+Version: 1.6.1
 Tested up to: 5.4
 Requires PHP: 5.6
 Text Domain: jgd-bizelite
@@ -289,6 +289,7 @@ hr {
 		border-top: transparent;
 	}
 	.page-template-full-width #access,
+	.page-template-full-page-width #access,
 	.woocommerce #access {
 		border-bottom: none;
 		height: 0;
@@ -331,8 +332,17 @@ hr {
 	}
 	.page-template-landing #main,
 	.page-template-thin-header #main,
+	.page-template-full-page-width #main,
+	.page-template-full-page-width.two-col-l #main,
+	.page-template-full-page-width.three-col-r #main,
+	.page-template-full-page-width.three-col-l #main,
 	.page-template-page_featured_categories #main {
 		grid-template-columns: 100%;
+	}
+	.page-template-full-page-width #main,
+	.page-template-full-page-width.two-col-l #main,
+	.page-template-full-page-width.three-col-l #main {
+		border: transparent;
 	}
 	.page-template-thin-header #main,
 	.page-template-page_featured_categories #main {
@@ -363,6 +373,10 @@ hr {
 	.page-template-full-width.two-col-l #container,
 	.page-template-full-width.three-col-l #container {
 		grid-column: 1 / 3;
+	}
+	.page-template-full-page-width.two-col-l #container,
+	.page-template-full-page-width.three-col-l #container {
+		grid-column: 1 / 2;
 	}
 }
 
@@ -1191,10 +1205,30 @@ hr {
 
 /* Page Templates */
 .page-template-landing .post-blog .entry,
-.page-template-landing .type-page .entry {
+.page-template-landing .type-page .entry,
+.page-template-full-page-width .post-blog .entry,
+.page-template-full-page-width .type-page .entry {
 	background-color: transparent;
 	border: none;
 	margin: 0;
+}
+
+.page-template-full-page-width #main.texture {
+	background-image: none;
+}
+
+.page-template-full-page-width .index-meta,
+.page-template-full-page-width .type-page,
+.page-template-full-page-width .type-page .entry {
+	padding: 0;
+}
+
+.page-template-full-page-width .post-edit-link {
+	margin: 20px 5%;
+}
+
+.page-template-full-page-width .type-page .entry > * {
+	max-width: none;
 }
 
 .page-template-page_featured_categories .entry {
