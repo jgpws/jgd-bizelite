@@ -30,6 +30,9 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 
 == Changelog ==
 
+= 1.6.2 August 28 2021 =
+Bug fix: Added new Customizer control to enable header/footer gradients; previously they were rendering by default, covering the background image.
+
 = 1.6.1 June 22 2021 =
 Added a new page template for page builders- Full Page Width, No Menu
 

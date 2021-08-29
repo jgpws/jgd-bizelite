@@ -132,14 +132,12 @@ function jgd_bizelite_gradient_css() {
 	$footer_gradient_2 = get_theme_mod( 'jgd_bizelite_footer_gradient_2', '#000000' );
 	$footer_gradient_angle = get_theme_mod( 'jgd_bizelite_footer_gradient_angle', 0 );
 
-	if ( $header_gradient_1 !== '' && $header_gradient_2 !== '' && $header_gradient_angle !== '' ) {
+	if ( get_theme_mod( 'jgd_bizelite_enable_gradients' ) == 1 ) {
 		$css = '
 .branding {
 	background: linear-gradient( ' . esc_html( $header_gradient_angle ) . 'deg, ' . esc_html( $header_gradient_2 ) . ', ' . esc_html( $header_gradient_1 ) . ' );
 }';
-	}
 
-	if ( $footer_gradient_1 != '' && $footer_gradient_2 !== '' ) {
 		$css .= '
 #footer {
 	background: linear-gradient( ' . esc_html( $footer_gradient_angle ) . 'deg, ' . esc_html( $footer_gradient_2 ) . ', ' . esc_html( $footer_gradient_1 ) . ' );

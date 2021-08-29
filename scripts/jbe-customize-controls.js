@@ -42,6 +42,26 @@
   } );
 
   wp.customize.bind( 'ready', function() {
+    function hideGradientControls() {
+      var gradientControlIds = [
+        'jgd_bizelite_header_gradient_1',
+        'jgd_bizelite_header_gradient_2',
+        'jgd_bizelite_header_gradient_angle',
+        'jgd_bizelite_footer_gradient_1',
+        'jgd_bizelite_footer_gradient_2',
+        'jgd_bizelite_footer_gradient_angle'
+      ];
+
+      if ( wp.customize.instance( 'jgd_bizelite_enable_gradients' ).get() === true ) {
+        $.each( gradientControlIds, function( i, value ) {
+          $( '#customize-control-' + value ).show();
+        } );
+      } else {
+        $.each( gradientControlIds, function( i, value ) {
+          $( '#customize-control-' + value ).hide();
+        } );
+      }
+    }
 
     function hideLandingPageOptions1() {
       var lPControlIds1 = [
@@ -159,6 +179,7 @@
     }
 
     // Call functions on page load
+    hideGradientControls();
     hideLandingPageOptions1();
     hideLandingPageOptions2();
     hideLandingPageOptions3();
@@ -175,6 +196,7 @@
     } );
 
     // and on Change
+    $( '#customize-control-jgd_bizelite_enable_gradients' ).on( 'change', hideGradientControls );
     $( '#customize-control-jgd_bizelite_select_landing_page' ).on( 'change', hideLandingPageOptions1 );
     $( '#customize-control-jgd_bizelite_select_landing_page' ).on( 'change', loadLanding1Url );
     $( '#customize-control-jgd_bizelite_select_landing_page' ).on( 'change', hideLandingPageOptions2 );
