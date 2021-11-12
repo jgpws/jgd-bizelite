@@ -30,6 +30,9 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 
 == Changelog ==
 
+= 1.6.3 November 11 2021 =
+Bug fix: Display Site Title and Tagline function was displaying the title regardless if it was checked or unchecked. This has been fixed.
+
 = 1.6.2 August 28 2021 =
 Bug fix: Added new Customizer control to enable header/footer gradients; previously they were rendering by default, covering the background image.
 

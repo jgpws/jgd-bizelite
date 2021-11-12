@@ -131,6 +131,7 @@ function jgd_bizelite_gradient_css() {
 	$footer_gradient_1 = get_theme_mod( 'jgd_bizelite_footer_gradient_1', '#000000' );
 	$footer_gradient_2 = get_theme_mod( 'jgd_bizelite_footer_gradient_2', '#000000' );
 	$footer_gradient_angle = get_theme_mod( 'jgd_bizelite_footer_gradient_angle', 0 );
+	$css = '';
 
 	if ( get_theme_mod( 'jgd_bizelite_enable_gradients' ) == 1 ) {
 		$css = '
