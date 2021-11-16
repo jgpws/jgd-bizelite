@@ -30,6 +30,9 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 
 == Changelog ==
 
+= 1.6.4 November 15 2021 =
+Added separate color option for the Full Page Width, No Menu template.
+
 = 1.6.3 November 11 2021 =
 Bug fix: Display Site Title and Tagline function was displaying the title regardless if it was checked or unchecked. This has been fixed.
 
@@ -37,10 +40,10 @@ Bug fix: Display Site Title and Tagline function was displaying the title regard
 Bug fix: Added new Customizer control to enable header/footer gradients; previously they were rendering by default, covering the background image.
 
 = 1.6.1 June 22 2021 =
-Added a new page template for page builders- Full Page Width, No Menu
+Added a new page template for page builders- Full Page Width, No Menu.
 
 = 1.6.0 June 15 2021 =
-Added a new feature- Header and Footer gradients
+Added a new feature- Header and Footer gradients.
 
 = 1.5.9 September 26 2020 =
 Used fixed values for left/right padding in entry area, for accuracy with full and wide width elements; adjusted styling for the Social Icons block; moved some functions to an inc folder; added several new Customizer options for the Landing Page template.

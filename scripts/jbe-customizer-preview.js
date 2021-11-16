@@ -31,6 +31,12 @@
 		} );
 	} );
 
+	wp.customize( 'jgd_bizelite_full_page_bg', function( value ) {
+		value.bind( function( newval ) {
+			$( '#main.texture' ).css( 'background-color', newval );
+		} );
+	} );
+
 	wp.customize( 'jgd_bizelite_landing_bg_1', function( value ) {
 		value.bind( function( newval ) {
 			$( '#main.texture' ).css( 'background-color', newval );

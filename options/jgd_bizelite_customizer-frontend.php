@@ -150,6 +150,8 @@ add_action( 'wp_enqueue_scripts', 'jgd_bizelite_gradient_css' );
 
 function jgd_bizelite_custom_color_css() {
 	$content_sidebar_bg = get_theme_mod( 'jgd_bizelite_content_sidebar_bgcolor', '#ededed' );
+	$full_page_width_bg_enable = get_theme_mod( 'jgd_bizelite_full_page_enable_bg', 0 );
+	$full_page_width_bg = get_theme_mod( 'jgd_bizelite_full_page_bg', '#ededed' );
 
 	$landing_page_id_1 = get_theme_mod( 'jgd_bizelite_apply_landing_page_1', 0 );
 	$landing_page_id_2 = get_theme_mod( 'jgd_bizelite_apply_landing_page_2', 0 );
@@ -163,6 +165,14 @@ function jgd_bizelite_custom_color_css() {
 #main.texture {
 	background-color: ' . esc_attr( $content_sidebar_bg ) . ';
 }';
+
+	if ( $full_page_width_bg_enable === true && $full_page_width_bg != '' ) {
+		$css .= '
+.page-template-full-page-width #main.texture {
+	background-color: ' . esc_attr( $full_page_width_bg ) . ';
+}
+		';
+	}
 
 	if ( $landing_page_bg_1 != '' ) {
 		$css .= '

@@ -63,6 +63,16 @@
       }
     }
 
+    function hideFullPageBGControl() {
+      if ( wp.customize.instance( 'jgd_bizelite_full_page_enable_bg' ).get() === true ) {
+        $( '#customize-control-jgd_bizelite_full_page_bg' ).show();
+      } else {
+        $( '#customize-control-jgd_bizelite_full_page_bg' ).hide();
+      }
+
+
+    }
+
     function hideLandingPageOptions1() {
       var lPControlIds1 = [
         'jgd_bizelite_apply_landing_page_1',
@@ -155,7 +165,7 @@
         if ( pageId > 0 ) {
           url = wp.customize.settings.url.home + '?page_id=' + pageId;
           wp.customize.previewer.previewUrl.set( url );
-          console.log( url );
+          //console.log( url );
         }
 
       }
@@ -171,7 +181,7 @@
         if ( pageId > 0 ) {
           url = wp.customize.settings.url.home + '?page_id=' + pageId;
           wp.customize.previewer.previewUrl.set( url );
-          console.log( url );
+          //console.log( url );
         }
 
       }
@@ -180,6 +190,7 @@
 
     // Call functions on page load
     hideGradientControls();
+    hideFullPageBGControl();
     hideLandingPageOptions1();
     hideLandingPageOptions2();
     hideLandingPageOptions3();
@@ -197,6 +208,7 @@
 
     // and on Change
     $( '#customize-control-jgd_bizelite_enable_gradients' ).on( 'change', hideGradientControls );
+    $( '#customize-control-jgd_bizelite_full_page_enable_bg' ).on( 'change', hideFullPageBGControl );
     $( '#customize-control-jgd_bizelite_select_landing_page' ).on( 'change', hideLandingPageOptions1 );
     $( '#customize-control-jgd_bizelite_select_landing_page' ).on( 'change', loadLanding1Url );
     $( '#customize-control-jgd_bizelite_select_landing_page' ).on( 'change', hideLandingPageOptions2 );

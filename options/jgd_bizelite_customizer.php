@@ -629,6 +629,53 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 
+	// Full Page Width, No Menu
+	$wp_customize->add_section(
+		'jgd_bizelite_full_page', array(
+			'title' => esc_html__( 'Full Page Width, No Menu', 'jgd-bizelite' ),
+			'priority' => 127,
+			'description' => esc_html__( 'Customize pages using the Full Page Width, No Menu template.', 'jgd-bizelite' ),
+			'panel' => 'jgd_bizelite_page_templates',
+			'active_callback' => 'jgd_bizelite_page_callback',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'jgd_bizelite_full_page_enable_bg', array(
+			'type' => 'theme_mod',
+			'default' => 0,
+			'sanitize_callback' => 'jgd_bizelite_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'jgd_bizelite_full_page_enable_bg', array(
+			'label' => esc_html__( 'Enable Content Background', 'jgd-bizelite' ),
+			'description' => esc_html__( 'Change the background color of the Full Page Width template content area independent of the theme background.', 'jgd-bizelite' ),
+			'section' => 'jgd_bizelite_full_page',
+			'type' => 'checkbox',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'jgd_bizelite_full_page_bg', array(
+			'type' => 'theme_mod',
+			'default' => '#ededed',
+			'transport' => 'postMessage',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control( $wp_customize, 'jgd_bizelite_full_page_bg',
+			array(
+				'label' => esc_html__( 'Background Color', 'jgd-bizelite' ),
+				'type' => 'color',
+				'section' => 'jgd_bizelite_full_page',
+			)
+		)
+	);
+
 	// Landing Page
 	$wp_customize->add_section(
 		'jgd_bizelite_landing', array(
@@ -640,7 +687,6 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 
-	// Landing Page
 	$wp_customize->add_setting(
 		'jgd_bizelite_select_landing_page', array(
 			'type' => 'theme_mod',
@@ -736,7 +782,6 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 				'section' => 'jgd_bizelite_landing',
 			)
 		);
-
 	}
 	//
 
