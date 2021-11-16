@@ -64,7 +64,7 @@ fieldset{border:1px solid silver;margin-bottom:1em}hr{border-bottom:2px solid rg
 .wp-custom-logo .blog-title{font-size:1.71em}.blog-title-landing{background-color:transparent;border-bottom:1px solid rgba(0,0,0,0.25);font-size:1.29em;padding:6px 40px;text-align:center;width:auto}
 @media screen and (min-width:40.063em){.blog-title-landing{border-bottom:transparent;border-right:1px solid rgba(0,0,0,0.25);float:left;height:36px;padding:3px 2.5% 0 2.5%}
 }.subtitle{color:#fff;padding:0 40px}.wp-custom-logo .subtitle{font-size:1em}@media screen and (min-width:48em){.wp-custom-logo .subtitle{font-size:1.29em}
-}.custom-logo-link img{max-height:100px;width:auto;float:left}@media screen and (min-width:64.063em){.custom-logo-link img{margin:20px;max-height:200px}
+}.custom-logo-link img{float:left;max-height:100px;padding:20px;width:auto}@media screen and (min-width:64.063em){.custom-logo-link img{max-height:200px}
 }.menubar{list-style:none;margin:0;padding:0}.menubar-pages-list-item,.menubar-cats-list-item{border-bottom:1px solid rgba(0,0,0,0.25);list-style:none}
 .menubar-title,.menubar .button-dropdown{display:inline-block}.menubar-title{color:#fff;cursor:default;font-size:1em;padding:10px 20px}
 .menubar .button-dropdown{margin:9px;float:right}@media screen and (min-width:48em){.menubar{float:left;height:40px;position:relative}
