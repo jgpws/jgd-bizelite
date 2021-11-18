@@ -4,7 +4,7 @@ Contributors: jgpws
 Tags: blog, news, two-columns, three-columns, custom-header, custom-logo, custom-background, custom-colors, editor-style, custom-menu, featured-images, theme-options, threaded-comments, translation-ready, wide-blocks
 Requires at least: 4.0
 Requires PHP: 5.6
-Tested up to: 5.4
+Tested up to: 5.8
 Stable tag: 1.6.1
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
