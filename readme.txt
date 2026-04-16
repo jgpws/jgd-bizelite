@@ -30,6 +30,9 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 
 == Changelog ==
 
+= 1.6.5 March 14 2022 =
+CSS fixes for the gallery, image blocks.
+
 = 1.6.4 November 15 2021 =
 Added separate color option for the Full Page Width, No Menu template.
 

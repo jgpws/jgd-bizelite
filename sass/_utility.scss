@@ -1,5 +1,14 @@
 /* -- Utility / State Rules -- */
 
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100% !important;
+	height: auto;
+}
+
 .alignleft {
 	float: left;
 	margin: 0px 1em 1em 0px !important;
@@ -34,15 +43,6 @@ img.aligncenter {
 .alignfull {
 	margin-left: -1.5em !important;
 	margin-right: -1.5em !important;
-}
-
-.size-auto,
-.size-full,
-.size-large,
-.size-medium,
-.size-thumbnail {
-	max-width: 100% !important;
-	height: auto;
 }
 
 .clearfix::after { // Stops floated images from overflowing parent container; Apply to parent container

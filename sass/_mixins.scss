@@ -11,7 +11,7 @@
 }
 
 @mixin hide-text-overflow {
-  overflow: hidden;
+  overflow: hidden !important;
 	text-overflow: ellipsis;
 	white-space: nowrap !important;
 }

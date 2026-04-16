@@ -78,11 +78,20 @@
 .wp-block-gallery .blocks-gallery-item figcaption {
 	@include caption;
 	@include hide-text-overflow;
+	
+	a:link,
+	a:visited {
+		color: #ffffff;
+	}
 }
 
 .wp-block-gallery .blocks-gallery-image figcaption,
 .wp-block-gallery .blocks-gallery-item figcaption {
 	margin-bottom: -16px;
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+	margin-bottom: 1rem;
 }
 
 .wp-block-image {
