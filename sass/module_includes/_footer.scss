@@ -1,64 +1,67 @@
-.site-info {
-  color: $white;
+@use "../partials/variables";
 
-  a:link,
-  a:visited {
-    color: $white;
+.site-info {
+  color: variables.$pale_gray;
+
+  a {
+    color: variables.$pale_gray;
   }
 
   a:hover,
   a:active {
-    color: $light_gray;
+    color: variables.$white;
   }
 }
 
 .up-down-buttons {
-	position: fixed;
-	right: 0px;
-	top: 45vh;
+  position: fixed;
+  right: 0px;
+  top: 45vh;
   z-index: 100;
 }
 
 .up,
 .down {
-	background-color: $black_50_opacity;
-	background-image: url(images/jgd-bizelite-assets.svg);
-	background-repeat: no-repeat;
-	border: 1px solid $white;
-	height: 72px;
-	margin: 0;
-	min-width: 44px;
-	width: 44px;
-	/*background-position: center center;*/
+  background-color: variables.$black_50_opacity;
+  background-image: url(images/jgd-bizelite-assets.svg);
+  background-repeat: no-repeat;
+  border: 1px solid variables.$white;
+  height: 72px;
+  margin: 0;
+  min-width: 44px;
+  width: 44px;
+  /*background-position: center center;*/
 }
 
 .up {
-	background-position: -35px -372px;
+  background-position: -35px -372px;
 }
 
 .down {
-	background-position: -127px -372px;
+  background-position: -127px -372px;
 }
 
-@media screen and (min-width: 48em) { // 48em = 768px
+@media screen and (min-width: 48em) {
+  // 48em = 768px
   .up,
-	.down {
-		width: 72px;
-		height: 72px;
-	}
+  .down {
+    width: 72px;
+    height: 72px;
+  }
 
-	.up {
-		background-position: -21px -372px;
-	}
+  .up {
+    background-position: -21px -372px;
+  }
 
-	.down {
-		background-position: -113px -372px;
-	}
+  .down {
+    background-position: -113px -372px;
+  }
 }
 
-@media screen and (min-width: 64.063em) { // 64.063em = 1025px
+@media screen and (min-width: 64.063em) {
+  // 64.063em = 1025px
   .down {
-		position: absolute;
-		left: -9999px;
-	}
+    position: absolute;
+    left: -9999px;
+  }
 }

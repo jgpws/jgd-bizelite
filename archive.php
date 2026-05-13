@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
-	<div id="main" class="texture">
+  <main id="main" class="main texture">
 
-		<div id="container">
+	  <section id="content" class="content">
 
-			<div id="content">
 			<?php get_template_part( 'template-parts/navigation' ); ?>
 
 			<h1 class="archive-title"><?php esc_html_e( 'Archive:', 'jgd-bizelite' ); ?></h1>
@@ -13,12 +12,10 @@
 
 			<?php get_template_part( 'template-parts/loop' ); ?>
 
-			</div><!-- #content -->
-
-		</div><!-- #container -->
+		</section><!-- #content -->
 
 		<?php get_sidebar(); ?>
 
-	</div><!-- #main -->
+	</main><!-- #main -->
 
 	<?php get_footer(); ?>

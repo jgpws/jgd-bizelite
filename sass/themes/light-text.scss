@@ -1,0 +1,424 @@
+@use "../partials/variables";
+
+/* -- Dark Background / Light Text -- */
+/* Base */
+.light-text {
+  color: variables.$lightest_gray;
+
+  a {
+    color: variables.$pale_gray;
+  }
+
+  a:active,
+  a:hover {
+    color: variables.$white;
+  }
+
+  table,
+  table th,
+  table td {
+    border-color: variables.$medium_gray;
+  }
+
+  blockquote,
+  pre {
+    background-color: variables.$medium_dark_gray;
+  }
+
+  pre,
+  cite {
+    color: variables.$white;
+  }
+
+  input,
+  textarea {
+    background-color: variables.$medium_gray;
+
+    &:focus {
+      background-color: variables.$medium_light_gray;
+    }
+  }
+
+  button,
+  form input[type="reset"],
+  form input[type="submit"],
+  select {
+    background-color: variables.$medium_gray;
+    color: variables.$white;
+  }
+
+  hr,
+  .wp-block-separator {
+    border-color: variables.$white_25_opacity;
+  }
+
+  .button-dropdown--light {
+    background-color: variables.$white;
+  }
+}
+
+/* Header */
+.light-text {
+  .search-input {
+    color: variables.$white;
+  }
+
+  .search-input::placeholder {
+    color: variables.$lightest_gray;
+  }
+
+  .search-submit {
+    background-color: transparent;
+  }
+}
+
+/* Posts/Pages */
+.light-text {
+  .entry {
+    background-color: variables.$base_color_dark;
+  }
+
+  .post-blog .entry,
+  .type-page .entry {
+    border-color: variables.$light_gray;
+  }
+
+  .attachment,
+  .post .index-meta,
+  .type-page .index-meta {
+    a:not(.post-edit-link) {
+      text-decoration: underline;
+    }
+  }
+
+  a.post-edit-link {
+    background-color: variables.$lightest_gray;
+    color: variables.$dark_gray;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: variables.$lighter_gray;
+    }
+  }
+
+  .post-blog .post-page-numbers,
+  .type-page .post-page-numbers,
+  .error404 .post-page-numbers {
+    border-color: variables.$white_25_opacity;
+
+    &.current {
+      border-color: variables.$white_12_opacity;
+    }
+  }
+
+  .index-meta p {
+    border-color: variables.$light_gray;
+  }
+
+  .sticky .entry {
+    border-color: variables.$lightest_gray;
+  }
+
+  .comments-section {
+    .comment {
+      border-color: variables.$light_gray;
+    }
+
+    .comment-meta a {
+      color: variables.$lightest_gray;
+    }
+
+    .comment-meta a:hover,
+    .comment-meta a:active {
+      color: variables.$white;
+    }
+  }
+
+  .comments-section .bypostauthor {
+    background-color: variables.$medium_dark_gray;
+    color: variables.$lightest_gray;
+  }
+
+  .comments-area,
+  .comment-respond {
+    border-color: variables.$medium_gray;
+  }
+
+  .comment-respond {
+    background-color: variables.$dark_gray;
+    color: variables.$lightest_gray;
+
+    a {
+      color: variables.$lightest_gray;
+    }
+
+    a:hover,
+    a:active {
+      color: variables.$white;
+    }
+  }
+
+  .bypostauthor {
+    color: variables.$text_color;
+
+    pre {
+      color: variables.$text_color_light;
+    }
+  }
+
+  .thread-odd {
+    background-color: variables.$medium_dark_gray;
+  }
+
+  .widget li {
+    border-color: variables.$light_gray;
+  }
+
+  .gallery img,
+  .wp-block-gallery img {
+    border-color: variables.$medium_gray;
+  }
+
+  .featured-cat-post {
+    .entry-title-featured {
+      a {
+        color: variables.$lightest_gray;
+      }
+
+      a:hover,
+      a:active {
+        color: variables.$pale_gray;
+      }
+    }
+  }
+
+  .wp-block-button__link {
+    background-color: variables.$medium_gray;
+    color: variables.$white;
+  }
+
+  .wp-block-button.is-style-outline .wp-block-button__link {
+    background-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: variables.$medium_gray;
+    }
+  }
+
+  .wp-block-calendar table tbody {
+    color: variables.$lightest_gray;
+  }
+
+  .wp-block-calendar table th {
+    color: variables.$darker_gray;
+  }
+
+  .wp-block-file {
+    background-color: variables.$medium_dark_gray;
+  }
+
+  .wp-block-latest-comments__comment-date {
+    color: variables.$lightest_gray;
+  }
+
+  .wp-block-table.is-style-stripes {
+    th,
+    td {
+      border-color: variables.$medium_gray;
+    }
+
+    tbody tr:nth-child(2n + 1) {
+      background-color: variables.$medium_dark_gray;
+    }
+  }
+}
+
+/* Sidebar */
+.light-text {
+  .widget-area ul ul li {
+    color: variables.$text_color_light;
+  }
+
+  .widgettitle,
+  .widget .wp-block-heading,
+  &.three-col-l .widgettitle,
+  &.three-col-r .widgettitle {
+    background-color: variables.$base_color_dark;
+  }
+
+  .wp-calendar-table {
+    background-color: variables.$medium_dark_gray;
+
+    thead {
+      background-color: variables.$darker_gray;
+    }
+  }
+}
+
+@media screen and (min-width: 64.063em) {
+  .light-text {
+    &.no-decs .sidebar {
+      border-color: variables.$white_25_opacity;
+    }
+  }
+}
+
+/* Color theme overrides */
+.light-text {
+  &.blue,
+  &.green,
+  &.red,
+  &.olive {
+    a.wp-block-button__link:not(.has-text-color) {
+      color: variables.$white;
+    }
+  }
+
+  &.blue {
+    .searchbar .search-input {
+      background-color: variables.$medium_blue;
+    }
+
+    a.post-edit-link {
+      background-color: variables.$lightest_blue;
+      color: variables.$dark_blue;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: variables.$lighter_blue;
+      }
+    }
+
+    .sticky .entry {
+      border-color: variables.$lightest_blue;
+    }
+
+    .widgettitle,
+    .widget .wp-block-heading {
+      background-color: variables.$dark_blue;
+    }
+  }
+
+  &.green {
+    .searchbar .search-input {
+      background-color: variables.$medium_light_green;
+      color: variables.$text_color;
+
+      &::placeholder {
+        color: variables.$dark_green;
+      }
+    }
+
+    a.post-edit-link {
+      background-color: variables.$lightest_green;
+      color: variables.$dark_green;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: variables.$lighter_green;
+      }
+    }
+
+    .sticky .entry {
+      border-color: variables.$lightest_green;
+    }
+
+    .widgettitle,
+    .widget .wp-block-heading {
+      background-color: variables.$dark_green;
+    }
+  }
+
+  &.red {
+    .searchbar .search-input {
+      background-color: variables.$medium_red;
+    }
+
+    a.post-edit-link {
+      background-color: variables.$lightest_red;
+      color: variables.$dark_red;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: variables.$lighter_red;
+      }
+    }
+
+    .sticky .entry {
+      border-color: variables.$lightest_red;
+    }
+
+    .widgettitle,
+    .widget .wp-block-heading {
+      background-color: variables.$dark_red;
+    }
+  }
+
+  &.silver {
+    .searchbar .search-input {
+      background-color: variables.$dark_silver_alt;
+      color: variables.$black;
+
+      &::placeholder {
+        color: variables.$text_color;
+      }
+    }
+
+    .sticky .entry {
+      border-color: variables.$light_silver_alt;
+    }
+
+    a.more-link,
+    a.comment-reply-link {
+      color: variables.$text_color;
+    }
+
+    .widgettitle,
+    .widget .wp-block-heading {
+      background-color: variables.$dark_silver_alt;
+      color: variables.$white;
+    }
+  }
+
+  &.olive {
+    .searchbar .search-input {
+      background-color: variables.$medium_olive;
+      color: variables.$text_color;
+
+      &::placeholder {
+        color: variables.$dark_olive;
+      }
+    }
+
+    a.post-edit-link {
+      background-color: variables.$lightest_olive;
+      color: variables.$dark_olive;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: variables.$lighter_olive;
+      }
+    }
+
+    .sticky .entry {
+      border-color: variables.$lightest_olive;
+    }
+
+    .bypostauthor a.comment-reply-link.button-primary {
+      background-color: variables.$medium_olive;
+      color: variables.$text_color;
+    }
+
+    .widgettitle,
+    .widget .wp-block-heading {
+      background-color: variables.$dark_olive;
+    }
+  }
+}

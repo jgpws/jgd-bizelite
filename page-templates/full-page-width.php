@@ -4,19 +4,15 @@
  * Description: Full width without the bounding box. It has no main menu, sidebars or comments, but includes a header and footer. This is ideal for use with a page builder.
  */
 get_header( 'nomenu' ); ?>
+	
+  <main id="main" class="main texture">
 
-	<div id="main" class="texture">
-
-		<div id="container">
-
-			<div id="content">
+	  <section id="content" class="content">
 
 			<?php get_template_part( 'template-parts/loop', 'landing' ); ?>
 
-			</div><!-- #content -->
+		</section><!-- #content -->
 
-		</div><!-- #container -->
-
-	</div><!-- #main -->
+	</main><!-- #main -->
 
 <?php get_footer(); ?>

@@ -1,120 +1,128 @@
+@use "../partials/variables";
+
 /* Main Menu */
 
 // jQuery required for display of these menus
 .menubar {
   list-style: none;
   margin: 0;
-	padding: 0;
+  padding: 0;
 
-	&-pages-list-item,
-	&-cats-list-item {
-    border-bottom: 1px solid $black_25_opacity;
-  	list-style: none;
-  }
-
-  &-title,
-  & .button-dropdown {
-    display: inline-block;
+  &-list-item {
+    border-bottom: 1px solid variables.$black_25_opacity;
+    list-style: none;
   }
 
   &-title {
-    color: $white;
-  	cursor: default;
-  	font-size: 1em;
-  	padding: 10px 20px;
+    color: variables.$pale_gray;
+    cursor: default;
+    display: inline-block;
+    font-size: 1em;
+    padding: 10px 20px;
   }
 
   & .button-dropdown {
-  	margin: 9px;
+    margin: 9px;
     float: right;
   }
 }
 
-@media screen and (min-width: 48em) { // 48em = 768px
+@media screen and (min-width: 48em) {
+  .access,
   .menubar {
-		float: left;
-		height: 40px;
-		position: relative;
+    display: flex;
+  }
+
+  // 48em = 768px
+  .menubar {
+    height: 36px;
+    position: relative;
 
     &-title {
       padding: 7.5px 20px;
     }
 
-    &-pages-list-item,
-    &-cats-list-item {
+    &-list-item {
       border-bottom: transparent;
-  		border-right: 1px solid $black_25_opacity;
-  		float: left;
-  		min-width: 110px;
-  		padding: 0px;
+      border-right: 1px solid variables.$black_25_opacity;
+      float: left;
+      min-width: 110px;
+      padding: 0px;
     }
-	}
+  }
+}
+
+.pagemenu.is-zero-height {
+  visibility: hidden;
 }
 
 .pagemenu {
-	.menu {
-		background-color: $black;
-		border: 10px solid $light_gray;
-		padding: 10px;
-	}
+  visibility: visible;
+
+  .menu {
+    background-color: variables.$darker_gray;
+    border: 10px solid variables.$lightest_gray;
+    padding: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pagemenu-vertical {
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 .pagemenu-vertical {
-	float: none;
-	max-height: 2500px;
-	overflow-y: hidden;
-	transition: all 1s ease-in-out;
-	z-index: 2;
+  float: none;
+  overflow-y: hidden;
+  z-index: 2;
 
-	.menu {
+  .menu {
     float: none;
-  	height: auto;
+    height: auto;
   }
 
-	.page_item,
+  .page_item,
   .cat-item,
   .menu-item {
     border: 0;
-  	float: none;
-  	list-style: none;
+    float: none;
+    list-style: none;
 
     a {
+      color: variables.$pale_gray;
       display: block;
       padding: 0.5em;
-
-      &:link,
-      &:visited {
-        color: $white;
-      	text-decoration: none;
-      }
+      text-decoration: none;
 
       &:hover,
+      &:focus,
       &:active {
-        background-color: $light_gray;
-      	color: $black;
+        background-color: variables.$pale_gray;
+        color: variables.$black;
       }
     }
   }
 
-	.children,
-	.sub-menu {
-		padding-left: 0px;
-	}
+  .children,
+  .sub-menu {
+    padding-left: 0px;
+  }
 
-	.children .page_item,
-	.children .cat-item,
-	.sub-menu .menu-item {
-		margin-left: 10px;
-	}
+  .children .page_item,
+  .children .cat-item,
+  .sub-menu .menu-item {
+    margin-left: 10px;
+  }
 }
 
 @media screen and (min-width: 48em) {
-	.pagemenu-vertical {
-		margin-top: 0;
-		position: absolute;
-		top: 36px;
+  .pagemenu-vertical {
+    margin-top: 0;
+    position: absolute;
+    top: 36px;
 
-		.page_item,
+    .page_item,
     .cat-item,
     .menu-item {
       width: 200px;
@@ -125,5 +133,5 @@
     .sub-menu .menu-item {
       width: auto;
     }
-	}
+  }
 }

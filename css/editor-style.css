@@ -1,227 +1,197 @@
 /* -- Editor Styles for the back end -- */
 .editor-styles-wrapper {
-	background-color: #ffffff;
-	color: #333333;
-	font-family: FreeSerif, "Times New Roman", Times, serif !important;
-	line-height: 1.29em;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: FreeSerif, "Times New Roman", Times, serif;
+  line-height: 1.29em;
 }
-
-p,
-address {
-	margin-bottom: 1rem;
-	margin-top: 0;
+.editor-styles-wrapper p,
+.editor-styles-wrapper address {
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
-
-.wp-block-freeform.block-library-rich-text__tinymce li,
-.wp-block-freeform.block-library-rich-text__tinymce p {
-	line-height: 1.29em;
+.editor-styles-wrapper p,
+.editor-styles-wrapper ul li,
+.editor-styles-wrapper ol li,
+.editor-styles-wrapper dl dt,
+.editor-styles-wrapper dl dd,
+.editor-styles-wrapper blockquote {
+  font-size: 1em;
+  line-height: 1.29em;
 }
-
-p,
-ul li,
-ol li,
-dl dt,
-dl dd,
-blockquote {
-	font-size: 1em;
+.editor-styles-wrapper blockquote {
+  background-color: #e6e6e6;
+  padding: 1em;
+  font-style: italic;
+  clear: both;
 }
-
-blockquote {
-	background-color: #ededed;
-	padding: 1em;
-	font-style: italic;
-	clear: both;
+.editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce blockquote {
+  border-left: none;
+  box-shadow: none;
+  margin: 20px;
 }
-
-.wp-block-freeform.block-library-rich-text__tinymce blockquote {
-	border-left: none;
-	box-shadow: none;
-	margin: 20px;
+.editor-styles-wrapper blockquote p {
+  font-size: 1em;
 }
-
-blockquote p {
-	font-size: 1em;
+.editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce li,
+.editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce p {
+  line-height: 1.29em;
 }
-
-h1 {
-	font-size: 2.14em;
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  margin: 0.2em auto !important;
 }
-
-h2 {
-	font-size: 1.71em;
+.editor-styles-wrapper h1 {
+  font-size: 2.14em;
 }
-
-h3 {
-	font-size: 1.29em;
+.editor-styles-wrapper h2 {
+  font-size: 1.71em;
 }
-
-h4 {
-	font-size: 1em;
+.editor-styles-wrapper h3 {
+  font-size: 1.29em;
 }
-
-h5 {
-	font-size: 0.875em;
+.editor-styles-wrapper h4 {
+  font-size: 1em;
 }
-
-h6 {
-	font-size: 0.75em;
+.editor-styles-wrapper h5 {
+  font-size: 0.875em;
 }
-
-a:link,
-a:visited {
-	color: #3131c4;
-	text-decoration: none;
+.editor-styles-wrapper h6 {
+  font-size: 0.75em;
 }
-
-a:hover,
-a:active {
-	color: #c03030;
-	text-decoration: underline;
+.editor-styles-wrapper a {
+  color: #3131c4;
+  text-decoration: underline;
 }
-
-img {
-	max-width: 100%;
-	height: auto;
+.editor-styles-wrapper a:hover,
+.editor-styles-wrapper a:active {
+  color: #c03030;
 }
-
-a img {
-	border: 0;
+.editor-styles-wrapper img {
+  max-width: 100%;
+  height: auto;
 }
-
-video {
-	width: 100% !important;
-	height: auto !important;
+.editor-styles-wrapper a img {
+  border: 0;
 }
-
-table {
-	margin: 0 auto;
+.editor-styles-wrapper video {
+  width: 100% !important;
+  height: auto !important;
 }
-
-table,
-table th,
-table td {
-	border: 1px solid #ededed;
+.editor-styles-wrapper table {
+  margin: 0 auto;
 }
-
-table th, table td {
-	padding: 0.5em;
+.editor-styles-wrapper table,
+.editor-styles-wrapper table th,
+.editor-styles-wrapper table td {
+  border: 1px solid #cccccc;
 }
-
-table caption {
-	color: #f5f5f5;
-	background-color: #000000;
-	font-weight: bold;
+.editor-styles-wrapper table th,
+.editor-styles-wrapper table td {
+  padding: 0.5em;
 }
-
-pre,
-.wp-block-freeform.block-library-rich-text__tinymce pre,
-code,
-kbd {
-	font-family: "Courier New", Courier, monospace;
+.editor-styles-wrapper table caption {
+  color: #f5f5f5;
+  background-color: #000000;
+  font-weight: bold;
 }
-
-pre,
-.wp-block-freeform.block-library-rich-text__tinymce pre {
-	background-color: #ededed;
-	border: 1px solid #c0c0c0;
-	font-size: 0.9em;
-	overflow-x: auto;
-	padding: 1em;
+.editor-styles-wrapper pre,
+.editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce pre,
+.editor-styles-wrapper code,
+.editor-styles-wrapper kbd {
+  font-family: "Courier New", Courier, monospace;
 }
-
-.entry form p:first-child:first-letter {
-	font-size: 1em;
+.editor-styles-wrapper pre,
+.editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce pre {
+  background-color: #e6e6e6;
+  border: 1px solid #cccccc;
+  font-size: 0.9em;
+  overflow-x: auto;
+  padding: 1em;
 }
-
-form label {
-	margin-right: 6px;
+.editor-styles-wrapper .entry form p:first-child:first-letter {
+  font-size: 1em;
 }
-
+.editor-styles-wrapper form label {
+  margin-right: 6px;
+}
 .editor-styles-wrapper button:not(.components-button),
-form input,
-form textarea,
-select {
-	color: #333333;
-	border: 1px solid #c0c0c0;
-	padding: 2px 6px;
-	font-size: 1em;
-}
-
-form input:focus,
-form textarea:focus {
-	background-color: #ededed;
-}
-
 .editor-styles-wrapper form input,
-form textarea,
-select,
-select option {
-	font-family: FreeSerif, "Times New Roman", Times, serif;
+.editor-styles-wrapper form textarea,
+.editor-styles-wrapper select {
+  color: #333333;
+  border: 1px solid #cccccc;
+  padding: 2px 6px;
+  font-size: 1em;
 }
-
+.editor-styles-wrapper form input:focus,
+.editor-styles-wrapper form textarea:focus {
+  background-color: #e6e6e6;
+}
+.editor-styles-wrapper form input,
+.editor-styles-wrapper form textarea,
+.editor-styles-wrapper select,
+.editor-styles-wrapper select option {
+  font-family: FreeSerif, "Times New Roman", Times, serif;
+}
 .editor-styles-wrapper button:not(.components-button),
-.wp-block-button__link,
-form input[type="reset"],
-form input[type="submit"],
-select {
-	background-color: #ededed;
-	margin: 6px;
-	min-width: 72px;
+.editor-styles-wrapper .wp-block-button__link,
+.editor-styles-wrapper form input[type=reset],
+.editor-styles-wrapper form input[type=submit],
+.editor-styles-wrapper select {
+  background-color: #e6e6e6;
+  margin: 6px;
+  min-width: 72px;
+}
+.editor-styles-wrapper select option {
+  height: 36px;
+}
+.editor-styles-wrapper form textarea {
+  width: 100%;
+}
+.editor-styles-wrapper form input#searchsubmit {
+  border: 0;
+}
+.editor-styles-wrapper hr {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  border-top: transparent;
+  margin: 1em 0;
+}
+.editor-styles-wrapper .wp-caption-text,
+.editor-styles-wrapper .gallery-caption {
+  text-align: center;
+  background: none #1a1a1a;
+  color: #e6e6e6;
+  font-size: 0.875em;
+  font-weight: bold;
+  padding: 6px;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  white-space: nowrap !important;
+}
+.editor-styles-wrapper .wp-calendar-table {
+  background-color: #ffffff;
+  border: 1px solid #333333;
+  border-collapse: collapse;
+}
+.editor-styles-wrapper .wp-calendar-table thead {
+  background-color: #e6e6e6;
+  text-align: center;
+}
+.editor-styles-wrapper .wp-calendar-table th {
+  font-weight: bold;
+}
+.editor-styles-wrapper .wp-calendar-table tbody td {
+  border: 1px solid #666666;
+  text-align: center;
+}
+.editor-styles-wrapper .wp-calendar-table th,
+.editor-styles-wrapper .wp-calendar-table td {
+  border: 0;
 }
 
-select option {
-	height: 36px;
-}
-
-form textarea {
-	width: 100%;
-}
-
-form input#searchsubmit {
-	border: 0;
-}
-
-hr {
-	border-bottom: 2px solid rgba(0, 0, 0, 0.25);
-	border-top: transparent;
-	margin: 1em 0;
-}
-
-.wp-caption-text,
-.gallery-caption {
-	text-align: center;
-	background: none #000000;
-	color: #f5f5f5;
-	font-size: 1em;
-	font-weight: bold;
-	padding: 6px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap !important;
-}
-
-#wp-calendar {
-	background-color: #ffffff;
-	border: 1px solid #333333;
-	border-collapse: collapse;
-}
-
-#wp-calendar thead {
-	background-color: #ededed;
-	text-align: center;
-}
-
-#wp-calendar th {
-	font-weight: bold;
-}
-
-#wp-calendar tbody td {
-	border: 1px solid #808080;
-	text-align: center;
-}
-
-#wp-calendar th,
-#wp-calendar td {
-	border: 0;
-}
 /*# sourceMappingURL=editor-style.css.map */

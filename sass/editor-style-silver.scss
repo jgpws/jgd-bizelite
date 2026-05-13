@@ -1,0 +1,34 @@
+.editor-styles-wrapper a {
+  color: #404040;
+}
+
+.editor-styles-wrapper table caption,
+.wp-block-calendar table caption {
+  background-color: #a0a0a0 !important;
+}
+
+.editor-styles-wrapper .wp-caption-text,
+.editor-styles-wrapper .gallery-caption,
+.wp-block-image figcaption,
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+  background-color: #c0c0c0;
+  color: #333333;
+
+  a,
+  a:hover,
+  a:active {
+    color: #3131c4;
+  }
+}
+
+.wp-block-calendar table tfoot a {
+  color: #404040;
+}
+
+.wp-block-pullquote.is-style-default {
+  border-color: #c0c0c0;
+}
+
+.wc-block-grid__product .wc-block-grid__product-title {
+  color: #404040;
+}

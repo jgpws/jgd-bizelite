@@ -1,19 +1,16 @@
 <?php get_header(); ?>
 
-	<div id="main" class="texture">
+	<main id="main" class="main texture">
 
-		<div id="container">
-
-			<div id="content">
+	  <section id="content" class="content">
 
 			<?php get_template_part( 'template-parts/loop', 'page' ); ?>
 
-			</div><!-- #content -->
 
-		</div><!-- #container -->
+		</section><!-- #content -->
 
 		<?php get_sidebar(); ?>
 
-	</div><!-- #main -->
+	</main><!-- #main -->
 
 <?php get_footer(); ?>

@@ -1,0 +1,223 @@
+@use "../partials/variables";
+
+/* Green color scheme */
+/* Base */
+body.green {
+  background-color: variables.$green;
+}
+.green {
+  a {
+    color: variables.$green;
+  }
+
+  a:hover,
+  a:active {
+    color: variables.$dark_green;
+  }
+
+  table caption {
+    background-color: variables.$dark_green;
+  }
+
+  .wp-block-calendar table tfoot {
+    a {
+      color: variables.$green;
+    }
+
+    a:hover,
+    a:active {
+      color: variables.$dark_green;
+    }
+  }
+}
+
+/* Buttons */
+.green {
+  .button-dropdown {
+    background-color: variables.$dark_green;
+  }
+
+  a.button-primary {
+    background-color: variables.$medium_light_green;
+    color: variables.$dark_green;
+    border-bottom-color: variables.$dark_green;
+  }
+
+  a.button-primary:hover {
+    background-color: variables.$dark_green;
+    color: variables.$white;
+  }
+
+  a.wp-block-button__link:not(.has-text-color) {
+    color: variables.$text_color;
+  }
+
+  .wp-block-search__button {
+    background-color: variables.$medium_light_green;
+    color: variables.$dark_green;
+    border-bottom-color: variables.$dark_green;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: variables.$dark_green;
+      color: variables.$white;
+    }
+  }
+}
+
+/* Header/Footer */
+.green {
+  .branding,
+  .footer {
+    background-color: variables.$dark_green;
+  }
+
+  &.custom-header .site-title-block {
+    background-color: variables.$green_50_opacity;
+  }
+
+  .blog-title a {
+    color: variables.$white;
+  }
+
+  .access {
+    background-color: variables.$medium_dark_green;
+    border-top-color: variables.$green;
+  }
+
+  .menubar-title {
+    color: variables.$pale_green;
+  }
+
+  .pagemenu {
+    .menu {
+      background-color: variables.$dark_green;
+      border-color: variables.$lightest_green;
+    }
+
+    a {
+      color: variables.$pale_green;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      background-color: variables.$pale_green;
+      color: variables.$black;
+    }
+  }
+
+  .searchbar .search-input {
+    border-color: variables.$green;
+  }
+
+  .menu-social a {
+    color: variables.$white;
+  }
+
+  .site-info {
+    a {
+      color: variables.$pale_green;
+    }
+
+    a:hover,
+    a:active {
+      color: variables.$white;
+    }
+  }
+
+  .up,
+  .down {
+    background-color: variables.$green_50_opacity;
+  }
+}
+
+@media screen and (min-width: 40.063em) {
+  .green .access {
+    border-bottom-color: variables.$green;
+    border-top: transparent;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .green .menu-social a {
+    color: variables.$white;
+  }
+
+  .green .menu-social .social-panel-expand {
+    background-color: variables.$medium_dark_green;
+    border-bottom-color: variables.$green;
+  }
+}
+
+/* Posts/Pages */
+.green {
+  .nav-separator {
+    background: url(../../images/jgd-bizelite-assets.svg) no-repeat -80px -45px;
+  }
+
+  .sticky .entry {
+    border-color: variables.$light_green;
+  }
+
+  .wp-caption-text,
+  .gallery-caption,
+  .wp-block-image figcaption,
+  .wp-block-gallery.has-nested-images
+    figure.wp-block-image:not(.is-style-rounded)
+    figcaption {
+    background-color: variables.$dark_green;
+    color: variables.$pale_green;
+
+    a {
+      color: variables.$lighter_green;
+    }
+
+    a:hover,
+    a:active {
+      color: variables.$lightest_green;
+    }
+  }
+
+  .bypostauthor {
+    background-color: variables.$lightest_green;
+
+    .button-primary {
+      background-color: variables.$dark_green;
+      color: variables.$white;
+    }
+  }
+
+  .wp-block-pullquote.is-style-default {
+    border-color: variables.$light_green;
+  }
+
+  &.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block {
+    background-color: variables.$green_75_opacity;
+  }
+}
+
+/* Sidebar */
+.green {
+  .widget-area ul ul li {
+    color: variables.$green;
+  }
+
+  .widgettitle,
+  .widget .wp-block-heading {
+    background: url(../../images/jgd-bizelite-assets.svg) no-repeat -20px -123px
+      variables.$base_color;
+  }
+}
+
+@media screen and (min-width: 64.063em) {
+  .green.three-col-r,
+  .green.three-col-l {
+    .widgettitle,
+    .widget .wp-block-heading {
+      background: url(../../images/jgd-bizelite-assets.svg)
+        no-repeat -20px -273px variables.$base_color;
+    }
+  }
+}

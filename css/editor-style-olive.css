@@ -1,35 +1,55 @@
-.editor-styles-wrapper a:link,
-.editor-styles-wrapper a:visited {
-  color: #535300 !important;
+.editor-styles-wrapper a {
+  color: #4d4d00;
+}
+.editor-styles-wrapper a:hover,
+.editor-styles-wrapper a:active {
+  color: #000000;
 }
 
 .editor-styles-wrapper table caption,
 .wp-block-calendar table caption {
-  background-color: #535300 !important;
+  background-color: #4d4d00 !important;
 }
 
 .editor-styles-wrapper .wp-caption-text,
 .editor-styles-wrapper .gallery-caption,
 .wp-block-image figcaption,
-.wp-block-gallery .blocks-gallery-image figcaption,
-.wp-block-gallery .blocks-gallery-item figcaption {
-  background-color: #808000;
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+  background-color: #4d4d00;
+  color: #f6f6ee;
+}
+.editor-styles-wrapper .wp-caption-text a,
+.editor-styles-wrapper .gallery-caption a,
+.wp-block-image figcaption a,
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption a {
+  color: #dfdf9f;
+}
+.editor-styles-wrapper .wp-caption-text a:hover,
+.editor-styles-wrapper .wp-caption-text a:active,
+.editor-styles-wrapper .gallery-caption a:hover,
+.editor-styles-wrapper .gallery-caption a:active,
+.wp-block-image figcaption a:hover,
+.wp-block-image figcaption a:active,
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption a:hover,
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption a:active {
+  color: #f6f6ee;
 }
 
-.wp-block-calendar table tfoot a:link,
-.wp-block-calendar table tfoot a:visited {
-  color: #535300;
+.wp-block-calendar table tfoot a {
+  color: #4d4d00;
 }
 
 .wp-block-pullquote.is-style-default {
-  border-color: #c0c056;
+  border-color: #dbdb70;
 }
 
 .wc-block-grid__product .wc-block-grid__product-title {
-  color: #535300;
+  color: #4d4d00;
 }
 
 .wc-block-featured-product__link .wp-block-button__link {
-  background-color: rgba(83, 83, 0, 0.50) !important;
-  border-bottom: #535300;
+  background-color: rgba(83, 83, 0, 0.5) !important;
+  border-bottom: #808000;
 }
+
+/*# sourceMappingURL=editor-style-olive.css.map */

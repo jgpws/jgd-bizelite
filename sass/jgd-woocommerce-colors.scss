@@ -1,0 +1,253 @@
+@use "partials/variables";
+
+/* WooCommerce color overrides file */
+
+$colors:
+  "Blue" "blue" "#000080" "#1717cf" "#00004d" "rgba(0, 0, 83, 0.50)",
+  "Green" "green" "#215e21" "#2e842e" "#143914" "rgba(11, 61, 11, 0.50)",
+  "Red" "red" "#8b0000" "#d81818" "#570000" "rgba(90, 0, 0, 0.50)",
+  "Olive" "olive" "#4d4d00" "#808000" "#000000" "rgba(83, 83, 0, 0.50)";
+
+@each $title, $slug, $color, $medium_color, $dark_color,
+  $semitransparent_color in $colors
+{
+  /* #{$title} */
+
+  .#{$slug} {
+    &.woocommerce {
+      .woocommerce-breadcrumb a {
+        color: #{$color};
+      }
+
+      .woocommerce-breadcrumb a:hover,
+      nav.woocommerce-pagination ul li a:hover,
+      nav.woocommerce-pagination ul li a:focus {
+        color: #{$dark_color};
+      }
+
+      ul.products li.product .woocommerce-loop-category__title,
+      ul.products li.product .woocommerce-loop-product__title,
+      ul.products li.product h3 {
+        color: #{$color};
+
+        &:hover {
+          color: #{$dark_color};
+        }
+      }
+    }
+
+    .woocommerce {
+      #respond input#submit.alt,
+      a.button.alt,
+      button.button.alt,
+      input.button.alt {
+        background-color: #{$medium_color};
+        border-bottom: 1px #{$dark_color};
+        font-weight: bold;
+
+        &:hover {
+          background-color: #{$dark_color};
+        }
+      }
+    }
+
+    .wc-block-grid .wc-block-components-product-title {
+      a:hover {
+        color: #{$dark_color};
+      }
+    }
+
+    .wc-block-grid .wc-block-components-product-title a,
+    .wc-block-grid__product-title {
+      color: #{$color};
+
+      &:hover {
+        color: #{$dark_color};
+      }
+    }
+
+    .wc-block-featured-product__link .wp-block-button__link {
+      background-color: #{$semitransparent_color};
+      border-bottom-color: #{$dark_color};
+
+      &:hover {
+        background-color: #{$dark_color};
+      }
+    }
+  }
+}
+
+/* Silver */
+
+.silver {
+  &.woocommerce {
+    .woocommerce-breadcrumb a {
+      color: variables.$medium_dark_gray;
+    }
+
+    .woocommerce-breadcrumb a:hover,
+    nav.woocommerce-pagination ul li a:hover,
+    nav.woocommerce-pagination ul li a:focus {
+      color: variables.$dark_gray;
+    }
+
+    ul.products li.product .woocommerce-loop-category__title,
+    ul.products li.product .woocommerce-loop-product__title,
+    ul.products li.product h3 {
+      color: variables.$medium_dark_gray;
+
+      &:hover {
+        color: variables.$dark_gray;
+      }
+    }
+  }
+
+  .woocommerce {
+    #respond input#submit.alt,
+    a.button.alt,
+    button.button.alt,
+    input.button.alt {
+      background-color: variables.$silver;
+      border-bottom: 1px solid variables.$dark_silver_alt;
+      color: variables.$text_color;
+      font-weight: bold;
+
+      &:hover {
+        background-color: variables.$silver_alt;
+      }
+    }
+  }
+
+  .wc-block-grid .wc-block-components-product-title {
+    a {
+      color: variables.$medium_dark_gray;
+    }
+
+    a:hover {
+      color: variables.$dark_gray;
+    }
+  }
+
+  .wc-block-grid__product-title {
+    color: variables.$medium_dark_gray;
+
+    &:hover {
+      color: variables.$dark_gray;
+    }
+  }
+
+  .wc-block-featured-product__link .wp-block-button__link {
+    &:hover {
+      background-color: variables.$darker_silver_alt;
+    }
+  }
+}
+
+/* Light Text overrides */
+.light-text {
+  &.woocommerce,
+  &.woocommerce-page {
+    ul.products li.product {
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+  }
+
+  &.woocommerce {
+    .woocommerce-breadcrumb,
+    ul.products li.product .price {
+      color: variables.$text_color_light;
+    }
+
+    .woocommerce-breadcrumb {
+      a {
+        color: variables.$lightest_gray;
+      }
+
+      a:hover {
+        color: variables.$white;
+      }
+    }
+
+    ul.products li.product .woocommerce-loop-category__title,
+    ul.products li.product .woocommerce-loop-product__title,
+    ul.products li.product h3 {
+      color: variables.$white;
+
+      &:hover {
+        color: variables.$text_color_light;
+      }
+    }
+
+    nav.woocommerce-pagination ul li span.current {
+      border-color: variables.$white_25_opacity;
+      color: variables.$text_color_light;
+    }
+
+    nav.woocommerce-pagination ul li a {
+      &:hover,
+      &:active {
+        color: variables.$text_color_light;
+      }
+    }
+
+    &.woocommerce.single-product div.product p.price {
+      color: variables.$text_color_light;
+    }
+
+    div.product .woocommerce-tabs ul.tabs li.active a,
+    div.product .woocommerce-tabs .panel {
+      color: variables.$text_color;
+    }
+
+    .widget_shopping_cart .buttons a,
+    &.widget_shopping_cart .buttons a {
+      color: variables.$text_color;
+    }
+  }
+
+  .wc-block-grid {
+    .wc-block-components-product-title {
+      a {
+        color: variables.$lightest_gray !important;
+      }
+
+      a:hover,
+      a:active {
+        color: variables.$white;
+      }
+    }
+  }
+
+  a.wc-block-grid__product-link:hover,
+  a.wc-block-grid__product-link:active {
+    text-decoration-color: currentColor;
+  }
+
+  .wc-block-grid__product-title {
+    color: variables.$lightest_gray;
+
+    &:hover,
+    &:active {
+      color: variables.$white;
+    }
+  }
+
+  .wc-block-components-pagination__page,
+  .wc-block-components-pagination__page--active[disabled]:focus,
+  .wc-block-components-pagination__page--active[disabled]:hover {
+    color: variables.$white;
+  }
+
+  .wc-block-components-pagination__page {
+    border-color: variables.$white_25_opacity;
+  }
+
+  .wc-block-components-pagination__page--active[disabled] {
+    border-color: variables.$white_12_opacity;
+  }
+
+  .wp-block-button.wc-block-components-product-button .wp-block-button__link {
+    background-color: variables.$medium_gray;
+    color: variables.$white;
+  }
+}

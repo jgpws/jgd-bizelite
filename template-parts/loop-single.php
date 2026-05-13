@@ -1,12 +1,12 @@
 <!-- begins the loop- single page -->
 <?php if(have_posts()) : while ( have_posts() ) : the_post(); ?>
 
-<!-- opens post div -->
-<div id="post-<?php the_id(); ?>" <?php post_class(); ?>>
-	<h1 class="entry-title"><?php the_title(); ?></a></h1>
+<h2 class="entry-title"><?php the_title(); ?></h2>
+<!-- opens #post -->
+<article id="post-<?php the_id(); ?>" <?php post_class(); ?>>
 	<?php get_template_part( 'template-parts/entry', 'meta' ); ?>
 
-		<!-- opens entry div -->
+		<!-- opens .entry -->
 		<div class="entry clearfix">
 			<?php
 			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
@@ -18,12 +18,16 @@
 
 			<?php jgd_bizelite_disable_comments_switcher_customizer(); ?>
 		</div>
-		<!-- closes entry div -->
+		<!-- closes .entry -->
 
-</div>
-<!-- closes post div -->
+</article>
+<!-- closes #post -->
 
 <?php endwhile; else: ?>
-<p><?php esc_html_e( 'Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite' ); ?></p>
+<article id="post">
+  <div class="entry">
+    <p><?php esc_html_e( 'Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite' ); ?></p>
+  </div>
+</article>
 <?php endif; ?>
 <!-- ends the loop- single page -->

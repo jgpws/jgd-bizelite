@@ -1,0 +1,108 @@
+$serif: FreeSerif, "Times New Roman", Times, serif;
+$monospace: "Courier New", Courier, monospace;
+
+// Colors
+$text_color: #333333;
+$text_color_light: #e6e6e6;
+$link_color: #3131c4;
+$link_hover_color: #c03030;
+$link_color_light: #a1a1e8;
+$link_color_light_hover: #e8a1a1;
+$base_color: #ffffff;
+$base_color_dark: #1a1a1a;
+
+$silver: #cccccc;
+$white: #ffffff;
+$black: #000000;
+
+// Color schemes
+
+// Black (default)
+$pale_gray: #e6e6e6;
+$lightest_gray: #cccccc;
+$lighter_gray: #b3b3b3;
+$light_gray: #999999;
+$medium_light_gray: #808080;
+$medium_gray: #666666;
+$medium_dark_gray: #4d4d4d;
+$dark_gray: #333333;
+$darker_gray: #1a1a1a;
+
+$darker_gray_50_opacity: rgba(26, 26, 26, 0.5);
+
+$white_12_opacity: rgba(255, 255, 255, 0.12);
+$white_25_opacity: rgba(255, 255, 255, 0.25);
+$white_50_opacity: rgba(255, 255, 255, 0.5);
+$white_75_opacity: rgba(255, 255, 255, 0.75);
+
+$black_12_opacity: rgba(0, 0, 0, 0.12);
+$black_25_opacity: rgba(0, 0, 0, 0.25);
+$black_50_opacity: rgba(0, 0, 0, 0.5);
+$black_75_opacity: rgba(0, 0, 0, 0.75);
+
+// Blue
+$pale_blue: #eeeef6;
+$lightest_blue: #c9c9e8;
+$lighter_blue: #9f9fdf;
+$light_blue: #7070db;
+$medium_light_blue: #3c3cdd;
+$medium_blue: #1717cf;
+$medium_dark_blue: #0909aa;
+$blue: #000080;
+$dark_blue: #00004d;
+
+$blue_50_opacity: rgba(0, 0, 83, 0.5);
+$blue_75_opacity: rgba(0, 0, 83, 0.75);
+
+// Green
+$pale_green: #eff6ef;
+$lightest_green: #cae7ca;
+$lighter_green: #a1dea1;
+$light_green: #7bd17b;
+$medium_light_green: #55c355;
+$medium_green: #3caa3c;
+$medium_dark_green: #2e842e;
+$green: #215e21;
+$dark_green: #143914;
+
+$green_50_opacity: rgba(11, 61, 11, 0.5);
+$green_75_opacity: rgba(11, 61, 11, 0.75);
+
+// Red
+$pale_red: #faf5f5;
+$lightest_red: #ebd1d1;
+$lighter_red: #e2a7a7;
+$light_red: #dd7878;
+$medium_light_red: #de4545;
+$medium_red: #d81818;
+$medium_dark_red: #b30909;
+$red: #8b0000;
+$dark_red: #570000;
+
+$red_50_opacity: rgba(90, 0, 0, 0.5);
+$red_75_opacity: rgba(90, 0, 0, 0.75);
+
+// Silver
+$pale_silver_alt: #ededed;
+$light_silver_alt: #d4d4d4;
+$medium_dark_silver_alt: #bababa;
+$silver_alt: #a0a0a0;
+$dark_silver_alt: #878787;
+$darker_silver_alt: #6e6e6e;
+
+$silver_50_opacity: rgba(128, 128, 128, 0.5);
+$silver_75_opacity: rgba(128, 128, 128, 0.75);
+
+// Olive
+$pale_olive: #f6f6ee;
+$lightest_olive: #e8e8c9;
+$lighter_olive: #dfdf9f;
+$light_olive: #dbdb70;
+$medium_light_olive: #dddd3c;
+$medium_olive: #cfcf17;
+$medium_dark_olive: #aaaa09;
+$olive: #808000;
+$dark_olive: #4d4d00;
+
+$olive_50_opacity: rgba(83, 83, 0, 0.5);
+$olive_75_opacity: rgba(83, 83, 0, 0.75);

@@ -1,0 +1,51 @@
+@use "partials/variables";
+
+.editor-styles-wrapper {
+  a {
+    color: variables.$red;
+  }
+
+  a:hover,
+  a:active {
+    color: variables.$dark_red;
+  }
+}
+
+.editor-styles-wrapper table caption,
+.wp-block-calendar table caption {
+  background-color: variables.$dark_red !important;
+}
+
+.editor-styles-wrapper .wp-caption-text,
+.editor-styles-wrapper .gallery-caption,
+.wp-block-image figcaption,
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+  background-color: variables.$dark_red;
+  color: variables.$pale_red;
+
+  a {
+    color: variables.$lighter_red;
+  }
+
+  a:hover,
+  a:active {
+    color: variables.$pale_red;
+  }
+}
+
+.wp-block-calendar table tfoot a {
+  color: variables.$dark_red;
+}
+
+.wp-block-pullquote.is-style-default {
+  border-color: variables.$light_red;
+}
+
+.wc-block-grid__product .wc-block-grid__product-title {
+  color: variables.$dark_red;
+}
+
+.wc-block-featured-product__link .wp-block-button__link {
+  background-color: rgba(90, 0, 0, 0.5) !important;
+  border-bottom: #5a0000;
+}

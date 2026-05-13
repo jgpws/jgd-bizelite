@@ -1,0 +1,198 @@
+/* Silver color scheme */
+/* Base */
+body.silver {
+  background-color: #a0a0a0;
+}
+
+.silver a {
+  color: #4d4d4d;
+}
+.silver a:hover,
+.silver a:active {
+  color: #333333;
+}
+.silver table caption {
+  background-color: #a0a0a0;
+  color: #333333;
+}
+.silver .wp-block-calendar table tfoot a {
+  color: #4d4d4d;
+}
+.silver .wp-block-calendar table tfoot a:hover,
+.silver .wp-block-calendar table tfoot a:active {
+  color: #333333;
+}
+
+/* Buttons */
+.silver .button-dropdown {
+  background-color: #878787;
+}
+.silver a.button-primary {
+  background-color: #cccccc;
+  border-bottom-color: #878787;
+  color: #333333;
+}
+.silver a.button-primary:hover {
+  background-color: #a0a0a0;
+}
+.silver a.wp-block-button__link:not(.has-text-color) {
+  color: #333333;
+}
+.silver .wp-block-search__button {
+  background-color: #cccccc;
+  border-bottom-color: #878787;
+  color: #333333;
+}
+.silver .wp-block-search__button:hover, .silver .wp-block-search__button:active, .silver .wp-block-search__button:focus {
+  background-color: #a0a0a0;
+}
+
+/* Header/Footer */
+.silver .branding,
+.silver .footer {
+  background-color: #878787;
+}
+.silver .blog-title a {
+  color: #ffffff;
+}
+.silver.page-template-thin-header .blog-title a {
+  color: #333333;
+}
+.silver.custom-header .site-title-block {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.silver .access {
+  background-color: #bababa;
+  border-bottom-color: #a0a0a0;
+}
+.silver .menubar-title,
+.silver .searchform label {
+  color: #333333;
+}
+.silver .searchbar .search-submit {
+  background-position: -204px -382px;
+}
+.silver .pagemenu .menu {
+  background-color: #4d4d4d;
+  border-color: #d4d4d4;
+}
+.silver .pagemenu a {
+  color: #ffffff;
+}
+.silver .pagemenu a:focus,
+.silver .pagemenu a:active,
+.silver .pagemenu a:hover {
+  background-color: #ededed;
+  color: #000000;
+}
+.silver .menu-social a {
+  color: #333333;
+}
+.silver .site-info {
+  color: #1a1a1a;
+}
+.silver .site-info a {
+  color: #1a1a1a;
+}
+.silver .site-info a:hover,
+.silver .site-info a:active {
+  color: #000000;
+}
+.silver .up,
+.silver .down {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+@media screen and (min-width: 40.063em) {
+  .silver .access {
+    border-bottom-color: #a0a0a0;
+    border-top: transparent;
+  }
+}
+@media screen and (min-width: 48em) {
+  .silver .menu-social a {
+    color: #ffffff;
+  }
+  .silver .menu-social .social-panel-expand {
+    background-color: #bababa;
+    border-bottom-color: #a0a0a0;
+  }
+  .silver .menu-social .social-panel-expand a {
+    color: #333333;
+  }
+}
+/* Posts/Pages */
+.silver .nav-separator {
+  background: url(../../images/jgd-bizelite-assets.svg) no-repeat -140px -45px;
+}
+.silver .wp-caption-text,
+.silver .gallery-caption,
+.silver .wp-block-image figcaption,
+.silver .wp-block-gallery.has-nested-images figure.wp-block-image:not(.is-style-rounded) figcaption {
+  background-color: #cccccc;
+  color: #333333;
+}
+.silver .wp-caption-text a,
+.silver .gallery-caption a,
+.silver .wp-block-image figcaption a,
+.silver .wp-block-gallery.has-nested-images figure.wp-block-image:not(.is-style-rounded) figcaption a {
+  color: #3131c4;
+}
+.silver .wp-caption-text a:hover,
+.silver .wp-caption-text a:active,
+.silver .gallery-caption a:hover,
+.silver .gallery-caption a:active,
+.silver .wp-block-image figcaption a:hover,
+.silver .wp-block-image figcaption a:active,
+.silver .wp-block-gallery.has-nested-images figure.wp-block-image:not(.is-style-rounded) figcaption a:hover,
+.silver .wp-block-gallery.has-nested-images figure.wp-block-image:not(.is-style-rounded) figcaption a:active {
+  color: #992626;
+}
+.silver .bypostauthor {
+  background-color: #d4d4d4;
+  color: #333333;
+}
+.silver .bypostauthor .button-primary {
+  background-color: #a0a0a0;
+}
+.silver.page-template-page_landing .blog-title a {
+  color: #333333;
+}
+.silver .wp-block-pullquote.is-style-default {
+  border-color: #d4d4d4;
+}
+.silver.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(0, 0, 0, 0.75);
+  color: #333333;
+}
+.silver.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a {
+  color: #4d4d4d;
+}
+.silver.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a:hover,
+.silver.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block a:active {
+  color: #333333;
+}
+
+/* Sidebar */
+.silver .widgettitle,
+.silver .widget .wp-block-heading {
+  background: url(../../images/jgd-bizelite-assets.svg) no-repeat -20px -173px #ffffff;
+}
+.silver .wp-calendar-table {
+  border-color: #a0a0a0;
+}
+.silver .wp-calendar-table tbody td {
+  border-color: #a0a0a0;
+}
+
+@media screen and (min-width: 64.063em) {
+  .silver.three-col-r .widgettitle,
+  .silver.three-col-r .widget .wp-block-heading,
+  .silver.three-col-l .widgettitle,
+  .silver.three-col-l .widget .wp-block-heading {
+    background: url(../../images/jgd-bizelite-assets.svg) no-repeat -20px -323px #ffffff;
+  }
+}
+
+/*# sourceMappingURL=silver.css.map */

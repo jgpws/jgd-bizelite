@@ -1,0 +1,185 @@
+@use "variables";
+
+/* -- Base styles -- */
+
+html,
+body {
+  height: 100%; // For content that is too short; used with Flexbox on the #wrapper
+}
+
+body {
+  font-family: variables.$serif;
+  color: variables.$text_color;
+  background-color: variables.$dark_gray;
+}
+
+p,
+address {
+  margin-bottom: 1rem;
+}
+
+p,
+ul li,
+ol li,
+dl dt,
+dl dd,
+blockquote {
+  font-size: 1em;
+  line-height: 1.29em;
+}
+
+blockquote {
+  background-color: variables.$pale_gray;
+  margin: 20px auto !important;
+  padding: 1em;
+  font-style: italic;
+  clear: both;
+}
+
+blockquote p {
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 2.14em; // ~30 px
+}
+
+h2 {
+  font-size: 1.71em; // ~24 px
+}
+
+h3 {
+  font-size: 1.29em; // ~18 px
+}
+
+h4 {
+  font-size: 1em; // ~16 px
+}
+
+h5 {
+  font-size: 0.875em; // ~14 px
+}
+
+h6 {
+  font-size: 0.75em; // ~12 px
+}
+
+a {
+  color: variables.$link_color;
+  text-decoration: underline;
+}
+
+a:hover,
+a:active {
+  color: variables.$link_hover_color;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+a img {
+  border: 0;
+}
+
+video {
+  // for responsive html5 videos
+  width: 100% !important;
+  height: auto !important;
+}
+
+table {
+  margin: 0 auto;
+}
+
+table,
+table th,
+table td {
+  border: 1px solid variables.$pale_gray;
+}
+
+table th,
+table td {
+  padding: 0.5em;
+}
+
+table caption {
+  color: variables.$text_color_light;
+  background-color: variables.$darker_gray;
+  font-weight: bold;
+}
+
+pre,
+code,
+kbd {
+  font-family: variables.$monospace;
+}
+
+pre {
+  background-color: variables.$pale_gray;
+  border: 1px solid variables.$silver;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+form label {
+  margin-right: 6px;
+}
+
+button,
+form input,
+form textarea,
+select {
+  color: variables.$text_color;
+  border: 1px solid variables.$silver;
+  padding: 2px 6px;
+  font-size: 1em;
+}
+
+form input:focus,
+form textarea:focus {
+  background-color: variables.$pale_gray;
+}
+
+button,
+form input,
+form textarea,
+select,
+select option {
+  font-family: variables.$serif;
+}
+
+button,
+.wp-block-button__link,
+form input[type="reset"],
+form input[type="submit"],
+select {
+  background-color: variables.$pale_gray;
+  margin: 6px;
+  min-width: 72px;
+}
+
+select option {
+  height: 36px;
+}
+
+form textarea {
+  width: 100%;
+}
+
+form input#searchsubmit {
+  border: 0;
+}
+
+fieldset {
+  border: 1px solid variables.$silver;
+  margin-bottom: 1em;
+}
+
+hr {
+  border-bottom: 2px solid variables.$black_25_opacity;
+  border-top: transparent;
+  margin: 1em 0;
+}

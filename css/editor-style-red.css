@@ -1,35 +1,55 @@
-.editor-styles-wrapper a:link,
-.editor-styles-wrapper a:visited {
-  color: #5a0000 !important;
+.editor-styles-wrapper a {
+  color: #8b0000;
+}
+.editor-styles-wrapper a:hover,
+.editor-styles-wrapper a:active {
+  color: #570000;
 }
 
 .editor-styles-wrapper table caption,
 .wp-block-calendar table caption {
-  background-color: #5a0000 !important;
+  background-color: #570000 !important;
 }
 
 .editor-styles-wrapper .wp-caption-text,
 .editor-styles-wrapper .gallery-caption,
 .wp-block-image figcaption,
-.wp-block-gallery .blocks-gallery-image figcaption,
-.wp-block-gallery .blocks-gallery-item figcaption {
-  background-color: #5a0000;
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+  background-color: #570000;
+  color: #faf5f5;
+}
+.editor-styles-wrapper .wp-caption-text a,
+.editor-styles-wrapper .gallery-caption a,
+.wp-block-image figcaption a,
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption a {
+  color: #e2a7a7;
+}
+.editor-styles-wrapper .wp-caption-text a:hover,
+.editor-styles-wrapper .wp-caption-text a:active,
+.editor-styles-wrapper .gallery-caption a:hover,
+.editor-styles-wrapper .gallery-caption a:active,
+.wp-block-image figcaption a:hover,
+.wp-block-image figcaption a:active,
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption a:hover,
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption a:active {
+  color: #faf5f5;
 }
 
-.wp-block-calendar table tfoot a:link,
-.wp-block-calendar table tfoot a:visited {
-  color: #5a0000;
+.wp-block-calendar table tfoot a {
+  color: #570000;
 }
 
 .wp-block-pullquote.is-style-default {
-  border-color: #c55959;
+  border-color: #dd7878;
 }
 
 .wc-block-grid__product .wc-block-grid__product-title {
-  color: #5a0000;
+  color: #570000;
 }
 
 .wc-block-featured-product__link .wp-block-button__link {
-  background-color: rgba(90, 0, 0, 0.50) !important;
+  background-color: rgba(90, 0, 0, 0.5) !important;
   border-bottom: #5a0000;
 }
+
+/*# sourceMappingURL=editor-style-red.css.map */

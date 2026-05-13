@@ -17,4 +17,4 @@
 	do_action( 'wp_body_open' );
 } ?>
 <!-- http://themeshaper.com/2009/06/24/creating-wordpress-theme-html-structure-tutorial/ -->
-<div id="wrapper" class="hfeed">
+<div id="wrapper" class="wrapper hfeed">

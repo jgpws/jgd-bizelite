@@ -1,13 +1,13 @@
 <!-- begins the loop- page -->
 <?php if(have_posts()) : while ( have_posts() ) : the_post(); ?>
 
-<!-- opens post div -->
-<div id="post-<?php the_id(); ?>" <?php post_class(); ?>>
+<!-- opens #post -->
+<article id="post-<?php the_id(); ?>" <?php post_class(); ?>>
 	<div class="index-meta">
 		<?php jgd_bizelite_edit_icon(); ?>
 	</div>
 
-	<!-- opens entry div -->
+	<!-- opens .entry -->
 	<div class="entry clearfix">
 	<?php
 	if ( has_post_thumbnail() ) {
@@ -18,12 +18,16 @@
 
 	<?php jgd_bizelite_disable_comments_switcher_customizer(); ?>
 	</div>
-	<!-- closes entry div -->
+	<!-- closes .entry -->
 
-</div>
-<!-- closes post div -->
+</article>
+<!-- closes #post -->
 
 <?php endwhile; else: ?>
-<p><?php esc_html_e( 'Sorry, no pages yet. Would you like to create one?', 'jgd-bizelite' ); ?></p>
+<article id="post">
+  <div class="entry">
+    <p><?php esc_html_e( 'Sorry, no pages yet. Would you like to create one?', 'jgd-bizelite' ); ?></p>
+  </div>
+</article>
 <?php endif; ?>
 <!-- ends the loop- page -->

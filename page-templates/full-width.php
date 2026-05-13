@@ -10,18 +10,14 @@
 
 <?php get_header( 'nomenu' ); ?>
 
-	<div id="main" class="texture">
+	<main id="main" class="main texture">
 
-		<div id="container">
-
-			<div id="content">
+	  <section id="content" class="content">
 
 			<?php get_template_part( 'template-parts/loop', 'plain' ); ?>
 
-			</div><!-- #content -->
+		</section><!-- #content -->
 
-		</div><!-- #container -->
-
-	</div><!-- #main -->
+	</main><!-- #main -->
 
 <?php get_footer(); ?>

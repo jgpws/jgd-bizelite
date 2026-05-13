@@ -9,8 +9,8 @@ $args = array(
 $first_query = new WP_query( $args );
 
 if( $first_query->have_posts() ) : while ( $first_query->have_posts() ) : $first_query->the_post(); ?>
-	<!-- opens post div -->
-	<div id="post-<?php the_id(); ?>" <?php post_class(); ?>>
+	<!-- opens #post -->
+	<article id="post-<?php the_id(); ?>" <?php post_class(); ?>>
 		<div class="entry-header">
 		<?php
 			if( has_post_thumbnail() ) {
@@ -28,12 +28,16 @@ if( $first_query->have_posts() ) : while ( $first_query->have_posts() ) : $first
 		</div>
 		<!-- closes entry div -->
 
-	</div>
-	<!-- closes post div -->
+	</article>
+	<!-- closes #post -->
 	<?php
 	endwhile;
 else: ?>
-<p><?php esc_html_e( 'Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite' ); ?></p>
+<article id="post">
+  <div class="entry">
+    <p><?php esc_html_e( 'Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite' ); ?></p>
+  </div>
+</article>
 <?php endif;
 wp_reset_postdata();
 // ends first loop ?>
@@ -42,12 +46,12 @@ wp_reset_postdata();
 // begins second loop
 
 if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<!-- opens post div -->
-	<div id="post-<?php the_id(); ?>" <?php post_class(); ?>>
+	<!-- opens #post -->
+	<article id="post-<?php the_id(); ?>" <?php post_class(); ?>>
 		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 			<?php get_template_part( 'template-parts/entry', 'meta-featured' ); ?>
 
-		<!-- opens entry div -->
+		<!-- opens .entry -->
 		<div class="entry clearfix">
 		<?php
 		if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
@@ -55,15 +59,19 @@ if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		} ?>
 		<?php the_excerpt(); ?>
 		</div>
-		<!-- closes entry div -->
+		<!-- closes .entry -->
 
-	</div>
-	<!-- closes post div -->
+	</article>
+	<!-- closes #post -->
 	<?php
  endwhile;
  wp_reset_postdata();
 else: ?>
-<p><?php esc_html_e('Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite'); ?></p>
+<article id="post">
+  <div class="entry">
+    <p><?php esc_html_e('Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite'); ?></p>
+  </div>
+</article>
 <?php endif;
 wp_reset_postdata();
 // ends second loop ?>

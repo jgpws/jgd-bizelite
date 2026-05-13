@@ -4,23 +4,48 @@
   "description": "JGD-BizElite WordPress theme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:style": "sass sass/style.scss:style.css",
+    "minify-style": "cleancss -o style.min.css style.css",
+    "watch:style": "onchange 'sass/{module_includes,partials}/*.scss' -- run-s sass:style minify-style",
+    "sass:color-schemes": "sass sass/themes:css/color-schemes",
+    "minify-color-schemes": "cleancss --batch --batch-suffix .min -o ./css/color-schemes css/color-schemes/blue.css css/color-schemes/green.css css/color-schemes/red.css css/color-schemes/silver.css css/color-schemes/olive.css css/color-schemes/light-text.css",
+    "watch:color-schemes": "onchange 'sass/themes/*.scss' -- run-s sass:color-schemes minify-color-schemes",
+    "sass:block-colors": "sass sass/gutenberg-colors.scss:css/gutenberg-colors.css",
+    "minify-block-colors": "cleancss -o css/gutenberg-colors.min.css css/gutenberg-colors.css",
+    "watch:block-colors": "onchange 'sass/gutenberg-colors.scss' -- run-s sass:block-colors minify-block-colors",
+    "sass:editor-styles": "sass sass/editor-style.scss:css/editor-style.css sass/gutenberg-editor-style.scss:css/gutenberg-editor-style.css",
+    "minify-editor-styles": "cleancss --batch --batch-suffix .min -o ./css css/editor-style.css css/gutenberg-editor-style.css",
+    "watch:editor-styles": "onchange 'sass/editor-style.scss' 'sass/gutenberg-editor-style.scss' -- run-s sass:editor-styles minify-editor-styles",
+    "sass:editor-themecolors": "sass sass/editor-style-blue.scss:css/editor-style-blue.css sass/editor-style-green.scss:css/editor-style-green.css sass/editor-style-olive.scss:css/editor-style-olive.css sass/editor-style-red.scss:css/editor-style-red.css sass/editor-style-silver.scss:css/editor-style-silver.css",
+    "watch:editor-themecolors": "onchange 'sass/editor-style-blue.scss' 'sass/editor-style-green.scss' 'sass/editor-style-red.scss' 'sass/editor-style-silver.scss' 'sass/editor-style-olive.scss' -- run-s sass:editor-themecolors",
+    "sass:wc": "sass sass/jgd-woocommerce.scss:css/jgd-woocommerce.css sass/jgd-woocommerce-colors.scss:css/jgd-woocommerce-colors.css",
+    "minify-wc": "cleancss -o css/jgd-woocommerce.min.css css/jgd-woocommerce.css",
+    "minify-wc-colors": "cleancss -o css/jgd-woocommerce-colors.min.css css/jgd-woocommerce-colors.css",
+    "watch:wc": "onchange 'sass/jgd-woocommerce.scss' 'sass/jgd-woocommerce-colors.scss' -- run-s sass:wc minify-wc minify-wc-colors",
+    "minify-all-css": "npm-run-all minify-style minify-block-colors minify-editor-styles minify-wc minify-wc-colors",
+    "minify-main-script": "terser scripts/jgd-bizelite-scripts.js -c -o scripts/jgd-bizelite-scripts.min.js",
+    "minify-customize-controls": "terser scripts/jbe-customize-controls.js -c -o scripts/jbe-customize-controls.min.js",
+    "minify-customizer-preview": "terser scripts/jbe-customizer-preview.js -c -o scripts/jbe-customizer-preview.min.js",
+    "watch:js": "onchange 'scripts/jgd-bizelite-scripts.js' -- run-s minify-main-script",
+    "watch:customizer-js": "onchange 'scripts/jbe-customize-controls.js' 'scripts/jbe-customizer-preview.js' -- run-s minify-customize-controls minify-customizer-preview",
+    "watch-all": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start --proxy 'localhost/wordpress' --files 'style.css, css/**/*.css, scripts/*.js, **/*.php'",
+    "develop": "run-p watch-all serve"
   },
   "author": "Jason Gonzalez",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^3.0.4",
+    "clean-css-cli": "^5.6.3",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-sass": "^5.0.0",
-    "gulp-uglify": "^3.0.2",
-    "gulp-uglifycss": "^1.1.0",
     "gulp-zip": "^4.2.0",
-    "sass": "^1.43.4"
+    "npm-run-all2": "^8.0.4",
+    "onchange": "^7.1.0",
+    "sass": "^1.43.4",
+    "terser": "^5.46.1"
   },
   "dependencies": {
-    "del": "^5.1.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sourcemaps": "^2.6.5"
+    "del": "^5.1.0"
   }
 }

@@ -1,24 +1,21 @@
 <?php get_header(); ?>
 
-	<div id="main" class="texture">
+<main id="main" class="main texture">
 
-		<div id="container">
+	<section id="content" class="content">
+		<?php get_template_part( 'template-parts/navigation' ); ?>
 
-			<div id="content">
-			<?php get_template_part( 'template-parts/navigation' ); ?>
+		<p class="archive-title"><?php esc_html_e( 'Search results for: ', 'jgd-bizelite' ); ?></p>
+		<h2 class="search-subtitle"><?php the_search_query(); ?></h2>
+		<hr>
 
-			<h3 class="archive-title"><?php esc_html_e( 'Search results for: ', 'jgd-bizelite' ); ?></h3>
-			<h1 class="search-subtitle"><?php the_search_query(); ?></h1>
-			<hr>
+		<?php get_template_part( 'template-parts/loop', 'search' ); ?>
 
-			<?php get_template_part( 'template-parts/loop', 'search' ); ?>
 
-			</div><!-- #content -->
+	</section><!-- #content -->
 
-		</div><!-- #container -->
+	<?php get_sidebar(); ?>
 
-		<?php get_sidebar(); ?>
+</main><!-- #main -->
 
-	</div><!-- #main -->
-
-	<?php get_footer(); ?>
+<?php get_footer(); ?>

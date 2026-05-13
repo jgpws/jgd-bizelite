@@ -1,4 +1,4 @@
-<div id="sidebar" class="sidebar">
+<aside id="sidebar" class="sidebar">
 	<div class="wc-widget-area widget-area">
 		<?php if ( is_active_sidebar( 'wc_widget_area' ) ) : ?>
 		<!-- begins widgetized area -->
@@ -10,4 +10,4 @@
 		<p>Add your WooCommerce widgets here.</p>
 		<?php endif; ?><!-- ends widgetized area -->
 	</div><!-- .widget-area -->
-</div><!-- #sidebar -->
+</aside><!-- #sidebar -->

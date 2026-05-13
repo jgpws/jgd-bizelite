@@ -1,22 +1,18 @@
 <?php get_header(); ?>
 
-	<div id="main" class="texture">
+<main id="main" class="main texture">
 
-		<div id="container">
+	<section id="content" class="content">
+		<?php get_template_part( 'template-parts/navigation' ); ?>
+		<h1 class="archive-title"><?php the_archive_title(); ?></h1>
+		<hr>
 
-			<div id="content">
-			<?php get_template_part( 'template-parts/navigation' ); ?>
-			<h1 class="archive-title"><?php the_archive_title(); ?></h1>
-			<hr>
+		<?php get_template_part( 'template-parts/loop' ); ?>
 
-			<?php get_template_part( 'template-parts/loop' ); ?>
+	</section><!-- #content -->
 
-			</div><!-- #content -->
+	<?php get_sidebar(); ?>
 
-		</div><!-- #container -->
+</main><!-- #main -->
 
-		<?php get_sidebar(); ?>
-
-	</div><!-- #main -->
-
-	<?php get_footer(); ?>
+<?php get_footer(); ?>

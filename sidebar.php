@@ -1,4 +1,4 @@
-<div id="sidebar" class="sidebar">
+<aside id="sidebar" class="sidebar">
 	<div class="primary widget-area">
 		<?php if ( is_active_sidebar( 'primary_widget_area' ) ) : ?>
 		<!-- begins widgetized area -->
@@ -44,7 +44,7 @@
 			</li>
 		</ul>
 		<?php endif; ?><!-- ends widgetized area -->
-	</div><!-- .widget-area -->
+	</div><!-- .primary -->
 
 	<div class="secondary widget-area">
 		<?php if ( is_active_sidebar( 'secondary_widget_area' ) ) : ?>
@@ -52,5 +52,5 @@
 				<?php dynamic_sidebar( 'secondary_widget_area' ); ?>
 			</ul>
 		<?php endif; ?>
-	</div><!-- .widget-area -->
-</div><!-- #sidebar -->
+	</div><!-- .secondary -->
+</aside><!-- #sidebar -->

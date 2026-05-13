@@ -19,11 +19,11 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		'jgd_bizelite_logo_options', array(
 			'type' => 'radio',
 			'label' => __( 'Logo/Title Alignment*', 'jgd-bizelite' ),
-			'description' => sprintf( /* translators: %1$s = <p>, %2$s = </p> */ esc_html__( '%1$s* = refeshes the page%2$s%1$s** = The title and subtitle are not displayed in Center logo alignment.%2$s', 'jgd-bizelite' ), '<p>', '</p>' ),
+			'description' => sprintf( /* translators: %1$s = <p>, %2$s = </p> */ esc_html__( '%1$s* = refeshes the page%2$s', 'jgd-bizelite' ), '<p>', '</p>' ),
 			'section' => 'title_tagline',
 			'choices' => array(
 				'left' => esc_html__( 'Left (default)', 'jgd-bizelite' ),
-				'center' => esc_html__( 'Center**', 'jgd-bizelite' ),
+				'center' => esc_html__( 'Center', 'jgd-bizelite' ),
 				'right' => esc_html__( 'Right', 'jgd-bizelite' ),
 			),
 		)
@@ -36,7 +36,6 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_setting(
 		'jgd_bizelite_style_choices', array(
 			'default' => 'none',
-			'transport' => 'postMessage',
 			'sanitize_callback' => 'jgd_bizelite_sanitize_style_choices',
 		)
 	);
@@ -44,7 +43,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		'jgd_bizelite_style_choices', array(
 			'type' => 'radio',
 			'priority' => 20,
-			'label' => esc_html__( 'Color Schemes', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Color Schemes *', 'jgd-bizelite' ),
 			'section' => 'colors',
 			'choices' => array(
 				'none' => esc_html__( 'Black (default)', 'jgd-bizelite' ),
@@ -59,7 +58,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 
 	$wp_customize->add_setting(
 		'jgd_bizelite_content_sidebar_bgcolor', array(
-			'default' => '#ededed',
+			'default' => '#e6e6e6',
 			'transport' => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
@@ -101,7 +100,6 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_setting(
 		'jgd_bizelite_light_text', array(
 			'default' => 0,
-			'transport' => 'postMessage',
 			'sanitize_callback' => 'jgd_bizelite_sanitize_checkbox',
 		)
 	);
@@ -111,14 +109,13 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 			'type' => 'checkbox',
 			'section' => 'colors',
 			'priority' => 40,
-			'label' => esc_html__( 'Use light text for dark background', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Use light text for dark background *', 'jgd-bizelite' ),
 		)
 	);
 
 	$wp_customize->add_setting(
 		'jgd_bizelite_hide_bg_texture', array(
 			'default' => 0,
-			'transport' => 'postMessage',
 			'sanitize_callback' => 'jgd_bizelite_sanitize_checkbox',
 		)
 	);
@@ -128,14 +125,13 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 			'type' => 'checkbox',
 			'section' => 'colors',
 			'priority' => 50,
-			'label' => esc_html__( 'Hide background texture behind content', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Hide background texture behind content *', 'jgd-bizelite' ),
 		)
 	);
 
 	$wp_customize->add_setting(
 		'jgd_bizelite_hide_decorations', array(
 			'default' => 0,
-			'transport' => 'postMessage',
 			'sanitize_callback' => 'jgd_bizelite_sanitize_checkbox',
 		)
 	);
@@ -144,7 +140,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 			'type' => 'checkbox',
 			'section' => 'colors',
 			'priority' => 60,
-			'label' => esc_html__( 'Hide Decorations', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Hide Decorations *', 'jgd-bizelite' ),
 		)
 	);
 
@@ -163,7 +159,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		'jgd_bizelite_header_alignment', array(
 			'type' => 'radio',
 			'section' => 'header_image',
-			'label' => esc_html__( 'Align the header background image if it is smaller than the recommended size.', 'jgd-bizelite' ),
+			'label' => esc_html__( 'Align the header image if it is smaller than the recommended size.', 'jgd-bizelite' ),
 			'choices' => array(
 				'left' => esc_html__( 'Left', 'jgd-bizelite' ),
 				'center' => esc_html__( 'Center (default)', 'jgd-bizelite' ),
@@ -634,7 +630,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		'jgd_bizelite_full_page', array(
 			'title' => esc_html__( 'Full Page Width, No Menu', 'jgd-bizelite' ),
 			'priority' => 127,
-			'description' => esc_html__( 'Customize pages using the Full Page Width, No Menu template.', 'jgd-bizelite' ),
+			'description' => esc_html__( 'Customize pages that use the Full Page Width, No Menu template.', 'jgd-bizelite' ),
 			'panel' => 'jgd_bizelite_page_templates',
 			'active_callback' => 'jgd_bizelite_page_callback',
 		)
@@ -660,7 +656,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_setting(
 		'jgd_bizelite_full_page_bg', array(
 			'type' => 'theme_mod',
-			'default' => '#ededed',
+			'default' => '#e6e6e6',
 			'transport' => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
@@ -681,7 +677,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		'jgd_bizelite_landing', array(
 			'title' => esc_html__( 'Landing Page', 'jgd-bizelite' ),
 			'priority' => 130,
-			'description' => sprintf( esc_html__( '%1$sCustomize pages using the Landing Page template.%2$s%1$s* Use these features to preview the landing page colors in the block editor.%2$s%1$s%3$sDisable (uncheck) these features after finishing customizations to the landing page, as they show on every page.%4$s%2$s', 'jgd-bizelite' ), '<p>', '</p>', '<strong>', '</strong>' ),
+			'description' => sprintf( esc_html__( '%1$sCustomize pages using the Landing Page template.%2$s%1$s* Use these features to preview the landing page colors in the block editor.%2$s%1$s%3$sDisable (uncheck) the background and foreground features for the Block Editor after finishing customizations to the landing page.%2$s%1$sThey will otherwise display on every page in the editor.%4$s%2$s%1$s** Refreshes the page%2$s', 'jgd-bizelite' ), '<p>', '</p>', '<strong>', '</strong>' ),
 			'panel' => 'jgd_bizelite_page_templates',
 			'active_callback' => 'jgd_bizelite_page_callback',
 		)
@@ -750,7 +746,7 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		);
 
 		$wp_customize->add_setting(
-			'jgd_bizelite_show_landing_bg_gutenberg_' . $counter , array(
+			'jgd_bizelite_show_landing_bg_gutenberg_' . $counter, array(
 				'type' => 'theme_mod',
 				'default' => 0,
 				'transport' => 'postMessage',
@@ -759,15 +755,15 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		);
 
 		$wp_customize->add_control(
-			'jgd_bizelite_show_landing_bg_gutenberg_' . $counter , array(
+			'jgd_bizelite_show_landing_bg_gutenberg_' . $counter, array(
 				'type' => 'checkbox',
 				'label' => esc_html__( 'Show Landing Page background color in the Block Editor. *', 'jgd-bizelite' ),
 				'section' => 'jgd_bizelite_landing',
 			)
-		);
+    );
 
 		$wp_customize->add_setting(
-			'jgd_bizelite_landing_light_text_' . $counter , array(
+			'jgd_bizelite_show_landing_fg_gutenberg_' . $counter, array(
 				'type' => 'theme_mod',
 				'default' => 0,
 				'transport' => 'postMessage',
@@ -776,9 +772,25 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 		);
 
 		$wp_customize->add_control(
-			'jgd_bizelite_landing_light_text_' . $counter , array(
+			'jgd_bizelite_show_landing_fg_gutenberg_' . $counter, array(
 				'type' => 'checkbox',
-				'label' => esc_html__( 'Use light text for dark background *', 'jgd-bizelite' ),
+				'label' => esc_html__( 'Show Landing Page foreground color (for light text) in the Block Editor *', 'jgd-bizelite' ),
+				'section' => 'jgd_bizelite_landing',
+			)
+    );
+
+		$wp_customize->add_setting(
+			'jgd_bizelite_landing_light_text_' . $counter, array(
+				'type' => 'theme_mod',
+				'default' => 0,
+				'sanitize_callback' => 'jgd_bizelite_sanitize_checkbox',
+			)
+		);
+
+		$wp_customize->add_control(
+			'jgd_bizelite_landing_light_text_' . $counter, array(
+				'type' => 'checkbox',
+				'label' => esc_html__( 'Use light text for dark background **', 'jgd-bizelite' ),
 				'section' => 'jgd_bizelite_landing',
 			)
 		);
@@ -827,13 +839,13 @@ function jbe_customize_register( WP_Customize_Manager $wp_customize ) {
 	}
 
 	$wp_customize->selective_refresh->add_partial( 'jgd_bizelite_menutitle_one', array(
-		'selector' => '.menubar-pages-list-item .menubar-title',
+		'selector' => '#menubar-title-one',
 		'container_inclusive' => false,
 		'render_callback' => 'jgd_bizelite_menutitle_one_customizer',
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'jgd_bizelite_menutitle_two', array(
-		'selector' => '.menubar-cats-list-item .menubar-title',
+		'selector' => '#menubar-title-two',
 		'container_inclusive' => false,
 		'render_callback' => 'jgd_bizelite_menutitle_two_customizer',
 	) );
@@ -972,7 +984,7 @@ function jgd_bizelite_sanitize_checkbox( $checked ) {
 
 /* call postMessage javascript */
 function jgd_bizelite_preview_js() {
-	wp_enqueue_script( 'jgd-bizelite-custom-css-preview', get_template_directory_uri() . '/scripts/jbe-customizer-preview.js', array( 'jquery', 'customize-preview' ), '', true );
+	wp_enqueue_script( 'jgd-bizelite-custom-css-preview', get_template_directory_uri() . '/scripts/jbe-customizer-preview.min.js', array( 'jquery', 'customize-preview' ), filemtime( get_template_directory() . '/scripts/jbe-customizer-preview.min.js' ), true );
 	$args = array(
 		'color_styles' => get_theme_mod( 'jgd_bizelite_style_choices' ),
 		'logo_alignment' => get_theme_mod( 'jgd_bizelite_logo_options' ),
@@ -983,6 +995,6 @@ add_action( 'customize_preview_init', 'jgd_bizelite_preview_js' );
 
 /* for Customizer controls */
 function jgd_bizelite_customizer_controls() {
-	wp_enqueue_script( 'jgd-bizelite-customizer-controls', get_template_directory_uri() . '/scripts/jbe-customize-controls.js', array( 'jquery' ), '', true );
+	wp_enqueue_script( 'jgd-bizelite-customizer-controls', get_template_directory_uri() . '/scripts/jbe-customize-controls.min.js', array( 'jquery' ), filemtime( get_template_directory() . '/scripts/jbe-customize-controls.min.js' ), true );
 }
 add_action( 'customize_controls_enqueue_scripts', 'jgd_bizelite_customizer_controls' );

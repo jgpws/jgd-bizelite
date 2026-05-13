@@ -17,12 +17,12 @@ function jgd_bizelite_gutenberg_colors() {
 					array(
 						'name' => esc_html__( 'Light Gray', 'jgd-bizelite' ),
 						'slug' => 'light-gray',
-						'color' => '#ededed',
+						'color' => '#999999',
 					),
 					array(
 						'name' => esc_html__( 'Medium Gray', 'jgd-bizelite' ),
 						'slug' => 'medium-gray',
-						'color' => '#808080',
+						'color' => '#666666',
 					),
 					array(
 						'name' => esc_html__( 'Dark Gray', 'jgd-bizelite' ),
@@ -48,12 +48,12 @@ function jgd_bizelite_gutenberg_colors() {
 					array(
 						'name' => esc_html__( 'Light Blue', 'jgd-bizelite' ),
 						'slug' => 'light-blue',
-						'color' => '#aaaae0',
+						'color' => '#7070db',
 					),
 					array(
 						'name' => esc_html__( 'Medium Blue', 'jgd-bizelite' ),
 						'slug' => 'medium-blue',
-						'color' => '#5656c0',
+						'color' => '#1717cf',
 					),
 					array(
 						'name' => esc_html__( 'Blue', 'jgd-bizelite' ),
@@ -63,7 +63,7 @@ function jgd_bizelite_gutenberg_colors() {
 					array(
 						'name' => esc_html__( 'Dark Blue', 'jgd-bizelite' ),
 						'slug' => 'dark-blue',
-						'color' => '#000053',
+						'color' => '#00004d',
 					),
 					array(
 						'name' => esc_html__( 'Black', 'jgd-bizelite' ),
@@ -84,12 +84,12 @@ function jgd_bizelite_gutenberg_colors() {
 					array(
 						'name' => esc_html__( 'Light Green', 'jgd-bizelite' ),
 						'slug' => 'light-green',
-						'color' => '#b8d8b8',
+						'color' => '#7bd17b',
 					),
 					array(
 						'name' => esc_html__( 'Medium Green', 'jgd-bizelite' ),
 						'slug' => 'medium-green',
-						'color' => '#71b071',
+						'color' => '#3caa3c',
 					),
 					array(
 						'name' => esc_html__( 'Green', 'jgd-bizelite' ),
@@ -99,7 +99,7 @@ function jgd_bizelite_gutenberg_colors() {
 					array(
 						'name' => esc_html__( 'Dark Green', 'jgd-bizelite' ),
 						'slug' => 'dark-green',
-						'color' => '#0b3d0b',
+						'color' => '#143914',
 					),
 					array(
 						'name' => esc_html__( 'Black', 'jgd-bizelite' ),
@@ -120,17 +120,22 @@ function jgd_bizelite_gutenberg_colors() {
 					array(
 						'name' => esc_html__( 'Light Red', 'jgd-bizelite' ),
 						'slug' => 'light-red',
-						'color' => '#daadad',
+						'color' => '#dd7878',
 					),
 					array(
 						'name' => esc_html__( 'Medium Red', 'jgd-bizelite' ),
 						'slug' => 'medium-red',
-						'color' => '#c55959',
-					),
+						'color' => '#d81818',
+          ),
+          array(
+            'name' => esc_html__( 'Red', 'jgd-bizelite' ),
+            'slug' => 'red',
+            'color' => '#8b0000'
+          ),
 					array(
 						'name' => esc_html__( 'Dark Red', 'jgd-bizelite' ),
 						'slug' => 'dark-red',
-						'color' => '#5a0000',
+						'color' => '#570000',
 					),
 					array(
 						'name' => esc_html__( 'Black', 'jgd-bizelite' ),
@@ -151,22 +156,22 @@ function jgd_bizelite_gutenberg_colors() {
 					array(
 						'name' => esc_html__( 'Light Silver', 'jgd-bizelite' ),
 						'slug' => 'light-silver',
-						'color' => '#e0e0e0',
+						'color' => '#d4d4d4',
 					),
 					array(
 						'name' => esc_html__( 'Silver', 'jgd-bizelite' ),
 						'slug' => 'silver',
-						'color' => '#c0c0c0',
+						'color' => '#cccccc',
 					),
 					array(
-						'name' => esc_html__( 'Medium Gray', 'jgd-bizelite' ),
-						'slug' => 'medium-gray',
-						'color' => '#808080',
+						'name' => esc_html__( 'Medium Silver', 'jgd-bizelite' ),
+						'slug' => 'medium-silver',
+						'color' => '#a0a0a0',
 					),
 					array(
-						'name' => esc_html__( 'Medium Dark Gray', 'jgd-bizelite' ),
-						'slug' => 'medium-dark-gray',
-						'color' => '#404040',
+						'name' => esc_html__( 'Dark Silver', 'jgd-bizelite' ),
+						'slug' => 'dark-silver',
+						'color' => '#6e6e6e',
 					),
 					array(
 						'name' => esc_html__( 'Black', 'jgd-bizelite' ),
@@ -187,12 +192,12 @@ function jgd_bizelite_gutenberg_colors() {
 					array(
 						'name' => esc_html__( 'Light Olive', 'jgd-bizelite' ),
 						'slug' => 'light-olive',
-						'color' => '#e0e0aa',
+						'color' => '#dbdb70',
 					),
 					array(
 						'name' => esc_html__( 'Medium Olive', 'jgd-bizelite' ),
 						'slug' => 'medium-olive',
-						'color' => '#c0c056',
+						'color' => '#cfcf17',
 					),
 					array(
 						'name' => esc_html__( 'Olive', 'jgd-bizelite' ),
@@ -202,7 +207,7 @@ function jgd_bizelite_gutenberg_colors() {
 					array(
 						'name' => esc_html__( 'Dark Olive', 'jgd-bizelite' ),
 						'slug' => 'dark-olive',
-						'color' => '#535300',
+						'color' => '#4d4d00',
 					),
 					array(
 						'name' => esc_html__( 'Black', 'jgd-bizelite' ),

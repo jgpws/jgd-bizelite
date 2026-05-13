@@ -1,22 +1,35 @@
 <?php get_header(); ?>
-<?php global $post; ?>
+<?php 
+  global $post;
+  $parent_id = wp_get_post_parent_id( $post->ID );
+?>
+    
+	<main id="main" class="main texture">
 
-	<div id="main" class="texture">
+		<section id="content" class="content">
+		<!-- see http://themeshaper.com/2009/06/29/wordpress-theme-index-template-tutorial/ -->
 
-		<div id="container">
-
-			<div id="content">
-			<!-- see http://themeshaper.com/2009/06/29/wordpress-theme-index-template-tutorial/ -->
-
-			<p class="post-parent-return"><?php esc_html_e( 'Return to:', 'jgd-bizelite' ); ?> <a href="<?php echo esc_url( get_permalink( $post->post_parent ) ); ?>" title="<?php /* translators: %s = Post parent title */ printf( esc_attr__( 'Return to %s', 'jgd-bizelite' ), esc_html( get_the_title( $post->post_parent ), 1 ) ); ?>" rev="attachment"><?php echo esc_html( get_the_title( $post->post_parent ) ); ?></a></p>
+      <p class="post-parent-return">
+      <?php 
+        if ( $parent_id && $parent_id !== $post->ID ) {
+          esc_html_e( 'Parent post:', 'jgd-bizelite' ); ?>           <a href="<?php echo esc_url( get_permalink( $post->post_parent ) ); ?>" title="<?php /* translators: %s = Post parent title */ printf( esc_attr__( 'Return to %s', 'jgd-bizelite' ), esc_html( get_the_title( $post->post_parent ), 1 ) ); ?>" rev="attachment"><?php echo esc_html( get_the_title( $post->post_parent ) ); ?></a>
+      <?php } else {
+        esc_html_e( 'Parent post: Unattached to a post', 'jgd-bizelite' );
+      } ?>
+      </p>
 
 			<!-- begins the loop- single page -->
 			<?php if(have_posts()) : while ( have_posts() ) : the_post(); ?>
 
 			<!-- opens post div -->
-			<div id="post-<?php the_id(); ?>" <?php post_class(); ?>>
+			<article id="post-<?php the_id(); ?>" <?php post_class(); ?>>
 			<h1 class="entry-title"><?php the_title(); ?></a></h1>
-			<p class="index-meta"><strong><?php esc_html_e( 'By: ', 'jgd-bizelite' ); ?></strong><?php the_author_posts_link(); ?> <?php jgd_bizelite_hide_postdate_switcher_customizer(); ?><?php jgd_bizelite_hide_commentslink_switcher_customizer(); ?><span><?php edit_post_link(); ?></span></p>
+      <div class="index-meta">
+        <?php jgd_bizelite_edit_icon(); ?>
+        <p class="meta">
+          <strong><?php esc_html_e( 'By: ', 'jgd-bizelite' ); ?></strong><?php the_author_posts_link(); ?> <?php jgd_bizelite_hide_postdate_switcher_customizer(); ?><?php jgd_bizelite_hide_commentslink_switcher_customizer(); ?>
+        </p>
+      </div>
 
 				<!-- opens entry div -->
 				<div class="entry clearfix">
@@ -31,7 +44,7 @@
 				</div>
 				<!-- closes entry div -->
 
-			</div>
+			</article>
 			<!-- closes post div -->
 
 			<?php endwhile; else: ?>
@@ -39,12 +52,11 @@
 			<?php endif; ?>
 			<!-- ends the loop- single page -->
 
-			</div><!-- #content -->
 
-		</div><!-- #container -->
+		</section><!-- #content -->
 
 		<?php get_sidebar(); ?>
 
-	</div><!-- #main -->
+	</main><!-- #main -->
 
 	<?php get_footer(); ?>

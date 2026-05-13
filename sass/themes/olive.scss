@@ -1,0 +1,260 @@
+@use "../partials/variables";
+
+/* -- Olive color scheme -- */
+/* Base */
+body.olive {
+  background-color: variables.$olive;
+}
+.olive {
+  a {
+    color: variables.$dark_olive;
+  }
+
+  a:hover,
+  a:active {
+    color: variables.$black;
+  }
+
+  table caption {
+    background-color: variables.$dark_olive;
+  }
+
+  .wp-block-calendar table tfoot {
+    a {
+      color: variables.$dark_olive;
+    }
+
+    a:hover,
+    a:active {
+      color: variables.$black;
+    }
+  }
+}
+
+/* Buttons */
+.olive {
+  .button-dropdown {
+    background-color: variables.$dark_olive;
+  }
+
+  a.button-primary {
+    background-color: variables.$medium_olive;
+    border-bottom-color: variables.$dark_olive;
+    color: variables.$text_color;
+  }
+
+  a.button-primary:hover {
+    background-color: variables.$dark_olive;
+    color: variables.$white;
+  }
+
+  a.wp-block-button__link:not(.has-text-color) {
+    color: variables.$text_color;
+  }
+
+  .wp-block-search__button {
+    background-color: variables.$medium_olive;
+    border-bottom-color: variables.$dark_olive;
+    color: variables.$text_color;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: variables.$dark_olive;
+      color: variables.$white;
+    }
+  }
+}
+
+/* Header/Footer */
+.olive {
+  .branding,
+  .footer {
+    background-color: variables.$dark_olive;
+  }
+
+  &.custom-header .site-title-block {
+    background-color: variables.$olive_50_opacity;
+  }
+
+  .blog-title a {
+    color: variables.$white;
+  }
+
+  .access {
+    background-color: variables.$medium_dark_olive;
+    border-top-color: variables.$olive;
+  }
+
+  .pagemenu {
+    .menu {
+      background-color: variables.$dark_olive;
+      border-color: variables.$lightest_olive;
+    }
+
+    a {
+      color: variables.$pale_olive;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      background-color: variables.$pale_olive;
+      color: variables.$black;
+    }
+  }
+
+  .menubar-title {
+    color: variables.$text_color;
+  }
+
+  .searchbar {
+    .search-input {
+      border-color: variables.$olive;
+    }
+
+    .search-submit {
+      background-position: -204px -382px;
+    }
+  }
+
+  .menu-social a {
+    color: variables.$text_color;
+  }
+
+  .site-info {
+    a {
+      color: variables.$pale_olive;
+    }
+
+    a:hover,
+    a:active {
+      color: variables.$white;
+    }
+  }
+
+  .up,
+  .down {
+    background-color: rgba(83, 83, 0, 0.5);
+  }
+}
+
+@media screen and (min-width: 40.063em) {
+  .olive .access {
+    border-bottom-color: variables.$olive;
+    border-top: transparent;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .olive .menu-social a {
+    color: variables.$white;
+  }
+
+  .olive .menu-social .social-panel-expand {
+    background-color: variables.$medium_dark_olive;
+    border-bottom-color: variables.$olive;
+  }
+
+  .olive .menu-social .social-panel-expand a {
+    color: variables.$text_color;
+  }
+}
+
+/* Posts/Pages */
+.olive {
+  .nav-separator {
+    background: url(../../images/jgd-bizelite-assets.svg) no-repeat -170px -45px;
+  }
+
+  .sticky .entry {
+    border-color: variables.$light_olive;
+  }
+
+  .wp-caption-text,
+  .gallery-caption,
+  .wp-block-image figcaption,
+  .wp-block-gallery.has-nested-images
+    figure.wp-block-image:not(.is-style-rounded)
+    figcaption {
+    background-color: variables.$dark_olive;
+    color: variables.$pale_olive;
+
+    a {
+      color: variables.$lighter_olive;
+    }
+
+    a:hover,
+    a:active {
+      color: variables.$lightest_olive;
+    }
+  }
+
+  .bypostauthor {
+    background-color: variables.$lightest_olive;
+
+    .button-primary {
+      background-color: variables.$dark_olive;
+      color: variables.$white;
+    }
+  }
+
+  .wp-block-pullquote.is-style-default {
+    border-color: variables.$light_olive;
+  }
+
+  .page-template-page_landing .blog-title a {
+    color: variables.$dark_olive;
+  }
+  &.mag-featured {
+    .post.has-post-thumbnail:nth-of-type(1) {
+      .entry-title-block {
+        background-color: variables.$white_75_opacity;
+        border-color: variables.$black_75_opacity;
+        color: variables.$text-color;
+
+        a {
+          color: variables.$dark_olive;
+        }
+
+        a:hover,
+        a:active {
+          color: variables.$text_color;
+        }
+
+        a.post-edit-link {
+          color: variables.$black;
+        }
+
+        a.post-edit-link:active,
+        a.post-edit-link:hover {
+          color: variables.$white;
+        }
+      }
+    }
+  }
+}
+
+/* Sidebar */
+.olive {
+  .widget-area ul ul li {
+    color: variables.$olive;
+  }
+
+  .widgettitle,
+  .widget .wp-block-heading {
+    background: url(../../images/jgd-bizelite-assets.svg)
+      no-repeat -306px -173px variables.$base_color;
+  }
+}
+
+@media screen and (min-width: 64.063em) {
+  .olive.three-col-r,
+  .olive.three-col-l {
+    .widgettitle,
+    .widget .wp-block-heading {
+      background: url(../../images/jgd-bizelite-assets.svg)
+        no-repeat -306px -323px variables.$base_color;
+    }
+  }
+}

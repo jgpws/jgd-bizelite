@@ -17,34 +17,33 @@
 } else {
 	do_action( 'wp_body_open' );
 } ?>
-<div id="wrapper" class="hfeed">
-	<div id="header">
-			<div id="access">
-				<?php if (is_home() || is_front_page()) { ?>
-					<h1 class="blog-title blog-title-landing"><a href="<?php echo esc_url( home_url('/') ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php } else { ?>
-					<h4 class="blog-title blog-title-landing"><a href="<?php echo esc_url( home_url('/') ); ?>"><?php bloginfo( 'name' ); ?></a></h4>
-	<?php } ?>
+<div id="wrapper" class="wrapper hfeed">
+	<header id="header" class="header">
+    <a class="screen-reader-text skip-link" href="#content"><?php echo __( 'Skip to content', 'jgd-bizelite' ); ?></a>
+      <nav id="access" class="access">
+				<h1 class="blog-title blog-title-landing"><a href="<?php echo esc_url( home_url('/') ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 				<ul class="menubar">
-					<li class="menubar-pages-list-item">
-					<h3 class="menubar-title">
+					<li class="menubar-list-item">
+					<h3 id="menubar-title-one" class="menubar-title">
 					<?php jgd_bizelite_menutitle_one_customizer(); ?>
 					</h3>
 					<?php wp_nav_menu(
 						array(
 							'theme_location' => 'header_one',
+              'container_id' => 'menu-one',
 							'container_class' => 'pagemenu pagemenu-vertical is-zero-height',
 							'fallback_cb' => 'jgd_bizelite_pages_default'
 						)
 					); ?>
 					</li>
-					<li class="menubar-cats-list-item">
-					<h3 class="menubar-title">
+					<li class="menubar-list-item">
+					<h3 id="menubar-title-two" class="menubar-title">
 					<?php jgd_bizelite_menutitle_two_customizer(); ?>
 					</h3>
 					<?php wp_nav_menu(
 						array(
 							'theme_location' => 'header_two',
+              'container_id' => 'menu-two',
 							'container_class' => 'pagemenu pagemenu-vertical is-zero-height',
 							'fallback_cb' => 'jgd_bizelite_cats_default'
 							)
@@ -53,5 +52,5 @@
 
 				</ul>
 				<?php get_template_part( 'template-parts/menu', 'social' ); ?>
-			</div><!-- #access -->
-	</div><!-- #header -->
+			</nav><!-- #access -->
+	</header><!-- #header -->

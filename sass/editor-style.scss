@@ -1,222 +1,232 @@
 /* -- Editor Styles for the back end -- */
-@import "mixins";
-@import "variables";
+@use "partials/mixins";
+@use "partials/variables";
 
-body {
-  background-color: $base_color;
-	color: $text_color;
-  font-family: $serif;
+.editor-styles-wrapper {
+  background-color: variables.$base_color;
+  color: variables.$text_color;
+  font-family: variables.$serif;
   line-height: 1.29em;
-}
 
-p,
-address {
-	margin-bottom: 1rem;
-  margin-top: 0;
-}
+  p,
+  address {
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
 
-.wp-block-freeform.block-library-rich-text__tinymce li,
-.wp-block-freeform.block-library-rich-text__tinymce p {
-  line-height: 1.29em;
-}
+  p,
+  ul li,
+  ol li,
+  dl dt,
+  dl dd,
+  blockquote {
+    font-size: 1em;
+    line-height: 1.29em;
+  }
 
-p,
-ul li,
-ol li,
-dl dt,
-dl dd,
-blockquote {
-	font-size: 1em;
-}
+  blockquote {
+    background-color: variables.$pale_gray;
+    padding: 1em;
+    font-style: italic;
+    clear: both;
+  }
 
-blockquote {
-	background-color: $light_gray;
-	padding: 1em;
-	font-style: italic;
-	clear: both;
-}
+  .wp-block-freeform.block-library-rich-text__tinymce blockquote {
+    border-left: none;
+    box-shadow: none;
+    margin: 20px;
+  }
 
-.wp-block-freeform.block-library-rich-text__tinymce blockquote {
-  border-left: none;
-  box-shadow: none;
-  margin: 20px;
-}
+  blockquote p {
+    font-size: 1em;
+  }
 
-blockquote p {
-	font-size: 1em;
-}
+  .wp-block-freeform.block-library-rich-text__tinymce li,
+  .wp-block-freeform.block-library-rich-text__tinymce p {
+    line-height: 1.29em;
+  }
 
-h1 {
-	font-size: 2.14em; // ~30 px
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.2em auto !important;
+  }
 
-h2 {
-	font-size: 1.71em; // ~24 px
-}
+  h1 {
+    font-size: 2.14em; // ~30 px
+  }
 
-h3 {
-	font-size: 1.29em; // ~18 px
-}
+  h2 {
+    font-size: 1.71em; // ~24 px
+  }
 
-h4 {
-	font-size: 1em; // ~16 px
-}
+  h3 {
+    font-size: 1.29em; // ~18 px
+  }
 
-h5 {
-	font-size: 0.875em; // ~14 px
-}
+  h4 {
+    font-size: 1em; // ~16 px
+  }
 
-h6 {
-	font-size: 0.75em; // ~12 px
-}
+  h5 {
+    font-size: 0.875em; // ~14 px
+  }
 
-a:link,
-a:visited {
-	color: $link_color;
-	text-decoration: none;
-}
+  h6 {
+    font-size: 0.75em; // ~12 px
+  }
 
-a:hover,
-a:active {
-	color: $link_hover_color;
-	text-decoration: underline;
-}
+  a {
+    color: variables.$link_color;
+    text-decoration: underline;
+  }
 
-img {
-	max-width: 100%;
-	height: auto;
-}
+  a:hover,
+  a:active {
+    color: variables.$link_hover_color;
+  }
 
-a img {
-	border: 0;
-}
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 
-video { // for responsive html5 videos
-  width: 100% !important;
-  height: auto !important;
-}
+  a img {
+    border: 0;
+  }
 
-table {
-	margin: 0 auto;
-}
+  video {
+    // for responsive html5 videos
+    width: 100% !important;
+    height: auto !important;
+  }
 
-table,
-table th,
-table td {
-	border: 1px solid $light_gray;
-}
+  table {
+    margin: 0 auto;
+  }
 
-table th, table td {
-	padding: 0.5em;
-}
+  table,
+  table th,
+  table td {
+    border: 1px solid variables.$lightest_gray;
+  }
 
-table caption {
-	color: $text_color_light;
-	background-color: $black;
-	font-weight: bold;
-}
+  table th,
+  table td {
+    padding: 0.5em;
+  }
 
-pre,
-.wp-block-freeform.block-library-rich-text__tinymce pre,
-code,
-kbd {
-	font-family: $monospace;
-}
+  table caption {
+    color: variables.$text_color_light;
+    background-color: variables.$black;
+    font-weight: bold;
+  }
 
-pre,
-.wp-block-freeform.block-library-rich-text__tinymce pre {
-	background-color: $light_gray;
-	border: 1px solid $silver;
-  font-size: 0.9em;
-	overflow-x: auto;
-	padding: 1em;
-}
+  pre,
+  .wp-block-freeform.block-library-rich-text__tinymce pre,
+  code,
+  kbd {
+    font-family: variables.$monospace;
+  }
 
-.entry form p:first-child:first-letter {
-	font-size: 1em;
-}
+  pre,
+  .wp-block-freeform.block-library-rich-text__tinymce pre {
+    background-color: variables.$pale_gray;
+    border: 1px solid variables.$silver;
+    font-size: 0.9em;
+    overflow-x: auto;
+    padding: 1em;
+  }
 
-form label {
-	margin-right: 6px;
-}
+  .entry form p:first-child:first-letter {
+    font-size: 1em;
+  }
 
-.editor-styles-wrapper button:not(.components-button),
-form input,
-form textarea,
-select {
-	color: $text_color;
-	border: 1px solid $silver;
-	padding: 2px 6px;
-	font-size: 1em;
-}
+  form label {
+    margin-right: 6px;
+  }
 
-form input:focus,
-form textarea:focus {
-	background-color: $light_gray;
-}
+  button:not(.components-button),
+  form input,
+  form textarea,
+  select {
+    color: variables.$text_color;
+    border: 1px solid variables.$silver;
+    padding: 2px 6px;
+    font-size: 1em;
+  }
 
-.editor-styles-wrapper form input,
-form textarea,
-select,
-select option {
-	font-family: $serif;
-}
+  form input:focus,
+  form textarea:focus {
+    background-color: variables.$pale_gray;
+  }
 
-.editor-styles-wrapper button:not(.components-button),
-.wp-block-button__link,
-form input[type="reset"],
-form input[type="submit"],
-select {
-	background-color: $light_gray;
-	margin: 6px;
-	min-width: 72px;
-}
+  form input,
+  form textarea,
+  select,
+  select option {
+    font-family: variables.$serif;
+  }
 
-select option {
-	height: 36px;
-}
+  button:not(.components-button),
+  .wp-block-button__link,
+  form input[type="reset"],
+  form input[type="submit"],
+  select {
+    background-color: variables.$pale_gray;
+    margin: 6px;
+    min-width: 72px;
+  }
 
-form textarea {
-	width: 100%;
-}
+  select option {
+    height: 36px;
+  }
 
-form input#searchsubmit {
-	border: 0;
-}
+  form textarea {
+    width: 100%;
+  }
 
-hr {
-	border-bottom: 2px solid $black_25_opacity;
-	border-top: transparent;
-	margin: 1em 0;
-}
+  form input#searchsubmit {
+    border: 0;
+  }
 
-.wp-caption-text,
-.gallery-caption {
-  @include caption;
-  @include hide-text-overflow;
-}
+  hr {
+    border-bottom: 2px solid variables.$black_25_opacity;
+    border-top: transparent;
+    margin: 1em 0;
+  }
 
-#wp-calendar {
-	background-color: $base_color;
-	border: 1px solid $dark_gray;
-	border-collapse: collapse;
+  .wp-caption-text,
+  .gallery-caption {
+    @include mixins.caption;
+    @include mixins.hide-text-overflow;
+  }
 
-	thead {
-		background-color: $light_gray;
-		text-align: center;
-	}
+  .wp-calendar-table {
+    background-color: variables.$base_color;
+    border: 1px solid variables.$dark_gray;
+    border-collapse: collapse;
 
-	th {
-		font-weight: bold;
-	}
+    thead {
+      background-color: variables.$pale_gray;
+      text-align: center;
+    }
 
-	tbody td {
-		border: 1px solid $medium_gray;
-		text-align: center;
-	}
+    th {
+      font-weight: bold;
+    }
 
-	th,
-	td {
-		border: 0;
-	}
+    tbody td {
+      border: 1px solid variables.$medium_gray;
+      text-align: center;
+    }
+
+    th,
+    td {
+      border: 0;
+    }
+  }
 }

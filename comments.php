@@ -8,7 +8,7 @@ if ( post_password_required() ) {
 
 if ( have_comments() ) : ?>
 	<div id="comments-area" class="comments-area">
-		<h3 id="comments"><?php comments_number( esc_html__( 'No Comments', 'jgd-bizelite' ), esc_html__( 'One Comment', 'jgd-bizelite' ), esc_html__( '% Comments', 'jgd-bizelite' ) ); ?></h3>
+		<h3 id="comments" class="comments"><?php comments_number( esc_html__( 'No Comments', 'jgd-bizelite' ), esc_html__( 'One Comment', 'jgd-bizelite' ), esc_html__( '% Comments', 'jgd-bizelite' ) ); ?></h3>
 		<ul class="commentlist">
 			<?php wp_list_comments( 'reverse_top_level=true' ); ?>
 		</ul>

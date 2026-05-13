@@ -1,0 +1,177 @@
+/* Green color scheme */
+/* Base */
+body.green {
+  background-color: #215e21;
+}
+
+.green a {
+  color: #215e21;
+}
+.green a:hover,
+.green a:active {
+  color: #143914;
+}
+.green table caption {
+  background-color: #143914;
+}
+.green .wp-block-calendar table tfoot a {
+  color: #215e21;
+}
+.green .wp-block-calendar table tfoot a:hover,
+.green .wp-block-calendar table tfoot a:active {
+  color: #143914;
+}
+
+/* Buttons */
+.green .button-dropdown {
+  background-color: #143914;
+}
+.green a.button-primary {
+  background-color: #55c355;
+  color: #143914;
+  border-bottom-color: #143914;
+}
+.green a.button-primary:hover {
+  background-color: #143914;
+  color: #ffffff;
+}
+.green a.wp-block-button__link:not(.has-text-color) {
+  color: #333333;
+}
+.green .wp-block-search__button {
+  background-color: #55c355;
+  color: #143914;
+  border-bottom-color: #143914;
+}
+.green .wp-block-search__button:hover, .green .wp-block-search__button:active, .green .wp-block-search__button:focus {
+  background-color: #143914;
+  color: #ffffff;
+}
+
+/* Header/Footer */
+.green .branding,
+.green .footer {
+  background-color: #143914;
+}
+.green.custom-header .site-title-block {
+  background-color: rgba(11, 61, 11, 0.5);
+}
+.green .blog-title a {
+  color: #ffffff;
+}
+.green .access {
+  background-color: #2e842e;
+  border-top-color: #215e21;
+}
+.green .menubar-title {
+  color: #eff6ef;
+}
+.green .pagemenu .menu {
+  background-color: #143914;
+  border-color: #cae7ca;
+}
+.green .pagemenu a {
+  color: #eff6ef;
+}
+.green .pagemenu a:hover,
+.green .pagemenu a:focus,
+.green .pagemenu a:active {
+  background-color: #eff6ef;
+  color: #000000;
+}
+.green .searchbar .search-input {
+  border-color: #215e21;
+}
+.green .menu-social a {
+  color: #ffffff;
+}
+.green .site-info a {
+  color: #eff6ef;
+}
+.green .site-info a:hover,
+.green .site-info a:active {
+  color: #ffffff;
+}
+.green .up,
+.green .down {
+  background-color: rgba(11, 61, 11, 0.5);
+}
+
+@media screen and (min-width: 40.063em) {
+  .green .access {
+    border-bottom-color: #215e21;
+    border-top: transparent;
+  }
+}
+@media screen and (min-width: 48em) {
+  .green .menu-social a {
+    color: #ffffff;
+  }
+  .green .menu-social .social-panel-expand {
+    background-color: #2e842e;
+    border-bottom-color: #215e21;
+  }
+}
+/* Posts/Pages */
+.green .nav-separator {
+  background: url(../../images/jgd-bizelite-assets.svg) no-repeat -80px -45px;
+}
+.green .sticky .entry {
+  border-color: #7bd17b;
+}
+.green .wp-caption-text,
+.green .gallery-caption,
+.green .wp-block-image figcaption,
+.green .wp-block-gallery.has-nested-images figure.wp-block-image:not(.is-style-rounded) figcaption {
+  background-color: #143914;
+  color: #eff6ef;
+}
+.green .wp-caption-text a,
+.green .gallery-caption a,
+.green .wp-block-image figcaption a,
+.green .wp-block-gallery.has-nested-images figure.wp-block-image:not(.is-style-rounded) figcaption a {
+  color: #a1dea1;
+}
+.green .wp-caption-text a:hover,
+.green .wp-caption-text a:active,
+.green .gallery-caption a:hover,
+.green .gallery-caption a:active,
+.green .wp-block-image figcaption a:hover,
+.green .wp-block-image figcaption a:active,
+.green .wp-block-gallery.has-nested-images figure.wp-block-image:not(.is-style-rounded) figcaption a:hover,
+.green .wp-block-gallery.has-nested-images figure.wp-block-image:not(.is-style-rounded) figcaption a:active {
+  color: #cae7ca;
+}
+.green .bypostauthor {
+  background-color: #cae7ca;
+}
+.green .bypostauthor .button-primary {
+  background-color: #143914;
+  color: #ffffff;
+}
+.green .wp-block-pullquote.is-style-default {
+  border-color: #7bd17b;
+}
+.green.mag-featured .post.has-post-thumbnail:nth-of-type(1) .entry-title-block {
+  background-color: rgba(11, 61, 11, 0.75);
+}
+
+/* Sidebar */
+.green .widget-area ul ul li {
+  color: #215e21;
+}
+.green .widgettitle,
+.green .widget .wp-block-heading {
+  background: url(../../images/jgd-bizelite-assets.svg) no-repeat -20px -123px #ffffff;
+}
+
+@media screen and (min-width: 64.063em) {
+  .green.three-col-r .widgettitle,
+  .green.three-col-r .widget .wp-block-heading,
+  .green.three-col-l .widgettitle,
+  .green.three-col-l .widget .wp-block-heading {
+    background: url(../../images/jgd-bizelite-assets.svg) no-repeat -20px -273px #ffffff;
+  }
+}
+
+/*# sourceMappingURL=green.css.map */

@@ -1,12 +1,12 @@
 <!-- begins the loop -->
 <?php if(have_posts()) : while ( have_posts() ) : the_post(); ?>
 
-<!-- opens post div -->
-<div id="post-<?php the_id(); ?>" <?php post_class(); ?>>
+<!-- opens #post -->
+<article id="post-<?php the_id(); ?>" <?php post_class(); ?>>
 		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 		<?php get_template_part( 'template-parts/entry', 'meta' ); ?>
 
-	<!-- opens entry div -->
+	<!-- opens .entry -->
 	<div class="entry clearfix">
 	<?php
 	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
@@ -21,12 +21,16 @@
 		the_content();
 	} ?>
 	</div>
-	<!-- closes entry div -->
+	<!-- closes .entry -->
 
-</div>
-<!-- closes post div -->
+</article>
+<!-- closes #post -->
 
 <?php endwhile; else: ?>
-<p><?php esc_html_e( 'Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite' ); ?></p>
+<article id="post">
+  <div class="entry">
+    <p><?php esc_html_e( 'Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite' ); ?></p>
+  </div>
+</article>
 <?php endif; ?>
 <!-- ends the loop -->

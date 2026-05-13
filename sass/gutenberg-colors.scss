@@ -1,30 +1,58 @@
 /* -- Gutenberg colors for the front end -- */
-@import "variables";
+@use "partials/variables";
 
 /* White */
 .has-white-background-color {
-  background-color: $white;
+  background-color: variables.$white;
 }
 
 .has-white-color {
-  color: $white;
+  color: variables.$white;
 }
 
 .wp-block-button__link.has-white-color {
-  &:link,
-  &:visited,
+  color: variables.$white;
+
   &:hover,
   &:active {
-    color: $white;
+    color: variables.$white;
   }
 }
 
-$black_colors: ("light-gray": $light_gray, "medium-gray": $medium_gray, "dark-gray": $dark_gray);
-$blue_colors: ("light-blue": $light_blue, "medium-blue": $medium_blue, "blue": $blue, "dark-blue": $dark_blue);
-$green_colors: ("light-green": $light_green, "medium-green": $medium_green, "green": $green, "dark-green": $dark_green);
-$red_colors: ("light-red": $light_red, "medium-red": $medium_red, "red": $red, "dark-red": $dark_red);
-$silver_colors: ("light-silver": $light_silver_alt, "silver": $silver, "medium-dark-gray": $darker_silver_alt);
-$olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "olive": $olive, "dark-olive": $dark_olive);
+$black_colors: (
+  "light-gray": variables.$pale_gray,
+  "medium-gray": variables.$medium_gray,
+  "dark-gray": variables.$dark_gray,
+);
+$blue_colors: (
+  "light-blue": variables.$light_blue,
+  "medium-blue": variables.$medium_blue,
+  "blue": variables.$blue,
+  "dark-blue": variables.$dark_blue,
+);
+$green_colors: (
+  "light-green": variables.$light_green,
+  "medium-green": variables.$medium_green,
+  "green": variables.$green,
+  "dark-green": variables.$dark_green,
+);
+$red_colors: (
+  "light-red": variables.$light_red,
+  "medium-red": variables.$medium_red,
+  "red": variables.$red,
+  "dark-red": variables.$dark_red,
+);
+$silver_colors: (
+  "light-silver": variables.$light_silver_alt,
+  "silver": variables.$silver,
+  "medium-dark-gray": variables.$darker_silver_alt,
+);
+$olive_colors: (
+  "light-olive": variables.$light_olive,
+  "medium-olive": variables.$medium_olive,
+  "olive": variables.$olive,
+  "dark-olive": variables.$dark_olive,
+);
 
 /* Black color scheme */
 @each $slug, $var in $black_colors {
@@ -36,21 +64,34 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
     color: #{$var};
   }
 
+  :root
+    :where(
+      .wp-block-button.is-style-outline
+        .wp-block-button__link.has-#{$slug}-background-color
+    ) {
+    background-color: #{$var} !important;
+  }
+
+  :root
+    :where(
+      .wp-block-button.is-style-outline
+        .wp-block-button__link.has-#{$slug}-color
+    ) {
+    color: #{$var} !important;
+  }
+
   .is-style-outline .wp-block-button__link.has-white-color {
-    border-color: $white;
-    color: $text_color;
+    border-color: variables.$white;
+    color: variables.$text_color;
 
     &:hover,
     &:focus {
-      border-color: $silver;
+      border-color: variables.$silver;
     }
   }
 
   .wp-block-button__link.has-#{$slug}-color {
-    &:link,
-    &:visited {
-      color: #{$var};
-    }
+    color: #{$var} !important;
   }
 }
 
@@ -64,6 +105,22 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
     color: #{$var};
   }
 
+  :root
+    :where(
+      .wp-block-button.is-style-outline
+        .wp-block-button__link.has-#{$slug}-background-color
+    ) {
+    background-color: #{$var} !important;
+  }
+
+  :root
+    :where(
+      .wp-block-button.is-style-outline
+        .wp-block-button__link.has-#{$slug}-color
+    ) {
+    color: #{$var} !important;
+  }
+
   .is-style-outline .wp-block-button__link.has-#{$slug}-color {
     border-color: #{$var};
 
@@ -74,10 +131,7 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
   }
 
   .wp-block-button__link.has-#{$slug}-color {
-    &:link,
-    &:visited {
-      color: #{$var};
-    }
+    color: #{$var};
   }
 }
 
@@ -91,6 +145,22 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
     color: #{$var};
   }
 
+  :root
+    :where(
+      .wp-block-button.is-style-outline
+        .wp-block-button__link.has-#{$slug}-background-color
+    ) {
+    background-color: #{$var} !important;
+  }
+
+  :root
+    :where(
+      .wp-block-button.is-style-outline
+        .wp-block-button__link.has-#{$slug}-color
+    ) {
+    color: #{$var} !important;
+  }
+
   .is-style-outline .wp-block-button__link.has-#{$slug}-color {
     border-color: #{$var};
 
@@ -101,10 +171,7 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
   }
 
   .wp-block-button__link.has-#{$slug}-color {
-    &:link,
-    &:visited {
-      color: #{$var};
-    }
+    color: #{$var} !important;
   }
 }
 
@@ -118,6 +185,22 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
     color: #{$var};
   }
 
+  :root
+    :where(
+      .wp-block-button.is-style-outline
+        .wp-block-button__link.has-#{$slug}-background-color
+    ) {
+    background-color: #{$var} !important;
+  }
+
+  :root
+    :where(
+      .wp-block-button.is-style-outline
+        .wp-block-button__link.has-#{$slug}-color
+    ) {
+    color: #{$var} !important;
+  }
+
   .is-style-outline .wp-block-button__link.has-#{$slug}-color {
     border-color: #{$var};
 
@@ -128,10 +211,7 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
   }
 
   .wp-block-button__link.has-#{$slug}-color {
-    &:link,
-    &:visited {
-      color: #{$var};
-    }
+    color: #{$var} !important;
   }
 }
 
@@ -145,6 +225,22 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
     color: #{$var};
   }
 
+  :root
+    :where(
+      .wp-block-button.is-style-outline
+        .wp-block-button__link.has-#{$slug}-background-color
+    ) {
+    background-color: #{$var} !important;
+  }
+
+  :root
+    :where(
+      .wp-block-button.is-style-outline
+        .wp-block-button__link.has-#{$slug}-color
+    ) {
+    color: #{$var} !important;
+  }
+
   .is-style-outline .wp-block-button__link.has-#{$slug}-color {
     border-color: #{$var};
 
@@ -155,10 +251,7 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
   }
 
   .wp-block-button__link.has-#{$slug}-color {
-    &:link,
-    &:visited {
-      color: #{$var};
-    }
+    color: #{$var} !important;
   }
 }
 
@@ -172,6 +265,22 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
     color: #{$var};
   }
 
+  :root
+    :where(
+      .wp-block-button.is-style-outline
+        .wp-block-button__link.has-#{$slug}-background-color
+    ) {
+    background-color: #{$var} !important;
+  }
+
+  :root
+    :where(
+      .wp-block-button.is-style-outline
+        .wp-block-button__link.has-#{$slug}-color
+    ) {
+    color: #{$var} !important;
+  }
+
   .is-style-outline .wp-block-button__link.has-#{$slug}-color {
     border-color: #{$var};
 
@@ -182,34 +291,43 @@ $olive_colors: ("light-olive": $light_olive, "medium-olive": $medium_olive, "oli
   }
 
   .wp-block-button__link.has-#{$slug}-color {
-    &:link,
-    &:visited {
-      color: #{$var};
-    }
+    color: #{$var} !important;
   }
 }
 
 /* Black */
 .has-black-background-color {
-  background-color: $black;
+  background-color: variables.$black;
 }
 
 .has-black-color {
-  color: $black;
+  color: variables.$black;
+}
+
+:root
+  :where(
+    .wp-block-button.is-style-outline
+      .wp-block-button__link.has-black-background-color
+  ) {
+  background-color: variables.$black !important;
+}
+
+:root
+  :where(
+    .wp-block-button.is-style-outline .wp-block-button__link.has-black-color
+  ) {
+  color: variables.$black !important;
 }
 
 .is-style-outline .wp-block-button__link.has-black-color {
-  border-color: $black;
+  border-color: variables.$black;
 
   &:hover,
   &:focus {
-    color: $black !important;
+    color: variables.$black !important;
   }
 }
 
 .wp-block-button__link.has-black-color {
-  &:link,
-  &:visited {
-    color: $black;
-  }
+  color: variables.$black !important;
 }

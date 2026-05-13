@@ -30,6 +30,11 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 
 == Changelog ==
 
+= 1.6.6 May 12 2026 =
+* Disclosure: AI tools (Google Gemini) were used in the template hooks section of functions.php. I used AI to figure out where to use WooCommerce hooks in the new WooCommerce templates. AI was also used in the scripts/jgd-bizelite-scripts.js file to help with adding ARIA roles and fixing dropdown code for the menus and sidebar.
+
+Major maintenance update with better WooCommerce compatibility; WooCommerce CSS separate loading; updated custom header image functionality; updated html tags to semantic html5 tags, etc.
+
 = 1.6.5 March 14 2022 =
 CSS fixes for the gallery, image blocks.
 

@@ -1,10 +1,8 @@
 <?php get_header(); ?>
 
-	<div id="main" class="texture">
+	<main id="main" class="main texture">
 
-		<div id="container">
-
-			<div id="content">
+		<section id="content" class="content">
 			<?php get_template_part( 'template-parts/navigation' ); ?>
 			<?php
 			// current author info
@@ -46,12 +44,10 @@
 			<p><?php esc_html_e('Sorry, no posts yet. Would you like to create one?', 'jgd-bizelite'); ?></p>
 			<?php endif; ?>
 
-			</div><!-- #content -->
-
-		</div><!-- #container -->
+		</section><!-- #content -->
 
 		<?php get_sidebar(); ?>
 
-	</div><!-- #main -->
+	</main><!-- #main -->
 
 	<?php get_footer(); ?>

@@ -1,63 +1,69 @@
 /* Content Navigation */
 .navigation {
-	float: left;
-	font-weight: bold;
-	padding: 20px 5%;
-	width: 100%;
+  font-weight: bold;
+  padding: 20px 5%;
+  width: 100%;
 
-	.navlinks,
-	.nav-links {
-		text-align: center;
-		margin: 0 auto;
-	}
+  .navlinks,
+  .nav-links {
+    text-align: center;
+    margin: 0 auto;
+  }
 
-	.nav-links {
-		min-height: 72px;
+  .nav-links {
+    display: grid;
+    grid-template-rows: auto 20px auto;
+    justify-items: center;
 
-		a {
-			text-decoration: none;
-		}
-	}
+    a {
+      text-decoration: none;
+    }
+  }
 
-	// Navigation separator- added with jQuery in jgd-bizelite-scripts.js
-	.nav-separator {
-		background: url(images/jgd-bizelite-assets.svg) no-repeat -20px -45px;
-		display: inline-block;
-		height: 20px;
-		width: 20px;
-	}
+  // Navigation separator- added with jQuery in jgd-bizelite-scripts.js
+  .nav-separator {
+    background: url(images/jgd-bizelite-assets.svg) no-repeat -20px -45px;
+    height: 20px;
+    width: 20px;
+  }
 
-	.nav-previous,
-	.nav-next {
-		margin: 1em 0;
-	}
+  .nav-previous,
+  .nav-next {
+    margin: 1em 0;
+  }
 }
 
-@media screen and (min-width: 40.063em) { // 40.063em = 641px
-	.navigation {
-		.nav-links {
-			min-height: 20px;
-		}
+@media screen and (min-width: 40.063em) {
+  // 40.063em = 641px
+  .navigation {
+    .nav-links {
+      grid-template-columns: 1fr 20px 1fr;
+      grid-template-rows: auto;
+      min-height: 20px;
+    }
 
-		.nav-previous,
-		.nav-next {
-			margin: 0px;
-		}
+    .nav-previous,
+    .nav-next {
+      margin: 0px;
+    }
 
-		.nav-previous {
-			float: left;
-			max-width: 45%;
-		}
+    .nav-previous {
+      justify-self: start;
+      margin-right: 1rem;
+      text-align: left;
+    }
 
-		.nav-next {
-			float: right;
-			max-width: 45%;
-		}
-	}
+    .nav-next {
+      justify-self: end;
+      margin-left: 1rem;
+      text-align: right;
+    }
+  }
 }
 
-@media screen and (min-width: 85.438em) { // 85.438em = 1367px
-	.navigation {
-		padding: 20px 10%;
-	}
+@media screen and (min-width: 85.438em) {
+  // 85.438em = 1367px
+  .navigation {
+    padding: 20px 10%;
+  }
 }

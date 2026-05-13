@@ -9,11 +9,9 @@
 
 get_header(); ?>
 
-	<div id="main" class="texture">
+	<main id="main" class="main texture">
 
-		<div id="container">
-
-			<div id="content">
+	  <section id="content" class="content">
 
 			<?php get_template_part( 'template-parts/loop', 'page' );
 
@@ -40,7 +38,7 @@ get_header(); ?>
 			$cat2 = get_theme_mod( 'jgd_bizelite_cat_dropdown_2', 0 );
 			$cat3 = get_theme_mod( 'jgd_bizelite_cat_dropdown_3', 0 ); ?>
 
-				<div class="featured-cat-container">
+				<section class="featured-cat-container">
 					<h2><?php jgd_bizelite_cat_section_title_customizer(); ?></h2>
 					<hr>
 					<?php if( $cat_query1->have_posts() ) : ?>
@@ -115,11 +113,10 @@ get_header(); ?>
 					</div><?php
 					endif;
 				?>
-				</div><!-- .featured-cat-container -->
-			</div><!-- #content -->
+				</section><!-- .featured-cat-container -->
 
-		</div><!-- #container -->
+		</section><!-- #content -->
 
-	</div><!-- #main -->
+	</main><!-- #main -->
 
 <?php get_footer(); ?>

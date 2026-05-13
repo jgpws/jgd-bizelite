@@ -1,3 +1,5 @@
+@use "../partials/variables";
+
 /* Button Styles */
 
 .button-dropdown,
@@ -8,37 +10,43 @@
 }
 
 .button-dropdown {
-  background: url(images/jgd-bizelite-assets.svg) no-repeat -20px -16px $dark_gray;
-  border: 1px solid $white;
+  background: url(images/jgd-bizelite-assets.svg) no-repeat -20px -16px
+    variables.$dark_gray;
+  border: 1px solid variables.$white;
 }
 
 .button-dropdown--light {
-  background: url(images/jgd-bizelite-assets.svg) no-repeat -49px -17px $white;
-	border: 1px solid #a0a0a0;
+  background: url(images/jgd-bizelite-assets.svg) no-repeat -49px -17px
+    variables.$white;
+  border: 1px solid variables.$light_gray;
 }
 
 .button-primary {
-  background-color: $medium_gray;
-  border-bottom: 1px solid $dark_gray;
+  background-color: variables.$medium_gray;
+  border-bottom: 1px solid variables.$dark_gray;
   display: inline-block;
-	font-weight: bold;
+  font-weight: bold;
   font-size: 0.875em;
-	height: 36px;
-	min-width: 72px;
-	padding: 8px;
-	text-align: center;
-	vertical-align: middle;
+  height: 36px;
+  min-width: 72px;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
 
   &:hover {
-    background-color: $black;
+    background-color: variables.$darker_gray;
     text-decoration: none;
   }
 
   .bypostauthor & {
-    background-color: $black;
+    background-color: variables.$darker_gray;
   }
 }
 
 a.button-primary {
-  color: $white;
+  color: variables.$white;
+}
+
+.bypostauthor .button-primary {
+  text-decoration: none;
 }
