@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass:style": "sass sass/style.scss:style.css",
     "minify-style": "cleancss -o style.min.css style.css",
-    "watch:style": "onchange 'sass/{module_includes,partials}/*.scss' -- run-s sass:style minify-style",
+    "watch:style": "onchange 'sass/style.scss' 'sass/{module_includes,partials}/*.scss' -- run-s sass:style minify-style",
     "sass:color-schemes": "sass sass/themes:css/color-schemes",
     "minify-color-schemes": "cleancss --batch --batch-suffix .min -o ./css/color-schemes css/color-schemes/blue.css css/color-schemes/green.css css/color-schemes/red.css css/color-schemes/silver.css css/color-schemes/olive.css css/color-schemes/light-text.css",
     "watch:color-schemes": "onchange 'sass/themes/*.scss' -- run-s sass:color-schemes minify-color-schemes",

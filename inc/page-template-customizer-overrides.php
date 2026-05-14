@@ -1,6 +1,6 @@
 <?php
 /*
- * Customizer overrides for the block editor.
+ * Customizer overrides (Page Templates) for the block editor.
   */
 
   function jgd_bizelite_custom_editor_style() {
