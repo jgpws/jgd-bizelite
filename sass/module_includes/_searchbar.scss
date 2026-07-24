@@ -95,10 +95,15 @@
 }
 
 /* Global Search Bar styles */
+.search-input,
+.search-submit {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
 .search-submit {
   background: url(images/jgd-bizelite-assets.svg) no-repeat -204px -382px;
   border: transparent;
-  display: inline-block;
   height: 24px;
   margin: 0px 0.5em;
   min-width: 24px;

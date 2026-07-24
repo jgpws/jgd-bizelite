@@ -56,6 +56,10 @@
 }
 
 /* Calendar */
+.widget-area .wp-block-calendar:first-of-type {
+  margin-top: 0px;
+}
+
 .wp-block-calendar {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -64,6 +68,7 @@
     font-family: variables.$serif;
 
     caption {
+      background-color: variables.$base_color_dark;
       color: variables.$white;
     }
 

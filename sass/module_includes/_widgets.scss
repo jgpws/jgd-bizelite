@@ -212,8 +212,15 @@
 }
 
 .widget_calendar {
+  .three-col-r &,
+  .three-col-l & {
+    .calendar_wrap,
+    caption {
+      width: 196px;
+    }
+  }
+
   .calendar_wrap {
-    width: 196px;
     margin: 20px auto;
   }
 
@@ -224,10 +231,6 @@
   th,
   td {
     padding: 0;
-  }
-
-  caption {
-    width: 196px;
   }
 }
 
