@@ -4,7 +4,8 @@ Contributors: jgpws
 Tags: blog, news, two-columns, three-columns, custom-header, custom-logo, custom-background, custom-colors, editor-style, custom-menu, featured-images, theme-options, threaded-comments, translation-ready, wide-blocks
 Requires at least: 6.0
 Requires PHP: 7.4
-Tested up to: 6.9
+Tested up to: 7.0
+
 Stable tag: 1.6.6
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
@@ -29,6 +30,9 @@ JGD-BizElite supports Jetpack's Responsive Videos feature when the plugin is ena
 * Themify Icons, Copyright 2019 Lally Elias, SIL Open Font License, https://github.com/lykmapipo/themify-icons
 
 == Changelog ==
+
+= 1.6.7 July 29 2026 =
+Minor CSS fixes for the header and blog posts. Change of theme homepage web address. 
 
 = 1.6.6 May 12 2026 =
 * Disclosure: AI tools (Google Gemini) were used in the template hooks section of functions.php. I used AI to figure out where to use WooCommerce hooks in the new WooCommerce templates. AI was also used in the scripts/jgd-bizelite-scripts.js file to help with adding ARIA roles and fixing dropdown code for the menus and sidebar.

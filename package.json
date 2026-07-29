@@ -1,6 +1,6 @@
 {
   "name": "jgd-bizelite",
-  "version": "1.4.0",
+  "version": "1.6.6",
   "description": "JGD-BizElite WordPress theme",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,9 @@
     "watch:customizer-js": "onchange 'scripts/jbe-customize-controls.js' 'scripts/jbe-customizer-preview.js' -- run-s minify-customize-controls minify-customizer-preview",
     "watch-all": "npm-run-all --parallel watch:*",
     "serve": "browser-sync start --proxy 'localhost/wordpress' --files 'style.css, css/**/*.css, scripts/*.js, **/*.php'",
-    "develop": "run-p watch-all serve"
+    "develop": "run-p watch-all serve",
+    "copy-files-to-dist": "node build-dist.js",
+    "zip-theme": "node zip-theme.js"
   },
   "author": "Jason Gonzalez",
   "license": "GPL-3.0-or-later",

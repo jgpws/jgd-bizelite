@@ -1,6 +1,11 @@
 @use "../partials/variables";
 
 /* -- Posts / Pages -- */
+.post-blog {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
 .entry-title {
   a {
     color: variables.$dark_gray;
